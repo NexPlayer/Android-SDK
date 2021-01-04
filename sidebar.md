@@ -9,6 +9,7 @@
     - [Loggging Callback](/logging_callback.md) 
     - [API Documentation](/advanced.md) 
 - 3rd Party Integration
+    - [VAST](/vast.md) 
     - [Agama](/Agama.md) 
     - [Conviva](/Conviva.md)     
 - [Releases](/releases.md) 
