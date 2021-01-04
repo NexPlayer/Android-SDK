@@ -754,12 +754,9 @@ Live HLS playback option.
 
 This must be one of the following values:
 
-- **LIVE\_VIEW\_RECENT (0x00000000)** Start playback from the most recently received media segment (.ts)
-    files of the HLS live playlist. (The player will begin playback at a media segment that was loaded four(4) segments earlier than the latest media segment file loaded.) For example, if 5.ts is the latest media segment (.ts) file loaded in a sequence of five media segments, playback will begin at the beginning of the second media segment, four segments (2.ts, 3.ts, 4.ts, and 5.ts) preceding the latest media segment file loaded.
+- **LIVE\_VIEW\_RECENT (0x00000000)** Start playback from the most recently received media segment (.ts) files of the HLS live playlist. For example, if 5.ts is the latest media segment (.ts) , playback will begin at the beginning of that segment.
 
-- **LIVE\_VIEW\_RECENT\_BYTARGETDUR (0x00000001)** Start playback from the most recently received me-
-    dia segement (.ts) files, based on the value set for the EXT-X-TARGETDURATION tag in the HLS live playlist.
-    (The player will begin playback at the media segment that is immediately precedes the media segment that is three times (x3) the target durationbefore the latest media segment file loaded.) As a concrete example, if the target duration is set to 12 seconds and the total duration of currently loaded media segments is 48 seconds, playback will begin at the media file that immediately precedes the media segment with the timestamp at 12 (48-36) seconds. If this example HLS playlist includes media segment files 1.ts (duration of 10 seconds), 2.ts (9 sec), 3.ts (11 sec), 4.ts (10 sec), and 5.ts (8 sec), then playback will begin at the first media segment, 1.ts, because it immediate precedes the 2.ts segment (where the timestamp at 12 seconds occurs).
+- **LIVE\_VIEW\_RECENT\_BYTARGETDUR (0x00000001)** Start playback from the most recently received media segement (.ts) files, based on the value set for the EXT-X-TARGETDURATION tag in the HLS live playlist. (The player will begin playback at the media segment that is immediately precedes the media segment that is three times (x3) the target durationbefore the latest media segment file loaded.) As a concrete example, if the target duration is set to 12 seconds and the total duration of currently loaded media segments is 48 seconds, playback will begin at the media file that immediately precedes the media segment with the timestamp at 12 (48-36) seconds. If this example HLS playlist includes media segment files 1.ts (duration of 10 seconds), 2.ts (9 sec), 3.ts (11 sec), 4.ts (10 sec), and 5.ts (8 sec), then playback will begin at the first media segment, 1.ts, because it immediate precedes the 2.ts segment (where the timestamp at 12 seconds occurs).
 
 - **LIVE\_VIEW\_FIRST (0x00000002)** Unconditionally start HLS playback from the first entry in the HLS playlist.
 
