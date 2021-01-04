@@ -233,7 +233,7 @@ This method sets the value of any *integer* external parameter for the Agama cli
 | key  | The event notification that Agama client module will get. This will be: *NexAgamaClient.AGAMA\_PROPERTY.EX\_SPECIFIED_DURATION* - Duration of the content in seconds. *NexAgamaClient.AGAMA\_PROPERTY.EX\_PLAYLIST_TYPE* - The type of the current content.
 | value         | The *integer* value to set for the external parameters.|
 
-#### 2.1.3.9 void setProperty (com.nexstreaming.nexplayerengine.NexAgamaClient.AGAMA_PROPERTY key,int value) throws IllegalArgumentException
+#### void setProperty (com.nexstreaming.nexplayerengine.NexAgamaClient.AGAMA_PROPERTY key,int value) throws IllegalArgumentException
 
 This method sets the value of any *integer* property for the Agama client module in NexPlayer™.
 
@@ -255,7 +255,7 @@ This method sets the value of any *integer* property for the Agama client module
 | key  | The event notification that Agama client module will get. This will be: *NexAgamaClient.AGAMA\_PROPERTY.INT\_PORT_NO* *NexAgamaClient.AGAMA\_PROPERTY.INT\_REPORT_INTERVAL* *NexAgamaClient.AGAMA\_PROPERTY.INT\_ID\_REPORT_INTERVAL* *NexAgamaClient.AGAMA\_PROPERTY.LONG\_APP\_STARTUP_TIME*
 | value         | The *integer* value to set or the Agama client property.|
 
-#### 2.1.3.11 void setProperty (com.nexstreaming.nexplayerengine.NexAgamaClient.AGAMA_PROPERTY key,long value) throws IllegalArgumentException
+#### void setProperty (com.nexstreaming.nexplayerengine.NexAgamaClient.AGAMA_PROPERTY key,long value) throws IllegalArgumentException
 
 This method sets the value of any *long* property for the Agama client module in NexPlayer™.
 
