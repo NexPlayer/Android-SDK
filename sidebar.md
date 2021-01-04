@@ -12,5 +12,6 @@
     - [VAST](/vast.md) 
     - [Agama](/Agama.md) 
     - [Conviva](/Conviva.md)     
+    - [Freewheel](/freewheel.md)
 - [Releases](/releases.md) 
 - [Request Demo](https://nexplayersdk.com/ios-player-sdk/) 
