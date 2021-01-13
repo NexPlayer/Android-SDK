@@ -252,7 +252,7 @@ Set this to zero to disable timeout (NexPlayer™ will wait indefinitely for a r
 
 **Default:** 60000 (60 seconds)
 
-### DOWNLOADER_HTTP\_HEADER = (0x00090002)
+### DOWNLOADER_HTTP\_HEADER (0x00090002)
 
 This property adds additional header fields to be sent along with the HTTP headers when sending streaming requests (HLS and Smooth Streaming) from the Downloader module.
 
@@ -260,7 +260,7 @@ This property should be set before the Downloader module is opened by Downloader
 
 **Type:** String
 
-### DOWNLOADER_USERAGENT\_STRING = (0x00090001)
+### DOWNLOADER_USERAGENT\_STRING (0x00090001)
 
 An RTSP/HTTP User Agent value associated with the Downloader module.
 
@@ -584,7 +584,7 @@ Controls the algorithm used for bitrate switching when playing an HLS stream.
 - **0:** Use a more aggressive algorithm: up-switching happens sooner.
 - **1:** Use a more conservative algorithm: up-switching happens only if a significant amount of extra bandwidth is available beyond that required to support the given bitrate. This is similar to the iPhone algorithm.
 
-### HTTP_CREDENTIAL = (134)
+### HTTP_CREDENTIAL (134)
 
 Additional HTTP headers to use to supply credentials when a 401 response is received from the server.
 
@@ -850,7 +850,7 @@ This is a possible setting for the LOG\_LEVEL property; see that property for de
 
 This is a possible setting for the LOG\_LEVEL property; see that property for details.
 
-### LOW_LATENCY\_BUFFER\_OPTION = (75)
+### LOW_LATENCY\_BUFFER\_OPTION (75)
 
 Set a low latency buffer option.
 
@@ -883,7 +883,7 @@ This is a possible setting for the LOW\_LATENCY\_BUFFER\_OPTION property; see th
 
 This is a possible setting for the LOW\_LATENCY\_BUFFER\_OPTION property; see that property for details.
 
-### MAX_BUFFER\_DURATION = (143)
+### MAX_BUFFER\_DURATION (143)
 
 The maximum duration of prefetch buffer to pause filling the buffer.
 
@@ -898,7 +898,7 @@ paused until the buffer status meets the condition of MIN\_BUFFER\_DURATION.
 
 **Default:** 300000 (300s)
 
-### MAX_BUFFER\_RATE = (141)
+### MAX_BUFFER\_RATE (141)
 
 The maximum filled percentage of the prefetch buffer to pause filling the buffer.
 
@@ -960,7 +960,7 @@ This is used to prevent NexPlayer from attempting to play tracks that are encode
 
 **Default:** 0x7FFFFFFF
 
-### MAX_WIDTH = (125)
+### MAX_WIDTH (125)
 
 Limits the maximum width (in pixels) of the video tracks that can be selected during streaming play.
 
@@ -972,7 +972,7 @@ This is used to prevent NexPlayer from attempting to play tracks that are encode
 
 **Default:** 0x7FFFFFFF
 
-### MIN_BUFFER\_DURATION = (142)
+### MIN_BUFFER\_DURATION (142)
 
 The minumum duration of prefetch buffer to resume filling the buffer.
 
@@ -1090,7 +1090,7 @@ By default, this property is set to 0 to download the first TS file completely t
 - 0 : Partial prefetch ignored; playback will begin after downloading the first TS file completely.
 - 1 : Partial prefetch enabled; playback will begin after a part of the TS file is downloaded.
  
-### PLAYABLE\_FOR\_NOT\_SUPPORT\_AUDIO\_CODEC = (48)
+### PLAYABLE\_FOR\_NOT\_SUPPORT\_AUDIO\_CODEC (48)
 
 If set to 0, returns an error or generates an error event if the audio codec is not supported.
 
@@ -1561,7 +1561,7 @@ This is used when NexPlayer tries to open new media. If there is no response fro
 
 **Default:** 300000 (300 seconds)
 
-### SPEED\_CONTROL\_AVAILABILITY = (0x00050001)
+### SPEED\_CONTROL\_AVAILABILITY (0x00050001)
 
 Indicates whether or not speed control is available on this device.
 
@@ -1576,7 +1576,7 @@ This is useful to determine whether to display the speed control in the user int
 - **0:** Device does not support speed control.
 - **1:** Device supports speed control.
 
-### START\_NEARESTBW = (555)
+### START\_NEARESTBW (555)
 
 Sets a target bandwidth (before playing HLS content) when selecting which track to play as playback starts.
 
@@ -1776,7 +1776,7 @@ This prevents, for example, a corruption in the time stamp in an audio frame fro
 
 > **Warning** This property is not supported in this API version.
 
-### TRACKDOWN_VIDEO\_RATIO = (132)
+### TRACKDOWN_VIDEO\_RATIO (132)
 
 This property controls the ratio of skipped frames that will be tolerated before a track change is forced, if `ENABLE_TRACKDOWN` is enabled.
 
