@@ -4,13 +4,13 @@
 
 NexPlayer synchronization can be enabled by setting the following property:
 
-```
+```java
 mNexPlayer.setProperty(NexPlayer.NexProperty.ENABLE_SPD_SYNC_TO_GLOBAL_TIME, 1);
 ```
 
 For DASH, _suggestedPresentationDelay_ attribute is taken account for synchronising the playback. You should set the following property to set presentation delay on HLS as it is not supported by default in this protocol. 
 
-```
+```java
 mNexPlayer.setProperty(NexPlayer.NexProperty.SET_APPLS_PROGRAM_DATE_TIME_PRESENTATION_DELAY, 6000);
 ```
 
@@ -23,7 +23,7 @@ You can control the synchronization behaviour further by adjusting the below pro
 
 Enables synchronization to device UTC for more accurate behaviour. 
 
-```
+```java
 mNexPlayer.setProperty(NexPlayer.NexProperty.ENABLE_SPD_SYNC_TO_DEVICE_TIME, 1);
 ```
 
@@ -39,7 +39,7 @@ Values:
 
 If the current playback is not more synchronized than this value, the player will speed up playback and make sync. 
 
-```
+```java
 mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_SYNC_DIFF_TIME, 100);
 ```
 
@@ -54,7 +54,7 @@ Default: 300 (300 msec)
 
 If playback is out of sync than this value, the player will jump to synchronize the video rather than make it by speeding
 
-```
+```java
 mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_TOO_MUCH_DIFF_TIME, 5000);
 ```
 
@@ -66,6 +66,6 @@ Default: 5000 (5 seconds)
 ## Things to consider
 
 - You should make sure **suggestedPresentationDelay** is present in DASH manifest otherwise synchronisation won't work
-- For HLS, you should set _SET\_APPLS\_PROGRAM\_DATE\_TIME\_PRESENTATION\_DELAY_ property as mentioned above
-- You should make sure there is enough distance from the live edge to provide a smooth playback which should be adjusted with suggestedPresentationDelay and _SET\_APPLS\_PROGRAM\_DATE\_TIME\_PRESENTATION\_DELAY_ properties. If there is not enough space to buffer from the live edge, playback might be effected.
+- For HLS, you should set `SET_PRESENTATION_DELAY` property as mentioned above
+- You should make sure there is enough distance from the live edge to provide a smooth playback which should be adjusted with *suggestedPresentationDelay* and `SET_PRESENTATION_DELAY` properties. If there is not enough space to buffer from the live edge, playback might be effected.
 
