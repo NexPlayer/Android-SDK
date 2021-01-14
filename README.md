@@ -16,6 +16,12 @@ Feel free to contact us to request a demo
 
 ## NexPlayer™ SDK for Android Release Notes
 
+### version 6.72.0.836 (12/01/2021)
+- [Optimization] Improve multiple player instance performance
+- [Add] Dolby SW decoding support for 64bit devices
+- [Add] Allow setting offset for SPD Device Time
+- [Add] Implemented a new callback for data inactivity
+
 ### version 6.72.0.835 (17/12/2020)
 - [Add] Dolby Vision support for STBs
 - [Add] Fast downloads. Download speed has increased up to 2x.
