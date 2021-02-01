@@ -103,12 +103,12 @@
 ### version 6.69.2.812 (05/02/2020)
 - [Fix] Fixed crash issue while parsing for incorrect ID3 tag ### version by implementing of defensive code.
 
-### version 6.69.1.811 (11/12/2020)
+### version 6.69.1.811 (11/12/2019)
 - [Optimization] Improvement of EMSG data callback
 - [Optimization] Improvement of TimedText CaptionRenderer
 - [Update] Upgrade OpenSSL ver from 1.0.2r to 1.1.1d
 
-### version 6.69.0.810 (04/12/2020)
+### version 6.69.0.810 (04/12/2019)
 * [Added] Added callback for getting Widevine Level (L1,L3)
 * [Improvement] Improved Widevine policy for offline playback to HW->SW policy
 * [Added] Added the possibility to go to SW Widevine if (enableWVSW && !enableMediaDRM)
@@ -120,7 +120,7 @@
 - [Fix] Fixed buffering issue for A/V interleaved content
 * [Improvement] NPDS-6286 Hiccup effect when skipping through content improved
 
-### version 6.68.0.807 (18/11/2020)
+### version 6.68.0.807 (18/11/2019)
 - [Optimization] Improvement of A/V sync performance on specific live contents
 - [Optimization] Optimized video performance for low end devices SM-T280, SM-T285 and Oppo A37f
 - [Fix] Fixed and issue when pausing a live stream that caused frequent error 23.
@@ -131,7 +131,7 @@
 - [Add] Added NXPROTOCOL_PROPERTY_LIVE_OFFSET_TIME property.
 - [Add] Added NEXPLAYER_PROPERTY_HTTP_FAILOVER_DURATION property.
 
-### version 6.67.0.800 (31/10/2020)
+### version 6.67.0.800 (31/10/2019)
 - [Optimization] Improvement of HEVC performance on Amazon device Cube
 
 ### version 6.66.1.798
