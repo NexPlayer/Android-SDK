@@ -1,5 +1,9 @@
 ## NexPlayer™ SDK for Android Release Notes
 
+### version 6.72.0.838 (11/02/2021)
+- [Optimization] Removed unnecessary permissions from sample
+- [Add] HTTP/2 Support
+
 ### version 6.72.0.836 (12/01/2021)
 - [Optimization] Improve multiple player instance performance
 - [Add] Dolby SW decoding support for 64bit devices
