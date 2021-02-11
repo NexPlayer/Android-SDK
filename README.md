@@ -16,6 +16,14 @@ Feel free to contact us to request a demo
 
 ## NexPlayer™ SDK for Android Release Notes
 
+### version 6.72.0.838 (11/02/2021)
+- [Fix] Playback gets laggy or freezes after a few track change
+- [Fix] Audio settings of the device are not respected by the player
+- [Fix] Track availability does not respect OS Surround sound settings
+- [Fix] API Warning popup fixed
+- [Optimization] Removed unnecessary permissions from sample
+- [Add] HTTP/2 Support
+
 ### version 6.72.0.836 (12/01/2021)
 - [Optimization] Improve multiple player instance performance
 - [Add] Dolby SW decoding support for 64bit devices
