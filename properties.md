@@ -185,12 +185,11 @@ Appropriate values for any other problematic devices need to be determined exper
 
 Avoids waiting for the first Caption segment to download when starting to play content.
 
-This property can be used when playing Caption content. By default, NexPlayer waits until the first Caption
-segment is downloaded before content begins to play so that no caption text will be missed.
+This property can be used when playing Caption content. By default, NexPlayer waits until the first Caption segment is downloaded before content begins to play so that no caption text will be missed.
 
 However, if this property is disabled (set to 0), the player will start playing content as soon as possible (instead of waiting until the first Caption segment is fully downloaded). This may be preferred if content should start playing as quickly as possible (although initial Caption may be missed).
 
-This property should be called once, immediately after callinginitbut before calling open.
+This property should be called once, immediately after calling init but before calling open.
 
 **Type:** boolean
 
@@ -244,7 +243,7 @@ The amount of time to wait for a server response before generating an error even
 
 If there is no response from the server for longer than the amount of time specified here, an error event will be generated and playback will stop.
 
-Set this to zero to disable timeout (NexPlayer™ will wait indefinitely for a response).
+Set this to zero to disable timeout (NexPlayer will wait indefinitely for a response).
 
 **Type:** unsigned integer
 
@@ -384,11 +383,13 @@ Sets whether or not to display TTML text tracks in ID3 tags automatically when t
 
 In the case, when both CEA closed captions and TTML text tracks in ID3 tags are included in content, this property can be used to set whether to display the TTML text tracks in ID3 tags or the closed captions automatically.
 
-By default, this property is set to 0 to disable TTML text tracks in ID3 tags automatically if they exist in content (as was the behavior of NexPlayer previously). If for some reason it would be preferable that TTML captions in ID3 tag be displayed instead of the CEA closed captions text tracks, this property should be set to 1 usingsetProperty:
+By default, this property is set to 0 to disable TTML text tracks in ID3 tags automatically if they exist in content (as was the behavior of NexPlayer previously). If for some reason it would be preferable that TTML captions in ID3 tag be displayed instead of the CEA closed captions text tracks, this property should be set to 1 using setProperty:
 
-mNexPlayer.setProperty(NexProperty.ENABLE\_ID3\_TTML, 1);
+```java
+mNexPlayer.setProperty(NexProperty.ENABLE_ID3_TTML, 1);
+```
 
-This property should only be called once, after callinginitbut before calling open.
+This property should only be called once, after calling init but before calling open.
 
 **Warning**
 
@@ -438,7 +439,8 @@ Enables synchronization to device UTC (SPD).
 
 - **0:** Disabled device UTC
 - **1:** Enabled device UTC
- 
+
+
 ### ENABLE_SPD\_SYNC\_TO\_GLOBAL\_TIME (591)
 
 Enables synchronization to UTC time(SPD).
@@ -503,7 +505,8 @@ This property should be called after init but before calling open.
 
 - **0:** disable
 - **1:** enable
- 
+
+
 ### ENABLE_WEBVTT (518)
 
 Sets whether or not to display WebVTT text tracks automatically when they are included in content.
@@ -529,16 +532,15 @@ This property should only be called once, immediately after calling init but bef
  
 ### ENHANCED_SOUND\_AVAILABILITY (0x00050008)
 
-Indicates whether or not the NexSound audio solution, speed control component, DTS audio solution headphone
-X, and head tracking are available on this device.
+Indicates whether or not the NexSound audio solution, speed control component, DTS audio solution headphoneX, and head tracking are available on this device.
 
-As audio solutions components are optional in the NexPlayer SDK, this property can be used to checked their
-availability.
+As audio solutions components are optional in the NexPlayer SDK, this property can be used to checked their availability.
 
 When this property is set equal to 1 (enabled), NexPlayer uses NexSound audio solution and speed control.
+
 When this property is set equal to 2 (enabled), NexPlayer uses DTS audio solution and headphone X. When this property is set equal to 4 (enabled), NexPlayer uses DTS audio solution and head tracking.
 
-This property is related to thenotifyHeadsetStatemethod.
+This property is related to the `notifyHeadsetState` method.
 
 **Type:** unsigned integer
 
@@ -718,7 +720,11 @@ Specifies the segment offset when starting playback.
 
 This property may have different meaning depending on the LIVE\_VIEW\_OPTION.
 
-If `LIVE_VIEW_OPTION` is set to `LIVE_VIEW_RECENT`, then this property specifies the offset of segment from the live edge when starting playback. For example, 1: The player will select the last segment in the manifest. 2: The player will select the second last segment in the manifest. 3: The player will select the third last segment in the manifest. If this property is set to 0, the player will select the segment depending on its policy.
+If `LIVE_VIEW_OPTION` is set to `LIVE_VIEW_RECENT`, then this property specifies the offset of segment from the live edge when starting playback. For example; 
+
+- 1: The player will select the last segment in the manifest. 
+- 2: The player will select the second last segment in the manifest. 
+- 3: The player will select the third last segment in the manifest. If this property is set to 0, the player will select the segment depending on its policy.
 
 This property is not currently defined for other `LIVE_VIEW_OPTION`.
 
@@ -777,11 +783,11 @@ This is a possible setting for the `LIVE_VIEW_OPTION` property; see that propert
 
 #### LIVE_VIEW\_FIRST 0x00000002 
 
-This is a possible setting for the LIVE\_VIEW\_OPTION property; see that property for details.
+This is a possible setting for the `LIVE_VIEW_OPTION` property; see that property for details.
 
 #### LIVE_VIEW\_LOW\_LATENCY 0x00000003 
 
-This is a possible setting for the LIVE\_VIEW\_OPTION property; see that property for details.
+This is a possible setting for the `LIVE_VIEW_OPTION` property; see that property for details.
 
 ### LOCK\_END\_DATE (0x000A0002)
 
@@ -1002,7 +1008,7 @@ When using HLS ABR, this is the minimum allowable bandwidth.
 
 Any track with a bandwidth smaller than this value will not be played back.
 
-> **Note** To dynamically set a minimum bandwidth allowed while content is playing, please call the methodNexABRController::changeMinBandWidth() instead. This property should be set to zero for no minimum.
+> **Note** To dynamically set a minimum bandwidth allowed while content is playing, please call the method `NexABRController::changeMinBandWidth()` instead. This property should be set to zero for no minimum.
  
 **Type:** unsigned integer
 
@@ -1135,9 +1141,7 @@ PREFER\_BANDWIDTH
 
 This property sets the preferred bandwidth when switching tracks during streaming play.
 
-Under normal operation (when this property is zero), if the available network bandwidth drops below the minimum
-needed to play the current track without buffering, the player will immediately switch to a lower bandwidth track, if
-one is available, to minimize any time spent buffering.
+Under normal operation (when this property is zero), if the available network bandwidth drops below the minimum needed to play the current track without buffering, the player will immediately switch to a lower bandwidth track, if one is available, to minimize any time spent buffering.
 
 If this property is set, the player will attempt to choose only tracks above the specified bandwidth, even if that causes some buffering. However, if the buffering becomes too severe or lasts for an extended time, the player may eventually switch to a lower-bandwidth track anyway.
 
@@ -1247,8 +1251,7 @@ Sets the proxy port number.
 
 The number of milliseconds of media to buffer if additional buffering is required during streaming playback (HLS, RTSP, etc).
 
-This is the amount of audio and video that NexPlayer buffers when the buffer becomes empty during playback
-(requiring additional buffering).Afteropen() is called, this property can be set at any time during playback by calling setProperty.
+This is the amount of audio and video that NexPlayer buffers when the buffer becomes empty during playback (requiring additional buffering).Afteropen() is called, this property can be set at any time during playback by calling setProperty.
 
 For the initial buffering, the value of the property INITIAL\_BUFFERING\_DURATION is used instead.
 
@@ -1271,10 +1274,8 @@ Setting this property to 1 means an explicit request for internet radio stream m
 **Values:**
 
 - **0 : DEFAULT :** Default mode. Does not add an additional explicit request for internet radio stream metadata.
-- **1 : INSERT\_HEADER :** Always inserts a header with a request for internet radio stream metadata (with every
-    content request).
-- **2 : INSERT\_HEADER\_AFTER\_TRIAL :** If NexPlayer determines content is a SHOUTcast or Icecast
-    stream, a header with an explicit request for metadata will be added to subsequent server requests.
+- **1 : INSERT\_HEADER :** Always inserts a header with a request for internet radio stream metadata (with every content request).
+- **2 : INSERT\_HEADER\_AFTER\_TRIAL :** If NexPlayer determines content is a SHOUTcast or Icecast stream, a header with an explicit request for metadata will be added to subsequent server requests.
  
 ### RFC_BUFFER\_COUNT (0x00070001)
 
@@ -1300,8 +1301,7 @@ Increasing the page size can increase seek times, especially for data received o
 
 Controls the size of each page in the remote file cache.
 
-Use caution when adjusting this value. Improper settings may adversely affect performance, or may cause some
-content to fail to play.
+Use caution when adjusting this value. Improper settings may adversely affect performance, or may cause some content to fail to play.
 
 **See Also**
  
@@ -1339,8 +1339,13 @@ The minimum possible port number for the RTP port that is created when performin
 
 Sets the idr frame search option during seek.
 
-If you want to search nearest IDR frame set SEEK\_NEAREST\_IDR\_FRAME\_DURING\_LOCAL(1)|SEEK\_NEARE-
-ST\_IDR\_FRAME\_DURING\_STREAMING(2) as content type.
+If you want to search nearest IDR frame set 
+
+```
+SEEK_NEAREST_IDR_FRAME_DURING_LOCAL(1) | SEEK_NEAREST_IDR_FRAME_DURING_STREAMING(2)
+``` 
+
+as content type.
 
 **Type:** unsigned integer
 
@@ -1366,11 +1371,9 @@ A Random Access point is a specific position that the parser is allowed to seek 
 
 This value sets the range where NexPlayer will seek from a Random Access point given by the parser to a target position that equals msec(milliseconds), the first parameter in the seek() API.
 
-If theexactparameter, the second parameter in the seek API, istrueand the difference between a Random
-Access point and the target position is within this value, seek will find and seek to the exact target position. If the exactparameter is set totrueand the difference between a Random Access point and the target position is beyond this range,seekwill give up the accurate target point and will instead seek to and play from the Random Access point.
+If theexactparameter, the second parameter in the seek API, istrueand the difference between a Random Access point and the target position is within this value, seek will find and seek to the exact target position. If the exactparameter is set totrueand the difference between a Random Access point and the target position is beyond this range,seekwill give up the accurate target point and will instead seek to and play from the Random Access point.
 
-For example, if NexPlayer is seeking to 10000 ms exactly (exact=true) and there is a Random Access point
-at 7000 ms, if this property is set to less than 3000 ms, the player will ignore the exact target value and will instead play from 7000 ms. On the other hand, if this property is set to more than 3000 ms, then NexPlayer will seek exactly to 10000 ms and begin playback.
+For example, if NexPlayer is seeking to 10000 ms exactly (exact=true) and there is a Random Access point at 7000 ms, if this property is set to less than 3000 ms, the player will ignore the exact target value and will instead play from 7000 ms. On the other hand, if this property is set to more than 3000 ms, then NexPlayer will seek exactly to 10000 ms and begin playback.
 
 > **Warning** Please remember that in order to seek to a target position, audio or video frames have to be decoded. If too large of a value is set here, it may cause the seek process to consume an excessive amount of time especially in high resolution video content.
  
@@ -1470,7 +1473,7 @@ This property sets the duration of content (closest to live) that cannot yet be 
 
 It is like setting how long to wait before asking for the latest fragment in a live presentation, and thus basically set the played "live" point back from the actual live content available on the server.
 
-The end-to-end latency of the player (what is being played "live" in the player compared to what is available live on the server) is at least the duration ofLiveBackOffadded to the duration set forLivePlaybackOffset with `SET_LIVEPLAYBACKOFFSET`.
+The end-to-end latency of the player (what is being played "live" in the player compared to what is available live on the server) is at least the duration of LiveBackOff added to the duration set for LivePlaybackOffset with `SET_LIVEPLAYBACKOFFSET`.
 
 **Type:** unsigned int
 
@@ -1484,7 +1487,7 @@ Sets the `SmoothStreamingLivePlaybackOffset` property when playing Smooth Stream
 
 This property sets the duration away from the live position to start playback when joining a live presentation when the LiveView option is set to "Recent", but excludes theLiveBackOffduration (set by SET\_LIVEBACKOFF).
 
-As a result, live content will be played behind the actual live position by a duration determined by BOTHLiveBackOffand the value forLivePlaybackOffsetset here.
+As a result, live content will be played behind the actual live position by a duration determined by BOTH LiveBackOff and the value for LivePlaybackOffset set here.
 
 Setting this property enables faster startup because it allows a buffer to be built up as fast as bandwidth will support (potentially faster than real time), which creates a buffer against network jitter. It does however also increase end-to-end latency, which means what is played "live" in the player is farther behind the actual live playing point of the content.
 
@@ -1584,8 +1587,7 @@ While NexPlayer automatically chooses an ideal track to play based on several fa
 
 When this property is set, NexPlayer selects and starts playing the track in content that has the bandwidth closest to the set bandwidth value, initially ignoring other factors.
 
-Note that as playback continues, the track played may change as NexPlayer judges all factors that influence
-streaming playback and chooses the best option.
+Note that as playback continues, the track played may change as NexPlayer judges all factors that influence streaming playback and chooses the best option.
 
 This property should be called after init but before calling open.
 
@@ -1713,12 +1715,11 @@ the SW codec, as more data can be decoded and saved in the buffer.
 
 Allows custom ID3 tags added to timed metadata in content to be recognized and handled by NexPlayer.
 
-When customized ID3 tags with additional information have been added to the timed metadata in content, this
-property can be used to help NexPlayer recognize and pass those ID3 tags and the extra information they contain to an application.
+When customized ID3 tags with additional information have been added to the timed metadata in content, this property can be used to help NexPlayer recognize and pass those ID3 tags and the extra information they contain to an application.
 
 Additional customized timed metadata will be saved as an ArrayList of NexID3TagText objects and can be retrieved by calling NexID3TagInformation.getArrExtraData.
 
-This property must be setbeforeNexPlayer.openis called.
+This property must be set before NexPlayer.open is called.
 
 **Type:** String
 
@@ -1820,3 +1821,11 @@ RTSP/HTTP User Agent value.
 **Type:** String
 
 **Default:** "User-Agent: Mozilla/5.0 (iPhone; U; CPU iPhone OS 3\_1\_2 like Mac OS X; ko-kr) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7D11 Safari/528.16"
+
+### ENABLE_SUPPORT\_HTTP2 (904)
+
+When this property is 1, all the request will be made over HTTP/2 protocol. By default HTTP/1.1 will be used.
+
+**Type:** integer
+ 
+**Default:** 0
