@@ -3143,32 +3143,26 @@ This method sets and registers an *IABREventListener* listener for the applicati
 
 This method sets the target bandwidth for streaming playback dynamically during playback.
 
-This method should be called after `NexPlayer.open()`. This applies in cases with content where there are multiple
-tracks at different bandwidths (such as in the case of HLS). The player will not consider any track under the target
-bandwidth and over the target bandwidth when determining whether a track change is appropriate, even if it detects
-less and more bandwidth available.
+This method should be called after `NexPlayer.open()`. This applies in cases with content where there are multiple tracks at different bandwidths (such as in the case of HLS). The player will not consider any track under the target bandwidth and over the target bandwidth when determining whether a track change is appropriate, even if it detects less and more bandwidth available.
 
 **Parameters**
 
  
 | Name         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |--------------|----------------|
-| targetBwBps  | Target bandwidth in bps (bits per second).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| segOption    | One of the followingSegmentOptionvalues, indicating how to handle buffered content when the track changes:   - `DEFAULT` : Default (`NexPlayer`™ will decide betweenQUICKMIX(changing tracks     quickly) andLATEMIX(playing buffered content and changing tracks more slowly)). - `QUICKMIX` : `NexPlayer`™ will clear the buffer as much as possible and will start to     download new track so user can see a new track faster. - `LATEMIX` : `NexPlayer`™ will preserve and play the content segments already buffered     and will download a new track. |
-| targetOption | How to use the target bandwidth value set. One of the following *TargetOption* options:   - `DEFAULT` : Default target option (BELOW) - `BELOW` : Select a track with a bandwidth below the target bandwidth. - `ABOVE` : Select a track with a bandwidth above the target bandwidth. - `MATCH` : Select the track that has a bandwidth that matches the target set; otherwise     send an error and no new target bandwidth is selected.                                                                                                                          |
+| targetBwBps  | Target bandwidth in bps (bits per second).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+| segOption    | One of the following SegmentOption values, indicating how to handle buffered content when the track changes:  **DEFAULT** : Default (NexPlayer will decide between QUICKMIX (changing tracks     quickly) and LATEMIX (playing buffered content and changing tracks more slowly)). **QUICKMIX** : NexPlayer will clear the buffer as much as possible and will start to download new track so user can see a new track faster. **LATEMIX** : NexPlayer will preserve and play the content segments already buffered and will download a new track. |
+| targetOption | How to use the target bandwidth value set. One of the following TargetOption options: **DEFAULT** : Default target option (BELOW) **BELOW** : Select a track with a bandwidth below the target bandwidth. **ABOVE** : Select a track with a bandwidth above the target bandwidth. **MATCH** : Select the track that has a bandwidth that matches the target set; otherwise send an error and no new target bandwidth is selected.                                                                                                                          |
 
 **Returns**
-
  
 NexErrorCode
  
 **See Also**
  
-- `TargetOption` enumeration
-
-- `SegmentOption` enumeration
-
-- `setABREnabled`
+- TargetOption
+- SegmentOption
+- setABREnabled
  
  
 ### NexALFactory Class Reference
