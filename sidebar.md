@@ -11,7 +11,7 @@
 - 3rd Party Integration
     - [VAST](/vast.md) 
     - [Agama](/Agama.md) 
-    - [Agora](/Agora.md)
+    - [Agora](/agora.md)
     - [Conviva](/Conviva.md)     
     - [Freewheel](/freewheel.md)
 - [Releases](/releases.md) 
