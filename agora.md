@@ -1,6 +1,9 @@
 # NexPlayer SDK Integration with Agora.io
 
 ## Initialize Agora SDK
+
+Download integration package: https://customer.nexplayersdk.com/download.php?id=349&token=VOYFXcK3WjKyCzeUcHB4ozmHwqo8z3E9
+
 #### 1. Create RtcEngine
 First of all, we have to initialize Agora engine. 
 
