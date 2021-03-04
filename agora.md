@@ -2,8 +2,6 @@
 
 ## Initialize Agora SDK
 
-Download integration package from [here](https://customer.nexplayersdk.com/download.php?id=349&token=VOYFXcK3WjKyCzeUcHB4ozmHwqo8z3E9)
-
 #### 1. Create RtcEngine
 First of all, we have to initialize Agora engine. 
 
@@ -292,3 +290,14 @@ private void setPlayerListener(NexPlayer nexPlayer) {
         mNexPlayer.setVolume(fGain);
     }
 	```
+## Sample app
+
+For more detail, you can see the implementation in the sample app [here](https://customer.nexplayersdk.com/download.php?id=349&token=VOYFXcK3WjKyCzeUcHB4ozmHwqo8z3E9)
+
+## Download Agora SDK
+
+You can download agora SDK for Android [here](https://docs.agora.io/en/All/downloads?platform=Android)
+
+## Request NexPlayer Demo
+
+You can request a NexPlayer demo for Android [here](https://nexplayersdk.com/android-player-sdk-demo/)
