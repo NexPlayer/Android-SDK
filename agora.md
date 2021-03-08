@@ -292,7 +292,7 @@ private void setPlayerListener(NexPlayer nexPlayer) {
 	```
 ## Sample app
 
-For more detail, you can see the implementation in the sample app [here](https://customer.nexplayersdk.com/download.php?id=349&token=VOYFXcK3WjKyCzeUcHB4ozmHwqo8z3E9)
+For more detail, you can see the implementation in the sample app [here](https://customer.nexplayersdk.com/download.php?id=364&token=ViM33Ty2dUJosJ6mi4bMB8xiUwhFMCSE) or download [apk](https://customer.nexplayersdk.com/download.php?id=363&token=0vUE9LdLNdzOqTVfLmy15X3FljQHIn2a)
 
 ## Download Agora SDK
 
