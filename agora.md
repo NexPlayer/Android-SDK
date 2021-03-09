@@ -96,7 +96,7 @@ private void setPlayer(){
     }
 ```
 
-#### 2. Open an stream
+#### 2. Open a stream
 
 ```java
 private void openStream(String streamUrl){
