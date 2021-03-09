@@ -3,7 +3,7 @@
 ## Initialize Agora SDK
 
 #### 1. Create RtcEngine
-First of all, we have to initialize Agora engine. 
+First, we have to initialize Agora engine. 
 
 ```java
 //Initialize event handler
@@ -24,7 +24,7 @@ mRtcEngine = RtcEngine.create(getBaseContext(), getString(R.string.agora_app_id)
 ```
 
 #### 2. Setup local video
-Creates a root view, which will contain the video view.
+Create a root view, which will contain the video view.
 
 ```java
 private void setupLocalVideoFeed() {
@@ -45,7 +45,7 @@ private void setupLocalVideoFeed() {
     }
 ```
 #### 3. Setup remote videos
-Event handler checks whether there are any remote stream. If so, remote video(s) will be loaded.
+Event handler checks whether there is any remote stream. If so, remote video(s) will be loaded.
 
 ```java
 private final IRtcEngineEventHandler mRtcEventHandler = new IRtcEngineEventHandler() {
@@ -66,7 +66,7 @@ private final IRtcEngineEventHandler mRtcEventHandler = new IRtcEngineEventHandl
 ```
 
 #### 4. Join channel
-Joins channel with default values. Token and channel name will be the same for this demo (read from remote)
+Join channel with default values. Token and channel name will be the same for this demo (read from remote)
 
 ```java
 mRtcEngine.joinChannel([channel token], [channel name], null, 0);
@@ -293,7 +293,7 @@ private void setPlayerListener(NexPlayer nexPlayer) {
 	
 ## Sample app
 
-For more detail, you can see the implementation in the sample app [here](https://customer.nexplayersdk.com/download.php?id=364&token=ViM33Ty2dUJosJ6mi4bMB8xiUwhFMCSE) or download [apk](https://customer.nexplayersdk.com/download.php?id=363&token=0vUE9LdLNdzOqTVfLmy15X3FljQHIn2a)
+For more details, you can see the implementation in the sample app [here](https://customer.nexplayersdk.com/download.php?id=364&token=ViM33Ty2dUJosJ6mi4bMB8xiUwhFMCSE) or download [apk](https://customer.nexplayersdk.com/download.php?id=363&token=0vUE9LdLNdzOqTVfLmy15X3FljQHIn2a)
 
 ## Download Agora SDK
 
