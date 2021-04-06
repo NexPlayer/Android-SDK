@@ -15,6 +15,16 @@ Feel free to contact us to request a demo
 * support@nexplayer.com
 
 ## NexPlayer™ SDK for Android Release Notes
+- [Update] Migrate sample application to AndroidX
+- [Update] Update gradle version of the sample application
+- [Update] Automatically fallback to HW DRM when SW DRM fails
+- [Update] Provide an API to use socket logging
+- [Improve] Improve multiple player instance stability
+- [Fix] Fixed an issue for specific type of DRM contents
+
+### version 6.72.0.840 (26/03/2021)
+- [Optimization] Removed unnecessary permissions from sample
+- [Add] HTTP/2 Support
 
 ### version 6.72.0.838 (11/02/2021)
 - [Optimization] Removed unnecessary permissions from sample
