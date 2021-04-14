@@ -308,7 +308,7 @@ It can be used from Android os 4.4 and up.
 
 **Type:** int
 
-**Default:** 0
+**Default:** 1
 
 **Values:**
 
