@@ -3,7 +3,8 @@
 ## Initialize Agora SDK
 
 #### 1. Create RtcEngine
-First, we have to initialize Agora engine. 
+First, we have to initialize Agora engine.
+<script src="https://gist.github.com/gonguz/212902748247b6479aa2f63102bd1bc6.js"></script>
 
 ```java
 //Initialize event handler
