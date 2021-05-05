@@ -16,6 +16,16 @@ Feel free to contact us to request a demo
 
 ## NexPlayer™ SDK for Android Release Notes
 
+### version 6.72.0.841 (22/04/2021)
+- [Fix] Search the nearest segment when seeking in hls protocol
+
+### version 6.72.0.842 (16/04/2021)
+- [Add] New API to enable SW DRM recovery
+- [Add] Implemented new property to disable video vendor codec
+- [Add] Possibility to enable UDS logging before
+- [Add] Added new properties in order to get current A/V codec
+- [Update] ViewRight WebClient updated to version 4.3.7.2
+
 ### version 6.72.0.840 (26/03/2021)
 - [Update] Migrate sample application to AndroidX
 - [Update] Update gradle version of the sample application
