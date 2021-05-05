@@ -4,7 +4,24 @@
 
 #### 1. Create RtcEngine
 First, we have to initialize Agora engine.
-<script src="https://gist.github.com/gonguz/212902748247b6479aa2f63102bd1bc6.js"></script>
+
+```java
+//Initializes event handler
+private final IRtcEngineEventHandler mRtcEventHandler = new IRtcEngineEventHandler() {
+        @Override
+        public void onFirstRemoteVideoDecoded(final int uid, int width, int height, int elapsed) {...}
+
+        @Override
+        public void onUserOffline(final int uid, int reason) {...}
+
+        @Override
+        public void onUserMuteVideo(final int uid, final boolean toggle) {...}
+    };
+```
+```java
+//Initialize RtcEngine
+mRtcEngine = RtcEngine.create(getBaseContext(), getString(R.string.agora_app_id), mRtcEventHandler);
+```
 
 #### 2. Setup local video
 Create a root view, which will contain the video view.
