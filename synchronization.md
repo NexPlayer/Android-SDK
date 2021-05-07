@@ -8,12 +8,12 @@ NexPlayer synchronization can be enabled by setting the following property:
 mNexPlayer.setProperty(NexPlayer.NexProperty.ENABLE_SPD_SYNC_TO_GLOBAL_TIME, 1);
 ```
 
-For DASH, _suggestedPresentationDelay_ attribute is taken account for synchronising the playback. You should set the following property to set presentation delay on HLS as it is not supported by default in this protocol. 
+To set the SPD value from the client side for both DASH and HLS you can set the SPD value per property (`SET_PRESENTATION_DELAY` or 590) as shown below: 
 
 ```java
-mNexPlayer.setProperty(NexPlayer.NexProperty.SET_APPLS_PROGRAM_DATE_TIME_PRESENTATION_DELAY, 6000);
+mNexPlayer.setProperty (NexProperty.SET_PRESENTATION_DELAY, mPrefData.mSPDValue);
 ```
-
+Note that if the value of SET_PRESENTATION_DELAY is too large, the player may not find the delayed segment provided by the live content server.
 
 ## Advanced configuration
 You can control the synchronization behaviour further by adjusting the below properties
