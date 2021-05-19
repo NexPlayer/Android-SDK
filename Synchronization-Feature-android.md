@@ -1,6 +1,6 @@
 # Enabling Synchronization Feature on Android
 
-## How Synchronization feature works?
+## What is Nexplayer's synchronization feature?
 
 NexPlayer synchronization feature technology allows you to play a video stream synchronously
 on different devices using the DASH SPD value. This is also possible for HLS
@@ -64,16 +64,11 @@ seconds, not in milliseconds as device time.
 - Setting a very low SPD value for the stream might affect smooth playback
 experience as it won’t allow the player to create enough buffer.
 
-TEST LINK:
+EXAMPLE TEST LINK:
 
 [https://akamaibroadcasteruseast.akamaized.net/cmaf/live/657078/akasource/out.mpd]()
 
-
-#### *To configure synchronization feature from the code we have to add the next properties:
-
-# NexPlayer Synchronization Feature
-
-## How to enable synchronization feature?
+## How to enable synchronization feature from the code
 
 
 NexPlayer synchronization can be enabled by setting the following property:
