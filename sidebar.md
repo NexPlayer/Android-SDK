@@ -14,5 +14,6 @@
     - [Agora](/agora.md)
     - [Conviva](/Conviva.md)     
     - [Freewheel](/freewheel.md)
+    - [AWS-NexPlayer](/AWSMediaServices-NexPlayer.md)
 - [Releases](/releases.md) 
 - [Request Demo](https://nexplayersdk.com/ios-player-sdk/) 
