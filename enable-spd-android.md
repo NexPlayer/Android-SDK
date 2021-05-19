@@ -100,7 +100,7 @@ find the delayed segment provided by the live content server.
 You can control the synchronization behaviour further by adjusting the below
 properties.
 
-#### ```ENABLE_SPD_SYNC_TO_DEVICE_TIME```
+#### ENABLE_SPD_SYNC_TO_DEVICE_TIME
 
 
 Enables synchronization to device UTC for more accurate behaviour.
@@ -117,7 +117,7 @@ Values:
 - 1: Enabled device UTC
 
 
-#### ```SET_SPD_SYNC_DIFF_TIME```
+#### SET_SPD_SYNC_DIFF_TIME
 
 If the current playback is not more synchronized than this value, the player will speed
 up playback and make sync.
@@ -130,7 +130,7 @@ Unit: msec (1/1000 sec)
 
 Default: 300 (300 msec)
 
-#### ```SET_SPD_TOO_MUCH_DIFF_TIME```
+#### SET_SPD_TOO_MUCH_DIFF_TIME
 
 If playback is out of sync than this value, the player will jump to synchronize the
 video rather than make it by speeding.
