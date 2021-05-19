@@ -141,7 +141,7 @@ Default: 5000 (5 seconds)
 ## Things to consider
 
 
-- You should make sure suggestedPresentationDelay ispresent in DASH
+- You should make sure suggestedPresentationDelay is present in DASH
 manifest otherwise synchronisation won't work.
 - For HLS, you should set ```SET_PRESENTATION_DELAY``` property as mentioned
 above.
