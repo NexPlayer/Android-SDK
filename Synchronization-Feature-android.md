@@ -42,7 +42,6 @@ Synchronization feature is highly dependent on the internet speed and the config
 
 ### Limitations
 
-
 - Only works with live content.
 - Device time should be adjusted correctly, incorrect device time or setting it
 manually might break the logic. This can be handledby using server time but
@@ -51,9 +50,6 @@ seconds, not in milliseconds as device time.
 - Setting a very low SPD value for the stream might affect smooth playback
 experience as it won’t allow the player to create enough buffer.
 
-EXAMPLE TEST LINK:
-
-[https://akamaibroadcasteruseast.akamaized.net/cmaf/live/657078/akasource/out.mpd]()
 
 ## How to enable synchronization feature from the code
 
