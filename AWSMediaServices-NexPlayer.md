@@ -1,6 +1,6 @@
-#NexPlayer with AWS Media Services - Integration Guide
+# NexPlayer with AWS Media Services - Integration Guide
 
-##Video On Demand VOD
+## Video On Demand VOD
 
 ### Static File
 
