@@ -4,7 +4,6 @@
 - Advanced Usage
     - [Media DRM](/MediaDRM.md) 
     - [SW DRM](/SW_WV.md) 
-    - [Synchronization](/synchronization.md) 
     - [Logging To File](/log2File.md) 
     - [Loggging Callback](/logging_callback.md) 
     - [API Documentation](/advanced.md)
