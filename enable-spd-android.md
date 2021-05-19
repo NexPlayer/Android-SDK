@@ -151,8 +151,7 @@ manifest otherwise synchronisation won't work.
 - For HLS, you should set ```SET_PRESENTATION_DELAY``` property as mentioned
 above.
 - You should make sure there is enough distance from the live edge to provide
-a smooth playback which should be adjusted with
-*suggestedPresentationDelay* and ```SET_PRESENTATION_DELAY``` properties. If
+a smooth playback which should be adjusted with *suggestedPresentationDelay* and ```SET_PRESENTATION_DELAY``` properties. If
 there is not enough space to buffer from the live edge, playback might be
 effected.
 
