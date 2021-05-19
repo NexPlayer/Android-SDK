@@ -30,7 +30,7 @@ Here we have several fields that depending on our needs we will have to configur
 **Sync to Device UTC:** Enable or disable. This field takes as reference the UTC time
 (disabled by default).
 
-![](1.JPG)
+  <img width="20%" height="40%" text-align="center" src="./assets/1.jpg" alt="1" >
 
 
 Once we have configured what we need, we will play the content with SPD in the
@@ -50,7 +50,8 @@ This means that it will have a delay of 5 seconds.
 
 Example:
 
-![](2.JPG)
+  <img width="80%" height="60%" text-align="center" src="./assets/2.jpg" alt="2" >
+
 
 ### Limitations
 
