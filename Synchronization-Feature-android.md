@@ -40,19 +40,6 @@ Streaming → GO TO URL (at the bottom) → put the URL in the “Stream URL
 
 Synchronization feature is highly dependent on the internet speed and the configuration of the manifest.
 
-It is important to know that we have to make sure that we have SPD activated. On
-the other hand, to check that the content that we use has SPD it has to have the
-following tag in the manifest:
-
-**_suggestedPresentationDelay="PT5S"_**
-
-This means that it will have a delay of 5 seconds.
-
-Example:
-
-  <img width="80%" height="60%" text-align="center" src="./assets/2.jpg" alt="2" >
-
-
 ### Limitations
 
 
