@@ -7,7 +7,8 @@
     - [Synchronization](/synchronization.md) 
     - [Logging To File](/log2File.md) 
     - [Loggging Callback](/logging_callback.md) 
-    - [API Documentation](/advanced.md) 
+    - [API Documentation](/advanced.md)
+    - [Enable SPD](/enable-spd-android.md)
 - 3rd Party Integration
     - [VAST](/vast.md) 
     - [Agama](/Agama.md) 
