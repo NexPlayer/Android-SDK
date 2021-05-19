@@ -33,11 +33,13 @@ In order to begin encoding your video file, you needto have a video file in
 Amazon Simple Storage Service S3.
 
 1. Start by navigating to S3 in your AWS console.
-	- Select your region. Some regions do not support AWS Elemental MediaPackage. You can see the supported regions inthis list.
+	- Select your region. Some regions do not support AWS Elemental MediaPackage. You can see the supported regions in this list.
+	
+		<img width="20%" height="40%" text-align="center" src="./assets/aws-image.png" alt="AWS-NexPlayer" >
 
   
 
-		![](image.png)
+		
 
 
 2. To keep from conflicting with other applications, we recommend that you create a new bucket for this guide. The default settings should suffice, but your bucket will need to have a unique name.
