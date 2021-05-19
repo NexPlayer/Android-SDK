@@ -149,9 +149,3 @@ above.
 a smooth playback which should be adjusted with *suggestedPresentationDelay* and ```SET_PRESENTATION_DELAY``` properties. If
 there is not enough space to buffer from the live edge, playback might be
 effected.
-
-**You can find our updated documentation on our Github page:**
-
-[Updated SPD documentation](https://github.com/NexPlayer/Android-SDK/blob/master/synchronization.md)
-
-
