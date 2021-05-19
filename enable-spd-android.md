@@ -1,15 +1,15 @@
-# ENABLED SPD ON ANDROID
+# Enabling Synchronization Feature on Android
 
-## How SPD Feature works?
+## How Synchronization feature works?
 
-NexPlayer SPD feature technology allows you to play a video stream synchronously
+NexPlayer synchronization feature technology allows you to play a video stream synchronously
 on different devices using the DASH SPD value. This is also possible for HLS
 streams by controlling the SPD value from the client-side.
 
-## HOW TO ENABLE SPD IN THE SAMPLE APPLICATION
+## How to enable synchronization feature in the sample application
 
 To get started we need an apk and at least two devices.
-Steps to enable SPD:
+Steps to enable Synchronization:
 
 
 - Go to the three dots → Settings → SPD Settings.
@@ -38,7 +38,7 @@ section.
 
 Streaming → GO TO URL (at the bottom) → put the URL in the “Stream URL
 
-SPD is highly dependent on the internet speed and the configuration of the manifest.
+Synchronization feature is highly dependent on the internet speed and the configuration of the manifest.
 
 It is important to know that we have to make sure that we have SPD activated. On
 the other hand, to check that the content that we use has SPD it has to have the
@@ -69,7 +69,7 @@ TEST LINK:
 [https://akamaibroadcasteruseast.akamaized.net/cmaf/live/657078/akasource/out.mpd]()
 
 
-#### *To configure SPD from the code we have to add the next properties:
+#### *To configure synchronization feature from the code we have to add the next properties:
 
 # NexPlayer Synchronization Feature
 
@@ -79,16 +79,19 @@ TEST LINK:
 NexPlayer synchronization can be enabled by setting the following property:
 
 
-`mNexPlayer.setProperty(NexPlayer.NexProperty.ENABLE_SPD_SYNC_TO_GLOBAL_TIME, 1);`
+```java
+mNexPlayer.setProperty(NexPlayer.NexProperty.ENABLE_SPD_SYNC_TO_GLOBAL_TIME, 1);
+```
 
 
 To set the SPD value from the client side for both DASH and HLS you can set the
-SPD value per property ( `SET_PRESENTATION_DELAY` or 590) as shown below:
+SPD value per property ( ```SET_PRESENTATION_DELAY``` or 590) as shown below:
 
+```java
+mNexPlayer.setProperty (NexProperty.SET_PRESENTATION_DELAY,mPrefData.mSPDValue);
+```
 
-`mNexPlayer.setProperty (NexProperty.SET_PRESENTATION_DELAY,mPrefData.mSPDValue);`
-
-Note that if the value of `SET_PRESENTATION_DELAY `is too large, the player may not
+Note that if the value of ```SET_PRESENTATION_DELAY``` is too large, the player may not
 find the delayed segment provided by the live content server.
 
 ### Advanced configuration
@@ -97,12 +100,14 @@ find the delayed segment provided by the live content server.
 You can control the synchronization behaviour further by adjusting the below
 properties.
 
-#### `ENABLE_SPD_SYNC_TO_DEVICE_TIME`
+#### ```ENABLE_SPD_SYNC_TO_DEVICE_TIME```
 
 
 Enables synchronization to device UTC for more accurate behaviour.
 
-`mNexPlayer.setProperty(NexPlayer.NexProperty.ENABLE_SPD_SYNC_TO_DEVICE_TIME, 1);`
+```java
+mNexPlayer.setProperty(NexPlayer.NexProperty.ENABLE_SPD_SYNC_TO_DEVICE_TIME, 1);
+```
 
 Default: 0
 
@@ -112,23 +117,27 @@ Values:
 - 1: Enabled device UTC
 
 
-#### `SET_SPD_SYNC_DIFF_TIME`
+#### ```SET_SPD_SYNC_DIFF_TIME```
 
 If the current playback is not more synchronized than this value, the player will speed
 up playback and make sync.
 
-`mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_SYNC_DIFF_TIME, 100);`
+```java
+mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_SYNC_DIFF_TIME, 100);
+```
 
 Unit: msec (1/1000 sec)
 
 Default: 300 (300 msec)
 
-#### `SET_SPD_TOO_MUCH_DIFF_TIME`
+#### ```SET_SPD_TOO_MUCH_DIFF_TIME```
 
 If playback is out of sync than this value, the player will jump to synchronize the
 video rather than make it by speeding.
 
-`mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_TOO_MUCH_DIFF_TIME,5000);`
+```java
+mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_TOO_MUCH_DIFF_TIME,5000);
+```
 
 Unit: msec (1/1000 sec)
 
@@ -139,11 +148,11 @@ Default: 5000 (5 seconds)
 
 - You should make sure suggestedPresentationDelay ispresent in DASH
 manifest otherwise synchronisation won't work.
-- For HLS, you should set `SET_PRESENTATION_DELAY` property as mentioned
+- For HLS, you should set ```SET_PRESENTATION_DELAY``` property as mentioned
 above.
 - You should make sure there is enough distance from the live edge to provide
 a smooth playback which should be adjusted with
-*suggestedPresentationDelay* and `SET_PRESENTATION_DELAY` properties. If
+*suggestedPresentationDelay* and ```SET_PRESENTATION_DELAY``` properties. If
 there is not enough space to buffer from the live edge, playback might be
 effected.
 
