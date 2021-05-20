@@ -152,9 +152,7 @@ AWS Elemental MediaPackage requires that we have an HLS stream.
     new job.
 
 2. You will need to specify an Input location.
-    a. Use the video that you uploaded while following the [Static File
-    ](https://docs.google.com/document/d/1kINhE2ri1tq8DZ25K8tnH6GGDwwumQlUtRtJyHSxNmA/edit?ts=6093b790#heading=h.wx3xxnk7ir5d) guide.
-
+    
 3. Add an Output Group to the job.
     - For our purposes, we would like to create an HLS stream,so we
        will select Apple HLS.
@@ -297,8 +295,7 @@ this, including a subset of Amazon Web Services.
 We will start by using a simulated live stream.
 
 Amazon S3 -> AWS Elemental MediaLive -> AWS Lambda->
-AWS Elemental MediaPackage -> AWS Elemental MediaTailor[optional If
-Serving Ads] -> Amazon Cloudfront -> NexPlayer
+AWS Elemental MediaPackage -> AWS Elemental MediaTailor (optional If Serving Ads) -> Amazon Cloudfront -> NexPlayer
 
 We will then set up a true live stream by swapping S3 for an Encoder.
 
