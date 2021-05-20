@@ -92,10 +92,8 @@ There are many configuration options, but let’s get started by making a new Cl
        - Select your S3 bucket
     - Origin Path
        - Input your path “/outputs”
-    - Restrict Bucket Access. We recommend restricting bucket access
-       so that all players connect using the enhanced capabilities of
-       CloudFront.
-       - To do so create a new identity
+    - Restrict Bucket Access. We recommend restricting bucket access so that all players connect using the enhanced capabilities of CloudFront.
+		- To do so create a new identity
 		- Click “ _Yes_ ”
 		- Update Bucket Policy to automatically update the S3 bucket.
     - Price Class
