@@ -221,9 +221,9 @@ Now that we’ve provided a reason to use this flow, let’s check it out!
 	- You will need to follow the instructions in this guide from aws to set up the policy.
 		- [https://docs.aws.amazon.com/mediapackage/latest/ug/setting-up-create-trust-rel-policy-vod.html](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
 	- Next, you will need to follow these instructions to create a role with your new policy.
-           - [https://docs.aws.amazon.com/mediapackage/latest/ug/setting-up-create-trust-rel-role.html](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
+		- [https://docs.aws.amazon.com/mediapackage/latest/ug/setting-up-create-trust-rel-role.html](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
 	- Finally, you will need to modify the trust relationship as described in this guide.
-           - [https://docs.aws.amazon.com/mediapackage/latest/ug/setting-up-create-trust-rel-trust.html](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
+		- [https://docs.aws.amazon.com/mediapackage/latest/ug/setting-up-create-trust-rel-trust.html](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
 4. Now switch to Assets and click “Ingest Asset”
     - S3 bucket name
        - Select the S3 bucket you made earlier.
@@ -352,8 +352,7 @@ video file.
     with other applications, we recommend you create a new bucket for this
     guide.
 	
-	- Your bucket will need to have a unique name.
-			- nexplayer-integration-guide-public
+	- Your bucket will need to have a unique name.		- nexplayer-integration-guide-public
        
 	- Your bucket will need to be public
 		- Uncheck “Block all public access”
@@ -473,16 +472,15 @@ distribution for that channel.
     - To enable CloudFront click the radio button to create a CloudFront distribution for this channel.
 
 2. At this point you can now proceed to the AWS ElementalMediaLive setup.
-       - Create a channel
-       - Specify a new output group in your AWS Elemental MediaLive channel for the AWS Elemental MediaPackage channel you create.
+	- Create a channel
+	- Specify a new output group in your AWS Elemental MediaLive channel for the AWS Elemental MediaPackage channel you create.
 
 3. Now you need to create an endpoint.
     - Click “ _Add endpoints_ ”.
     - ID: NexPlayerIntegrationGuideS3MpegDashEndpoint
-    - In this example we will create an MPEG-DASH endpoint,but you
-       should know that Media Tailor also works with HLS.
-          - Packager setting: DASH-ISO
-		- Save
+    - In this example we will create an MPEG-DASH endpoint,but you should know that Media Tailor also works with HLS.
+	- Packager setting: DASH-ISO
+	- Save
 
 
 #### Inserting Ads - Optional
@@ -504,8 +502,7 @@ You can learn more about our Ad Decision Server [here](https://aws.amazon.com/bl
 		- Click Actions -> Make Public
 3. Now you’ll need an xml file which will simulate your ADS.
 
-- Take the sample xml below and replace the CDATA [video] with a
-       link to your video.
+- Take the sample xml below and replace the CDATA [video] with a link to your video.
        
 ```
 <VAST version="3.0">
@@ -549,16 +546,11 @@ ads within the distribution using [AWS Elemental MediaTailor](https://aws.amazon
 
 1. Click Create configuration
     - Name: NexPlayerIntegrationGuideMP4AdCampaign
-    - Content Source: Use the URL from the Endpoint you just created
-       without the {name.mpd} or {name.m3u8} section.
-          - The content source needs to contain ad markers.
-             1. If you have been following this guide then you added
-                a Lambda function and scheduled it with CloudWatch
-                to insert the markers.
-             2. If your video already has ad markers, you can skip
-                that step.
-    - Ad decision server: Use the url for the VAST xml file you
-       uploaded.
+    - Content Source: Use the URL from the Endpoint you just created without the {name.mpd} or {name.m3u8} section.
+	- The content source needs to contain ad markers.
+		1. If you have been following this guide then you added a Lambda function and scheduled it with CloudWatch to insert the markers.
+		2. If your video already has ad markers, you can skip that step.
+    - Ad decision server: Use the url for the VAST xml file you uploaded.
 2. Now you can get your video by taking the MediaTailor url prefix and
     appending index.mpd
 
