@@ -214,10 +214,7 @@ Now that we’ve provided a reason to use this flow, let’s check it out!
 		- Save
 
 
-3. In order to grant AWS Elemental MediaPackage permission to access
-    your S3 bucket, you will need to create a new IAM Role. Don’t be
-    intimidated by the json or anything else. These guides from AWS are
-    straightforward. Just follow the steps.
+3. In order to grant AWS Elemental MediaPackage permission to access your S3 bucket, you will need to create a new IAM Role. Don’t be intimidated by the json or anything else. These guides from AWS are straightforward. Just follow the steps.
 	- You will need to follow the instructions in this guide from aws to set up the policy.
 		- [https://docs.aws.amazon.com/mediapackage/latest/ug/setting-up-create-trust-rel-policy-vod.html](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
 	- Next, you will need to follow these instructions to create a role with your new policy.
