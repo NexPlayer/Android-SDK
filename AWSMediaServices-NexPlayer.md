@@ -396,11 +396,10 @@ Now, Let’s get started with [AWS Elemental MediaLive](https://console.aws.amaz
 		- Confirm.
     - Create an Output
        - Chose MediaPackage as the output group
-          1. (If you have not already done so) Go to the [AWS
-             Elemental MediaPackage](https://docs.google.com/document/d/1kINhE2ri1tq8DZ25K8tnH6GGDwwumQlUtRtJyHSxNmA/edit?ts=6093b790#heading=h.h2rc56y1fjlk) section in this guide to create a channel.
+          1. (If you have not already done so) Go to the AWS Elemental MediaPackage section to create a channel.
           2. Select the AWS Elemental MediaPackage channel ID you created within AWS Elemental MediaPackage
           3. Confirm
-		- Got to your AWS Elemental MediaPackage group outputs.
+				- Got to your AWS Elemental MediaPackage group outputs.
 			1. Specify width and height as 1920 and 1080.
 			2. Codec settings: H
 			3. Aspect Ratio: Specified
