@@ -173,7 +173,7 @@ AWS Elemental MediaPackage requires that we have an HLS stream.
        able to operate.
     - To configure your IAM role, choose AWS integration from the left
        navigation pane and then find the section Service access.		- If this is your first time, you might need to select Create a new service role, configure permissions.	
-			- Then you will need to select to your S3 input and output locations
+		- Then you will need to select to your S3 input and output locations
 	
 	- For the purposes of this guide, we have created a new service
     role and named it “MediaConvert_IntegrationGuide_Role_NVirginia”.
@@ -218,19 +218,13 @@ Now that we’ve provided a reason to use this flow, let’s check it out!
     your S3 bucket, you will need to create a new IAM Role. Don’t be
     intimidated by the json or anything else. These guides from AWS are
     straightforward. Just follow the steps.
-       - You will need to follow the instructions in this guide from aws to
-          set up the policy.
-         - [https://docs.aws.amazon.com/mediapackage/latest/ug/setti
-                ng-up-create-trust-rel-policy-vod.html](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
-       - Next, you will need to follow these instructions to create a role
-          with your new policy.
-           - [https://docs.aws.amazon.com/mediapackage/latest/ug/setti
-                ng-up-create-trust-rel-role.html](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
-       - Finally, you will need to modify the trust relationship as described
-          in this guide.
-           - [https://docs.aws.amazon.com/mediapackage/latest/ug/setti
-                ng-up-create-trust-rel-trust.html](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
-4. Now switch to Assets and click “ _Ingest Asse_ t”
+	- You will need to follow the instructions in this guide from aws to set up the policy.
+		- [https://docs.aws.amazon.com/mediapackage/latest/ug/setting-up-create-trust-rel-policy-vod.html](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
+	- Next, you will need to follow these instructions to create a role with your new policy.
+           - [https://docs.aws.amazon.com/mediapackage/latest/ug/setting-up-create-trust-rel-role.html](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
+	- Finally, you will need to modify the trust relationship as described in this guide.
+           - [https://docs.aws.amazon.com/mediapackage/latest/ug/setting-up-create-trust-rel-trust.html](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
+4. Now switch to Assets and click “Ingest Asset”
     - S3 bucket name
        - Select the S3 bucket you made earlier.
     - IAM Role
@@ -252,9 +246,7 @@ Now that we’ve provided a reason to use this flow, let’s check it out!
 
 #### CloudFront
 
-Now we need a CDN to host the stream. We will be using Amazon CloudFront
-again. This time we will create a distribution using the domain name of your
-newly created Packaging group.
+Now we need a CDN to host the stream. We will be using Amazon CloudFront again. This time we will create a distribution using the domain name of your newly created Packaging group.
 
 
 1. Navigate to CloudFront
