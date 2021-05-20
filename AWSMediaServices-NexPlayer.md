@@ -128,7 +128,7 @@ There are many configuration options, but let’s get started by making a new Cl
 Now that you have a streaming service, you can stream your new video on your target devices. If you have not yet imported NexPlayer into your project, please follow our integration guide for your platform.
 
 Use the following URL format to play your CloudFronthosted file.
-[https://{cloudfronturl}/{videoname}]()
+https://{cloudfronturl}/{videoname}
 
 ### Just In Time Packaging
 
@@ -292,7 +292,7 @@ newly created Packaging group.
        amazonaws.com
     - Now, get the CloudFront URL for your new distributionand
        combine it with the “video name”
-          - [https://{cloudfronturl}/{videoname}](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
+          - https://{cloudfronturl}/{videoname}
 
 #### Your Project
 
@@ -301,7 +301,7 @@ your target devices. If you have not yet imported NexPlayer into your project,
 please follow our integration guide for your platform.
 
 Use the following URL format to play your CloudFront hosted file.
-[https://{cloudfronturl}/{videoname}](https://docs.aws.amazon.com/mediapackage/latest/ug/vod-content.html)
+https://{cloudfronturl}/{videoname}
 
 #### Conclusion
 
@@ -533,7 +533,7 @@ You can learn more about our Ad Decision Server [here](https://aws.amazon.com/bl
 - Take the sample xml below and replace the CDATA [video] with a
        link to your video.
        
-~~~
+```
 <VAST version="3.0">
 		<Ad>
 		<InLine>
@@ -556,7 +556,7 @@ You can learn more about our Ad Decision Server [here](https://aws.amazon.com/bl
 		</InLine>
 		</Ad>
 </VAST>
-~~~
+```
 
 
 ​	
@@ -595,7 +595,7 @@ your target devices. If you have not yet imported NexPlayer into your project,
 please follow our integration guide for your platform.
 
 Use the following URL format to play your CloudFront hosted file.
-[https://{cloudfronturl}/{videoname}](https://aws.amazon.com/mediatailor/)
+https://{cloudfronturl}/{videoname}
 
 ### Live Stream with OBS
 
@@ -678,7 +678,7 @@ on your target devices. If you have not yet imported NexPlayer into your
 project, please follow our integration guide for your platform.
 
 Use the following URL format to play your CloudFront hosted file.
-[https://{cloudfronturl}/{videoname}](https://aws.amazon.com/mediatailor/)
+https://{cloudfronturl}/{videoname}
 
 #### Conclusion
 
