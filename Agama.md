@@ -160,9 +160,21 @@ This method gets the value of any property of the Agama client module.
 
 **Parameters**
 
-| Parameter | Description                                                                                                                                                                                                                                                                                                                                                                |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | The Agama client module property to get. This will be one of:  *NexAgamaClient.AGAMA\_PROPERTY.INT\_PORT_NO*    *NexAgamaClient.AGAMA\_PROPERTY.INT\_REPORT_INTERVAL*  *NexAgamaClient.AGAMA\_PROPERTY.INT\_ID\_REPORT_INTERVAL* *NexAgamaClient.AGAMA\_PROPERTY.STR\_SERVER_IP*  *NexAgamaClient.AGAMA\_PROPERTY.STR\_CUSTOMER_KEY*  *NexAgamaClient.AGAMA\_PROPERTY.STR\_CONFIGURATION\_SET_FROM* |
+<table>
+	<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th rowspan="7">Key</th>
+</tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.INT_PORT_NO</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.INT_REPORT_INTERVAL</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.INT_ID_REPORT_INTERVAL</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.STR_SERVER_IP</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.STR_CUSTOMER_KEY</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.STR_CONFIGURATION_SET_FROM</td></tr>
+</table>
 						
 
 **Returns**
@@ -191,9 +203,19 @@ This method is called to notify the Agama client module of any event that occurs
 
 **Parameters**
 
-| Parameter | Description                                                                                                                                                                                                                                                                                                                                                                |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| key       | The Agama client module property to get. This will be one of:  *NexAgamaClient.AGAMA\_PROPERTY.NOTIFY\_CHANNEL_CHANGE*    *NexAgamaClient.AGAMA\_PROPERTY.NOTIFY\_BACKGROUND*  *NexAgamaClient.AGAMA\_PROPERTY.NOTIFY\_FOREGROUND* *NexAgamaClient.AGAMA\_PROPERTY.NOTIFY\_USER_LOGOUT* |
+<table>
+	<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th rowspan="7">Key</th>
+</tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.NOTIFY_CHANNEL_CHANGE</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.NOTIFY_BACKGROUND</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.NOTIFY_FOREGROUND</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.NOTIFY_USER_LOGOUT</td></tr>
+</table>
 
 #### void notify (int event, String param)
 
@@ -203,7 +225,7 @@ This method is called to notify the Agama client module of any event that occurs
 
 | Parameter | Description                                                                    |
 |-----------|--------------------------------------------------------------------------------|
-| event  | The event notification that Agama client module will get. This will be: *NexAgamaClient.AGAMA\_PROPERTY.NOTIFY\_CHANNEL_CHANGE*|
+| event  | *NexAgamaClient.AGAMA\_PROPERTY.NOTIFY\_CHANNEL_CHANGE*|
 | param         | The current user ID as a string.                                                                              |
 
 #### void release ()
@@ -218,19 +240,45 @@ This method sets the value of any *string* external parameter for the Agama clie
 
 **Parameters**
 
-| Parameter | Description                                                                    |
-|-----------|--------------------------------------------------------------------------------|
-| key  | The event notification that Agama client module will get. This will be: *NexAgamaClient.AGAMA\_PROPERTY.EX\_CONTENT_TITLE* - Content title. *NexAgamaClient.AGAMA\_PROPERTY.EX\_CONTENT_DESCRIPTION* - Content description. *NexAgamaClient.AGAMA\_PROPERTY.EX\_GENERIC_DESCRIPTION* - A generic description of the state. &nbsp;&nbsp;Can be any relevant information related with the state. *NexAgamaClient.AGAMA\_PROPERTY.EX\_CHANNEL_NAME* - Channel name.|
-| value         | The *string* value to set for the external parameters.                                                                              |
+<table>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th rowspan="5">Key</th>
+</tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.EX_CONTENT_TITLE - Content title</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.EX_CONTENT_DESCRIPTION - Content description</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.EX_GENERIC_DESCRIPTION - A generic description of the state. Can be any relevant information related with the state</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.EX_CHANNEL_NAME - Channel name</td></tr>
+	
+<tr>
+  <th>value</th>
+  <td>The string value to set for the external parameters</td>
+</tr> 
+</table>
 
 #### void setExternalParams (int key, int value)
 
 This method sets the value of any *integer* external parameter for the Agama client module in NexPlayer™.
 
-| Parameter | Description                                                                    |
-|-----------|--------------------------------------------------------------------------------|
-| key  | The event notification that Agama client module will get. This will be: *NexAgamaClient.AGAMA\_PROPERTY.EX\_SPECIFIED_DURATION* - Duration of the content in seconds. *NexAgamaClient.AGAMA\_PROPERTY.EX\_PLAYLIST_TYPE* - The type of the current content.
-| value         | The *integer* value to set for the external parameters.|
+<table>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th rowspan="3">Key</th>
+</tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.EX_SPECIFIED_DURATION - Duration of the content in seconds</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.EX_PLAYLIST_TYPE - The type of the current content</td></tr>
+	
+<tr>
+  <th>value</th>
+  <td>The int value to set for the external parameters</td>
+</tr> 
+</table>
 
 #### void setProperty (com.nexstreaming.nexplayerengine.NexAgamaClient.AGAMA_PROPERTY key,int value) throws IllegalArgumentException
 
@@ -238,10 +286,24 @@ This method sets the value of any *integer* property for the Agama client module
 
 **Parameters**
 
-| Parameter | Description                                                                    |
-|-----------|--------------------------------------------------------------------------------|
-| key  | The event notification that Agama client module will get. This will be: *NexAgamaClient.AGAMA\_PROPERTY.INT\_PORT_NO* *NexAgamaClient.AGAMA\_PROPERTY.INT\_REPORT_INTERVAL* *NexAgamaClient.AGAMA\_PROPERTY.INT\_ID\_REPORT_INTERVAL* *NexAgamaClient.AGAMA\_PROPERTY.LONG\_APP\_STARTUP_TIME*
-| value         | The *integer* value to set or the Agama client property.|
+<table>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th rowspan="5">Key</th>
+</tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.INT_PORT_NO</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.INT_REPORT_INTERVAL</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.INT_ID_REPORT_INTERVAL</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.LONG_APP_STARTUP_TIME</td></tr>
+	
+<tr>
+  <th>value</th>
+  <td>The integer value to set or the Agama client property</td>
+</tr> 
+</table>
 
 #### void setProperty (com.nexstreaming.nexplayerengine.NexAgamaClient.AGAMA_PROPERTY key,String value) throws IllegalArgumentException
 
@@ -249,10 +311,24 @@ This method sets the value of any *integer* property for the Agama client module
 
 **Parameters**
 
-| Parameter | Description                                                                    |
-|-----------|--------------------------------------------------------------------------------|
-| key  | The event notification that Agama client module will get. This will be: *NexAgamaClient.AGAMA\_PROPERTY.INT\_PORT_NO* *NexAgamaClient.AGAMA\_PROPERTY.INT\_REPORT_INTERVAL* *NexAgamaClient.AGAMA\_PROPERTY.INT\_ID\_REPORT_INTERVAL* *NexAgamaClient.AGAMA\_PROPERTY.LONG\_APP\_STARTUP_TIME*
-| value         | The *integer* value to set or the Agama client property.|
+<table>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th rowspan="5">Key</th>
+</tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.INT_PORT_NO</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.INT_REPORT_INTERVAL</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.INT_ID_REPORT_INTERVAL</td></tr>
+  <tr><td>NexAgamaClient.AGAMA_PROPERTY.LONG_APP_STARTUP_TIME</td></tr>
+	
+<tr>
+  <th>value</th>
+  <td>The string value to set or the Agama client property</td>
+</tr> 
+</table>
 
 #### void setProperty (com.nexstreaming.nexplayerengine.NexAgamaClient.AGAMA_PROPERTY key,long value) throws IllegalArgumentException
 
@@ -262,5 +338,5 @@ This method sets the value of any *long* property for the Agama client module in
 
 | Parameter | Description                                                                    |
 |-----------|--------------------------------------------------------------------------------|
-| key  | The Agama client *long* property to set. This will be: *NexAgamaClient.AGAMA\_PROPERTY.LONG\_APP\_STARTUP_TIME*
+| key  | *NexAgamaClient.AGAMA\_PROPERTY.LONG\_APP\_STARTUP_TIME*
 | value         | The *long* value to set for the external parameters.|
