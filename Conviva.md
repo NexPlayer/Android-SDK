@@ -54,7 +54,7 @@ For more information on how to use the NexPlayer™ SDK with Conviva, please see
 
 This enumeration includes the properties that must be set to integrate the Conviva client module into NexPlayer™.
 
-The values of the different properties can be set by calling thesetPropertymethod of the relevant client class.
+The values of the different properties can be set by calling the setProperty method of the relevant client class.
 
 **Parameters**
 
