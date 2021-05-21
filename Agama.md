@@ -18,8 +18,7 @@ nor distributed without prior written approval by NexStreaming Corp.
 
 From version 6.10 of the NexPlayer™ SDK, a new module has been added to make it easier to integrate Agama
 into applications with NexPlayer™.
-For more information on how to use the NexPlayer™ SDK with Agama, please see: NexAgamaClient
-This documentation is a work in progress.
+For more information on how to use the NexPlayer™ SDK with Agama, please see: NexAgamaClient.
 
 ## Class Documentation
 
