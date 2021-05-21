@@ -124,10 +124,10 @@ https://{cloudfronturl}/{videoname}
 
 In the previous section you created a static video asset using AWS
 Elemental MediaConvert. You created a new S3 bucket which hosted your
-input video file and your output Mpeg Dash manifest.
+input video file and your output MPEG-DASH manifest.
 
 In this section, you will use AWS Elemental MediaConvert to create an
-HLS stream from the same input video file. You will then learn how to use AWS Elemental MediaPackage to package and stream avideo file with an automatic CloudFront distribution.
+HLS stream from the same input video file. You will then learn how to use AWS Elemental MediaPackage to package and stream a video file with an automatic CloudFront distribution.
 
 We will be utilizing this VOD Static File flow:
 
@@ -263,7 +263,7 @@ Now we need a CDN to host the stream. We will be using Amazon CloudFront again. 
 8. Now, to build the URL for your asset, navigate toAssets.
     - Click on your new video asset to reveal the URL
     - Copy the portion of the url after the domain name that you set up.
-       This is the “video name” or “path” and is the partof the url after
+       This is the “video name” or “path” and is the part of the url after
        amazonaws.com
     - Now, get the CloudFront URL for your new distributionand combine it with the “video name”
 		- https://{cloudfronturl}/{videoname}
