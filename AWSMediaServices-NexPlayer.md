@@ -9,7 +9,7 @@
 In order to use NexPlayer’s streaming capabilities in your NexPlayer
 project, you will need to have a video player stack which can stream in
 formats compatible with your target devices. In this guide we will set up a new
-Mpeg Dash stream for playback on a mobile device.We will use a few
+MPEG-DASH stream for playback on a mobile device. We will use a few
 different services for this, including a subset of Amazon Web Services AWS.
 
 We will be utilizing this VOD Static File flow:
@@ -29,7 +29,7 @@ The key components are:
 
 #### Amazon S3
 
-In order to begin encoding your video file, you needto have a video file in
+In order to begin encoding your video file, you need to have a video file in
 Amazon Simple Storage Service S3.
 
 1. Start by navigating to S3 in your AWS console.
@@ -43,6 +43,7 @@ Amazon Simple Storage Service S3.
    - When using AWS Elemental MediaConvert to access this bucket you will need to specify an input and output location.      
 		- Create an inputs folder in your bucket.
 		- Create an outputs folder in your bucket.
+		
 3. Upload one of your videos to the inputs folder within your new S3
     bucket.
     - (optional) We recommend trimming the video to 1 minute or less for initial testing purposes and then using a longer video at a later time.
