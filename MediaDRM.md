@@ -67,7 +67,7 @@ This API is used for setting optionalParameters when sending requests to the Key
 
 ### How to store and retrieve Media DRM content
 
-To play MediaDRM content without internet connection, you should store the content before playback. If the user
+To play MediaDrm content without internet connection, you should store the content before playback. If the user
 enables storing mode, then NexPlayer will request a specified KeyID from MediaDRM and pass it through an event
 listener. The user MUST store it using his/her own way such as saving it in a database.
 
@@ -124,7 +124,7 @@ You can save content during playback. In this mode, NexPlayer will store the con
 		
 **Retrieving stored content from cache files**
 
-To play stored MediaDRM files, you should register a retrieve callback function and recover a DRM session via
+To play stored MediaDrm files, you should register a retrieve callback function and recover a DRM session via
 KeyID.
 
 1. Register an HTTP Retrieve callback:
