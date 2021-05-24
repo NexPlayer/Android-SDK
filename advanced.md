@@ -14,7 +14,7 @@ Initializes and registers the **AsfPlayReadyDRMManager**.
  
 #### static native int initDRMManagerMulti ( ObjectnexPlayerHandle,StringstrEngineLibName) [static]
 
-internal use only. Please do not use.
+Internal use only. Please do not use.
 
 ### NexLogsToFile.Builder Class Reference
 
