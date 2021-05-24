@@ -6,7 +6,7 @@ MediaDrm can be used to obtain keys for decrypting protected media streams, in c
 provided by Google. The MediaDrm APIs are designed to support the ISO/IEC 23001-7: Common Encryption
 standard, but may also be used to implement other encryption schemes.
 
-### MediaDRM Components
+### MediaDrm Components
 
 ![](assets/mediadrm_overview.png)
 
