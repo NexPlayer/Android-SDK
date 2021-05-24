@@ -1,9 +1,5 @@
 # NexPlayer with AWS Media Services - Integration Guide
 
-- TEST
-- as
-- scxd
-
 ## Video On Demand VOD
 
 ### Static File
