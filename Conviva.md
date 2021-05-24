@@ -5,8 +5,7 @@
 **Disclaimer for Intellectual Property**
 
 This product is designed for general purpose, and accordingly the customer is responsible for all or any of
-intellectual property licenses required for actual application. NexStreaming Corp. does not provide any indem-
-nification for any intellectual properties owned by third party.
+intellectual property licenses required for actual application. NexStreaming Corp. does not provide any indentification for any intellectual properties owned by third party.
 
 **Copyright**
 
