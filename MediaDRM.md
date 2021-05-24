@@ -163,7 +163,7 @@ this file and calling this API once will enableContinue Store and Retrieve.
 
 > **Note** The new offline playback does not support storing and playing content simultaneously. If you wish to do both actions, please use the previous offline playback method.
 
-### How To Store Media DRM Content
+### How To Store MediaDrm Content
 
 1. Initialize NexPlayer and NexALFactory.
 2. Create an instance of NexOfflineStoreController.
@@ -173,10 +173,10 @@ this file and calling this API once will enableContinue Store and Retrieve.
 6. Call startOfflineStore ().
 7. NexOfflineStoreController will get credentials from the Key Server, and then store content automatically.
 
-To store media DRM content and then to retrieve, the user needs the same offline key ID from storing. Therefore,
+To store MediaDrm content and then to retrieve, the user needs the same offline key ID from storing. Therefore,
 the user must store the ID in the stored info file to retrieve and playback offline successfully.
 
-To playback offline any stored media DRM content, pass the offline key ID to the instance of NexOfflineStoreController by using setOfflineStoreSetting API.
+To playback offline any stored MediaDrm content, pass the offline key ID to the instance of NexOfflineStoreController by using setOfflineStoreSetting API.
 
 ```java
 @Override
@@ -189,7 +189,7 @@ public void onOfflineKeyStoreListener(NexPlayer mp, byte[] keyId) {
 }
 ```
 
-### How To Retrieve Media DRM Content
+### How To Retrieve MediaDrm Content
 
 1. Initialize NexPlayer and NexALFactory.
 2. Implement IOfflineKeyListener and then register it using setOfflineKeyListener API.
