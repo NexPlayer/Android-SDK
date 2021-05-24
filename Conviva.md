@@ -133,12 +133,20 @@ This method gets the value of any property of the Conviva client module.
 
 **Parameters**
 
-| Parameter | Description                                                                                                                                                                                                                                                                                                                                                                |
-|-----------|----------------------------------------|
-| key       | The Conviva module property to get. This will be one of:  *NexClient.CONVIVA\_PROPERTY.PREF\_STR\_CDN_NAME*    
-*NexClient.CONVIVA\_PROPERTY.PREF\_STR\_CUSTOMER_KEY*  
-*NexClient.CONVIVA\_PROPERTY.PREF\_STR\_PLAYER_NAME* 
-*NexClient.CONVIVA\_PROPERTY.PREF\_STR\_USER_ID*  *NexClient.CONVIVA\_PROPERTY.PREF\_STR\_ASSET_NAME*|
+<table>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th rowspan="6">Key</th>
+</tr>
+  <tr><td>NexClient.CONVIVA_PROPERTY.PREF_STR_CDN_NAME</td></tr>
+  <tr><td>NexClient.CONVIVA_PROPERTY.PREF_STR_CUSTOMER_KEY</td></tr>
+  <tr><td>NexClient.CONVIVA_PROPERTY.PREF_STR_PLAYER_NAME</td></tr>
+  <tr><td>NexClient.CONVIVA_PROPERTY.PREF_STR_USER_ID</td></tr>
+  <tr><td>NexClient.CONVIVA_PROPERTY.PREF_STR_ASSET_NAME</td></tr>
+</table>
 
 **Returns**
 
