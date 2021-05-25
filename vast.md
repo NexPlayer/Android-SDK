@@ -284,7 +284,7 @@ any other methods
 
 | Name  | Description  | 
 |---|---|
-|context| Context "
+|context| Context
 |view| Container for ad player.|
 
 
@@ -372,7 +372,7 @@ Set Content and Ad complete listener.
 
 | Name  | Description  | 
 |---|---|
-|listener| NexVideoView.OnCompletionListener."
+|listener| NexVideoView.OnCompletionListener.|
 
 #### void setContentPlayer ( NexPlayer nexplayer)
 
@@ -382,7 +382,7 @@ Set NexPlayer.
 
 | Name  | Description  | 
 |---|---|
-|nexplayer|Nex Player|
+|nexplayer|NexPlayer instance|
 
 #### void setNexPlayerErrorListener (OnErrorListener listener)
 
