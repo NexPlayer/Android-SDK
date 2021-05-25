@@ -6,8 +6,6 @@ From version 6.15 of the NexPlayer™ SDK, a new module has been added to make i
 
 For more information on how to use the NexPlayer™ SDK with FreeWheel, please see: `NexFreeWheelClient` 
 
-This documentation is a work in progress.
-
 ## Class Documentation
 
 ### NexFreeWheelClient Class Reference
@@ -63,7 +61,7 @@ public void onTimedMetaRenderRender(NexPlayer mp, final NexID3TagInformation Tim
 - NexPlayer.getClientStatus
 
 
-#### NexFreeWheelClient(Activity activity,Context context,String contentsURL)
+#### NexFreeWheelClient (Activity activity, Context context, String contentsURL)
 
 Constructs a new Stream Stitcher Helper instance for the FreeWheel service.
 
@@ -76,7 +74,7 @@ Constructs a new Stream Stitcher Helper instance for the FreeWheel service.
 |contentsURL| The stitched stream URL. Please ask FreeWheel Account Manager for the appropriate format.|
 
 
-#### void handleMetaData(String key, String value, long msec)
+#### void handleMetaData (String key, String value, long msec)
 
 This method lets the NexPlayer™ SDK handle metadata updates for the FreeWheel client module.
 
