@@ -111,7 +111,7 @@ In order to modify an HTTP Request with NexPlayer™ :
 mNexPlayer.setProperty(NexProperty.ENABLE_MODIFY_HTTP_REQUEST, 1);
 ```
 	
-after **init** but before calling **open** in order to set the property ENABLE\_MODIFY\_HTTP\_REQUEST to enabled.
+After **init** but before calling **open** in order to set the property ENABLE\_MODIFY\_HTTP\_REQUEST to enabled.
 
 2. The following override code must also be included for onModifyHttpRequest:
 
@@ -183,7 +183,7 @@ The NexCaptionPainter™ renders a variety of subtitle formats including:
 4. CEA 708 closed captions
 5. Web Video Text Tracks (WebVTT)
 
-### to use NexCaptionPainter
+### To use NexCaptionPainter
 
 NexCaptionPainter always needs to know the video output size in the application so that the subtitles can be correctly positioned. If a change into the video size is produced, that information should be notify to NexCaptionPainter.
 
@@ -349,7 +349,7 @@ public void onOfflineKeyStoreListener(NexPlayer mp, byte[] keyId) {
 ![](assets/api_seq_offline_wv_store.png)
 
  
-Figure 1.5: Sequence diagram for storing HLS or DASH Widevine content
+Figure 1.5: Sequence diagram for storing HLS or DASH Widevine content.
  
 ### How To Retrieve Media DRM Content
 
@@ -380,7 +380,7 @@ The user must decode the saved string data in the stored info file as abyteand r
 
 ![](assets/api_seq_offline_wv_retrieve.png)
  
-Figure 1.6: Sequence diagram for retrieving HLS or DASH Widevine content
+Figure 1.6: Sequence diagram for retrieving HLS or DASH Widevine content.
  
 ### Creating a Stored Info File List
 
