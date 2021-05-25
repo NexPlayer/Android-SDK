@@ -13,7 +13,7 @@ It is possible to set certain properties on the NexPlayer™ instance, which aff
 
 For more information on properties, see **NexProperty**.
 
-The application may also need to handle displaying of decoded frames, if the Java rendering method is being used. This is necessary to supportHoneycomb. See **Honeycomb Support** for more details.
+The application may also need to handle displaying of decoded frames, if the Java rendering method is being used. This is necessary to support Honeycomb. See **Honeycomb Support** for more details.
 
 Notifications are handled through the **IListener** and **IVideoRendererListener** interfaces. The application must provide objects which implement these interfaces, and must call **setListener** and **IVideoRendererListener** to associate them with the NexPlayer™ instance.
 
@@ -98,7 +98,7 @@ case NexPlayer.NEXPLAYER_ASYNC_CMD_SEEK:
 It is recommended that *android:theme="@android:style/Theme.NoTitleBar"* be used in AndroidManifest.xml instead of *android:theme="@android:style/Theme.Wallpaper.NoTitleBar"*
 since this setting may cause unwanted side effects in fonts when the OpenGL renderer is in use.
 
-Developers are also encouraged to use all of the files and folders included in theSDK/libsfolder with the NexPlayer™ SDK. If application size is an issue, please refer to **Selective Codec Support and Required Libraries**.
+Developers are also encouraged to use all of the files and folders included in the SDK/libs folder with the NexPlayer™ SDK. If application size is an issue, please refer to **Selective Codec Support and Required Libraries**.
 
 
 ## Enabling Modified HTTP Requests
@@ -139,7 +139,7 @@ See **onModifyHttpRequest** for more information.
 
 ## Supported Subtitles, Timed Text, and Closed Captions
 
-> **Warning** In content where both CEA 608/708 closed captions and WebVTT text tracks exist, NexPlayer™ will automatically display the WebVTT text cues but this can be changed by setting the NexProperty.ENABLE\_WEBVTT to 0 with setProperty.
+> **Warning** In content where both CEA 608/708 closed captions and WebVTT text tracks exist, NexPlayer™ will automatically display the WebVTT text cues but this can be changed by setting the NexProperty. ENABLE\_WEBVTT to 0 with setProperty.
 
 The NexPlayer™ supports a variety of subtitle formats including:
 
@@ -239,7 +239,7 @@ There are three possible use cases available:
 
 2. **A variant playlist with alternative video** :
 
-    Each track contains both audio and video, but alternative video streams are available (for example different camera angles or views of the same content). In this case, the same audio is included in each track, and theuser chooses which video stream to display. Tracks within a stream are selected internally based on network conditions and the device but the user can change video streams from the UI.
+    Each track contains both audio and video, but alternative video streams are available (for example different camera angles or views of the same content). In this case, the same audio is included in each track, and the user chooses which video stream to display. Tracks within a stream are selected internally based on network conditions and the device but the user can change video streams from the UI.
 
 3. **A combination of a variant playlist with alternative video and audio** :
 
