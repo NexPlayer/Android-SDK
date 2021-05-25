@@ -30,7 +30,7 @@ void setBufferingTime( NexPlayer hNexPlayer ) {
 
 **Numeric Property Identifiers**
 
-Properties can also be identified by numeric value. This is how NexPlayer identifies properties internally, but in general, it is better to use thisenumand the methods listed above instead.
+Properties can also be identified by numeric value. This is how NexPlayer identifies properties internally, but in general, it is better to use this enum and the methods listed above instead.
 
 If you must work with the numeric property identifiers directly, you can retrieve them using the getPropertyCode method of a member of this enum, and the methods getProperties(int) and setProperties(int, int) can be used to get or set a property based on the numeric identifier.
 
