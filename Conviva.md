@@ -181,11 +181,21 @@ If the *priority* parameter is *NexConvivaClient.ERR_FATAL*, NexConvivaClient wi
 
 **Parameters**
 
-| Parameter | Description                                                                                                                                                                                                                                                                                                                                                                |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| desc       | Returns a detailed description of the error as a String.|
-| key       | The value to set. This will be one of:<br>  *NexConvivaClient.ERR\_FATAL* <br>    *NexConvivaClient.WARNING*|
-</br>
+<table>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th rowspan="2">desc</th>
+</tr>
+<tr><td>Returns a detailed description of the error as a String.</td></tr>
+<tr>
+  <th rowspan="3">Key</th>
+</tr>
+  <tr><td>NexConvivaClient.ERR_FATAL</td></tr>
+  <tr><td>NexConvivaClient.WARNING</td></tr>
+</table>
 
 
 #### boolean resumeMonitor()
