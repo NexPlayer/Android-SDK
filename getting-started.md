@@ -955,10 +955,11 @@ mNexPlayer.setProperty(NexPlayer.NexProperty.PARTIAL_PREFETCH, 1);
 	```java    
 	mNexPlayer.setProperty(NexPlayer.NexProperty.INITIAL_BUFFERING_DURATION, 500);
 	mNexPlayer.setProperty(NexPlayer.NexProperty.RE_BUFFERING_DURATION, 500);
-	   
+	```  
+	
 	> **Note** Buffering may occur frequently when bandwidth (Throughput) is not sufficient to deliver a
 	segment or chunk in time.
-	```                   
+	                  
          		
 	- Case 2 : For Low Latency This mode would be suitable for public networks such as WiFi and LTE. The latency might be around 3000ms. Example :
 
@@ -966,7 +967,8 @@ mNexPlayer.setProperty(NexPlayer.NexProperty.PARTIAL_PREFETCH, 1);
 	mNexPlayer.setProperty(NexPlayer.NexProperty.INITIAL_BUFFERING_DURATION, 2000);
 	mNexPlayer.setProperty(NexPlayer.NexProperty.RE_BUFFERING_DURATION, 2000);
 	```    
-               
+         
+	 
 	> **Note** Buffering will rarely occur, but the latency will be slightly longer than the initial buffering time you set up.
              
        
