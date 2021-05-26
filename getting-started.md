@@ -358,7 +358,7 @@ Figure 1.5: Sequence diagram for storing HLS or DASH Widevine content.
 3. Call **open** () or **openFD** () to open media.
 4. NexPlayer will get credentials from the Key Server, and then play content automatically.
 
-The user must decode the saved string data in the stored info file as abyteand return it to **onOfflineKeyRetrieveListener**. Refer to Section Obtaining Saved Data from the Stored Info File.
+The user must decode the saved string data in the stored info file as a byte and return it to **onOfflineKeyRetrieveListener**. Refer to Section Obtaining Saved Data from the Stored Info File.
 
 ```java
 	@Override
@@ -487,7 +487,7 @@ By default, the frame is stretched to fill the entire surface. The rectangle in 
 
 In addition, an application must also do the following, in order to support the OpenGL renderer:
 
-1. Call NexPlayer™’s **init** method, passing the model name of the current device (you can attempt to force the use of the OpenGL renderer for debugging purposes by passingNEX\_DEVICE\_USE\_OPENGLinstead of the device name.
+1. Call NexPlayer™’s **init** method, passing the model name of the current device (you can attempt to force the use of the OpenGL renderer for debugging purposes by passingNEX\_DEVICE\_USE\_OPENGLinstead of the device name).
 
 2. After initializing NexPlayer™, In **onVideoRenderPrepared**, check which renderer is being used to determine if it is the OpenGL renderer. Any special code to support the OpenGL renderer should be conditional based on the renderer in use. To determine the current renderer in use, call **GetRenderMode** and check the result, as follows:
 
@@ -831,9 +831,6 @@ The following table summarizes the codecs supported by each library, and the lib
 NexPlayer™ loads content data into buffers in a device’s memory to prepare for playback (the so-called Prefetch
 buffer in NexPlayer™). Buffer settings can be adjusted in multiple ways with the properties listed below:
 
-
-**1.18 Buffer Support 26**
-
 - **To Control Buffer Size** :
  - `PREFETCH_BUFFER_SIZE`: This property sets the size of the prefetch buffer to prepare for playback.
  The default value is 50MB but depending on the content size, this value can be adjusted accordingly. If the buffer status satisfies either limit set by MAX\_BUFFER\_RATE or MAX\_BUFFER\_DURATION, the filling of the prefetch buffer will be stopped even though there may be spare space still available in the prefetch buffer.
@@ -862,7 +859,7 @@ these operations will run automatically in the background and can be adjusted wi
  - `MAX_BUFFER_DURATION`: If the duration of content available in the filling prefetch buffer is greater
        than this value, buffering will be paused until the buffer status meets the condition of MIN\_BUFFER\_DURATION again. The default value is 300 seconds.
 
-- **For HTTP Protocols** : For HTTP protocols, only properties defining buffering maximums, MAX\_BUFFER\_DURATION and MAX\_BUFFER\_RATE, are available. The properties work in the same way as for non-HTTP protocols. Afterbeing paused automatically, buffering will automatically resume after 10% of the buffer is exhausted. Note that when MAX\_BUFFER\_DURATION and MAX\_BUFFER\_RATE are both set, NexPlayer™ will apply the first maximum value that is met. For example, if the percentage set by MAX\_BUFFER\_RATE is passed first, the prefetch buffering will automatically pause even if the buffer is less full than the duration value set for MAX\_BUFFER\_DURATION.
+- **For HTTP Protocols** : For HTTP protocols, only properties defining buffering maximums, MAX\_BUFFER\_DURATION and MAX\_BUFFER\_RATE, are available. The properties work in the same way as for non-HTTP protocols. After being paused automatically, buffering will automatically resume after 10% of the buffer is exhausted. Note that when MAX\_BUFFER\_DURATION and MAX\_BUFFER\_RATE are both set, NexPlayer™ will apply the first maximum value that is met. For example, if the percentage set by MAX\_BUFFER\_RATE is passed first, the prefetch buffering will automatically pause even if the buffer is less full than the duration value set for MAX\_BUFFER\_DURATION.
 
 ## Client Time Shift
 
@@ -952,15 +949,14 @@ mNexPlayer.setProperty(NexPlayer.NexProperty.PARTIAL_PREFETCH, 1);
 	LOW_LATENCY_BUFFEROPTION_NONE);
 	```
 
-	- Case 1 : For Ultra Low Latency This mode would be suitable for a managed network maintain-
-ing constant bandwidth.(ex. Video services based on broadband) The latency might be around
+	- Case 1 : For Ultra Low Latency This mode would be suitable for a managed network maintaining constant bandwidth(ex. Video services based on broadband). The latency might be around
 1000ms. Example :
 
 	```java    
 	mNexPlayer.setProperty(NexPlayer.NexProperty.INITIAL_BUFFERING_DURATION, 500);
 	mNexPlayer.setProperty(NexPlayer.NexProperty.RE_BUFFERING_DURATION, 500);
 	   
-	//(Note) Buffering may occur frequently when bandwidth(Throughput) is not sufficient to deliver a
+	> **Note** Buffering may occur frequently when bandwidth (Throughput) is not sufficient to deliver a
 	segment or chunk in time.
 	```                   
          		
@@ -971,7 +967,7 @@ ing constant bandwidth.(ex. Video services based on broadband) The latency might
 	mNexPlayer.setProperty(NexPlayer.NexProperty.RE_BUFFERING_DURATION, 2000);
 	```    
                
-	> Note Buffering will rarely occur, but the latency will be slightly longer than the initial buffering time you set up.
+	> **Note** Buffering will rarely occur, but the latency will be slightly longer than the initial buffering time you set up.
              
        
 	- Case 3 : Adjust latency for HLS. In case of HLS, the player has disadvantage in low latency perspective than DASH:
@@ -1024,7 +1020,7 @@ multiple devices simultaneously.
 	mNexPlayer.setProperty(NexPlayer.NexProperty.SET_APPLS_PROGRAM_DATE_TIME_PRESENTATION_DELAY, DelayValueInMsec);
 	```
 
- Then the player will work the same as DASH-SPD case such as suggestedPresentationDelay which is set to DelayValueInMsec. The end users are able to be both controlled the latency and synchro- nized by using this property in HLS.
+ Then the player will work the same as DASH-SPD case such as suggestedPresentationDelay which is set to DelayValueInMsec. The end users are able to be both controlled the latency and synchronized by using this property in HLS.
 		
 - **Case 4** : Additional detailed methods:
 	
@@ -1034,7 +1030,7 @@ multiple devices simultaneously.
 		mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_SYNC_DIFF_TIME, MaxDiffValueMsec);
 		```
 	
-	- If playback is out of sync compared to this value,the player will jump to synchronize the video rather than make it by speeding up. 
+	- If playback is out of sync compared to this value, the player will jump to synchronize the video rather than make it by speeding up. 
 
 		```java
 		mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_TOO_MUCH_DIFF_TIME, TooMuchSyncDiffValueMsec);
