@@ -736,7 +736,7 @@ This property is not currently defined for other `LIVE_VIEW_OPTION`.
 
 Specifies the segment offset in time when starting playback.
 
-This property may have different meaning depending on the LIVE\_VIEW\_OPTION. This property has higher priority than `LIVE_OFFSET_SEGMENT_COUNT`. If `LIVE_VIEW_OPTION` is set to `LIVE_VIEW_RECENT`, then this property specifies the time offset of segment from the live edge when starting playback. For example, if the duration of each segment is 6 seconds,
+This property may have different meaning depending on the LIVE\_VIEW\_OPTION. This property has higher priority than `LIVE_OFFSET_SEGMENT_COUNT`. If `LIVE_VIEW_OPTION` is set to `LIVE_VIEW_RECENT`, then this property specifies the time offset of segment from the live edge when starting playback. For example, if the duration of each segment is 6 seconds:
 
 **1** ∼ **6000:** The player will select the last segment in the manifest.
 
