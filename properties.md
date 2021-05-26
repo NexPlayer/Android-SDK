@@ -226,7 +226,7 @@ Sets whether or not to continue downloading data in pause state when playing con
 
 When this property is set, content data will continue to be downloaded even when NexPlayer;™ is paused.
 
-This property should be called afterinitand before calling open.
+This property should be called after init and before calling open.
 
 **Type:** int
 
