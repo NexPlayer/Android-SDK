@@ -652,7 +652,7 @@ In this state, audio and video are played back independently as soon as data is 
 
 This property can be enabled if audio and video synchronization are not important, and if real-time behavior is needed between the server and the client.
 
-In normal cases, this shouldnotbe used (it should be set to zero) because it will cause video and audio to quickly lose synchronization for most normal media streams.
+In normal cases, this should not be used (it should be set to zero) because it will cause video and audio to quickly lose synchronization for most normal media streams.
 
 **Type:** boolean
 
@@ -687,7 +687,7 @@ If this property is enabled, NexPlayer will ignore those extra RU column reset c
 
 Allows NexPlayer to ignore thetext modecommand in CEA608 closed captions.
 
-This property may be useful in cases where CEA 608 closed captions have been implemented in ways other than strictly following the standard specifications which include extratext modecommands. It allows NexPlayer to properly display those alternatively implemented captions in video content.
+This property may be useful in cases where CEA 608 closed captions have been implemented in ways other than strictly following the standard specifications which include extra text mode commands. It allows NexPlayer to properly display those alternatively implemented captions in video content.
 
 In content that includes standard CEA 608 closed captions that follow the specifications, enabling this property may result in captions that do not appear as expected, so use of this property is discouraged in those cases as NexPlayer will properly display CEA 608 closed captions according to the specifications.
  
@@ -698,7 +698,7 @@ In content that includes standard CEA 608 closed captions that follow the specif
 **Values:**
 
 - **0:** Disabled. NexPlayer will display CEA 608 closed captions according to the specifications.
-- **1:** Enabled. NexPlayer will ignore thetext modecommand when displaying CEA 608 closed captions.
+- **1:** Enabled. NexPlayer will ignore the text mode command when displaying CEA 608 closed captions.
  
 ### INITIAL_BUFFERING\_DURATION (9)
 
@@ -763,7 +763,7 @@ This must be one of the following values:
 
 - **LIVE_VIEW\_RECENT (0x00000000)** Start playback from the most recently received media segment (.ts) files of the HLS live playlist. For example, if 5.ts is the latest media segment (.ts), playback will begin at the beginning of that segment.
 
-- **LIVE_VIEW\_RECENT\_BYTARGETDUR (0x00000001)** Start playback from the most recently received media segement (.ts) files, based on the value set for the EXT-X-TARGETDURATION tag in the HLS live playlist. (The player will begin playback at the media segment that is immediately precedes the media segment that is three times (x3) the target durationbefore the latest media segment file loaded.) As a concrete example, if the target duration is set to 12 seconds and the total duration of currently loaded media segments is 48 seconds, playback will begin at the media file that immediately precedes the media segment with the timestamp at 12 (48-36) seconds. If this example HLS playlist includes media segment files 1.ts (duration of 10 seconds), 2.ts (9 sec), 3.ts (11 sec), 4.ts (10 sec), and 5.ts (8 sec), then playback will begin at the first media segment, 1.ts, because it immediate precedes the 2.ts segment (where the timestamp at 12 seconds occurs).
+- **LIVE_VIEW\_RECENT\_BYTARGETDUR (0x00000001)** Start playback from the most recently received media segement (.ts) files, based on the value set for the EXT-X-TARGETDURATION tag in the HLS live playlist. (The player will begin playback at the media segment that is immediately precedes the media segment that is three times (x3) the target duration before the latest media segment file loaded). As a concrete example, if the target duration is set to 12 seconds and the total duration of currently loaded media segments is 48 seconds, playback will begin at the media file that immediately precedes the media segment with the timestamp at 12 (48-36) seconds. If this example HLS playlist includes media segment files 1.ts (duration of 10 seconds), 2.ts (9 sec), 3.ts (11 sec), 4.ts (10 sec), and 5.ts (8 sec), then playback will begin at the first media segment, 1.ts, because it immediate precedes the 2.ts segment (where the timestamp at 12 seconds occurs).
 
 - **LIVE_VIEW\_FIRST (0x00000002)** Unconditionally start HLS playback from the first entry in the HLS playlist.
 
@@ -821,12 +821,12 @@ This affects the type of messages that are logged by the protocol module (it doe
 
 This value is made by or-ing together zero or more of the following values:
 
-- **LOG\_LEVEL\_NONE (0x00000000)** Don’t log anything(not currently supported)
-- **LOG\_LEVEL\_DEBUG (0x00000001)** Log start, stop and errors (default for the debug version)
-- **LOG\_LEVEL\_RTP (0x00000002)** Generate log entries relating to RTP packets
-- **LOG\_LEVEL\_RTCP (0x00000004)** Generate log entries relating to RTCP packets
-- **LOG\_LEVEL\_FRAME (0x00000008)** Log information about the frame buffer
-- **LOG\_LEVEL\_ALL (0x0000FFFF)** Log everything(not currently supported)
+- **LOG\_LEVEL\_NONE (0x00000000)** Don’t log anything (not currently supported).
+- **LOG\_LEVEL\_DEBUG (0x00000001)** Log start, stop and errors (default for the debug version).
+- **LOG\_LEVEL\_RTP (0x00000002)** Generate log entries relating to RTP packets.
+- **LOG\_LEVEL\_RTCP (0x00000004)** Generate log entries relating to RTCP packets.
+- **LOG\_LEVEL\_FRAME (0x00000008)** Log information about the frame buffer.
+- **LOG\_LEVEL\_ALL (0x0000FFFF)** Log everything (not currently supported). 
 
 **Type:** unsigned integer
 
@@ -862,14 +862,14 @@ Set a low latency buffer option.
 
 This must be one of the following values:
 
-- **LOW\_LATENCY\_BUFFEROPTION\_NONE (0x00000000)** The latency value is set by INITIAL\_BUFFERIN-
+- **LOW\_LATENCY\_BUFFEROPTION\_NONE (0x00000000)** The latency value is set by INITIAL\_BUFFERIN
     G\_DURATION and RE\_BUFFERING\_DURATION of NexProperty. It should set the reliable value depending
     on the bitrate of content and network environment.
 - **LOW\_LATENCY\_BUFFEROPTION\_AUTO\_BUFFER (0x00000001)** The latency value is calculated by the
     player at runtime. During playback, the latency may increase or decrease because it may change depending
     on the network environment.
 - **LOW\_LATENCY\_BUFFEROPTION\_CONST\_BUFFER (0x00000002)** The latency value is calculated by the
-    player at the beginning of playback and maintains the value unchanged during playback. The latency in-
+    player at the beginning of playback and maintains the value unchanged during playback. The latency in
     creases more than when using Auto Buffer Mode, but the rebuffering will be reduced and try to maintain
     constant latency after rebuffering.
 
@@ -1181,10 +1181,10 @@ mNexPlayer.setProperty(NexProperty.PREFER\_LANGUAGE, "eng");
 
 Sets the language to use for audio in multi-stream content, before content is played.
 
-This property can be used to set the preferred language of audio streams to be used in content,beforeNex-
-Player™ begins playing content.
+This property can be used to set the preferred language of audio streams to be used in content, before Nex
+Player begins playing content.
 
-> **Warning** To change any media streamwhilecontent is playing, the method setMediaStream should be called instead. To set the preferred language for both audio and text streams to the same language, use the NexProperty, PREFER\_LANGUAGE, instead.
+> **Warning** To change any media stream while content is playing, the method setMediaStream should be called instead. To set the preferred language for both audio and text streams to the same language, use the NexProperty, PREFER\_LANGUAGE, instead.
  
 This property should be set by calling setProperty() after init and before NexPlayer.open() is called.
 
@@ -1198,11 +1198,11 @@ This property should be set by calling setProperty() after init and before NexPl
  
 ### PREFER_LANGUAGE\_TEXT (532)
 
-Sets the language to use for text in multi-stream content, before content is played.
+Sets the language to use for text in multistream content, before content is played.
 
 This property can be used to set the preferred language of text streams to be displayed in content, before NexPlayer begins playing content.
 
-> **Warning** To change any media streamwhilecontent is playing, the method setMediaStream should be called instead. To set the preferred language for both audio and text streams to the same language, use the NexProperty, PREFER\_LANGUAGE, instead.
+> **Warning** To change any media stream while content is playing, the method setMediaStream should be called instead. To set the preferred language for both audio and text streams to the same language, use the NexProperty, PREFER\_LANGUAGE, instead.
  
 This property should be set by calling setProperty() after init and before NexPlayer.open() is called.
 
@@ -1250,7 +1250,7 @@ Set the proxy port number.
 
 The number of milliseconds of media to buffer if additional buffering is required during streaming playback (HLS, RTSP, etc).
 
-This is the amount of audio and video that NexPlayer buffers when the buffer becomes empty during playback (requiring additional buffering).Afteropen() is called, this property can be set at any time during playback by calling setProperty.
+This is the amount of audio and video that NexPlayer buffers when the buffer becomes empty during playback (requiring additional buffering). Afteropen() is called, this property can be set at any time during playback by calling setProperty.
 
 For the initial buffering, the value of the property INITIAL\_BUFFERING\_DURATION is used instead.
 
