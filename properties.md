@@ -1147,7 +1147,7 @@ If this property is set, the player will attempt to choose only tracks above the
 
 **Type:** unsigned integer
 
-**Unit:** kbps (kilobits per second)
+**Unit:** kbps (Kbits per second)
 
 **Default:** 0
 
@@ -1159,8 +1159,7 @@ PREFER\_AV
 
 Sets the language of both audio and text played in multi-stream content.
 
-It can be used to set the preferred language of audio and text streams to be displayed in content,beforeNex-
-Player™ begins playing content.
+It can be used to set the preferred language of audio and text streams to be displayed in content, before NexPlayer begins playing content.
 
 > **Warning** To change any media streamwhilecontent is playing, the method setMediaStream should be called instead.  
 
@@ -1233,7 +1232,7 @@ If this value is set to 20MB, 1/4 (5MB) is allocated to the past (content alread
  
 ### PROXY_ADDRESS (31)
 
-Sets the proxy address.
+Set the proxy address.
 
 **Type:** String
 
@@ -1241,7 +1240,7 @@ Sets the proxy address.
 
 ### PROXY_PORT (32)
 
-Sets the proxy port number.
+Set the proxy port number.
 
 **Type:** integer
 
@@ -1487,7 +1486,7 @@ Sets the `SmoothStreamingLivePlaybackOffset` property when playing Smooth Stream
 
 This property sets the duration away from the live position to start playback when joining a live presentation when the LiveView option is set to "Recent", but excludes theLiveBackOffduration (set by SET\_LIVEBACKOFF).
 
-As a result, live content will be played behind the actual live position by a duration determined by BOTH LiveBackOff and the value for LivePlaybackOffset set here.
+As a result, live content will be played behind the actual live position by a duration determined by both LiveBackOff and the value for LivePlaybackOffset set here.
 
 Setting this property enables faster startup because it allows a buffer to be built up as fast as bandwidth will support (potentially faster than real time), which creates a buffer against network jitter. It does however also increase end-to-end latency, which means what is played "live" in the player is farther behind the actual live playing point of the content.
 
@@ -1532,7 +1531,7 @@ The amount of time to wait before timing out when establishing a connection to t
 
 If the connection to the server (the socket connection) cannot be established within the specified time, an error event will be generated and playback will not start.
 
-Set this to zero to disable timeout (NexPlayer™ will wait indefinitely for a connection).
+Set this to zero to disable timeout (NexPlayer will wait indefinitely for a connection).
 
 **Type:** unsigned integer
 
