@@ -1250,7 +1250,7 @@ Set the proxy port number.
 
 The number of milliseconds of media to buffer if additional buffering is required during streaming playback (HLS, RTSP, etc).
 
-This is the amount of audio and video that NexPlayer buffers when the buffer becomes empty during playback (requiring additional buffering). Afteropen() is called, this property can be set at any time during playback by calling setProperty.
+This is the amount of audio and video that NexPlayer buffers when the buffer becomes empty during playback (requiring additional buffering). After open() is called, this property can be set at any time during playback by calling setProperty.
 
 For the initial buffering, the value of the property INITIAL\_BUFFERING\_DURATION is used instead.
 
