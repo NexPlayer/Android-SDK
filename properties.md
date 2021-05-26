@@ -169,7 +169,7 @@ Adjusts A/V synchronization by ofsetting video relative to audio.
 
 Positive values cause the video to play faster than the audio, while negative values cause the audio to play faster than the video. Under normal operation, this can be set to zero, but in some cases where the synchronization is bad in the original content, this can be used to correct for the error.
 
-While A/V synchronization is generally optimized internally by NexPlayer , there may occasionally be devices which need to be offset in order to improve overall A/V synchronization. For examples of how to set AV\_SET\_OFFSET based on the device in use, please see the Sample Application code as well as the introductory section A/V Synchronization section.
+While A/V synchronization is generally optimized internally by NexPlayer, there may occasionally be devices which need to be offset in order to improve overall A/V synchronization. For examples of how to set AV\_SET\_OFFSET based on the device in use, please see the Sample Application code as well as the introductory section A/V Synchronization section.
 
 Appropriate values for any other problematic devices need to be determined experimentally by testing manually.
 
