@@ -1065,7 +1065,7 @@ Prevents the video track from playing back when set to TRUE (1).
 
 Allows NexPlayer to begin downloading content media files from a specified time stamp in the content.
 
- **Warning** This property is currently only supported for VOD in HTTP Live Streaming (HLS).
+ >**Warning** This property is currently only supported for VOD in HTTP Live Streaming (HLS).
  
 NexPlayer allows users to start playback in the middle of a content file with the start api, but typically, before playback can begin, the player still opens content from the first media file available and then has to receive all of the media files between the first file and the point where the user would like to start playback.
 
