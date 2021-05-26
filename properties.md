@@ -8,7 +8,7 @@ The value of each property is an unsigned integer. For some properties, it may b
 
 To set a property, call setProperty on the NexPlayer instance. To get the current value of a property, call getProperty.
 
-> **Note** Members of the enumeration that have not been documented, as well as values that have not yet been used are subject to change in future versions. Do not access or change undocumented properties, or your code may behave unpredictably and may break in future versions.
+> **Note** Do not access or change undocumented properties, or your code may behave unpredictably and may break in future versions.
 
 **Property Fine-Tuning Guidelines**
 
