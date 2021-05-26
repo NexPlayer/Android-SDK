@@ -224,7 +224,7 @@ If this property is set, NexPlayer will check the HTTP request and response head
 
 Sets whether or not to continue downloading data in pause state when playing content.
 
-When this property is set, content data will continue to be downloaded even when NexPlayer;™ is paused.
+When this property is set, content data will continue to be downloaded even when NexPlayer is paused.
 
 This property should be called after init and before calling open.
 
