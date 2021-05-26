@@ -460,7 +460,7 @@ Set reference server utc for SPD.
 
 This property should be set before calling open. The value is string of Unix epoch time in miliseconds e.g. "1602555563000" is Tuesday, October 19:23 AM (GMT).
 
-If the value is less than availability start time in MPD, media not found will occur. If difference between reference server utc and device time is greater than a day, it will be 
+If the value is less than availability start time in MPD, media not found will occur. If difference between reference server utc and device time is greater than a day, it will be.
 
 **Type** String
 
@@ -476,7 +476,7 @@ Allows NexPlayer to switch to a lower bandwidth track if the resolution or bitra
 Under normal operation, NexPlayer switches tracks based solely on current network conditions. When this property is enabled, NexPlayer will also switch to a lower bandwith track if too many frames are skipped during playback.
 
 This is useful for content that is targeted for a variety of devices, some of which may not be powerful enough to handle the higher quality streams.
-
+ 
 The `TRACKDOWN_VIDEO_RATIO` property controls the threshold at which the track change will occur, if frames
 are being skipped.
 
