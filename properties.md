@@ -1362,15 +1362,15 @@ as content type.
 
 Sets the range where NexPlayer will seek to a Random Access point rather than the exact target position provided in the seek API.
 
-> **Warning** This property is only valid when the first parameter,exact, in the seek API istrue.
+> **Warning** This property is only valid when the first parameter, exact, in the seek API is true.
  
 Setting this value is a kind of option for the seek API and can be used to minimize the time required to seek in content by taking advantage of Random Access points in the content.
 
 A Random Access point is a specific position that the parser is allowed to seek to directly.
 
-This value sets the range where NexPlayer will seek from a Random Access point given by the parser to a target position that equals msec(milliseconds), the first parameter in the seek() API.
+This value sets the range where NexPlayer will seek from a Random Access point given by the parser to a target position that equals msec (milliseconds), the first parameter in the seek() API.
 
-If the exact parameter, the second parameter in the seek API, istrueand the difference between a Random Access point and the target position is within this value, seek will find and seek to the exact target position. If the exact parameter is set to true and the difference between a Random Access point and the target position is beyond this range, seek will give up the accurate target point and will instead seek to and play from the Random Access point.
+If the exact parameter, the second parameter in the seek API, is true and the difference between a Random Access point and the target position is within this value, seek will find and seek to the exact target position. If the exact parameter is set to true and the difference between a Random Access point and the target position is beyond this range, seek will give up the accurate target point and will instead seek to and play from the Random Access point.
 
 For example, if NexPlayer is seeking to 10000 ms exactly (exact=true) and there is a Random Access point at 7000 ms, if this property is set to less than 3000 ms, the player will ignore the exact target value and will instead play from 7000 ms. On the other hand, if this property is set to more than 3000 ms, then NexPlayer will seek exactly to 10000 ms and begin playback.
 
@@ -1750,9 +1750,9 @@ For example, 70 means that if the current video time is more than 70msec behind 
 
 The number of milliseconds (as a negative number) that video is allowed to run ahead of audio before the system waits for audio to catch up.
 
-For example, -50 means that if the current video time is more than 50msec ahead of the audio time, the current video frame will not be displayed until the audio catches up to the same time stamp. This is used to adjust video and audio synchronization.
+For example, -50 means that if the current video time is more than 50 msec ahead of the audio time, the current video frame will not be displayed until the audio catches up to the same time stamp. This is used to adjust video and audio synchronization.
  
-**Type:** integer(should be negative)
+**Type:** integer (should be negative)
 
 **Unit:** msec (1/1000 sec)
 
@@ -1788,7 +1788,7 @@ The formula used to determine if a track switch is necessary is:
 
 In other words, if this property is set to 70, and `ENABLE_TRACKDOWN` is set to 1, NexPlayer will require that at least 70% of the decoded frames be displayed. If less than 70% can be displayed (greater than 30% skipped frames), then the next lower bandwidth track will be selected.
 
-A performance-based track switch **permanently** limits the maximum bandwidth of tracks that are eligible for play back until the content is closed. For this reason, setting this ratio higher than the default value of 70 is strongly discouraged. (This differs from the bandwidth-based algorithm, which continuously adapts to current network bandwidth).
+A performance-based track switch **permanently** limits the maximum bandwidth of tracks that are eligible for play back until the content is closed. For this reason, setting this ratio higher than the default value of 70 is strongly discouraged (This differs from the bandwidth-based algorithm, which continuously adapts to current network bandwidth).
 
 **Type:** integer
 **Range:** 0 to 100
