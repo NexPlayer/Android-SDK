@@ -8,7 +8,7 @@ The value of each property is an unsigned integer. For some properties, it may b
 
 To set a property, call setProperty on the NexPlayer instance. To get the current value of a property, call getProperty.
 
-> **Note** Do not access or change undocumented properties, or your code may behave unpredictably and may break in future versions.
+> **Note** Members of the enumeration that have not been documented, as well as values that have not yet been used are subject to change in future versions. Do not access or change undocumented properties, or your code may behave unpredictably and may break in future versions.
 
 **Property Fine-Tuning Guidelines**
 
@@ -50,7 +50,7 @@ Under normal operation, when there are no audio frames left in the audio buffer,
 
 There is an exception if the video buffer is more than 60% full. In this case, NexPlayer will continue video playback even if there is no more audio available.
 
-Setting this property totrue(1) bypasses this exception and forces the system to go to buffering immediately if there are no audio frames left to play.
+Setting this property to true(1) bypasses this exception and forces the system to go to buffering immediately if there are no audio frames left to play.
 
 **Type:** boolean
 
@@ -704,7 +704,7 @@ In content that includes standard CEA 608 closed captions that follow the specif
 
 The number of milliseconds of media to buffer initially before beginning streaming playback (HLS, RTSP, etc.).
 
-This is the initial amount of audio and video that NexPlayer buffers when it begins playback. To set this property separately, it must be set by calling setPropertyaftercalling open() and before start() is called.
+This is the initial amount of audio and video that NexPlayer buffers when it begins playback. To set this property separately, it must be set by calling setProperty after calling open() and before start() is called.
 
 If further buffering is required later in the playback process, the value of the property `RE_BUFFERING_DURATION` will be used instead.
 
@@ -1161,7 +1161,7 @@ Sets the language of both audio and text played in multi-stream content.
 
 It can be used to set the preferred language of audio and text streams to be displayed in content, before NexPlayer begins playing content.
 
-> **Warning** To change any media streamwhilecontent is playing, the method setMediaStream should be called instead.  
+> **Warning** To change any media stream while content is playing, the method setMediaStream should be called instead.  
 
 This property should be set by calling setProperty() after init and before NexPlayer.open() is called as demonstrated in the following sample code:
 
