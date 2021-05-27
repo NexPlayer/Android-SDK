@@ -12,7 +12,7 @@ Initializes and registers the **AsfPlayReadyDRMManager**.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initDRMManagerMulti ( ObjectnexPlayerHandle,StringstrEngineLibName) [static]
+#### static native int initDRMManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
 
 Internal use only. Please do not use.
 
@@ -325,9 +325,9 @@ Initializes and registers the **DeceUVDRMManager**.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initDRMManagerMulti(Object nexPlayerHandle, String strEngineLibName) [static]
+#### static native int initDRMManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
 
-internal use only. Please do not use.
+Internal use only. Please do not use.
 
 ### DRMManager Class Reference
 
@@ -343,9 +343,9 @@ Initializes and registers DRMManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initDRMManagerMulti(Object nexPlayerHandle, String strEngineLibName) [static]
+#### static native int initDRMManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
 
-internal use only. Please do not use.
+Internal use only. Please do not use.
 
 ### NexCaptionSetting.EdgeStyle Enum Reference
 
@@ -436,7 +436,7 @@ This method gets a line of text in CEA 708 closed captions.
  
 | Name  | Description  | 
 |---|---|
-| cData | The caption data for the received line of text, as anarrayof characters.|
+| cData | The caption data for the received line of text, as anarray of characters.|
 | index | The index of the line of text, as an integer.|
   
 
@@ -520,7 +520,7 @@ An enumeration of the possible types of files being handled by NexPlayer™ duri
 
 These are possible values for the HTTP statistics parameter key, *FILE\_TYPE*.
 
-#### FileType( intcode)
+#### FileType (intcode)
 
 Sets the ***FileType***.
 
@@ -558,7 +558,7 @@ The statistics defined here are for general playback of HLS, DASH or SS content.
 - IStatistics
 - setDuration
 
-#### GeneralStatisticsMetric(int code)
+#### GeneralStatisticsMetric (int code)
 
 Sets the general statistic metric.
 
@@ -594,7 +594,7 @@ This is the same as NexRTStreamInformation.mCurTrackBw.
 
 This current number of HTTP requests that have been made, as an integer.
 
-This is the same as the running count of onHttpRequest(NexPlayer mp, String msg) calls.
+This is the same as the running count of onHttpRequest (NexPlayer mp, String msg) calls.
 
 #### NUM\_REQUEST\_ERRORS = ( 0x00000A00 )
 
@@ -655,14 +655,14 @@ This is the same as NexRTStreamInformation.mNumOfTrackSwitchUp.
 
 The current number of frames that have been decoded, as an integer.
 
-This is the same as getContentInfoInt(NexPlayer.CONTENT\_INFO\_INDEX\_VIDEO\_CODEC\_DECODIN-
+This is the same as getContentInfoInt (NexPlayer.CONTENT\_INFO\_INDEX\_VIDEO\_CODEC\_DECODIN-
 G\_TOTAL\_COUNT).
 
 #### NUM\_VIDEO\_FRAME\_RENDERED = ( 0x00000E00 )
 
 The current number of frames that have been successfully rendered, as an integer.
 
-This is the same as getContentInfoInt(NexPlayer.CONTENT\_INFO\_INDEX\_VIDEO\_RENDER\_TOTAL\_COUNT).
+This is the same as getContentInfoInt (NexPlayer.CONTENT\_INFO\_INDEX\_VIDEO\_RENDER\_TOTAL\_COUNT).
 
 #### PLAY\_TIME\_SEC = ( 0x00000100 )
 
@@ -676,7 +676,7 @@ This is the same as the count of NEXPLAYER\_EVENT\_TIME.
 
 
 
-#### static native int initManager ( String strEngineLibName) [static]
+#### static native int initManager (String strEngineLibName) [static]
 
 Initializes and registers the GetHttpAuthInfoManager.
 
@@ -688,7 +688,7 @@ Initializes and registers the GetHttpAuthInfoManager.
  
 #### static native int initManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
 
-internal use only. Please do not use.
+Internal use only. Please do not use.
 
 ### GetKeyExtManager Class Reference
 
@@ -708,7 +708,7 @@ Initializes and registers the GetKeyExtManager.
  
 #### static native int initManagerMulti ( Object nexPlayerHandle, String strEngineLibName) [static]
 
-internal use only. Please do not use.
+Internal use only. Please do not use.
 
 ### GetPDBlockManager Class Reference
 
@@ -728,7 +728,7 @@ Initializes and registers the GetPDBlockManager.
  
 #### static native int initManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
 
-internal use only. Please do not use.
+Internal use only. Please do not use.
 
 ### GetPlaylistInfoManager Class Reference
 
@@ -745,9 +745,9 @@ Initializes and registers the GetPlaylistInfoManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initManagerMulti (Object nexPlayerHandle,String strEngineLibName) [static]
+#### static native int initManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
 
-internal use only. Please do not use.
+Internal use only. Please do not use.
 
 ### GLRenderer Class Reference
 
@@ -755,7 +755,7 @@ This is the view for displaying NexPlayer™ video output when using the OpenGL 
 
 For details see the OpenGL Renderer section of the general NexPlayer™ Engine documentation.
 
-#### GLRenderer( Contextcontext,NexPlayernp,IListenerlistener,intcolorDepth)
+#### GLRenderer (Contextcontext, NexPlayernp, IListenerlistener, intcolorDepth)
 
 The sole constructor.
 
@@ -763,7 +763,7 @@ The sole constructor.
 
 | Name  | Description  | 
 |---|---|
-| context | Android context object (if the caller is an activity, passingthisis normal).| 
+| context | Android context object (if the caller is an activity, passing this is normal).| 
 |np| The NexPlayer™ object that will provide the video frames to display in this view.|
 |listener| An object that implements GLRenderer.IListener, for receiving notifications about changes to the size of the surface.|
 |colorDepth| Video output image color depth (this must be the same value passed when initializing NexPlayer™).<br>**1** : RGBA\_8888<br>**4** : RGB\_565|
@@ -772,7 +772,7 @@ The sole constructor.
 
 #### void release ()
 
-This method releases resources that are used by the instances ofGLRenderer.
+This method releases resources that are used by the instances of GLRenderer.
  
 #### void setListener (IListener listener)
 
@@ -790,7 +790,7 @@ This causes the next rendering pass to clear the video image.
 
 If this is set to `TRUE`, the next rendering pass will clear the video image instead of displaying the most recently rendered frame. After the next rendering pass, this is automatically reset to `FALSE`.
 
-The typical method of erasing the current video image is to set this totrueand then request a rendering pass, as follows:
+The typical method of erasing the current video image is to set this to true and then request a rendering pass, as follows:
 
 ```java
 glRenderer.mClearScreen = true;
@@ -801,12 +801,12 @@ glRenderer.requestRender();
 
 This method causes the next rendering pass to clear the video image and reinitialize the renderer.
 
-If this is set toTRUE, the next rendering pass will call NexPlayer.GLinit instead of displaying the most recently
-rendered frame. After the next rendering pass, this is automatically reset toFALSE.
+If this is set to TRUE, the next rendering pass will call NexPlayer.GLinit instead of displaying the most recently
+rendered frame. After the next rendering pass, this is automatically reset to FALSE.
 
-> **Warning** When onVideoRenderPrepared is invoked, this should be set totrueif the GLRenderer already has been created once.
+> **Warning** When onVideoRenderPrepared is invoked, this should be set to true if the GLRenderer already has been created once.
  
-The typical method of reinitializing the video renderer is to set this totrueand then request a rendering pass, as follows:
+The typical method of reinitializing the video renderer is to set this to true and then request a rendering pass, as follows:
 
 ```java
 glRenderer.mReInitRenderer = true;
@@ -829,9 +829,9 @@ Initializes and registers the HLSAES128DescrambleManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.| 
  
-#### static native int initManagerMulti ( Object nexPlayerHandle, String strEngineLibName ) [static]
+#### static native int initManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
 
-> internal use only. Please do not use.
+Internal use only. Please do not use.
 
 ### HLSTsDRMManager Class Reference
 
@@ -839,7 +839,7 @@ This class allows NexPlayer™ to handle and descramble HLS TS encrypted content
 
 
 
-#### static native int initDRMManager ( String strEngineLibName ) [static]
+#### static native int initDRMManager (String strEngineLibName) [static]
 
 Initializes and registers the `HLSTsDRMManager`.
 
@@ -849,15 +849,15 @@ Initializes and registers the `HLSTsDRMManager`.
 |-------|----------------|
 | strEngineLibName | The relevant engine library name as a string. |
  
-#### static native int initDRMManagerMulti ( ObjectnexPlayerHandle,StringstrEngineLibName) [static]
+#### static native int initDRMManagerMulti (Object nexPlayerHandle,String strEngineLibName) [static]
 
-internal use only. Please do not use.
+Internal use only. Please do not use.
 
 ### HTTPRetrieveDataManager Class Reference
 
 This class allows NexPlayer™ to support and handle offline HLS and Smooth Streaming content.
  
-#### static native int initManager ( String strEngineLibName, String cachFolder) [static]
+#### static native int initManager (String strEngineLibName, String cachFolder) [static]
 
 Initializes and registers the `HTTPRetrieveDataManager`.
 
@@ -868,9 +868,9 @@ Initializes and registers the `HTTPRetrieveDataManager`.
 | strEngineLibName | The relevant engine library name as a string. |
 | cachFolder | The folder to be used for the cache, as a string. |
  
-#### static native int initManagerMulti ( Object nexPlayerHandle, String strEngineLibName,String cachFolder) [static]
+#### static native int initManagerMulti (Object nexPlayerHandle, String strEngineLibName, String cachFolder) [static]
 
-> Internal use only. Please do not use.
+Internal use only. Please do not use.
 
 ### NexStatisticsMonitor.HttpStatisticsMetric Enum Reference
 
@@ -897,8 +897,6 @@ For general playback statistics or system statistics during playback, please mon
 #### HttpStatisticsMetric( int code )
 
 Sets the HTTP statistics metric.
-
-
 
 #### int getCode ( )
 
@@ -939,13 +937,13 @@ This enumeration defines the parameter key, for parameters related to HTTP stati
  
 HttpStatisticsMetric
  
-#### HttpStatisticsParamKey( int code )
+#### HttpStatisticsParamKey (int code)
 
 Sets the HTTP statistics parameter key.
 
 
 
-#### final int getCode ( )
+#### final int getCode ()
 
 Gets the HTTP statistics parameter key as an integer code.
 
@@ -1012,7 +1010,7 @@ A parameter for the HTTP statistic, *DOWN\_START*.
  
 
 
-#### static native int initManager ( String strEngineLibName, String cachFolder ) [static]
+#### static native int initManager (String strEngineLibName, String cachFolder) [static]
 
 Initializes and registers the HTTPStoreDataManager.
 
@@ -1025,21 +1023,21 @@ Initializes and registers the HTTPStoreDataManager.
  
 #### static native int initManagerMulti (Object nexPlayerHandle, String strEngineLibName, String cachFolder) [static]
 
-internal use only. Please do not use.
+Internal use only. Please do not use.
 
 ### NexABRController.IABREventListener Interface Reference
 
 This interface must be implemented in order for the application to receiveABRControlevents from NexABRController.
 
-NexABRController will call the methods provided in this interface automatically during playback to notify the application when variousABRControlevents have occurred.
+NexABRController will call the methods provided in this interface automatically during playback to notify the application when various ABRControl events have occurred.
 
 In most cases, the handling of these events is optional; NexPlayer™ will continue to play content back normally without the application doing anything special in response to the events received.
  
 
 
-#### abstract void onMinMaxBandWidthChanged (NexErrorCode result, int minBwBps,  intmaxBwBps ) [abstract]
+#### abstract void onMinMaxBandWidthChanged (NexErrorCode result, int minBwBps,  int maxBwBps) [abstract]
 
-This method will be called by theNexABRControllerwhen either the minimum or maximum bandwith allowed
+This method will be called by the NexABRController when either the minimum or maximum bandwith allowed
 for streaming content is changed.
 
 **Parameters**
@@ -1056,12 +1054,12 @@ for streaming content is changed.
 - changeMaxBandWidth()
 - changeMinBandWidth()
  
-#### abstract void onTargetBandWidthChanged ( NexErrorCode result, int reqBwBps, int selBwBps ) [abstract]
+#### abstract void onTargetBandWidthChanged (NexErrorCode result, int reqBwBps, int selBwBps) [abstract]
 
-This method will be called by theNexABRControllerwhen the target bandwidth for streaming content is
+This method will be called by the NexABRController when the target bandwidth for streaming content is
 changed.
 
-For example, if content has three tracks at bandwidths of 500k, 900k, and 1200k and the applications calls setTargetBandwidth to set a target of 700k with the target option `BELOW`, `reqBwBps` will be 700,000 and `selBwBps` will be 500,000.
+For example, if content has three tracks at bandwidths of 500k, 900k, and 1200k and the applications calls set TargetBandwidth to set a target of 700k with the target option `BELOW`, `reqBwBps` will be 700,000 and `selBwBps` will be 500,000.
 
 **Parameters**
 
@@ -1084,7 +1082,7 @@ This must be implemented by the UI.
 
 
 
-#### byte [ ] getKeyFromExternal ( String strKeyUrl )
+#### byte [ ] getKeyFromExternal (String strKeyUrl)
 
 Callback function to retrieve an encryption key from an HLS playlist over HTTPS for descrambling.
 
@@ -1101,7 +1099,7 @@ This function is called each time a new playlist is received and an encryption k
  
 A byte array where the encryption key information will be stored.
  
-#### boolean isSupportKeyAttr ( String strKeyAttr, String strURL )
+#### boolean isSupportKeyAttr (String strKeyAttr, String strURL)
 
 Callback function that verifies whether or not a key attribute is supported by the DRM module.
 
@@ -1124,19 +1122,19 @@ In this case, NexPlayer will not call the "getKeyFromExternal" callbacks and it 
 
 > **Warning** These methods are for internal usage only. Please do not use.
  
-#### void onCodecDownloaderEventBegin ( int param1, long param2)
+#### void onCodecDownloaderEventBegin (int param1, long param2)
 
 For internal use only. Please do not use.
 
-#### void onCodecDownloaderEventComplete ( int param1,int result )
+#### void onCodecDownloaderEventComplete (int param1, int result )
 
 For internal use only. Please do not use.
 
-#### void onCodecDownloaderEventError ( NexALFactoryErrorCode errorcode )
+#### void onCodecDownloaderEventError (NexALFactoryErrorCode errorcode )
 
 For internal use only. Please do not use.
  
-#### void onCodecDownloaderProgress ( int param1, int param2, long param3, long param4)
+#### void onCodecDownloaderProgress (int param1, int param2, long param3, long param4)
 
 For internal use only. Please do not use.
  
@@ -1170,7 +1168,7 @@ then this method will be called and gets the thumbnail information associated wi
  
 > Implemented in NexEventReceiver.
 
-#### void onDynamicThumbnailRecvEnd ( NexPlayer mp )
+#### void onDynamicThumbnailRecvEnd (NexPlayer mp)
 
 This callback method informs the Dynamic Thumbnail listener when the end of thumbnail data is received.
 
@@ -1218,7 +1216,7 @@ The exact track bandwidth that the user wants to set to forcibly.
 
 The application must implement this interface in order to receive events from NexPlayer™.
 
-> **CAUTION:** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from withinIListenercallbacks. The safest way to update the UI is to use `android.os.Handler` to post an event back to the main application thread.
+> **CAUTION:** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from with in IListener callbacks. The safest way to update the UI is to use `android.os.Handler` to post an event back to the main application thread.
 
 NexPlayer™ will call the methods provided in this interface automatically during playback to notify the application when various events have occurred.
 
@@ -1234,10 +1232,10 @@ For asynchronous commands, the application will generally want to take action in
 - When an open command succeeds, issue a start command to begin actual playback.
 - When a stop command succeeds, issue a close command to close the file.
 
-This is because commands such asopenandstoptake some time to execute, and follow-up commands such as
-startandclosecannot be called immediately, but must wait until the first command has completed.
+This is because commands such as open and stop take some time to execute, and follow-up commands such as
+start and close can not be called immediately, but must wait until the first command has completed.
 
-> **Warning** However, do not callclosein these event handlers as this may give rise to a deadlock. A safe way to call `close` is to use the Android UI main thread’s message handler.
+> **Warning** However, do not call close in these event handlers as this may give rise to a deadlock. A safe way to call `close` is to use the Android UI main thread’s message handler.
 
 > See each individual `IListener` method for a recommendation on how to implement that method in your application.
 
@@ -1456,12 +1454,12 @@ Below are the possible error codes for `async_command_value`.
  
 > Implemented in NexEventReceiver.
 
-#### void onAudioRenderCreate(NexPlayer mp,int samplingRate,int channelNum)
+#### void onAudioRenderCreate (NexPlayer mp, int samplingRate, int channelNum)
 
 Notification that the audio rendering thread has been created.
 
 Under previous versions of the SDK, it was necessary to create and manage the audio renderer. However, under
-the current version this is done automatically, and theonAudioRenderCreatemethod should be empty or
+the current version this is done automatically, and the on AudioRenderCreate method should be empty or
 contain only diagnostic code.
 
 **Parameters**
@@ -1478,7 +1476,7 @@ contain only diagnostic code.
 
 Notification that the audio rendering thread has been destroyed.
 
-Under previous versions of the SDK, it was necessary to destroy the audio renderer. However, under the current version this is done automatically, and theonAudioRenderDeletemethod should be empty or contain only
+Under previous versions of the SDK, it was necessary to destroy the audio renderer. However, under the current version this is done automatically, and the on AudioRenderDelete method should be empty or contain only
 diagnostic code.
 
 **Parameters**
@@ -1489,7 +1487,7 @@ diagnostic code.
   
 > Implemented in NexEventReceiver.
 
-#### void onAudioRenderPrepared(NexPlayer mp)
+#### void onAudioRenderPrepared (NexPlayer mp)
 
 This method is called when NexPlayer™ recognizes which audio render will be used.
 
@@ -1503,7 +1501,7 @@ Because NexPlayer™ supports only a SW audio render, this method will not be us
   
 > Implemented in NexEventReceiver.
 
-#### void onBuffering (NexPlayer mp,int progress\_in\_percent)
+#### void onBuffering (NexPlayer mp, int progress\_in\_percent)
 
 This reports the current buffering status.
 
@@ -1552,9 +1550,9 @@ Reports Data Inactivity Timeout.
  
 > Implemented in NexEventReceiver.
 
-#### void onDateRangeData (NexPlayer mp,NexDateRangeData[] data)
+#### void onDateRangeData (NexPlayer mp, NexDateRangeData[] data)
 
-This method reports the dataRange value that is contained in the EXT-X-DATERANGE tag.
+This method reports the data Range value that is contained in the EXT-X-DATERANGE tag.
 
 **Parameters**
 
@@ -1562,16 +1560,15 @@ This method reports the dataRange value that is contained in the EXT-X-DATERANGE
 | Name  | Description  | 
 |---|---|
 | mp | The NexPlayer™ object to which this event applies.| 
-| data | The array of NexDateRangeData object that includes dataRange and datacontained in the EXT-X-DATERANGE tag.| 
+| data | The array of NexDateRangeData object that includes data Range and data contained in the EXT-X-DATERANGE tag.| 
  
 > Implemented in NexEventReceiver.
  
-#### void onDownloaderAsyncCmdComplete (NexPlayer mp, int msg, int param1,int param2)
+#### void onDownloaderAsyncCmdComplete (NexPlayer mp, int msg, int param1, int param2)
 
 This function is called when an asynchronous command in the Downloader module is complete.
 
-This method will be called whenever DownloaderOpen(), DownloaderClose(), DownloaderStart() or Downloader-
-Stop() finish asynchronously.
+This method will be called whenever DownloaderOpen(), DownloaderClose(), DownloaderStart() or DownloaderStop() finish asynchronously.
 
 **Parameters**
 
@@ -1580,11 +1577,11 @@ Stop() finish asynchronously.
 | mp | The NexPlayer™ object to which this event applies.| 
 | data | The asynchronous command completed. This will be one of:<br>- NEXDOWNLOADER\_ASYNC\_CMD\_OPEN = 0x00200001<br>- NEXDOWNLOADER\_ASYNC\_CMD\_CLOSE = 0x00200002<br>- NEXDOWNLOADER\_ASYNC\_CMD\_START = 0x00200003<br>- NEXDOWNLOADER\_ASYNC\_CMD\_STOP = 0x00200004|
 | param1 | This integer indicates the result of the command. It will be 0 in the event of success, or will be an error code in the event of failure.| 
-| param2 | Additional information, if available, concerning the result reported inparam1. For example if the error is invalid response,param2 gives the HTTP status code.|  
+| param2 | Additional information, if available, concerning the result reported in param1. For example if the error is invalid response, param2 gives the HTTP status code.|  
  
 > Implemented in NexEventReceiver.
 
-#### void onDownloaderError (NexPlayer mp,int msg,int param1)
+#### void onDownloaderError (NexPlayer mp, int msg, int param1)
 
 This function is called when an error is generated by the Downloader module.
 
@@ -1598,7 +1595,7 @@ This function is called when an error is generated by the Downloader module.
   
 > Implemented in NexEventReceiver.
 
-#### void onDownloaderEventBegin (NexPlayer mp,int param1,int param2)
+#### void onDownloaderEventBegin (NexPlayer mp, int param1, int param2)
 
 This method reports when a Downloader event has started.
 
@@ -1612,7 +1609,7 @@ This method reports when a Downloader event has started.
  
 > Implemented in NexEventReceiver.
 
-#### void onDownloaderEventComplete (NexPlayer mp,int param1)
+#### void onDownloaderEventComplete (NexPlayer mp, int param1)
 
 This function is called when a Downloader event has completed.
 
