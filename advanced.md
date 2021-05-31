@@ -1704,13 +1704,13 @@ While NexPlayer™ normally handles HTTP requests and responses internally, in c
 > Implemented in NexEventReceiver.
 
 
-#### void onHTTPResponse (NexPlayer mp,String strResponse)
+#### void onHTTPResponse (NexPlayer mp, String strResponse)
 
 This method allows responses from an HTTP server to be received and handled in a more customized way.
 
 While NexPlayer™ normally handles HTTP requests and responses internally, in cases where additional information is required from the server (for example user cookies), this method can be used in conjunction with onHTTPRequest to handle that information directly.
 
-> **Note** This should be called after a response has been received from the server. To change the requests being made,onModifyHttpRequest should be called.
+> **Note** This should be called after a response has been received from the server. To change the requests being made, onModifyHttpRequest should be called.
  
 **Parameters**
 
@@ -1726,7 +1726,7 @@ While NexPlayer™ normally handles HTTP requests and responses internally, in c
  
 Implemented in NexEventReceiver.
 
-#### String onModifyHttpRequest (NexPlayer mp,int param1,Object input\_obj)
+#### String onModifyHttpRequest (NexPlayer mp, int param1, Object input\_obj)
 
 This method provides the HTTP Request that will be used by NexPlayer™ when an HTTP request is modified.
 
@@ -1948,7 +1948,7 @@ This can happen, for example, if the track changes during HLS playback, resultin
 
 The msg parameter contains information about the condition that has changed.
 
-Because multiple calls to this function can be issued for the same event, unknown values for msg should generally be ignored. To handle general status changes that affect content information without processing duplicate
+Since multiple calls to this function can be issued for the same event, unknown values for msg should generally be ignored. To handle general status changes that affect content information without processing duplicate
 messages, the best approach is just to handle NEXPLAYER\_STATUS\_REPORT\_CONTENT\_INFO\_UPDATED.
 
 To determine the new content information when this event occurs, call getContentInfo or getContentInfoInt.
@@ -2071,7 +2071,7 @@ Applications that wish to update the play time more often that once per second o
 
 #### void onTimedMetaRenderRender ( NexPlayer mp, NexID3TagInformation TimedMeta )
 
-This method is called when new timed metadata is ready for display in HLS.
+This method is called when new timed metadata is ready to be displayed in HLS.
 
 Timed metadata includes additional information about the playing content that may be displayed to the user and this information may change at different times throughout the content. Each time new metadata is available for display, this method is called.
 
@@ -2335,7 +2335,7 @@ Do not confuse this with `NexPlayer.IListener`, a separate interface.
 
 
 
-#### void onGLChangeSurfaceSize ( int width,int height)
+#### void onGLChangeSurfaceSize ( int width, int height )
 
 This method is called when the size of the OpenGL surface has changed.
 
@@ -2711,7 +2711,7 @@ method in your application.
  
 
 
-#### void onVideoRenderCapture (NexPlayer mp,int width,int height,int pixelbyte,Object bitmap)
+#### void onVideoRenderCapture (NexPlayer mp, int width, int height, int pixelbyte, Object bitmap)
 
 Called when a frame of video has been captured.
 
@@ -2933,7 +2933,7 @@ decryption of encrypted manifests or playlists.
 
 
 
-#### static native int initManager ( String strEngineLibName) *[static]*
+#### static native int initManager (String strEngineLibName) *[static]*
 
 Initializes and registers the `MPDDescrambleManager`.
 
@@ -2943,7 +2943,7 @@ Initializes and registers the `MPDDescrambleManager`.
 |------------------|---------------------------|
 | strEngineLibName | The relevant engine library name as a string. |
  
-#### static native int initManagerMulti ( Object nexPlayerHandle,String strEngineLibName) *[static]*
+#### static native int initManagerMulti (Object nexPlayerHandle,String strEngineLibName) *[static]*
 
 > Internal use only. Please do not use.
 
@@ -2967,7 +2967,7 @@ This method sets the pitch, yaw and roll euler angles.
 | yaw   | The yaw value is yaw degrees around the y axis.   |
 | roll  | The roll value is roll degrees around the z axis. |
  
-#### int setPositionAngle ( float x,float y,float z,float angle)
+#### int setPositionAngle (float x, float y, float z, float angle)
 
 This method sets the Position Vector and Angle.
 
@@ -2980,7 +2980,7 @@ This method sets the Position Vector and Angle.
 | z     | The z position that represents a vector or point in 3D space. |
 | angle | The angle rotating degrees about axis(x or y or z).           |
  
-#### int setQuaternion ( float w,float x,float y,float z)
+#### int setQuaternion (float w, float x, float y, float z)
 
 This method sets the quaternion value.
 
@@ -3063,7 +3063,7 @@ is appropriate, even if it detects less bandwidth available.
 NexErrorCode
  
  
-#### NexErrorCode changeMinMaxBandWidth(int minBwBps,int maxBwBps)
+#### NexErrorCode changeMinMaxBandWidth(int minBwBps, int maxBwBps)
 
 This method sets the minimum and maximum bandwidth for streaming playback dynamically during playback.
 
@@ -3136,7 +3136,7 @@ This method sets and registers an *IABREventListener* listener for the applicati
  
 - `NexABRController.IABREventListener`
   
-#### NexErrorCode setTargetBandWidth(int targetBwBps,SegmentOption segOption,TargetOption targetOption)
+#### NexErrorCode setTargetBandWidth(int targetBwBps, SegmentOption segOption, TargetOption targetOption)
 
 This method sets the target bandwidth for streaming playback dynamically during playback.
 
@@ -3216,7 +3216,7 @@ In addition, an application must also do the following:
 
 Sole constructor for `NexALFactory`;.
 
-After constructing a `NexALFactory` object, youmustcall `NexALFactory.init` before you can call any other methods.
+After constructing a `NexALFactory` object, you must call `NexALFactory.init` before you can call any other methods.
 
 
 
@@ -3230,7 +3230,7 @@ This method cancels a codec download.
 Zero if successful or a non-zero error code.
 
  
-#### static native int canUseNativeDecoder (String strDeviceModel,int sdkInfo) *[static]*
+#### static native int canUseNativeDecoder (String strDeviceModel, int sdkInfo) *[static]*
 
 Checks whether the current device can use native decoders or not.
 
@@ -3238,7 +3238,7 @@ Checks whether the current device can use native decoders or not.
  
 | Name           | Description                                                                                                                                                                                                                                                                                                                                                     |
 |----------------|---------------------|
-| strDeviceModel | Device model name. Under normal (production) use, you should pass the MODEL as avail- able via the Android API *inandroid.os.Build.MODEL*.                                                                                                                                                                                                                      |
+| strDeviceModel | Device model name. Under normal (production) use, you should pass the MODEL as available via the Android API *inandroid.os.Build.MODEL*.                                                                                                                                                                                                                      |
 | sdkInfo        | The Android SDK version number. Refer to NexSystemInfo.getPlatformInfo()   - 0x15 : SDK version 1.5 CUPCAKE - 0x16 : SDK version 1.6 DONUT - 0x21 : SDK version 2.1 ECLAIR - 0x22 : SDK version 2.2 FROYO - 0x30 : SDK version 2.3 GINGERBREAD - 0x31 : SDK version 3.0 HONEYCOMB - 0x40 : SDK version 4.0 ICECREAM SANDWICH - 0x41 : SDK version 4.1 JELLYBEAN |
 
 **Returns**
@@ -3312,17 +3312,17 @@ Returns the NexALFactoryContext.
 This method is called by the `NexPlayer`™ Engine. This is just for native methods. Don’t use this method for other
 purposes.
 
-#### boolean init (Context context,String strModel,String strRenderMode,int logLevel,int colorDepth)
+#### boolean init (Context context, String strModel, String strRenderMode, int logLevel, int colorDepth)
 
 Initializes `NexALFactory`.
 
 `NexPlayer`™ automatically detects the devices where HW codecs and H.264 Main/High profiles can be supported
 so there is no need to indicate any specific device model to the player.
 
-> **Warning** Although it is possible to change the device model parameter,*strModel*, it is not recommended because
+> **Warning** Although it is possible to change the device model parameter, *strModel*, it is not recommended because
 changing the model name may result in the H/W decoder not working properly. Please do NOT change
 the device model name in the sample code. Similarly, although it is possible to change the render mode
-parameter,*strRenderMode*, `NexPlayer`™ is only guaranteed to work properly with *strRenderMode*
+parameter, *strRenderMode*, `NexPlayer`™ is only guaranteed to work properly with *strRenderMode*
 set to *NEX\_DEVICE\_USE\_AUTO*. Please do NOT change the render mode in the sample code.
 
 **Parameters**
@@ -3333,7 +3333,7 @@ set to *NEX\_DEVICE\_USE\_AUTO*. Please do NOT change the render mode in the sam
 | context       | The current context; from *Activity* subclasses, you can just pass *this*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | srtModel      | Device model name. `NexPlayer`™ includes multiple renderer modules, and past versions of the player selected the module most suitable to the device based on this value. The renderer is now set by the parameter *strRenderMode*. Under normal use, you should pass the MODEL as available via the Android API in *android.os.Build.MODEL*. For example:  	*nexALFactory.init(this, android.os.Build.MODEL, 	NEX\_DEVICE\_USE\_AUTO, 0, 1);*     `NexPlayer`™ uses this to select the most appropriate renderer if no renderer is selected (*NULL* is passed) with the parameter *strRenderMode* below. For OS versions up to Gingerbread, this is always the Android Renderer (although from Froyo, other renderers are supported as well) if the SW codec is in use. For Honeycomb and Ice Cream Sandwich (ICS), this is always the OpenGL renderer when the SW codec is in use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | srtRenderMode | The Renderer to use, as a string. The recommended render mode to use is *NEX\_DEVICE\_USE\_AUTO*, which will choose the most appropriate render mode automatically. For devices that support the hardware codec, this will be:   - `NEX\_USE\_RENDER\_IOMX.` For devices that don’t support the hardware codec, this     will be one of the software renderers. While most devices should work properly with     OpenGL, occasionally another rendering module may be beneficial, for example if a device supports 3D rendering, if an application doesn’t implement support for the OpenGL renderer, or for devices running older versions of the Android OS. In some other     cases, such as the Kindle Fire running on Gingerbread, while the default renderer is     Android, the OpenGL renderer is recommended because of improved performance.     The available software renderers are:        `- NEX\_DEVICE\_USE\_AUTO ("Auto")` Added in `NexPlayer` SDK version 6.1.2, this           chooses which renderer to use automatically.        `- NEX\_DEVICE\_USE\_ONLY\_ANDROID ("Android")` Use only standard Android           API bitmaps to display frames. This is usually slower, but is more portable.        `- NEX\_DEVICE\_USE\_JAVA ("JAVA")` Use the Java renderer.        `- NEX\_DEVICE\_USE\_OPENGL ("OPENGL")` Use the OpenGL renderer.        `- NEX\_DEVICE\_USE\_ANDROID\_3D ("Android 3D")` Use the 3D video renderer           with standard Android API bitmaps. |
-| logLevel      | `NexPlayer`™ SDK logging level. This affects the messages that the SDK writes to the Android log.   - **-1** : Do not output any log messages. (If you do not want to output any log messages     in NexPlayerSample App, you should set the loglevel to 0xF0000000.) - **0** : Output basic log messages only (recommended). - **1** ∼ **4** : Output detailed log messages; higher numbers result in more verbose log en-     tries, but may cause performance issues in some cases and are not recommended for     general release code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| logLevel      | `NexPlayer`™ SDK logging level. This affects the messages that the SDK writes to the Android log.   - **-1** : Do not output any log messages. (If you do not want to output any log messages     in NexPlayerSample App, you should set the loglevel to 0xF0000000.) - **0** : Output basic log messages only (recommended). - **1** ∼ **4** : Output detailed log messages; higher numbers result in more verbose log entries, but may cause performance issues in some cases and are not recommended for general release code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | colorDepth    | colorDepth Video output image color depth.   - **1** : RGBA\_8888 - **4** : RGB\_565                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 **Returns**
@@ -3484,7 +3484,7 @@ The attributes will be generated by initializing settings object values.
 
 #### Object getValue (int attr)
 
-This method gets the value of an individual `NexCaptionAttribute`attribute.
+This method gets the value of an individual `NexCaptionAttribute` attribute.
 
 **Parameters**
 
@@ -3779,7 +3779,7 @@ This method sets the caption data to be rendered.
 |---------|--------------------------------|
 | caption | The NexClosedCaption object containing the closed captions and attributes to be displayed. |
  
-#### void setRenderingArea (Rect renderingArea,float scale)
+#### void setRenderingArea (Rect renderingArea, float scale)
 
 This method sets the caption rendering area, compared to the video rendering area.
 
@@ -3844,7 +3844,7 @@ This method constructs the caption preview renderer.
 | context | The handle for the player. |
 
  
-#### NexCaptionPreview (Context context,AttributeSet attr)
+#### NexCaptionPreview (Context context, AttributeSet attr)
 
 This method is an alternative constructor for the caption preview renderer.
 
@@ -3866,7 +3866,7 @@ This method is an alternative constructor for the caption preview renderer.
 
 This method changes the font size of text in the caption preview.
 
-To double the font size, the parameter *sizeRate* should be set to 200. In contrast, to halve the font size,*sizeRate* should be set to 50.
+To double the font size, the parameter *sizeRate* should be set to 200. In contrast, to halve the font size, *sizeRate* should be set to 50.
 
 **Parameters**
  
@@ -3879,10 +3879,10 @@ To double the font size, the parameter *sizeRate* should be set to 200. In contr
 
 This method resets the edge effects on caption preview text.
 
-Possible edge effects include *setShadow*,*setCaptionStroke*,*setRaise*, and *setDepressed*.
+Possible edge effects include *setShadow*, *setCaptionStroke*, *setRaise*, and *setDepressed*.
 
  
-#### void setBGCaptionColor (CaptionColor bgColor,int opacity)
+#### void setBGCaptionColor (CaptionColor bgColor, int opacity)
 
 This method sets the background color of text in the caption preview.
 
@@ -3895,7 +3895,7 @@ This method sets the background color of text in the caption preview.
 | opacity | The opacity of the preview caption window as an integer, from 0 to 255, where 0 is completely transparent and 255 is completely opaque. |
 
  
-#### void setCaptionStroke (CaptionColor strokeColor,int strokeOpacity,float strokeWidth)
+#### void setCaptionStroke (CaptionColor strokeColor, int strokeOpacity, float strokeWidth)
 
 This method sets the stroke color and width of caption preview text.
 
@@ -3911,7 +3911,7 @@ For a full list of colors, please refer to `NexClosedCaption.CaptionColor`. The 
 | strokeWidth   | The width of the stroke line as a float, in pixels.                                                              |
 
  
-#### void setCaptionWindowColor (CaptionColor windowColor,int windowOpacity)
+#### void setCaptionWindowColor (CaptionColor windowColor, int windowOpacity)
 
 This method sets the color of the caption window when previewed.
 
@@ -3927,7 +3927,7 @@ For a full list of colors , please refer to `NexClosedCaption.CaptionColor`.
  
 
  
-#### void setDepressed ( boolean isDepressed)
+#### void setDepressed (boolean isDepressed)
 
 This method adds a depressed filter to caption preview text.
 
@@ -3938,7 +3938,7 @@ This method adds a depressed filter to caption preview text.
 | isDepressed | TRUE if the text should be displayed as if depressed into the screen; otherwise FALSE |
 
  
-#### void setDepressedWithColor ( boolean isDepressed,CaptionColor depColor,int depOpacity)
+#### void setDepressedWithColor (boolean isDepressed, CaptionColor depColor, int depOpacity)
 
 This method indicates whether or not CEA 608 closed captions should be displayed as if "depressed" (in a set font
 color).
@@ -3969,7 +3969,7 @@ This method sets the radius of blur for the Emboss Mask filter when a user sets 
 | radius | The radius of blur when Emboss Mask filter is used. |
  
  
-#### void setEmbossSpecular ( float specular)
+#### void setEmbossSpecular (float specular)
 
 This method sets the specular level of the Emboss Mask filter used when a user sets the caption preview to be
 displayed ’Raised’ or ’Depressed’ in the UI.
@@ -3981,7 +3981,7 @@ displayed ’Raised’ or ’Depressed’ in the UI.
 |----------|---------------------------|
 | specular | The specular level of the Emboss Mask filter. |
  
-#### void setFGCaptionColor (CaptionColor fontColor,int opacity)
+#### void setFGCaptionColor (CaptionColor fontColor, int opacity)
 
 This method sets the foreground color of caption preview text.
 
@@ -3993,7 +3993,7 @@ This method sets the foreground color of caption preview text.
 | fontColor | The color to be used for caption preview text.                                                                                |
 | opacity   | The opacity of the preview text as an integer, from 0 to 255, where 0 is completely transparent and 255 is completely opaque. |
  
-#### void setFonts ( Typeface normType,Typeface boldType,Typeface italicType,Typeface boldItalicType)
+#### void setFonts (Typeface normType, Typeface boldType, Typeface italicType, Typeface boldItalicType)
 
 This method sets the fonts to be used for caption preview text.
 
@@ -4015,7 +4015,7 @@ typeface will be used.
 | italicType     | Typeface to be used for preview captions in italics.                        |
 | boldItalicType | Typeface to be used for preview captions that are both bold and in italics. |
  
-#### void setPreviewTextAlign (int horizontal,int vertical)
+#### void setPreviewTextAlign (int horizontal, int vertical)
 
 This method sets the alignment of text inside the caption window preview.
 
@@ -4037,7 +4037,7 @@ This method adds a raised filter to caption preview text.
 |-----------|-----------------------------|
 | isRaisedv | TRUE if the text should be displayed as if raised; otherwise FALSE. |
  
-#### void setRaisedWithColor (boolean isRaised,CaptionColor raisedColor,int raisedOpacity)
+#### void setRaisedWithColor (boolean isRaised, CaptionColor raisedColor, int raisedOpacity)
 
 This method indicates whether or not CEA 608 closed captions should be displayed as if "raised" (in a set font
 color).
@@ -4054,7 +4054,7 @@ the color of the raised portion of the caption text can be set by the user.
 | raisedColor   | The color of the raised part of the text set by the user, or null to use the default color.           |
 | raisedOpacity | The opacity of the raised part of the text as an integer, from 0 (transparent) to 255 (fully opaque). |
  
-#### void setShadow (boolean isShadow,CaptionColor shadowColor,int shadowOpacity)
+#### void setShadow (boolean isShadow, CaptionColor shadowColor, int shadowOpacity)
 
 This method adds a drop shadow effect to caption preview text.
 
@@ -4108,7 +4108,7 @@ To display CFF and 3GPP timed text, please use `NexCaptionRendererForTimedText.`
 - `void onMeasure (int widthMeasureSpec, int heightMeasureSpec)`
 - `void onDraw (Canvas canvas)`
 
-#### NexCaptionRenderer (Context context,int borderX,int borderY)
+#### NexCaptionRenderer (Context context, int borderX, int borderY)
 
 This sets the CEA 608 closed caption renderer in FULL mode.
 
@@ -4127,7 +4127,7 @@ video rendering area where no captions will appear.
 | borderX | The horizontal indent from the edge of the video rendering area to the caption rendering area. |
 | borderY | The vertical indent from the edge of the video rendering area to the caption rendering area.   |
  
-#### NexCaptionRenderer (Context context,AttributeSet attrs)
+#### NexCaptionRenderer (Context context, AttributeSet attrs)
 
 This is an alternative constructor for the `NexCaptionRenderer`.
 
@@ -4249,7 +4249,7 @@ By enabling this option, the bold attributes in the caption data are ignored and
 |--------|-------------------|
 | isBold | Set this to TRUE to force bold text, or FALSE to use the bold attribute in the original captions. |
  
-#### void setCaptionStroke (CaptionColor strokeColor,float strokeWidth)
+#### void setCaptionStroke (CaptionColor strokeColor, float strokeWidth)
 
 This sets the CEA 608 caption renderer stroke color and width.
 
@@ -4316,14 +4316,14 @@ If depressed closed captions are to be displayed in a user-defined color, see th
 
 | Name        | Description                                                  |
 |-------------|----------------------|
-| isDepressed | TRUE if closed captions are depressed,FALSE if they are not. |
+| isDepressed | TRUE if closed captions are depressed, FALSE if they are not. |
  
 **See Also**
 
  
 - `NexCaptionRenderer.setDepressedWithColor`
  
-#### void setDepressedWithColor (boolean isDepressed,CaptionColor depressedColor,int depressedOpacity)
+#### void setDepressedWithColor (boolean isDepressed, CaptionColor depressedColor, int depressedOpacity)
 
 This method indicates whether or not CEA 608 closed captions should be displayed as if "depressed" (in a set font
 color).
@@ -4399,7 +4399,7 @@ This method sets the specular level of the Emboss Mask filter used when a user s
  
 @deprecated This API is deprecated.
 
-#### void setFGCaptionColor (CaptionColor foreground,int fgOpacity)
+#### void setFGCaptionColor (CaptionColor foreground, int fgOpacity)
 
 This sets the CEA 608 closed captions foreground (text) color.
 
@@ -4412,7 +4412,7 @@ For a full list of colors , please refer to `NexClosedCaption.CaptionColor`.
 | foreground | The foreground color, or null to use the color from the original caption data. |
 | fgOpacity  | The foreground opacity, from 0 (transparent) to 255 (fully opaque).            | 
 
-#### void setFonts (Typeface normType,Typeface boldType,Typeface italicType,Typeface boldItalicType)
+#### void setFonts (Typeface normType, Typeface boldType, Typeface italicType, Typeface boldItalicType)
 
 This sets the font used for the captions.
 
@@ -4517,14 +4517,14 @@ instead.
 
 | Name    | Description                                               |
 |---------|-------------------|
-| isRaise | TRUE if closed captions are raised,FALSE if they are not. |
+| isRaise | TRUE if closed captions are raised, FALSE if they are not. |
  
 **See Also**
 
  
 - `NexCaptionRenderer.setRaiseWithColor`
  
-#### void setRaiseWithColor (boolean isRaise,CaptionColor raisedColor,int raisedOpacity)
+#### void setRaiseWithColor (boolean isRaise, CaptionColor raisedColor, int raisedOpacity)
 
 This method indicates whether or not CEA 608 closed captions should be displayed as if "raised" (in a set font
 color).
@@ -4541,7 +4541,7 @@ the color of the raised portion of the caption text can be set by the user.
 | raisedColor   | The color of the raised part of the text set by the user, or null to use the default color.           |
 | raisedOpacity | The opacity of the raised part of the text as an integer, from 0 (transparent) to 255 (fully opaque). |
  
-#### void setRenderArea (int x,int y,int width,int height)
+#### void setRenderArea (int x, int y, int width, int height)
 
 This sets the CEA 608 closed caption rendering area within the displayed video area.
 
@@ -4568,7 +4568,7 @@ This sets whether the CEA-608 captions have a shadow.
 |----------|------------------------|
 | isShadow | Set this to TRUE to force shadow text, or FALSE for no shadow. |
  
-#### void setShadowWithColor (boolean isShadow,CaptionColor shadowColor,int shadowOpacity)
+#### void setShadowWithColor (boolean isShadow, CaptionColor shadowColor, int shadowOpacity)
 
 This method sets whether CEA 608 closed captions should be displayed with a colored shadow.
 
@@ -4583,7 +4583,7 @@ It can be used to allow users to select the color they want to use for shadows a
 | shadowColor   | The shadow color, or null to use the color from the original caption data.            |
 | shadowOpacity | The shadow opacity as an integer, from 0 (transparent) to 255 (fully opaque).         |
  
-#### void setTextScaleFactor (float scale,float textSize)
+#### void setTextScaleFactor (float scale, float textSize)
 
 This method lets users control the CEA 608 closed caption font size in `NexPlayer`™ from the application UI.
 
@@ -4615,7 +4615,7 @@ outline.
 |-----------|--------------------------|
 | isUniform | TRUE if all caption characters should have a uniform black outline; otherwise FALSE. |
  
-#### void setWindowColor (CaptionColor windowColor,int windowOpacity)
+#### void setWindowColor (CaptionColor windowColor, int windowOpacity)
 
 This method sets the window color of CEA 608 closed captions.
 
@@ -4670,7 +4670,7 @@ This is the constructor for the 3GPP and TTML timed text caption renderer.
 |---------|--------|
 | context | The handle for the player. |
  
-#### NexCaptionRendererForTimedText (Context context,AttributeSet attrs)
+#### NexCaptionRendererForTimedText (Context context, AttributeSet attrs)
 
 This is an alternative constructor for the Timed Text caption renderer.
 
@@ -4712,7 +4712,7 @@ This method resets the edge effects on timed text captions.
 
 Possible edge effects includes setShadow, setCaptionStroke, setRaise, and setDepressed.
  
-#### void setBGCaptionColor (CaptionColor background,int bgOpacity)
+#### void setBGCaptionColor (CaptionColor background, int bgOpacity)
 
 This sets the background color of 3GPP/TTML captions.
 
@@ -4733,7 +4733,7 @@ This method controls whether timed text captions are displayed in bold text.
 
 Caption data includes attributes such as **bold** anditalics.
 
-Normally, the caption renderer displays each character in normal, **bold** oritalicsbased on the attributes included in
+Normally, the caption renderer displays each character in normal, **bold** or *italics* based on the attributes included in
 the caption data.
 
 However in some cases (such as for users with visual impairment) it may be desirable to force the use of **bold** text.
@@ -4746,7 +4746,7 @@ By enabling this option, the bold attributes in the caption data are ignored and
 |--------|-------------------|
 | isBold | Set this to TRUE to force bold text, or FALSE to use the bold attribute in the original captions. |
  
-#### void setCaptionStroke (CaptionColor strokeColor,int strokeOpacity,float strokeWidth)
+#### void setCaptionStroke (CaptionColor strokeColor, int strokeOpacity, float strokeWidth)
 
 This sets the 3GPP/TTML caption renderer stroke color and width.
 
@@ -4761,7 +4761,7 @@ For a full list of colors, please refer to `NexClosedCaption.CaptionColor`. The 
 | strokeOpacity | The stroke opacity, from 0 (transparent) to 255 (fully opaque).            |
 | strokeWidth   | The stroke width in pixels.                                                |
  
-#### void setCaptionWindowColor (CaptionColor windowColor,int windowOpacity)
+#### void setCaptionWindowColor (CaptionColor windowColor, int windowOpacity)
 
 This method sets the window color of 3GPP/TTML captions.
 
@@ -4786,7 +4786,7 @@ This property specifies the 3GPP or CFF timed text data to the renderer.
 |------|-------------|
 | data | The timed text data as a `NexClosedCaption` object. |
  
-#### void setDefaultTextSize ( float size)
+#### void setDefaultTextSize (float size)
 
 This method sets the default size of text for 3GPP/TTML timed text captions.
 
@@ -4825,7 +4825,7 @@ instead.
  
 - `NexCaptionRendererForTimedText.setDepressedWithColor`
  
-#### void setDepressedWithColor (boolean isDepressed,CaptionColor depColor,int depOpacity)
+#### void setDepressedWithColor (boolean isDepressed, CaptionColor depColor, int depOpacity)
 
 This method indicates whether or not 3GPP/TTML timed text should be displayed as if "depressed" (in a set font
 color).
@@ -4864,7 +4864,7 @@ This method sets the specular level of the Emboss Mask filter used when a user s
 |----------|---------------------------|
 | specular | The specular level of the Emboss Mask filter. |
  
-#### void setFGCaptionColor (CaptionColor foreground,int fgOpacity)
+#### void setFGCaptionColor (CaptionColor foreground, int fgOpacity)
 
 This method sets the foreground (text) color of 3GPP/TTML timed text captions.
 
@@ -4878,7 +4878,7 @@ For a full list of colors , please refer to `NexClosedCaption.CaptionColor`.
 | foreground | The foreground color, or null to use the color from the original caption data. |
 | fgOpacity  | The foreground opacity, from 0 (transparent) to 255 (fully opaque).            |
  
-#### void setFonts (Typeface normType,Typeface boldType,Typeface italicType,Typeface boldItalicType)
+#### void setFonts (Typeface normType, Typeface boldType, Typeface italicType, Typeface boldItalicType)
 
 This method sets the fonts to be used for the 3GPP/TTML timed text captions.
 
@@ -4930,7 +4930,7 @@ To have the raised timed text be displayed in a user-defined color, see the *set
 - `NexCaptionRendererForTimedText.setRaiseWithColor`
  
 
-#### void setRaiseWithColor (boolean isRaise,CaptionColor raisedColor,intr aisedOpacity)
+#### void setRaiseWithColor (boolean isRaise, CaptionColor raisedColor, intr aisedOpacity)
 
 This method indicates whether or not 3GPP/TTML timed text should be displayed as if "raised" (in a set font color).
 
@@ -5005,7 +5005,7 @@ character.
 | isDepressed | TRUE if 3GPP/TTML timed text captions should be displayed "uniformly",FALSE if they should not. |
 
 
-#### void setVideoSizeInformation (int videoWidth,int videoHeight,int surfaceWidth,int surfaceHeight,int left,int top)
+#### void setVideoSizeInformation (int videoWidth, int videoHeight, int surfaceWidth, int surfaceHeight, int left, int top)
 
 This property specifies the size and position of the video surface on the device’s screen for timed text.
 
@@ -5024,7 +5024,7 @@ be scaled proportionally.
 | left          | The horizontal (X) position of the top left hand corner of the video rendering area. |
 | top           | The vertical (Y) position of the top left hand corner of the video rendering area.   |
  
-#### void setWindowMargin (int left,int top,int right,int bottom)
+#### void setWindowMargin (int left, int top, int right, int bottom)
 
 This method sets a margin around caption text to the edge of the caption window, for timed text.
 
@@ -5079,7 +5079,7 @@ This is the constructor for the WebVTT caption renderer.
 |---------|--------|
 | context | The handle for the player. |
  
-#### NexCaptionRendererForWebVTT (Context context,AttributeSet attrs)
+#### NexCaptionRendererForWebVTT (Context context, AttributeSet attrs)
 
 This is an alternative constructor for the WebVTT caption renderer.
 
@@ -5131,7 +5131,7 @@ This method resets the edge effects on WebVTT text cue captions.
 Possible edge effects include setShadow, setCaptionStroke, setRaise, and setDepressed.
 
  
-#### void setBGCaptionColor (CaptionColor bgColor,int opacity)
+#### void setBGCaptionColor (CaptionColor bgColor, int opacity)
 
 This method sets the background color of WebVTT text cues.
 
@@ -5143,7 +5143,7 @@ This method sets the background color of WebVTT text cues.
 | bgColor | The color to be used for the background of text cues (the window color where caption text will appear). |
 | opacity | The opacity of the caption window as an integer, from 0 (fully transparent) to 255 (fully opaque).      |
  
-#### void setCaptionStroke (CaptionColor strokeColor,int strokeOpacity,float strokeWidth)**
+#### void setCaptionStroke (CaptionColor strokeColor, int strokeOpacity, float strokeWidth)**
 
 This method sets the stroke color and width of WebVTT text cues.
 
@@ -5157,7 +5157,7 @@ For a full list of colors, please refer to `NexClosedCaption.CaptionColor`. The 
 | strokeOpacity | The stroke opacity as an integer, from 0 (fully transparent) to 255 (fully opaque). |
 | strokeWidth   | The stroke line width as a float, in pixels.                                        |
 
-#### void setCaptionWindowColor (CaptionColor windowColor,int windowOpacity)
+#### void setCaptionWindowColor (CaptionColor windowColor, int windowOpacity)
 
 This method sets the window color of WebVTT text cue captions.
 
@@ -5205,7 +5205,7 @@ This method sets the default size of text for WebVTT text cues.
 |------|------------------------|
 | size | The size of the default text in DIP units. |
  
-#### void setDepressed ( boolean isDepressed)
+#### void setDepressed (boolean isDepressed)
 
 This method indicates whether or not WebVTT text cue captions should be displayed as if "depressed".
 
@@ -5224,7 +5224,7 @@ instead.
  
 - `NexCaptionRendererForWebVTT.setDepressedWithColor`
  
-#### void setDepressedWithColor (boolean isDepressed,CaptionColor depColor,int depOpacity)
+#### void setDepressedWithColor (boolean isDepressed, CaptionColor depColor, int depOpacity)
 
 This method indicates whether or not WebVTT text cue captions should be displayed as if "depressed" (in a set font
 color).
@@ -5264,7 +5264,7 @@ displayed ’Raised’ or ’Depressed’ in the UI.
 |----------|---------------------------|
 | specular | The specular level of the Emboss Mask filter. |
  
-#### void setFGCaptionColor (CaptionColor fontColor,int opacity)
+#### void setFGCaptionColor (CaptionColor fontColor, int opacity)
 
 This method sets the foreground (text) color of WebVTT text cues.
 
@@ -5277,7 +5277,7 @@ This method sets the foreground (text) color of WebVTT text cues.
 | fontColor | The color to be used for caption text.                                              |
 | opacity   | The opacity of the text as an integer, where 0 is invisible, and 1 is fully opaque. |
  
-#### void setFonts (Typeface normType,Typeface boldType,Typeface italicType,Typeface boldItalicType)
+#### void setFonts (Typeface normType,Typeface boldType, Typeface italicType, Typeface boldItalicType)
 
 This method sets the fonts to be used for WebVTT text cue captions.
 
@@ -5316,7 +5316,7 @@ instead.
  
 - `NexCaptionRendererForWebVTT.setRaisedWithColor`
  
-#### void setRaisedWithColor (boolean isRaised,CaptionColor raisedColor,int raisedOpacity)
+#### void setRaisedWithColor (boolean isRaised, CaptionColor raisedColor, int raisedOpacity)
 
 This method indicates whether or not WebVTT text cue captions should be displayed as if "raised" (in a set font
 color).
@@ -5343,7 +5343,7 @@ This method adds a ’drop shadow’ effect to WebVTT text cue captions.
 |----------|-------------------|
 | isShadow | TRUE if the captions should be displayed with a drop shadow; otherwise FALSE. |
  
-#### void setShadowWithColor (boolean isShadow,CaptionColor shadowColor,int shadowOpacity)
+#### void setShadowWithColor (boolean isShadow, CaptionColor shadowColor, int shadowOpacity)
 
 This method sets whether or not WebVTT text cue captions should be displayed with a colored shadow.
 
@@ -5378,7 +5378,7 @@ This method adds a "uniform" filter to WebVTT text cue captions.
 |-----------|------------------------------|
 | isUniform | TRUE if the text cues should be displayed with a uniform black outline; otherwise FALSE. |
  
-#### synchronized void setVideoSizeInformation (int videoWidth,int videoHeight,int surfaceWidth,int surfaceHeight,int left,int top)
+#### synchronized void setVideoSizeInformation (int videoWidth, int videoHeight, int surfaceWidth, int surfaceHeight, int left, int top)
 
 This property specifies the size and position of the video surface on the device’s screen for WebVTT captions.
 
@@ -5417,7 +5417,7 @@ used to ensure WebVTT text cues are displayed at the proper time while content i
  
 *FALSE* if the current time is NOT within the range of the WebVTT text cue’s duration range, otherwise *TRUE*.
  
-#### void setWindowMargin (int left,int top,int right,int bottom)
+#### void setWindowMargin (int left, int top, int right, int bottom)
 
 This API sets a margin around caption text to the edge of the caption window, for WebVTT text tracks.
 
@@ -5446,7 +5446,7 @@ This class manages the position of captions for NexCaptionSetting.
 - `void renderClosedCaption (int captionType, final NexClosedCaption textInfo)`
 
 
-#### NexCaptionRenderView ( Context context )
+#### NexCaptionRenderView (Context context)
 
 Constructor for NexCaptionRenderView.
 
@@ -5457,7 +5457,7 @@ Constructor for NexCaptionRenderView.
 | context | The Context instance associated with the activity that will contain this view. |
 
 
-#### NexCaptionRenderView ( Context *context*, AttributeSet *attrs* )
+#### NexCaptionRenderView (Context *context*, AttributeSet *attrs*)
 
 Constructor for NexCaptionRenderView.
 
@@ -5475,7 +5475,7 @@ This method gets the attribute information set to the current caption.
 The NexCaptionAttribute object set to the current caption.
 
 
-#### void setCaptionAttribute ( NexCaptionAttribute attribute )
+#### void setCaptionAttribute (NexCaptionAttribute attribute)
 
 This method sets the attributes of captions used by the NexVideoView.
 
@@ -5485,7 +5485,7 @@ This method sets the attributes of captions used by the NexVideoView.
 |-----------|-----------|
 | attribute | A NexCaptionAttribute object. |
 
-#### void setExternalSubtitleTextView ( TextView *textview*, LayoutParams *param*, String *encodingPreset* )
+#### void setExternalSubtitleTextView (TextView *textview*, LayoutParams *param*, String *encodingPreset*)
 
 This method sets the text view to display external subtitles.
 
@@ -5602,7 +5602,7 @@ Constructor of NexCaptionSetting.
 The attributes will be initialized by NexCaptionSetting.DEFAULT
 
 
-#### NexCaptionSetting ( NexCaptionSetting ref )
+#### NexCaptionSetting (NexCaptionSetting ref)
 
 Constructor of NexCaptionSetting.
 
@@ -5616,7 +5616,7 @@ The attributes will be generated by initializing settings object values.
 
 
 
-#### void copyAllSettings ( NexCaptionSetting ref )
+#### void copyAllSettings (NexCaptionSetting ref)
 
 This method sets the values of the attributes by settings the object values including NexCaptionSetting.DEFAULT.
 
@@ -5626,7 +5626,7 @@ This method sets the values of the attributes by settings the object values incl
 |------|---------|
 | ref  | A NexCaptionSetting object. |
 
-#### void copyTouchedSettings ( NexCaptionSetting ref ) 
+#### void copyTouchedSettings (NexCaptionSetting ref) 
 
 This method sets the values of the attributes by settings the object values excepting NexCaptionSetting.DEFAULT.
 
@@ -5775,7 +5775,7 @@ The size of text font can be changed from 50 to 200 percent of the original capt
 |----------------|--------|
 | sizePercentage | The percentage change in font size, as a float |
 
-#### void setBGCaptionColor (CaptionColor *background*, int *bgOpacity* )
+#### void setBGCaptionColor (CaptionColor *background*, int *bgOpacity*)
 
 This sets the background color of 3GPP/TTML captions.
 
@@ -5789,7 +5789,7 @@ For a full list of colors , please refer to NexClosedCaption.CaptionColor.
 | bgOpacity  | The background opacity, from 0 (transparent) to 255 (fully opaque).            |
 
 
-#### void setBold ( boolean *isBold* )
+#### void setBold (boolean *isBold*)
 
 This method controls whether captions are displayed in bold text.
 
@@ -5807,7 +5807,7 @@ By enabling this option, the bold attributes in the caption data are ignored and
 |--------|-------------------|
 | isBold | Set this to TRUE to force bold text, or FALSE to use the bold attribute in the original captions. |
 
-#### void setCaptionRenderArea ( int *videoWidth*, int *videoHeight*, int *surfaceWidth*, int *surfaceHeight*, int *left*, int *top* )
+#### void setCaptionRenderArea (int *videoWidth*, int *videoHeight*, int *surfaceWidth*, int *surfaceHeight*, int *left*, int *top*)
 
 This property specifies the rendering area within the displayed video area.
 
@@ -5841,7 +5841,7 @@ For a full list of colors, please refer to NexClosedCaption.CaptionColor. The st
 | strokeColor | The stroke opacity, from 0 (transparent) to 255 (fully opaque).            |
 | strokeWidth | The stroke width in pixels.                                                |
 
-#### void setCaptionWindowColor ( CaptionColor *windowColor*, int *windowOpacity* )
+#### void setCaptionWindowColor (CaptionColor *windowColor*, int *windowOpacity*)
 
 This method sets the window color of 3GPP/TTML captions.
 
@@ -5853,7 +5853,7 @@ For a full list of colors , please refer to NexClosedCaption.CaptionColor.
 
 | Name          | Description                                                              |
 |---------------|--------------|
-| windowColor   | The window color, ornullto use the color from the original caption data. |
+| windowColor   | The window color, or null to use the color from the original caption data. |
 | windowOpacity | The window color opacity, from 0 (transparent) to 255 (fully opaque).    |
 #### void setDepressed ( boolean *isDepressed* )
 
@@ -5888,7 +5888,7 @@ This method sets the specular level of the Emboss Mask filter used when a user s
 |----------|--------------------------|
 | specular | The specular level of the Emboss Mask filter |
 
-#### void setFGCaptionColor (CaptionColor *foreground*, int *fgOpacity* )
+#### void setFGCaptionColor (CaptionColor *foreground*, int *fgOpacity*)
 
 This property describes the video’s scale ratio.
 
@@ -5909,7 +5909,7 @@ For a full list of colors , please refer to NexClosedCaption.CaptionColor.
 | foreground | The foreground color, or null to use the color from the original caption data. |
 | fgOpacity  | The foreground opacity, from 0 (transparent) to 255 (fully opaque).            |
 
-#### void setFonts ( Typeface *normType*, Typeface *boldType*, Typeface *italicType*, Typeface *boldItalicType* )
+#### void setFonts (Typeface *normType*, Typeface *boldType*, Typeface *italicType*, Typeface *boldItalicType*)
 
 This method sets the fonts to be used for the captions.
 
@@ -5927,7 +5927,7 @@ For best results, specify all four typefaces. Any typeface can be set tonull, in
 | italicType     | Typeface to be used for italic captions.                           |
 | boldItalicType | Typeface to be used for captions that are both and italic          |
 
-#### void setRaise ( boolean *isRaise* )
+#### void setRaise (boolean *isRaise*)
 
 This method indicates whether or not captions should be displayed as if "raised".
 
@@ -5939,7 +5939,7 @@ If captions are "raised", they should be displayed as if rising above the video 
 |---------|-----------------|
 | isRaise | TRUE if the captions are raised, FALSE if they are not. |
 
-#### void setShadow ( boolean *isShadow* ,CaptionColor *sColor*, int *sOpacity* )
+#### void setShadow (boolean *isShadow*, CaptionColor *sColor*, int *sOpacity*)
 
 This method sets whether or not captions should be displayed with a shadow.
 
@@ -5949,7 +5949,7 @@ This method sets whether or not captions should be displayed with a shadow.
 |----------|--------------------------|
 | isShadow | Set this to TRUE to force text to be displayed with a shadow, or FALSE for no shadow |
 
-#### void setUniform ( boolean *isUniform* )
+#### void setUniform (boolean *isUniform*)
 
 This method indicates whether or not captions should be displayed "uniformly".
 
@@ -5974,7 +5974,7 @@ Constructor of NexCaptionWindowRect.
 The values in NexCaptionWindowRect will be initialized with NexCaptionSetting.DEFAULT
 
 
-#### NexCaptionWindowRect ( NexCaptionWindowRect *ref* )
+#### NexCaptionWindowRect (NexCaptionWindowRect *ref*)
 
 Constructor of NexCaptionWindowRect.
 
@@ -5988,7 +5988,7 @@ Parameters
 
 
 
-#### void copyAllSettings ( NexCaptionWindowRect *ref* )
+#### void copyAllSettings (NexCaptionWindowRect *ref*)
 
 This method sets the values by settings object values including NexCaptionSetting.DEFAULT.
 
@@ -5998,7 +5998,7 @@ Parameters
 |------|------------|
 | ref  | A NexCaptionWindowRect object. |
 
-#### void copyTouchedSettings ( NexCaptionWindowRect *ref* )
+#### void copyTouchedSettings (NexCaptionWindowRect *ref*)
 
 This method sets the values by settings object values excepting NexCaptionSetting.DEFAULT.
 
@@ -6040,13 +6040,13 @@ It can be set to a percentage of the horizontal caption render area.
 
 #### int xPercent
 
-This indicates the left position of the the caption window.
+This indicates the left position of the caption window.
 
 It can be set to a percentage of the horizontal caption render area.
 
 #### int yPercent
 
-This indicates the top position of the the caption window.
+This indicates the top position of the caption window.
 
 It can be set to a percentage of the vertical caption render area.
 
@@ -6289,12 +6289,11 @@ This method gets the align type data of a WebVTT cue.
 A byte array with the align type data for the content’s WebVTT.
  
  
-#### boolean getAvailableCaptionChannel ( intchannelNumber)
+#### boolean getAvailableCaptionChannel (int channelNumber)
 
 This method checks if CEA 608 closed caption information is available for the given channel.
 
-By checking how much time has passed since the channel information was updated (with the methodget-
-CaptionUpdateTime), this method can determine if there is any closed caption information available on this channel to be displayed. This allows the player to present the available CEA 608 channels to the user in order for the desired channel to be selected.
+By checking how much time has passed since the channel information was updated (with the method getCaptionUpdateTime), this method can determine if there is any closed caption information available on this channel to be displayed. This allows the player to present the available CEA 608 channels to the user in order for the desired channel to be selected.
 
 Different channels often provide different closed caption information, for example in different languages, but the four specified channels may not always be used or available for any particular content.
 
@@ -6306,7 +6305,7 @@ Different channels often provide different closed caption information, for examp
  
 **Returns**
  
-TRUE if the channel has available information,FALSE if no recent closed caption information is available on the given channel.
+TRUE if the channel has available information, FALSE if no recent closed caption information is available on the given channel.
  
 **See Also**
 
@@ -6322,7 +6321,7 @@ This property gets color of the rectangle text box.
  
 The color of the rectangle text box.
  
-#### CaptionColorgetBGColor ( introw,intcol)
+#### CaptionColorgetBGColor (int row, int col)
 
 This determines the background color to display behind the character in CEA 608 closed captions (FULL mode).
 
@@ -6369,7 +6368,7 @@ The background color of the displayed caption text as an ARGB hexacode. This wil
 
 This method gets the background color for timed text (TTML) in content.
 
-It corresponds to thetts:backgroundColorattribute, and specifies the color of the background region on which timed text (TTML) should be displayed.
+It corresponds to the tts:backgroundColorattribute, and specifies the color of the background region on which timed text (TTML) should be displayed.
 
 **Returns**
 
@@ -6437,11 +6436,11 @@ The type of text to be displayed. This will be one of:
 - NEX\_TEXT\_CEA608 = 0x####: CEA608 caption.
 - NEX\_TEXT\_CEA708 = 0x####: CEA708 caption.
 
-#### long getCaptionUpdateTime ( int channelNumber)
+#### long getCaptionUpdateTime (int channelNumber)
 
 This gets the time at which the CEA 608 closed captions in the given channel were last updated.
 
-This function allows NexPlayer™ to determine if caption information is available on the given channel, and thus determine which CEA 608 channels are available for the playing content, using the methodgetAvailableCaptionChannel.
+This function allows NexPlayer™ to determine if caption information is available on the given channel, and thus determine which CEA 608 channels are available for the playing content, using the method getAvailableCaptionChannel.
 
 **Parameters**
 
@@ -6460,7 +6459,7 @@ The time at which the caption content was last updated for the channel passed, i
 getAvailableCaptionChannel
 
  
-#### char getCharCode ( introw,intcol)
+#### char getCharCode (int row, int col)
 
 This gets the character to display in CEA 608 closed captions (FULL mode).
 
@@ -6477,7 +6476,7 @@ This gets the character to display in CEA 608 closed captions (FULL mode).
  
 The character to be displayed.
  
-#### CharsetgetCharset ( introw,intcol)
+#### CharsetgetCharset (int row, int col)
 
 This gets the encoding set for the character in CEA 608 closed captions.
 
@@ -6557,7 +6556,7 @@ A byte array with the text direction data for the content’s WebVTT.
 
 This method gets the display alignment for timed text (TTML) in content.
 
-It corresponds to thetts:displayAlignattribute and returns the relevant alignment in the display region that is determined in the TTML\_DisplayAlign enumeration.
+It corresponds to the tts:displayAlignattribute and returns the relevant alignment in the display region that is determined in the TTML\_DisplayAlign enumeration.
 
 **Returns**
 
@@ -6607,10 +6606,10 @@ The ending timestamp of the WebVTT text cue as an integer.
 
 This method gets the height of the region area where timed text (TTML) in content is to be displayed.
 
-It corresponds to the height dimension specified intts:extentattribute, and may also be the height of the root
+It corresponds to the height dimension specified in tts:extentattribute, and may also be the height of the root
 container region.
 
-Note that if thetts:extentattribute is set toauto, the display region should be considered to have the same
+Note that if the tts:extentattribute is set toauto, the display region should be considered to have the same
 height as the root container extent.
 
 **Returns**
@@ -6623,16 +6622,16 @@ The height of the text region as a TTML\_StyleLength object.
 
 This method gets the width of the region area where timed text (TTML) in content is to be displayed.
 
-It corresponds to the width dimension specified intts:extentattribute, and may also be the width of the root container region.
+It corresponds to the width dimension specified in tts:extentattribute, and may also be the width of the root container region.
 
-Note that if thetts:extentattribute is set toauto, the display region should be considered to have the same width as the root container extent.
+Note that if the tts:extentattribute is set toauto, the display region should be considered to have the same width as the root container extent.
 
 **Returns**
 
  
 The width of the text region as a TTML\_StyleLength object.
   
-#### CaptionColorgetFGColor ( introw,intcol)
+#### CaptionColorgetFGColor (int row, int col)
 
 This determines the color to display the character in CEA 608 closed captions (FULL mode).
 
@@ -6663,7 +6662,7 @@ TRUE if YES , FALSE if No.
 
 This method gets the font color for timed text (TTML) in content.
 
-It corresponds to thetts:colorattribute, and specifies the font color that should be displayed for timed text (TTML).
+It corresponds to the tts:colorattribute, and specifies the font color that should be displayed for timed text (TTML).
 
 **Returns**
 
@@ -6675,7 +6674,7 @@ The foreground color of the timed text (TTML) as an integer.
 
 This method determines the font family to be used for timed text (TTML) in content.
 
-It corresponds to thetts:fontFamilyattribute.
+It corresponds to the tts:fontFamilyattribute.
 
 **Returns**
 
@@ -6687,7 +6686,7 @@ The font family to be used for timed text (TTML) as a string.
 
 This method gets the font size of timed text (TTML) in content.
 
-It corresponds to thetts:fontSizeattribute, and indicates how large timed text (TTML) should be displayed.
+It corresponds to the tts:fontSizeattribute, and indicates how large timed text (TTML) should be displayed.
 
 **Returns**
 
@@ -6698,7 +6697,7 @@ The font size as a TTML\_StyleLength array, where if only one length is specifie
 
 This method gets the font style for timed text (TTML) in content.
 
-It corresponds to thetts:fontStyleattribute and indicates how timed text should be displayed.
+It corresponds to the tts:fontStyleattribute and indicates how timed text should be displayed.
 
 **Returns**
 
@@ -6768,7 +6767,7 @@ The horizontal position at which to display the caption. This will be an integer
 
 This method gets the line height of timed text (TTML) in content.
 
-It corresponds to thetts:lineHeightattribute, and can be used to vertically space out lines of timed text
+It corresponds to the tts:lineHeightattribute, and can be used to vertically space out lines of timed text
 (TTML) when displayed.
 
 **Returns**
@@ -6791,7 +6790,7 @@ A byte array with the line position data for the content’s WebVTT.
 
 This method gets the opacity of the timed text (TTML) in content.
 
-It corresponds to thetts:opacityattribute, and specifies the opacity or transparency of a region of timed text (TTML) in content.
+It corresponds to the tts:opacityattribute, and specifies the opacity or transparency of a region of timed text (TTML) in content.
 
 It should be a value between 0 and 1, where 0 is fully transparent and 1 is opaque.
 
@@ -6805,7 +6804,7 @@ The opacity of the timed text (TTML) as afloatbetween 0 and 1.
 This method gets the origin of the text display region for timed text (TTML) in content with respect to the root
 container extent or external authoring context.
 
-This corresponds to thetts:originattribute and will either beauto, where the origin can be treated as the same as the root container origin, or as two lengths, the first of which must be interpreted as the x coordinate and
+This corresponds to the tts:originattribute and will either beauto, where the origin can be treated as the same as the root container origin, or as two lengths, the first of which must be interpreted as the x coordinate and
 the second as the y coordinate of the origin of the text display region.
 
 **Returns**
@@ -6817,7 +6816,7 @@ The origin of the text display region for timed text (TTML) as a TTML\_StyleLeng
 
 This method gets the padding to be included around timed text (TTML) in content.
 
-It corresponds to thetts:paddingattribute and can include up to four lengths, indicating the padding to be included around the timed text (TTML) when displayed.
+It corresponds to the tts:paddingattribute and can include up to four lengths, indicating the padding to be included around the timed text (TTML) when displayed.
 
 If only one length is specified, it applies to all edges of the text display box. If there are two lengths specified, the first applies to the "before" and "after" edges (the top and bottom edges of the text box for typical Latin script) and the second to the "start" and "end" edges (or right and left edges for typical Latin script). If there are three length specifications, the first corresponds to the "before" edge, the second to the "start" and "end" edges, and the third to the "after" edge. Lastly, if four padding lengths are provided, they should be applied to the before, end, after, and start edges in the corresponding order.
 
@@ -6947,19 +6946,19 @@ This method returns the String data for CEA 608 closed captions in content.
 
 This method allows CEA 608 closed captions to be implemented in a caption renderer other than the NexCaptionRenderer provided by the NexPlayer SDK.
 
-If this method returnsnull, do not use it. Otherwise, use the string to implement and display CEA 608 closed captions with your specific renderer.
+If this method returns null, do not use it. Otherwise, use the string to implement and display CEA 608 closed captions with your specific renderer.
 
 **Returns**
 
  
-A String of CEA 608 closed caption data. If this method returnsnull, no caption data was received and no captions should be displayed.
+A String of CEA 608 closed caption data. If this method returns null, no caption data was received and no captions should be displayed.
  
  
 #### TTML\_TextAligngetTextAlignforTTML ( )
 
 This method gets the horizontal text alignment of timed text (TTML) in content.
 
-It corresponds to thetts:textAlignattribute, and indicates how timed text should be aligned horizontally in
+It corresponds to the tts:textAlignattribute, and indicates how timed text should be aligned horizontally in
 the display region when displayed.
 
 **Returns**
