@@ -7299,19 +7299,19 @@ TRUE if YES , FALSE if No.
 
 This method gets the zIndex for timed text (TTML) in content.
 
-It corresponds to thetts:zIndexattribute, and defines the front-to-back order of timed text (TTML) region areas if they overlap. For example, if several blocks of timed text (TTML) were to be staggered, layered, and displayed at once, the block with the zIndex of 2 would be in front (like the top sheet of paper in a pile), the block with zIndex of 1 would be next, and the block with zIndex of 0 would be under the others (like the bottom sheet of paper in pile).
+It corresponds to the tts:zIndexattribute, and defines the front-to-back order of timed text (TTML) region areas if they overlap. For example, if several blocks of timed text (TTML) were to be staggered, layered, and displayed at once, the block with the zIndex of 2 would be in front (like the top sheet of paper in a pile), the block with zIndex of 1 would be next, and the block with zIndex of 0 would be under the others (like the bottom sheet of paper in pile).
 
 **Returns**
 
  
-The zIndex of the timed text (TTML) as anint.
+The zIndex of the timed text (TTML) as an int.
  
  
 #### boolean isBoldforTTML ( )
 
 This method determines whether or not timed text (TTML) in content should be displayed in bold.
 
-It corresponds to thetts:fontWeightattribute.
+It corresponds to the tts:fontWeightattribute.
 
 **Returns**
 
@@ -7323,15 +7323,15 @@ TRUE if the timed text (TTML) should be displayed in bold or FALSE if it should 
 
 This method determines whether timed text (TTML) in content is displayed automatically or not.
 
-It corresponds to thetts:displayattribute, and allows certain text to be displayed in timed intervals while other text remains on the screen.
+It corresponds to the tts:displayattribute, and allows certain text to be displayed in timed intervals while other text remains on the screen.
 
 **Returns**
 
  
-TRUE if timed text (TTML) is labeledauto, or FALSE if it is labelednone.
+TRUE if timed text (TTML) is labeled auto, or FALSE if it is labeled none.
  
  
-#### boolean isDrawBackground ( introw,intcol)
+#### boolean isDrawBackground (int row, int col)
 
 This determines if the background of the character in CEA 608 closed captions is to be displayed or not (FULL mode).
 
@@ -7359,7 +7359,7 @@ Always 0.
  
 > **Deprecated** Do not use.
 
-#### boolean isFlashing ( introw,intcol)
+#### boolean isFlashing (int row, int col)
 
 This determines if the character in CEA 608 closed captions is to be displayed flashing (FULL mode).
 
@@ -7375,7 +7375,7 @@ This determines if the character in CEA 608 closed captions is to be displayed f
  
 TRUE if flashing, FALSE if not.
  
-#### boolean isItalic ( introw,intcol)
+#### boolean isItalic (int row, int col)
 
 This determines if the character in CEA 608 closed captions is to be displayed in italics.
 
@@ -7395,7 +7395,7 @@ This determines if the character in CEA 608 closed captions is to be displayed i
  
 #### int isItalic ( )
 
-This method determines CEA 608 closed captionsitalics.
+This method determines CEA 608 closed captions italics.
 
 **Returns**
 
@@ -7404,7 +7404,7 @@ Zero if the text is displayed normally; 1 if the text should be displayed inital
  
 Deprecated Do not use.
 
-#### boolean isLarge ( introw,intcol)
+#### boolean isLarge (int row, int col)
 
 This determines if the character in CEA 608 closed captions is to be displayed in BOLD (FULL mode).
 
@@ -7433,7 +7433,7 @@ Always 1 (opaque) for CEA 608 closed captions.
 
 This method determines whether or not timed text (TTML) in content that overflows the displayed block should be visible or not.
 
-It corresponds to thetts:overflowattribute, and determines whether timed text that overflows the display region will be visible or not.
+It corresponds to the tts:overflowattribute, and determines whether timed text that overflows the display region will be visible or not.
 
 **Returns**
 
@@ -7445,7 +7445,7 @@ TRUE if overflowing timed text (TTML) should be visible, FALSE if the overflow s
 
 This method determines when the background of timed text (TTML) in content should be visible.
 
-It corresponds to thetts:showBackgroundattribute, indicates whether the background should always be
+It corresponds to the tts:showBackgroundattribute, indicates whether the background should always be
 visible or should be visible only when there is timed text displayed.
 
 **Returns**
@@ -7457,14 +7457,14 @@ TRUE if the background should always be visible, or FALSE when background should
 
 This method determines if any text decoration should be displayed in timed text (TTML) in content.
 
-It corresponds to thetts:textDecorationattribute, and allows text features likeunderline,overline,
-andlineThroughto be displayed in timed text (TTML).
+It corresponds to the tts:textDecorationattribute, and allows text features like underline, overline,
+ and lineThrough to be displayed in timed text (TTML).
 
 **Returns**
 
 TRUE if text should be underlined, FALSE if there is no text decoration. 
  
-#### boolean isUnderline ( introw,intcol)
+#### boolean isUnderline (int row, int col)
 
 This determines if the character in CEA 608 closed captions is to be underlined when displayed (FULL mode).
 
@@ -7494,17 +7494,17 @@ Zero if the text is displayed normally; 1 if the text should be underlined.
 
 This method determines whether or not timed text (TTML) in content should be displayed (visible) or hidden.
 
-It corresponds to thetts:visibilityattribute, and allows timed text to be displayed and hidden at different intervals as desired.
+It corresponds to the tts:visibility attribute, and allows timed text to be displayed and hidden at different intervals as desired.
 
 **Returns**
 
-TRUE when text should be visible,FALSE when it should be hidden.
+TRUE when text should be visible, FALSE when it should be hidden.
  
 #### boolean isWrapforTTML ( )
 
 This method determines whether timed text (TTML) in content should wrap automatically to the following line or not.
 
-It corresponds to thetts:wrapOptionattribute and determines whether line wrapping will happen automatically when timed text (TTML) reaches the end of the display region, or if the text will only wrap to the next line on included line breaks.
+It corresponds to the tts:wrapOptionattribute and determines whether line wrapping will happen automatically when timed text (TTML) reaches the end of the display region, or if the text will only wrap to the next line on included line breaks.
 
 **Returns**
 
@@ -7515,13 +7515,13 @@ It corresponds to thetts:wrapOptionattribute and determines whether line wrappin
 
 This method determines the direction of timed text (TTML) in content.
 
-It corresponds to thetts:directionattribute, which indicates whether timed text should be displayed from left-to-right or from right-to-left.
+It corresponds to the tts:directionattribute, which indicates whether timed text should be displayed from left-to-right or from right-to-left.
 
 **Returns**
  
 `TRUE` if text is to be displayed left-to-right like standard Latin script, or `FALSE` if it should be displayed right-to-left.
  
-#### void setHtmlDataForWebVTT ( byte[ ]textData,intbyteLen)
+#### void setHtmlDataForWebVTT (byte[ ] textData, int byteLen)
 
 This method sets a String with the full HTML data about a WebVTT text track cue.
 
@@ -7535,7 +7535,7 @@ This method sets a String with the full HTML data about a WebVTT text track cue.
 
 > **Deprecated** Do not use.
 
-#### void setTextForWebVTT ( byte[ ]textData,intbyteLen)
+#### void setTextForWebVTT (byte[ ] textData, int byteLen)
 
 This method sets the text data of WebVTT text tracks in content.
 
@@ -7592,7 +7592,7 @@ This is an array containing the CEA 708 closed caption data for the given conten
  
 #### int mCEA708Len
 
-This is the size of themCEA708Dataarray containing the text data for CEA 708 closed captions within content.
+This is the size of the mCEA708Dataarray containing the text data for CEA 708 closed captions within content.
 
  
 #### int mCEA708ServiceNO
@@ -7609,79 +7609,79 @@ This can be ignored if animation of the display is not being used.
 
 #### final int TEXT\_TYPE\_3GPP\_TIMEDTEXT = 0x20 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 It indicates the contents include 3GPP timed text.
 
 #### final int TEXT\_TYPE\_ATSCMH\_AFD = 0x13 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 This format is not currently supported.
 
 #### final int TEXT\_TYPE\_ATSCMH\_BAR = 0x12 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 This format is not currently supported.
 
 #### final int TEXT\_TYPE\_ATSCMH\_CC = 0x11 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 This format is not currently supported.
 
 #### final int TEXT\_TYPE\_EXTERNAL\_TTML = 5 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 This indicates that the text type is external TTML (∗.dfxp, or the Distribution Format Exchange Profile).
 
 #### final int TEXT\_TYPE\_GENERAL = 1 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 This indicates general text type and requires no special processing of the text.
 
 #### final int TEXT\_TYPE\_NTSC\_CC\_CH1 = 0x14 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 It indicates the contents include CEA 608 closed captions on Data Channel 1 and processes the attributes accordingly.
 
 #### final int TEXT\_TYPE\_NTSC\_CC\_CH2 = 0x15 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 It indicates the contents include CEA 608 closed captions on Data Channel 2 and processes the attributes accordingly.
 
 #### final int TEXT\_TYPE\_SMI = 0x40 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 #### final int TEXT\_TYPE\_SRT = 0x41 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 #### final int TEXT\_TYPE\_SUB = 0x42 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 #### final int TEXT\_TYPE\_TTML\_TIMEDTEXT = 0x25 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 It indicates the contents include CFF timed text (TTML).
 
 #### final int TEXT\_TYPE\_UNKNOWN = 0 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 When the text type is unknown, NexPlayer™ doesn’t perform any special processing on the text (the same as in the case of general subtitles.)
 
 #### final int TEXT\_TYPE\_WEBVTT = 0x30 [static]
 
-This is a possiblereturnvalue for NexClosedCaption.getTextType().
+This is a possible return value for NexClosedCaption.getTextType().
 
 It indicates the contents include WebVTT text tracks.
 
@@ -7689,7 +7689,7 @@ It indicates the contents include WebVTT text tracks.
 
 Stores and provides information about an individual codec used by the NexPlayer™ engine.
 
-#### NexCodecInformation(String strCodecVersion,intiMediaType,int iCodecClass,int iCodecID,int iCpuInfo)
+#### NexCodecInformation(String strCodecVersion, int iMediaType, int iCodecClass,int iCodecID,int iCpuInfo)
 
 The sole initializer for this class.
 
@@ -7781,7 +7781,7 @@ Provides information on content.
 
 This is returned by NexPlayer.getContentInfo. See that method for details.
 
-#### static String getMediaCodecMimeType ( intmediaType,intcodecType) [static] , [protected]
+#### static String getMediaCodecMimeType (int mediaType, int codecType) [static] , [protected]
 
 This method converts codec information to mime type.
 
@@ -7910,7 +7910,7 @@ In the current version, only the types listed above will be recognized and if ca
 
 Furthermore, if an external subtitle file is included in addition to another format, this member will be set to the external subtitle type (SMI or SRT).
 
-Since CEA 608 and CEA 708 closed captions cannot be identified until decoding begins,mCaptionTypewill also be set to NEX\_TEXT\_UNKNOWN when they are included in content.
+Since CEA 608 and CEA 708 closed captions cannot be identified until decoding begins, mCaptionType will also be set to NEX\_TEXT\_UNKNOWN when they are included in content.
  
 #### int mCurrAudioStreamID
 
@@ -8326,25 +8326,25 @@ Possible video codec value for mVideoCodec.
 
 #### final int NEXPLAYER\_SEEKABLE\_IN\_BUFFER = 2 [static]
 
-One of the possible values formIsSeekablein NexContentInformation.mIsSeekable.
+One of the possible values for mIsSeekable in NexContentInformation.mIsSeekable.
 
 This indicates that the player can seek within the prefetch buffer of the current content.
 
 #### final int NEXPLAYER\_SEEKABLE\_IN\_CONTENT = 1 [static]
 
-One of the possible values formIsSeekablein NexContentInformation.mIsSeekable.
+One of the possible values for mIsSeekable in NexContentInformation.mIsSeekable.
 
 This indicates that the player can seek within the current content.
 
 #### final int NEXPLAYER\_SEEKABLE\_NONE = 0** [static]
 
-One of the possible values formIsSeekablein NexContentInformation.mIsSeekable.
+One of the possible values for mIsSeekable in NexContentInformation.mIsSeekable.
 
 This indicates that seeking is not available in the current content.
 
 #### final int NEXPLAYER\_SEEKABLE\_TO\_ZERO = 4 [static]
 
-One of the possible values formIsSeekablein NexContentInformation.mIsSeekable.
+One of the possible values for mIsSeekable in NexContentInformation.mIsSeekable.
 
 This indicates that the player can only seek to 0 seconds in the current content (in other words, the player can seek and return to the beginning of the content).
 
@@ -8482,7 +8482,7 @@ This is an alternative constructor for the CEA 708 closed captions caption view.
 This method changes the font size of CEA 708 closed captions.
 
 To double the size of the font, the parameter *rate* should be set to 200. In contrast, to have the size of the font,
-rateshould be set to 50 (in other words, 50%).
+rate should be set to 50 (in other words, 50%).
 
 **Parameters**
 
@@ -8539,7 +8539,7 @@ This method sets whether or not CEA 708 closed captions should be displayed in *
 
 Caption data includes attributes such as **bold** anditalics.
 
-Normally, the caption renderer displays each character in normal, **bold** , oritalicsbased on the attributes included
+Normally, the caption renderer displays each character in normal, **bold** , or italics based on the attributes included
 in the caption data.
 
 However in some cases (such as for users with visual impairment) it may be desirable to force the use of bold text.
@@ -8552,7 +8552,7 @@ By enabling this option, the bold attributes in the caption data are ignored and
 |--------|-------------------|
 | isBold | Set this to TRUE to force bold text, or FALSE to use the bold attribute in the original captions. |
 
-#### void setCaptionStroke (CaptionColor strokeColor,float strokeWidth)
+#### void setCaptionStroke (CaptionColor strokeColor, float strokeWidth)
 
 This method sets the CEA 708 closed caption renderer stroke color and width.
 
@@ -8565,7 +8565,7 @@ For a full list of colors, please refer to `NexClosedCaption.CaptionColor`. The 
 | strokeColor | The stroke color, or null to use the color from the original caption data. |
 | strokeWidth | The stroke width in pixels.                                                |
 
-#### void setCaptionWindowColor (CaptionColor windowColor,int windowOpacity)
+#### void setCaptionWindowColor (CaptionColor windowColor, int windowOpacity)
 
 This method sets the color and opacity of the CEA 708 closed caption window.
 
@@ -8593,7 +8593,7 @@ To have depressed closed captions be displayed in a user-defined color, see the 
 
 - `NexEIA708CaptionView.setDepressedWithColor`
 
-#### void setDepressedWithColor (boolean isDepressed,CaptionColor depColor,int depOpacity)**
+#### void setDepressedWithColor (boolean isDepressed, CaptionColor depColor, int depOpacity)**
 
 This method indicates wheather or not CEA 708 closed captions should be displayed as if "depressed" (in a set font
 color).
@@ -8609,7 +8609,7 @@ slightly, and the color of the depressed part of the caption text can be set by 
 | depColor    | The color of the depressed part set by the user, or null to use the default color.           |
 | depOpacity  | The opacity of the depressed part as an integer, from 0 (transparent) to 255 (fully opaque). |
 
-#### void setDisplayArea (int left,int top,int width,int height)
+#### void setDisplayArea (int left, int top, int width, int height)
 
 This method sets the area where CEA 708 closed captions will be displayed.
 
@@ -8662,7 +8662,7 @@ This method sets the specular level of the Emboss Mask filter used when a user s
 |----------|---------------------------|
 | specular | The specular level of the Emboss Mask filter. |
 
-#### void setFGCaptionColor (CaptionColor foreground,int fgOpacity)
+#### void setFGCaptionColor (CaptionColor foreground, int fgOpacity)
 
 This sets the CEA 708 closed captions foreground (text) color.
 
@@ -8675,11 +8675,11 @@ For a full list of colors, please refer to `NexClosedCaption.CaptionColor`.
 | foreground | The foreground color, or null to use the color from the original caption data. |
 | fgOpacity  | The foreground opacity, from 0 (transparent) to 255 (fully opaque).            |
 
-#### void setFonts (Typeface normType,Typeface boldType,Typeface italicType,Typeface boldItalicType)
+#### void setFonts (Typeface normType, Typeface boldType, Typeface italicType, Typeface boldItalicType)
 
 This method sets the fonts to be used for CEA 708 closed captions.
 
-Four typefaces may be specified for different combinations of **bold** anditalics. The caption renderer will select the
+Four typefaces may be specified for different combinations of **bold** and italics. The caption renderer will select the
 appropriate typeface from among these based on the CEA 708 captions being displayed.
 
 For best results, specify all four typefaces. Any typeface can be set to *null*, in which case the system default
@@ -8710,7 +8710,7 @@ To have raised closed captions be displayed in a user-defined color, see the met
 
 - `NexEIA708CaptionView.setRaiseWithColor`
 
-#### void setRaiseWithColor (boolean isRaise,CaptionColor raisedColor,int raisedOpacity)
+#### void setRaiseWithColor (boolean isRaise, CaptionColor raisedColor, int raisedOpacity)
 
 This method indicates whether or not CEA 708 closed captions should be displayed as if "raised" (in a set font
 color).
@@ -8736,7 +8736,7 @@ This method sets whether the CEA 708 closed captions should be displayed with a 
 |---------|---------------------------|
 | isShadow | Set this to TRUE to force text to be displayed with a shadow, or FALSE for no shadow. |
 
-#### void setShadowWithColor (boolean isShadow,CaptionColor shadowColor,int shadowOpacity)
+#### void setShadowWithColor (boolean isShadow, CaptionColor shadowColor, int shadowOpacity)
 
 This method sets whether CEA 708 closed captions should be displayed with a colored shadow.
 
@@ -8751,12 +8751,11 @@ This method sets whether CEA 708 closed captions should be displayed with a colo
 | shadowColor   | The shadow color, or null to use the color from the original caption data.            |
 | shadowOpacity | The shadow opacity as an integer, from 0 (transparent) to 255 (fully opaque).         |
 
-#### boolean SetSourceByteStream (int serviceNo, byte[ ]Data,int len)
+#### boolean SetSourceByteStream (int serviceNo, byte[ ] Data, int len)
 
 This method sets the source of the byte stream for CEA 708 closed captions.
 
-Similar to the channels in CEA 608 closed captions, CEA 708 services often provide different closed caption infor-
-mation for the given content, for example captions in different languages.
+Similar to the channels in CEA 608 closed captions, CEA 708 services often provide different closed caption information for the given content, for example captions in different languages.
 
 **Parameters**
 
@@ -8822,11 +8821,11 @@ Since CEA 708 closed captions include multiple services where different closed c
 - `EIA708Service[ ] mService`
 
 
-#### static final int byte2int (byte[ ]data,int offset,int len) *[static]*
+#### static final int byte2int (byte[ ] data, int offset, int len) *[static]*
 
 This method handles byte of data in CEA 708 closed captions.
 
-#### static final int ConvARGBColor (byte Opacity,byte Color) *[static]*
+#### static final int ConvARGBColor (byte Opacity, byte Color) *[static]*
 
 This method handles color conversion of CEA 708 closed captions.
 
@@ -8845,7 +8844,7 @@ This method checks if the CEA 708 service number is enabled.
 
 - `TRUE if the CEA 708 service is enabled, otherwise FALSE.`
 
-#### boolean SetSourceByteStream (int serviceNo,byte[ ]Data,int len)
+#### boolean SetSourceByteStream (int serviceNo, byte[ ] Data, int len)
 
 This method sets the source byte stream for CEA 708 closed captions.
 
@@ -9065,8 +9064,7 @@ An integer sub error code of UNKNOWN as provided by the `NexPlayer`™ engine.
 
 Audio or video decoding error.
 
-E.g. `NexPlayer` get a failure during parsing the content for playback or during decoding the audio or video bit-
-streams..
+E.g. `NexPlayer` get a failure during parsing the content for playback or during decoding the audio or video bitstreams..
 
 #### DATA_INACTIVITY_TIMEOUT = ( 0x00000026,NexErrorCategory.GENERAL, "The response timed out")
 
@@ -9234,11 +9232,37 @@ When an asynchronous method of `NexPlayer`™ has completed successfully or fail
 
 **Parameters**
 
-| Name    | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-|---------|----------------------|
-| mp      | The `NexPlayer`™ object generating the event.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| command | The command which completed. This may be any of the following values:- `NEXPLAYER_ASYNC_CMD_OPEN_LOCAL(0x00000001)` - `NEXPLAYER_ASYNC_CMD_OPEN_STREAMING(0x00000002)` - `NEXPLAYER_ASYNC_CMD_OPEN_TV(0x00000003)` - `NEXPLAYER_ASYNC_CMD_START_LOCAL(0x00000005)` - `NEXPLAYER_ASYNC_CMD_START_STREAMING(0x00000006)` - `NEXPLAYER_ASYNC_CMD_START_TV(0x00000007)` - `NEXPLAYER_ASYNC_CMD_STOP(0x00000008)` - `NEXPLAYER_ASYNC_CMD_PAUSE(0x00000009)` - `NEXPLAYER_ASYNC_CMD_RESUME(0x0000000A)` - `NEXPLAYER_ASYNC_CMD_SEEK(0x0000000B)` - `NEXPLAYER_ASYNC_CMD_STEP_SEEK(0x0000000E)` - `NEXPLAYER_ASYNC_CMD_REINITVIDEO(0x00000013)` - `NEXPLAYER_ASYNC_CMD_FASTPLAY_START(0x00000027)` - `NEXPLAYER_ASYNC_CMD_FASTPLAY_STOP(0x00000028)` - `NEXPLAYER_ASYNC_CMD_SET_MEDIA_STREAM(0x00000031)` |
-| result  | Zero if the command was successful, otherwise an error code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th>mp</th>
+  <td>The NexPlayer™ object generating the event.</td>
+</tr>
+  <th rowspan="16">command</th>
+  <tr><td>NEXPLAYER_ASYNC_CMD_OPEN_LOCAL(0x00000001)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_OPEN_STREAMING(0x00000002)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_OPEN_TV(0x00000003)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_START_LOCAL(0x00000005)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_START_STREAMING(0x00000006)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_START_TV(0x00000007)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_STOP(0x00000008)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_PAUSE(0x00000009)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_RESUME(0x0000000A)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_SEEK(0x0000000B)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_STEP_SEEK(0x0000000E)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_REINITVIDEO(0x00000013)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_FASTPLAY_START(0x00000027)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_FASTPLAY_STOP(0x00000028)</td></tr>
+  <tr><td>NEXPLAYER_ASYNC_CMD_SET_MEDIA_STREAM(0x00000031)</td></tr>
+</tr>
+<tr>
+  <th>result</th>
+  <td>Zero if the command was successful, otherwise an error code.</td>
+</tr>
+</table>                                                         
 
 Below are the possible error codes for async_command_value.
 
@@ -9395,14 +9419,24 @@ Below are the possible error codes for async_command_value.
 
 **Parameters**
 
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th>param1</th>
+  <td>A value specific to the command that has completed. The following commands use this value (for all other commands, the value is undefined and reserved for future use, and must be ignored): - NEXPLAYER_ASYNC_CMD_SEEK: The actual position at which the seek command completed. Depending on the media format, this may be different than the position that was requested for the seek operation.</td>
+</tr>
+<tr>
+  <th>param2</th>
+  <td>A value specific to the command that has completed. Currently there are no commands that pass this parameter, and it is reserved for future use. Applications should ignore this value.</td>
+</tr>
+</table>
 
-| Name   | Description                                                                                                                                                                                                                                                                                                                                                                                                   |
-|--------|---------------------------|
-| param1 | A value specific to the command that has completed. The following commands use this value (for all other commands, the value is undefined and reserved for future use, and must be ignored): - `NEXPLAYER_ASYNC_CMD_SEEK:`     The actual position at which the seek command completed. Depending on the media     format, this may be different than the position that was requested for the seek operation. |
-| param2 | A value specific to the command that has completed. Currently there are no commands that pass this parameter, and it is reserved for future use. Applications should ignore this value.                                                                                                                                                                                                                       |
 Implements `NexPlayer.IListener`.
 
-#### void onAudioRenderCreate (NexPlayer mp,int samplingRate,int channelNum)
+#### void onAudioRenderCreate (NexPlayer mp, int samplingRate, int channelNum)
 
 Notification that the audio rendering thread has been created.
 
@@ -9497,7 +9531,7 @@ Reports Data Inactivity Timeout.
 
 Implements `NexPlayer.IListener`.
 
-#### void onDateRangeData (NexPlayer mp,NexDateRangeData[ ] data)
+#### void onDateRangeData (NexPlayer mp, NexDateRangeData[ ] data)
 
 This method reports the dataRange value that is contained in the EXT-X-DATERANGE tag.
 
@@ -9510,25 +9544,40 @@ This method reports the dataRange value that is contained in the EXT-X-DATERANGE
 
 Implements NexPlayer.IListener.
 
-#### void onDownloaderAsyncCmdComplete (NexPlayer mp,int msg,int param1,int param2)
+#### void onDownloaderAsyncCmdComplete (NexPlayer mp, int msg, int param1, int param2)
 
 This function is called when an asynchronous command in the Downloader module is complete.
 
-This method will be called whenever DownloaderOpen(), DownloaderClose(), DownloaderStart() or Downloader-
-Stop() finish asynchronously.
+This method will be called whenever DownloaderOpen(), DownloaderClose(), DownloaderStart() or DownloaderStop() finish asynchronously.
 
 **Parameters**
 
-| Name   | Description                                                                                                                                                                                                                                         |
-|--------|-----------------|
-| mp     | The `NexPlayer`™ object to which this event applies.                                                                                                                                                                                                |
-| msg    | The asynchronous command completed. This will be one of:  - `NEXDOWNLOADER_ASYNC_CMD_OPEN = 0x00200001` - `NEXDOWNLOADER_ASYNC_CMD_CLOSE = 0x00200002` - `NEXDOWNLOADER_ASYNC_CMD_START = 0x00200003` - `NEXDOWNLOADER_ASYNC_CMD_STOP = 0x00200004` |
-| param1 | This integer indicates the result of the command. It will be 0 in the event of success, or will be an error code in the event of failure.                                                                                                           |
-| param2 | Additional information, if available, concerning the result reported in param1. For example if the error is invalid response, param2 gives the HTTP status code.                                                                                    |
+<table>
+<tr>
+  <th>Parameter</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th rowspan="5">msg</th>
+  <tr><td>NEXDOWNLOADER_ASYNC_CMD_OPEN = 0x00200001</td></tr>
+  <tr><td>NEXDOWNLOADER_ASYNC_CMD_CLOSE = 0x00200002</td></tr>
+  <tr><td>NEXDOWNLOADER_ASYNC_CMD_START = 0x00200003</td></tr>
+  <tr><td>NEXDOWNLOADER_ASYNC_CMD_STOP = 0x00200004</td></tr>
+</tr>
+<tr>
+  <th>param1</th>
+  <td>This integer indicates the result of the command. It will be 0 in the event of success, or will be an error code in the event of failure.</td>
+ </tr>
+<tr>
+  <th>param2</th>
+  <td>Additional information, if available, concerning the result reported in param1. For example if the error is invalid response, param2 gives the HTTP status code.</td>
+ </tr>
+  
+</table>
 
 Implements `NexPlayer.IListener`.
 
-#### void onDownloaderError (NexPlayer mp,int msg,int param1)
+#### void onDownloaderError (NexPlayer mp, int msg, int param1)
 
 This function is called when an error is generated by the Downloader module.
 
@@ -9542,7 +9591,7 @@ This function is called when an error is generated by the Downloader module.
 
 Implements `NexPlayer.IListener`.
 
-#### void onDownloaderEventBegin (NexPlayer mp,int param1,int param2)
+#### void onDownloaderEventBegin (NexPlayer mp, int param1, int param2)
 
 This method reports when a Downloader event has started.
 
@@ -9556,7 +9605,7 @@ This method reports when a Downloader event has started.
 
 Implements `NexPlayer.IListener`.
 
-#### void onDownloaderEventComplete (NexPlayer mp,int param1)
+#### void onDownloaderEventComplete (NexPlayer mp, int param1)
 
 This function is called when a Downloader event has completed.
 
@@ -9569,7 +9618,7 @@ This function is called when a Downloader event has completed.
 
 Implements `NexPlayer.IListener`.
 
-#### void onDownloaderEventProgress (NexPlayer mp,int param1,int param2,long param3,long param4)
+#### void onDownloaderEventProgress (NexPlayer mp, int param1, int param2, long param3, long param4)
 
 This function is called to pass the downloading progress of a Downloader event.
 
@@ -9585,21 +9634,38 @@ This function is called to pass the downloading progress of a Downloader event.
 
 Implements `NexPlayer.IListener`.
 
-#### void onDownloaderEventState (NexPlayer mp,int param1,int param2)
+#### void onDownloaderEventState (NexPlayer mp, int param1, int param2)
 
 This method reports the current state of a Downloader event.
 
 **Parameters**
 
-| Name   | Description                                                                                                                                                                                                                                  |
-|--------|----------|
-| mp     | The `NexPlayer`™ object to which this event applies.                                                                                                                                                                                         |
-| param1 | This parameter is currently undefined and is not used but is reserved for future use.                                                                                                                                                        |
-| param2 | This is an integer that indicates the current state of the Downloader event. This will be one of:  - `NEXDOWNLOADER_STATE_NONE = 0` - `NEXDOWNLOADER_STATE_CLOSED = 2` - `NEXDOWNLOADER_STATE_STOP = 3` - `NEXDOWNLOADER_STATE_DOWNLOAD = 4` |
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th>mp</th>
+  <td>The NexPlayer™ object to which this event applies.</td>
+ </tr>
+<tr>
+  <th>param1</th>
+  <td>This parameter is currently undefined and is not used but is reserved for future use.</td>
+ </tr>
+<tr>
+  <th rowspan="5">param2</th>
+  <tr><td>NEXDOWNLOADER_STATE_NONE = 0</td></tr>
+  <tr><td>NEXDOWNLOADER_STATE_CLOSED = 2</td></tr>
+  <tr><td>NEXDOWNLOADER_STATE_STOP = 3</td></tr>
+  <tr><td>NEXDOWNLOADER_STATE_DOWNLOAD = 4</td></tr>
+</tr>
+  
+</table>
 
 Implements `NexPlayer.IListener`.
 
-#### void onDynamicThumbnailData (NexPlayer mp,int width,int height,int cts,Object bitmap)**
+#### void onDynamicThumbnailData (NexPlayer mp, int width, int height, int cts, Object bitmap)**
 
 This method will be called by the `NexPlayer`™ engine when thumbnail data is created.
 
@@ -9647,7 +9713,7 @@ to this by calling `NexPlayer.stop` and then updating the user interface.
 
 Implements `NexPlayer.IListener`.
 
-#### void onError (NexPlayer mp,NexErrorCode errorcode)
+#### void onError (NexPlayer mp, NexErrorCode errorcode)
 
 An error has occurred during playback.
 
@@ -9660,7 +9726,7 @@ An error has occurred during playback.
 
 Implements `NexPlayer.IListener`.
 
-#### int onHTTPABRTrackChange (NexPlayer mp,int param1,int param2,int param3)
+#### int onHTTPABRTrackChange (NexPlayer mp, int param1, int param2, int param3)
 
 This method will be called by the `NexPlayer`™ engine when the ABR track is switched.
 
@@ -9681,7 +9747,7 @@ The exact track bandwidth that the user wants to set to forcibly.
 Implements `NexPlayer.IHTTPABRTrackChangeListener`.
 
 
-#### void onHTTPRequest (NexPlayer mp,String strRequest)
+#### void onHTTPRequest (NexPlayer mp, String strRequest)
 
 This method allows `NexPlayer`™ to pass HTTP request messages to an application.
 
@@ -9704,7 +9770,7 @@ is required from the server (for example user cookies), this method can be used 
 
 Implements `NexPlayer.IListener`.
 
-#### void onHTTPResponse (NexPlayer mp,String strResponse)
+#### void onHTTPResponse (NexPlayer mp, String strResponse)
 
 This method allows responses from an HTTP server to be received and handled in a more customized way.
 
@@ -9730,7 +9796,7 @@ made,on *ModifyHttpRequest* should be called.
 
 Implements `NexPlayer.IListener`.
 
-#### String onModifyHttpRequest (NexPlayer mp,int param1,Object input_obj)
+#### String onModifyHttpRequest (NexPlayer mp, int param1, Object input_obj)
 
 This method provides the HTTP Request that will be used by `NexPlayer`™ when an HTTP request is modified.
 
@@ -9821,12 +9887,11 @@ Reports Pause Supervision Timeout.
 
 Implements `NexPlayer.IListener`.
 
-#### void onPictureTimingInfo (NexPlayer mp,NexPictureTimingInfo[ ]arrPictureTimingInfo)**
+#### void onPictureTimingInfo (NexPlayer mp, NexPictureTimingInfo[ ] arrPictureTimingInfo)**
 
 This method provides SEI picture timing information about video frames of H.264 content when available.
 
-This method is called when *ENABLE_H264_SEI* is enabled and the H.264 content contains supplemental en-
-hancement information (SEI). While SEI may include a variety of attributes, this method specifically receives SEI
+This method is called when *ENABLE_H264_SEI* is enabled and the H.264 content contains supplemental enhancement information (SEI). While SEI may include a variety of attributes, this method specifically receives SEI
 picture timing information when available.
 
 `NexPlayer`™ delivers the timing information through this method by passing an instance of `NexPictureTimingInfo`
@@ -9842,7 +9907,7 @@ whenever SEI picture timing information is received.
 
 Implements `NexPlayer.IListener`.
 
-#### void onProgramTime (NexPlayer mp,String strTag,long offset)
+#### void onProgramTime (NexPlayer mp, String strTag, long offset)
 
 This retrieves the program time and date information from HLS content when the #EXT-X-PROGRAM-DATE-TIME tag is present.
 
@@ -9867,7 +9932,7 @@ The values from *strTag* and *offset* parameters can be added to determine the c
 
 Implements `NexPlayer.IListener`.
 
-#### void onRecording (NexPlayer mp,int recDuration,int recSize)
+#### void onRecording (NexPlayer mp, int recDuration, int recSize)
 
 This reports `NexPlayer`™’s recording status.
 
@@ -9884,7 +9949,7 @@ This reports `NexPlayer`™’s recording status.
 
 Implements `NexPlayer.IListener`.
 
-#### void onRecordingEnd (NexPlayer mp,int success)
+#### void onRecordingEnd (NexPlayer mp, int success)
 
 This indicates when `NexPlayer`™ recording has ended.
 
@@ -9927,7 +9992,7 @@ Reports RTSP command Timeout.
 
 Implements `NexPlayer.IListener`.
 
-#### void onSessionData (NexPlayer mp,NexSessionData[ ]data)
+#### void onSessionData (NexPlayer mp, NexSessionData[ ] data)
 
 This method reports the arbitrary session data of the HLS master playlist.
 
@@ -9940,7 +10005,7 @@ This method reports the arbitrary session data of the HLS master playlist.
 
 Implements `NexPlayer.IListener`.
 
-#### void onSignalStatusChanged (NexPlayer mp,int pre,int now)
+#### void onSignalStatusChanged (NexPlayer mp, int pre, int now)
 
 `NexPlayer`™’s signal status has been changed.
 
@@ -9986,7 +10051,7 @@ This is provided for compatibility with older code, and new applications may saf
 
 Implements `NexPlayer.IListener`.
 
-#### void onStateChanged (NexPlayer mp,int pre,int now)
+#### void onStateChanged (NexPlayer mp, int pre, int now)
 
 `NexPlayer`™’s state has been changed.
 
@@ -10004,7 +10069,7 @@ received, not when this event,*onStateChanged*, is called.
 
 Implements `NexPlayer.IListener`.
 
-#### void onStatusReport (NexPlayer mp,int msg,int param1)
+#### void onStatusReport (NexPlayer mp, int msg, int param1)
 
 This function is called when there is a change in the available content information.
 
@@ -10019,17 +10084,69 @@ To determine the new content information when this event occurs, call `getConten
 
 **Parameters**
 
-| Name   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-|--------|----------------|
-| mp     | The `NexPlayer`™ object to which this event applies.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| msg    | The type of notification. This is one of the following values:  - `NEXPLAYER_STATUS_REPORT_NONE (0x00000000)` No status change (this     value is not normally passed to *onStatusReport*, and should generally be ignored). - `NEXPLAYER_STATUS_REPORT_AUDIO_GET_CODEC_FAILED (0x00000001)`     Failed to determine the audio codec. This notification can happen at the beginning     of playback, or during playback if there is an audio codec change. This can happen     because of a switch to a new codec that `NexPlayer`™ does not support, or due to an     error in the format of the content or corrupted data in the content. - `NEXPLAYER_STATUS_REPORT_VIDEO_GET_CODEC_FAILED (0x00000002)`     Failed to determine the video codec. This notification can happen at the beginning     of playback, or during playback if there is a video codec change. This can happen     because of a switch to a new codec that NexPlayer™ does not support, or due to an     error in the format of the content or corrupted data in the content. - `NEXPLAYER_STATUS_REPORT_AUDIO_INIT_FAILED (0x00000003)` The audio     codec failed to initialize. This can happen for several reasons. The container may     indicate the wrong audio codec, or the audio stream may be incorrect or corrupted,     or the audio stream may use a codec version or features that `NexPlayer`™ doesn’t     support. - `NEXPLAYER_STATUS_REPORT_VIDEO_INIT_FAILED (0x00000004)` The video     codec failed to initialize. This can happen for several reasons. The container may     indicate the wrong video codec, or the video stream may be incorrect or corrupted,     or the video stream may use a codec version or features that `NexPlayer`™ doesn’t     support. - `NEXPLAYER_STATUS_REPORT_TRACK_CHANGED (0x00000005)` The track has     changed. This happens for protocols such as HLS that provide the content in multiple     formats or at multiple resolutions or bitrates. The ID of the new track can be found     in mCurrTrackID, and also inparam1. When this event occurs, `NexPlayer`™ also     generates a eNEXPLAYER_CONTENT_INFO_UPDATED event. - `NEXPLAYER_STATUS_REPORT_STREAM_CHANGED (0x00000006)` The stream     being played back has changed (between the states Audio-Only, Video-Only and     Audio+Video). The new stream type is in `mMediaType`, and also in *param1*. - `NEXPLAYER_STATUS_REPORT_DSI_CHANGED (0x00000007)` An attribute relating to the video or audio format (such as the resolution, bitrate, etc.) has changed.     This is considered Decoder Specific Information (DSI). - `NEXPLAYER_STATUS_REPORT_OBJECT_CHANGED (0x00000008)` One of the     codec objects in use has changed (that is, the audio or video codec in use has     changed). See `mAudioCodec` and `mVideoCodec` to get the ID of the new codec. - `NEXPLAYER_STATUS_REPORT_CONTENT_INFO_UPDATED (0x00000009)` The     content information has changed. When onStatusReport is called with any other non-Failure value for *msg*, it will also be called with this as well. This is a good place to     monitor insignificant changes to the content information. - `NEXPLAYER_STATUS_REPORT_DOWNLOAD_PROGRESS (0x00000080)` Reports the progress made storing content for offline play. This message will be called     when content is opened with *NEXPLAYER_SOURCE_TYPE_STORE_STREAM* type.     For this notification, the parameter *param1* returns the percentage of downloading     complete (0-100). - `NEXPLAYER_STATUS_REPORT_AVMODE_CHANGED (0x0000000A)` The     stream being played back has changed and the new stream has a different media     type. This event happens whenever the state changes between video-only, audio-only     and audio-video. *param1* contains the new media type: 1 for audio, 2 for video, 3 for     both. - `NEXPLAYER_STATUS_REPORT_HTTP_INVALID_RESPONSE (0x0000000B)` An     HTTP error response was received from the server.*param1* contains the error code     (this is a normal HTTP response code, such as 404, 500, etc.) - `NEXPLAYER_STATUS_REPORT_DISCONTINUITY_EXIST (0x00000012)` There is     a discontinuity tag found in the HLS content playlist. - `NEXPLAYER_STATUS_REPORT_EXTERNAL_DOWNLOAD_CANCELED (0x00000020)` The player canceled External PD Mode and played content on     Normal PD Mode. (e.g. The engine attempted to play regular content instead of piff     content on External PD Mode). - `NEXPLAYER_STATUS_REPORT_MINMAX_BANDWIDTH_CHANGED (0x00000021)` Either the Minimum bandwidth or Maximum bandwidth has been     changed. - `NEXPLAYER_STATUS_REPORT_STREAM_RECV_PAUSE (0x00000060)` When     the prefetch buffer exceeds the maximum value, the player pauses the buffer control.     The user can adjust the maximum value of the prefetch buffer by using `setProperty` of     the properties `MAX_BUFFER_RATE` or `MAX_BUFFER_DURATION`. - `NEXPLAYER_STATUS_REPORT_STREAM_RECV_RESUME (0x00000061)` When     the prefetch buffer is below the minimum value, the player resumes the buffer control.     The user can adjust the mimimum value of the prefetch buffer by using `setProperty` of     the properties `MIN_BUFFER_RATE` or `MIN_BUFFER_DURATION`. - `NEXPLAYER_STATUS_REPORT_DOWNLOAD_PROGRESS (0x00000080)` Re-     ports the progress made storing content for offline play. This message will be called     when content is opened with *NEXPLAYER_SOURCE_TYPE_STORE_STREAM* type.     For this notification, the parameter *param1* returns the percentage of downloading     complete (0-100). - `NEXPLAYER_STATUS_REPORT_MAX (0xFFFFFFFF)` This value is reserved; do     not use it. |
-| param1 | Additional information. The meaning of this depends on the value of *msg*. If the description above doesn’t refer to *param1*, then this parameter is undefined for that value of *msg* and should not be used.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th>mp</th>
+  <td>The NexPlayer™ object to which this event applies.</td> 
+</tr>
+<tr>
+  <th rowspan="22">msg</th>
+</tr>
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_NONE (0x00000000)</b>: No status change (this value is not normally passed to *onStatusReport*, and should generally be ignored)</td></tr>
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_AUDIO_GET_CODEC_FAILED (0x00000001)</b>: Failed to determine the audio codec. This notification can happen at the beginning of playback, or during playback if there is an audio codec change. This can happen because of a switch to a new codec that NexPlayer™ does not support, or due to an error in the format of the content or corrupted data in the content.</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_VIDEO_GET_CODEC_FAILED (0x00000002)</b>: Failed to determine the video codec. This notification can happen at the beginning of playback, or during playback if there is a video codec change. This can happen because of a switch to a new codec that NexPlayer™ does not support, or due to an error in the format of the content or corrupted data in the content.</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_AUDIO_INIT_FAILED (0x00000003)</b>: The audio codec failed to initialize. This can happen for several reasons. The container may     indicate the wrong audio codec, or the audio stream may be incorrect or corrupted, or the audio stream may use a codec version or features that NexPlayer™ doesn’t support.</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_VIDEO_INIT_FAILED (0x00000004)</b>: The video codec failed to initialize. This can happen for several reasons. The container may     indicate the wrong video codec, or the video stream may be incorrect or corrupted, or the video stream may use a codec version or features that NexPlayer™ doesn’t support.</td></tr>
+	
+<tr><td><b>NEXPLAYER_STATUS_REPORT_TRACK_CHANGED (0x00000005)</b>: The track has changed. This happens for protocols such as HLS that provide the content in multiple formats or at multiple resolutions or bitrates. The ID of the new track can be found in mCurrTrackID, and also inparam1. When this event occurs, `NexPlayer`™ also enerates a eNEXPLAYER_CONTENT_INFO_UPDATED event.</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_STREAM_CHANGED (0x00000006)</b>: The stream being played back has changed (between the states Audio-Only, Video-Only and     Audio+Video). The new stream type is in mMediaType, and also in param1.</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_DSI_CHANGED (0x00000007)</b>: An attribute relating to the video or audio format (such as the resolution, bitrate, etc.) has changed. This is considered Decoder Specific Information (DSI).</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_OBJECT_CHANGED (0x00000008)</b>: One of the codec objects in use has changed (that is, the audio or video codec in use has     changed). See mAudioCodec and mVideoCodec to get the ID of the new codec.</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_CONTENT_INFO_UPDATED (0x00000009)</b>: The content information has changed. When onStatusReport is called with any other non-Failure value for msg, it will also be called with this as well. This is a good place to monitor insignificant changes to the content information.</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_DOWNLOAD_PROGRESS (0x00000080)</b>: Reports the progress made storing content for offline play. This message will be called     when content is opened with NEXPLAYER_SOURCE_TYPE_STORE_STREAM type. For this notification, the parameter param1 returns the percentage of downloading     complete (0-100).</td></tr>
+	
+<tr><td><b>NEXPLAYER_STATUS_REPORT_AVMODE_CHANGED (0x0000000A)</b>: The stream being played back has changed and the new stream has a different media type. This event happens whenever the state changes between video-only, audio-only and audio-video. param1 contains the new media type: 1 for audio, 2 for video, 3 for     both.</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_HTTP_INVALID_RESPONSE (0x0000000B)</b>: An HTTP error response was received from the server.*param1* contains the error code     (this is a normal HTTP response code, such as 404, 500, etc.)</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_DISCONTINUITY_EXIST (0x00000012)</b>: There is a discontinuity tag found in the HLS content playlist.</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_OBJECT_CHANGED (0x00000008)</b>: One of the codec objects in use has changed (that is, the audio or video codec in use has     changed). See mAudioCodec and mVideoCodec to get the ID of the new codec.</td></tr>
 
+ <tr><td><b>NEXPLAYER_STATUS_REPORT_EXTERNAL_DOWNLOAD_CANCELED (0x00000020)</b>: The player canceled External PD Mode and played content on Normal PD Mode. (e.g. The engine attempted to play regular content instead of piff content on External PD Mode).</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_MINMAX_BANDWIDTH_CHANGED (0x00000021)</b>: Either the Minimum bandwidth or Maximum bandwidth has been changed</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_STREAM_RECV_PAUSE (0x00000060)</b>: When the prefetch buffer exceeds the maximum value, the player pauses the buffer control.     The user can adjust the maximum value of the prefetch buffer by using setProperty of the properties MAX_BUFFER_RATE or MAX_BUFFER_DURATION.</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_STREAM_RECV_RESUME (0x00000061)</b>: When the prefetch buffer is below the minimum value, the player resumes the buffer control.     The user can adjust the mimimum value of the prefetch buffer by using setProperty of the properties MIN_BUFFER_RATE or MIN_BUFFER_DURATION.</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_DOWNLOAD_PROGRESS (0x00000080)</b>: Reports the progress made storing content for offline play. This message will be called     when content is opened with NEXPLAYER_SOURCE_TYPE_STORE_STREAM type. For this notification, the parameter param1 returns the percentage of downloading     complete (0-100).</td></tr>
+	
+  <tr><td><b>NEXPLAYER_STATUS_REPORT_MAX (0xFFFFFFFF)</b>: This value is reserved; do not use it.</td></tr>
+	
+<tr>
+  <th>param1</th>
+  <td>Additional information. The meaning of this depends on the value of msg. If the description above doesn’t refer to param1, then this parameter is undefined for that value of msg and should not be used.</td> 
+</tr>
+</table>                                                                                                                                                       
 
 Implements `NexPlayer.IListener`.
  
  
-#### void onTextRenderInit (NexPlayer mp,int numTracks)
+#### void onTextRenderInit (NexPlayer mp, int numTracks)
 
 
 Called when initially beginning playback of media content with associated subtitles.
@@ -10044,7 +10161,7 @@ Called when initially beginning playback of media content with associated subtit
 
 Implements `NexPlayer.IListener`.
 
-#### void onTextRenderRender (NexPlayer mp,int trackIndex,NexClosedCaption textInfo)
+#### void onTextRenderRender (NexPlayer mp, int trackIndex, NexClosedCaption textInfo)
 
 This function is called when new subtitle data is ready for display.
 
@@ -10087,7 +10204,7 @@ ignore this event and create their own timer, in which case they can use the cur
 
 Implements `NexPlayer.IListener`.
 
-#### void onTimedMetaRenderRender (NexPlayer mp,NexID3TagInformation TimedMeta)
+#### void onTimedMetaRenderRender (NexPlayer mp, NexID3TagInformation TimedMeta)
 
 This method is called when new timed metadata is ready for display in HLS.
 
@@ -10110,7 +10227,7 @@ this method is called.
 
 Implements `NexPlayer.IListener`.
 
-#### void onTimeshift (NexPlayer mp,int currTime,int TotalTime)
+#### void onTimeshift (NexPlayer mp, int currTime, int TotalTime)
 
 This is a deprecated method that formerly reported `NexPlayer`™’s Time shift status.
 
@@ -10126,7 +10243,7 @@ This is a deprecated method that formerly reported `NexPlayer`™’s Time shift
 
 Implements `NexPlayer.IListener`.
 
-#### void onTimeshiftErr (NexPlayer mp,int err)
+#### void onTimeshiftErr (NexPlayer mp, int err)
 
 This is a deprecated method that formerly reported any `NexPlayer`™ Time shift error.
 
@@ -10134,7 +10251,7 @@ This is a deprecated method that formerly reported any `NexPlayer`™ Time shift
 
 Implements `NexPlayer.IListener`.
 
-#### void onVideoRenderCapture (NexPlayer mp,int width,int height,int pixelbyte,Object bitmap)
+#### void onVideoRenderCapture (NexPlayer mp, int width, int height, int pixelbyte, Object bitmap)
 
 Called when a frame of video has been captured.
 
@@ -10160,7 +10277,7 @@ process the captured frame as necessary.
 
 Implements `NexPlayer.IListener`.
 
-#### void onVideoRenderCreate (NexPlayer mp,int width,int height,Object rgbBuffer)**
+#### void onVideoRenderCreate (NexPlayer mp, int width, int height, Object rgbBuffer)**
 
 This method is called when `NexPlayer`™ needs the application to create a surface on which to render the video.
 
@@ -10333,7 +10450,7 @@ Initializes and registers `NexHLSAES128DRMManager`.
 |------------------|---------|
 | strEngineLibName | The relevant engine library name as a *string*. |
 
-#### native int initDRMManagerMulti (Object nexPlayerHandle,String strEnginePath)
+#### native int initDRMManagerMulti (Object nexPlayerHandle, String strEnginePath)
 
 For internal use only.
 
@@ -10428,7 +10545,7 @@ This method gets the timestamp of timed metadata.
 
 The timestamp of timed metadata in millisecond unit.
 
-#### void setArrExtraData ( ArrayList < NexID3TagText > ExtraData)
+#### void setArrExtraData (ArrayList < NexID3TagText > ExtraData)
 
 This method sets the list of customized ID3 tags and the extra data they contain included in content timed metadata.
 
@@ -10605,7 +10722,7 @@ Generally, use the `NexLog.v() NexLog.d() NexLog.i() NexLog.w()` and `NexLog.e()
 
 > **Deprecated** For internal use only. Please do not use.
 
-#### static void d (String tag,String msg) *[static]*
+#### static void d (String tag, String msg) *[static]*
 
 This method sends a DEBUG log message.
 
@@ -10616,7 +10733,7 @@ This method sends a DEBUG log message.
 | tag  | Used to identify the source of a log message. It usually identifies the class or activity where the log call occurs. |
 | msg  | The message to be logged.                                                                                            |
 
-#### static void e (String tag,String msg) *[static]*
+#### static void e (String tag, String msg) *[static]*
 
 This method sends an ERROR log message.
 
@@ -10627,7 +10744,7 @@ This method sends an ERROR log message.
 | tag  | Used to identify the source of a log message. It usually identifies the class or activity where the log call occurs. |
 | msg  | The message to be logged.                                                                                            |
 
-#### static void i (String tag,String msg) *[static]*
+#### static void i (String tag, String msg) *[static]*
 
 This method sends an INFO log message.
 
@@ -10638,7 +10755,7 @@ This method sends an INFO log message.
 | tag  | Used to identify the source of a log message. It usually identifies the class or activity where the log call occurs. |
 | msg  | The message to be logged.                                                                                            |
 
-#### static void v (String tag,String msg) *[static]*
+#### static void v (String tag, String msg) *[static]*
 
 This message sends a VERBOSE log message.
 
@@ -10649,7 +10766,7 @@ This message sends a VERBOSE log message.
 | tag  | Used to identify the source of a log message. It usually identifies the class or activity where the log call occurs. |
 | msg  | The message to be logged.                                                                                            |
 
-#### static void w (String tag,String msg) *[static]*
+#### static void w (String tag, String msg) *[static]*
 
 This message sends a WARN log message.
 
@@ -10718,7 +10835,7 @@ This method gets the height of CEA 708 closed captions.
 
 This method gets the width of CEA 708 closed captions.
 
-#### void PushChar ( int nChar )
+#### void PushChar (int nChar)
 
 This method pushes a character in the display of CEA 708 closed captions.
 
@@ -10726,15 +10843,15 @@ This method pushes a character in the display of CEA 708 closed captions.
 
 This method resets CEA 708 closed captions.
  
-#### void SetAttr ( byte ww, byte j, byte sd, byte pd)
+#### void SetAttr (byte ww, byte j, byte sd, byte pd)
 
 This method sets the attributes of CEA 708 closed captions.
  
-#### void SetLocation ( int row, int col )
+#### void SetLocation (int row, int col)
 
 This method sets the position of CEA 708 closed captions.
  
-#### void SetSize ( int rc, int cc, int rl, int cl, int maxcol )
+#### void SetSize (int rc, int cc, int rl, int cl, int maxcol)
 
 This method sets the size of CEA 708 closed captions.
  
@@ -10778,7 +10895,7 @@ This class allows an application to retrieve host information by using the hostn
 	
 	This class defines the information possible for an entry made with the method addEntry, including the hostname and its corresponding IP address when a customized IP address is desired.
 
-#### boolean addEntry ( Stringhostname,Stringaddress)
+#### boolean addEntry (String hostname, String address)
 
 This method adds an entry to the table of customized IP addresses.
 
@@ -10811,7 +10928,7 @@ In other words, this means that the table of net addresses can be used as a fall
 
 This is a possible table type for the methodsetNetAddrTable.
 
-When the parameternNetAddrTableTypeinNexPlayer.setNetAddrTableis set to this table type, the method will try to get the host information using the hostname and its corresponding custom IP address, set by the developer, from the table registered as the parameter table. If this fails, the player will try to get the host information from the existing host database.
+When the parameter nNetAddrTableType in NexPlayer.setNetAddrTableis set to this table type, the method will try to get the host information using the hostname and its corresponding custom IP address, set by the developer, from the table registered as the parameter table. If this fails, the player will try to get the host information from the existing host database.
 
 In other words, this means that the information in the table registered will be used with priority, overriding the information from the existing host database.
  
@@ -10839,7 +10956,7 @@ The new offline playback feature is an expansion, which is a better way of savin
 
 Section How to store HLS content for more details.
  
-#### NexOfflineStoreController(NexPlayerplayer,Contextcontext)
+#### NexOfflineStoreController(NexPlayer player, Context context)
 
 Constructor for NexOfflineStoreController.
 
@@ -10853,7 +10970,7 @@ To use the storing feature of new offline playback, the user must create an inst
 | context | The current context; from `Activity` subclasses, you can just passthis.| 
 
 
-#### static int deleteOfflineCache ( File storedInfoFile ) [static]
+#### static int deleteOfflineCache (File storedInfoFile) [static]
 
 This method deletes the cache directory files and then the stored info files.
 
@@ -10867,7 +10984,7 @@ This method deletes the cache directory files and then the stored info files.
  
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
  
-#### static int deleteOfflineCache ( String storedInfoFilePath ) [static]
+#### static int deleteOfflineCache (String storedInfoFilePath) [static]
 
 This method deletes the cache directory files and then the stored info files.
 
@@ -10901,7 +11018,7 @@ If IOfflineStoreListener is already registered, offlineStoreResumed callback is 
  
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
  
-#### void setListener ( IOfflineStoreListener l )
+#### void setListener (IOfflineStoreListener l)
 
 The user must register IOfflineStoreListener in NexOfflineStoreController in order for the application to get Offline Store events.
 
@@ -10913,7 +11030,7 @@ The application must call setListener before calling startOfflineStore.
 |---|---|
 | l | The callback to be invoked.|   
  
-#### void setOfflineStoreSetting ( NexOfflineStoreSetting setting, int value )
+#### void setOfflineStoreSetting (NexOfflineStoreSetting setting, int value)
 
 This method sets the setting values needed for storing.
 
@@ -10926,7 +11043,7 @@ Settings that are not customized will be set to default values. The user must ca
 | setting | The NexOfflineStoreSetting to set.|   
 | value | The new integer value for the NexOfflineStoreSetting.|    
  
-#### void setOfflineStoreSetting (NexOfflineStoreSetting setting,String value)
+#### void setOfflineStoreSetting (NexOfflineStoreSetting setting, String value)
 
 This method sets the setting values needed for storing.
 
@@ -10939,7 +11056,7 @@ Settings that are not customized will be set to default values. The user must ca
 | setting | The NexOfflineStoreSetting to set.|   
 | value | The new String value for the NexOfflineStoreSetting.|    
  
-#### int startOfflineStore ( String url, String storedInfoFilePath, int transportType)
+#### int startOfflineStore (String url, String storedInfoFilePath, int transportType)
 
 This method starts Offline storing.
 
@@ -10947,74 +11064,133 @@ If `IOfflineStoreListener` is already registered, offlineStoreStarted callback i
 
 **Parameters**
 
-| Name  | Description  | 
-|---|---|
-| url | The URL to store.|   
-| storedInfoFilePath | The absolute path of the stored info file.|   
-| transportType | The network transport type to use on the connection. This should be one of:<br>- NEXPLAYER\_TRANSPORT\_TYPE\_TCP<br>- NEXPLAYER\_TRANSPORT\_TYPE\_UDP|    
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th>url</th>
+  <td>The URL to store.</td>
+</tr>
+<tr>
+  <th>storedInfoFilePath</th>
+  <td>The absolute path of the stored info file.</td>
+</tr>
+<tr>
+  <th rowspan="3">transportType</th>
+  <tr><td>NEXPLAYER_TRANSPORT_TYPE_TCP</td></tr>
+  <tr><td>NEXPLAYER_TRANSPORT_TYPE_UDP</td></tr>
+</tr>
+</table> 
  
 
 **Returns**
 
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
  
-#### int startOfflineStore (String url,String storedInfoFilePath,int transportType,Map <String, String> optionalHeaders)
+#### int startOfflineStore (String url, String storedInfoFilePath, int transportType, Map <String, String> optionalHeaders)
 
 This method starts Offline storing.
 
 If IOfflineStoreListener is already registered, offlineStoreStarted callback is called when the Offline Store is started.
 
 **Parameters**
-
-| Name  | Description  | 
-|---|---|
-| url | The URL to store.|   
-| storedInfoFilePath | The absolute path of the stored info file.|   
-| transportType | The network transport type to use on the connection. This should be one of:<br>- NEXPLAYER\_TRANSPORT\_TYPE\_TCP<br>- NEXPLAYER\_TRANSPORT\_TYPE\_UDP|    
-| optionalHeaders |  Optional Headers for the license request|   
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th>url</th>
+  <td>The URL to store.</td>
+</tr>
+<tr>
+  <th>storedInfoFilePath</th>
+  <td>The absolute path of the stored info file.</td>
+</tr>
+<tr>
+  <th rowspan="3">transportType</th>
+  <tr><td>NEXPLAYER_TRANSPORT_TYPE_TCP</td></tr>
+  <tr><td>NEXPLAYER_TRANSPORT_TYPE_UDP</td></tr>
+</tr>
+<tr>
+  <th>optionalHeaders</th>
+  <td>Optional Headers for the license request.</td>
+</tr>
+</table> 
  
 **Returns**
  
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
 
-#### int startOfflineStore (String url,String storedInfoFilePath,int transportType,Map <String, String> optionalHeaders, List <String> httpHeaders)
+#### int startOfflineStore (String url, String storedInfoFilePath, int transportType, Map <String, String> optionalHeaders, List <String> httpHeaders)
 
 This method starts Offline storing.
 
 If IOfflineStoreListener is already registered, offlineStoreStarted callback is called when the Offline Store is started.
 
 **Parameters**
- 
-| Name  | Description  | 
-|---|---|
-| url | The URL to store.|   
-| storedInfoFilePath | The absolute path of the stored info file.|   
-| transportType | The network transport type to use on the connection. This should be one of:<br>- NEXPLAYER\_TRANSPORT\_TYPE\_TCP<br>- NEXPLAYER\_TRANSPORT\_TYPE\_UDP|    
-| optionalHeaders |  Optional Headers for the license request|   
-| httpHeaders |  Http Headers for the rest of the requests |   
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th>url</th>
+  <td>The URL to store.</td>
+</tr>
+<tr>
+  <th>storedInfoFilePath</th>
+  <td>The absolute path of the stored info file.</td>
+</tr>
+<tr>
+  <th rowspan="3">transportType</th>
+  <tr><td>NEXPLAYER_TRANSPORT_TYPE_TCP</td></tr>
+  <tr><td>NEXPLAYER_TRANSPORT_TYPE_UDP</td></tr>
+</tr>
+<tr>
+  <th>optionalHeaders</th>
+  <td>Optional Headers for the license request.</td>
+</tr>
+<tr>
+  <th>httpHeaders</th>
+  <td>Http Headers for the rest of the requests.</td>
+</tr>
+</table>  
 
 **Returns**
  
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
  
-#### int startOfflineStore ( FileDescriptor storedInfoFD,int transportType)
+#### int startOfflineStore (FileDescriptor storedInfoFD, int transportType)
 
 This method starts storing from where it left off based on the stored info file.
 
 This will start storing where it left off, so changing the setting to setOfflineStoreSetting will not have any effect. If IOfflineStoreListener is already registered, offlineStoreStarted callback is called when the Offline Store is started.
 
 **Parameters**
-
-| Name  | Description  | 
-|---|---|
-| storedInfoFD | The file descriptor of the info file created from storing.|   
-| transportType | The network transport type to use on the connection. This should be one of:<br>- NEXPLAYER\_TRANSPORT\_TYPE\_TCP<br>- NEXPLAYER\_TRANSPORT\_TYPE\_UDP|  
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th>storedInfoFD</th>
+  <td>The file descriptor of the info file created from storing.</td>
+</tr>
+<tr>
+  <th rowspan="3">transportType</th>
+  <tr><td>NEXPLAYER_TRANSPORT_TYPE_TCP</td></tr>
+  <tr><td>NEXPLAYER_TRANSPORT_TYPE_UDP</td></tr>
+</tr>
+</table>  
 
 **Returns**
  
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
  
-#### int startOfflineStore ( String storedInfoFilePath, int transportType)
+#### int startOfflineStore (String storedInfoFilePath, int transportType, Map< String, String> optionalHeaders)
 
 This method starts storing from where it left off based on the stored info file.
 
@@ -11022,31 +11198,25 @@ This will start storing where it left off, so changing the setting to setOffline
 IOfflineStoreListener is already registered, offlineStoreStarted callback is called when the Offline Store is started.
 
 **Parameters**
- 
-| Name  | Description  | 
-|---|---|
-| storedInfoFilePath | The absolute path of the stored|   
-| transportType | The network transport type to use on the connection. This should be one of:<br>- NEXPLAYER\_TRANSPORT\_TYPE\_TCP<br>- NEXPLAYER\_TRANSPORT\_TYPE\_UDP|  
-| optionalHeaders | Optional Headers for the license request|   
- 
-**Returns**
- 
-Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
- 
-#### int startOfflineStore ( String storedInfoFilePath, int transportType,Map< String, String> optionalHeaders)
-
-This method starts storing from where it left off based on the stored info file.
-
-This will start storing where it left off, so changing the setting to setOfflineStoreSetting will not have any effect. If
-IOfflineStoreListener is already registered, offlineStoreStarted callback is called when the Offline Store is started.
-
-**Parameters**
-
-| Name  | Description  | 
-|---|---|
-| storedInfoFilePath | The absolute path of the stored|   
-| transportType | The network transport type to use on the connection. This should be one of:<br>- NEXPLAYER\_TRANSPORT\_TYPE\_TCP<br>- NEXPLAYER\_TRANSPORT\_TYPE\_UDP|  
-| optionalHeaders | Optional Headers for the license request|    
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th>storedInfoFilePath</th>
+  <td>The absolute path of the stored.</td>
+</tr>
+<tr>
+  <th rowspan="3">transportType</th>
+  <tr><td>NEXPLAYER_TRANSPORT_TYPE_TCP</td></tr>
+  <tr><td>NEXPLAYER_TRANSPORT_TYPE_UDP</td></tr>
+</tr>
+<tr>
+  <th>optionalHeaders</th>
+  <td>Optional Headers for the license request.</td>
+</tr>
+</table>   
  
 **Returns**
 
@@ -11189,7 +11359,7 @@ For more in depth information about SEI picture timing information, please see t
  
 NexPlayer.IListener.onPictureTimingInfo for more information.
  
-#### NexPictureTimingInfo(int clockTimeStampFlag,int ctType,int nuitFieldBasedFlag, int countingType, int FullTimeStampFlag, int discontinuityFlag, int countDroppedFlag, int nFrames, int seconds, int minutes, int hours, int timeOffset)
+#### NexPictureTimingInfo(int clockTimeStampFlag, int ctType,int nuitFieldBasedFlag, int countingType, int FullTimeStampFlag, int discontinuityFlag, int countDroppedFlag, int nFrames, int seconds, int minutes, int hours, int timeOffset)
 
 This provides the SEI picture timing information for H.264 content being played.
 
@@ -11380,117 +11550,117 @@ For details on usage, see the NexPlayer™ Engine package documentation.
 
 - `static final int NEXPLAYER_ASYNC_CMD_NONE = 0x00000000`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_OPEN_LOCAL = 0x00000001`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_OPEN_STREAMING = 0x00000002`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_OPEN_TV = 0x00000003`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_START_LOCAL = 0x00000005`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_START_STREAMING = 0x00000006`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_START_TV = 0x00000007`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_STOP = 0x00000008`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_PAUSE = 0x00000009`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_RESUME = 0x0000000A`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_SEEK = 0x0000000B`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_STEP_SEEK = 0x0000000C`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_SETEXTSUBTITLE = 0x0000000F
 
 - `static final int NEXPLAYER_ASYNC_CMD_RECORD_START = 0x0000001A`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_RECORD_STOP = 0x0000001B`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_RECORD_PAUSE = 0x0000001C`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_RECORD_RESUME = 0x0000001D`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_REINITVIDEO = 0x00000013`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_TIMESHIFT_CREATE = 0x00000021`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_TIMESHIFT_DESTROY = 0x00000022`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_TIMESHIFT_PAUSE = 0x00000023`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_TIMESHIFT_RESUME = 0x00000024`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_TIMESHIFT_FORWARD = 0x00000025`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_TIMESHIFT_BACKWARD = 0x00000026`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_FASTPLAY_START = 0x00000027`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_FASTPLAY_STOP = 0x00000028`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_SET_MEDIA_STREAM = 0x00000031`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
     
 - `static final int NEXPLAYER_ASYNC_CMD_SET_MEDIA_TRACK = 0x00000032`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_SET_MEDIA_STREAM_TRACK = 0x00000033`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXDOWNLOADER_ASYNC_CMD_OPEN = 0x00200001`
 
@@ -11510,23 +11680,23 @@ For details on usage, see the NexPlayer™ Engine package documentation.
 
 - `static final int NEXPLAYER_ASYNC_CMD_OPEN_STORE_STREAM = 0x00000101`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_ASYNC_CMD_START_STORE_STREAM = 0x00000102`
 
-    Possible value forcommandparameter of onAsyncCmdComplete.
+    Possible value for command parameter of onAsyncCmdComplete.
 
 - `static final int NEXPLAYER_SOURCE_TYPE_LOCAL_NORMAL = 0`
 
-    Treatspathas a local media file; a possible value for thetypeparameter of NexPlayer.open.
+    Treats path as a local media file; a possible value for the type parameter of NexPlayer.open.
 
 - `static final int NEXPLAYER_SOURCE_TYPE_STREAMING = 1`
 
-    Treatspathas a URL to a streaming media source; a possible value for thetypeparameter of NexPlayer.open.
+    Treats path as a URL to a streaming media source; a possible value for the type parameter of NexPlayer.open.
 
 - `static final int NEXPLAYER_SOURCE_TYPE_STORE_STREAM = 2`
 
-    Treatspathas a URL to a streaming media source to be stored for offline playback; a possible value for the `type` parameter of NexPlayer.open.
+    Treats path as a URL to a streaming media source to be stored for offline playback; a possible value for the `type` parameter of NexPlayer.open.
 
 - `static final int NEXPLAYER_TRANSPORT_TYPE_TCP = 0`
 
@@ -11558,7 +11728,7 @@ For details on usage, see the NexPlayer™ Engine package documentation.
 
 - `static final int NEXPLAYER_STATE_PLAY = 3`
 
-    A media source is open and playing (this is the state after start has completed); a possiblereturnvalue of getState.
+    A media source is open and playing (this is the state after start has completed); a possible return value of getState.
 
 - `static final int NEXPLAYER_STATE_PAUSE = 4`
 
@@ -11843,43 +12013,43 @@ For details on usage, see the NexPlayer™ Engine package documentation.
 
 -  `static final String NEX_DEVICE_USE_AUTO = "Auto"`
 
-    A possible value for thestrRenderModeparameter of NexALFactory.init.
+    A possible value for the strRenderMode parameter of NexALFactory.init.
 
 -  `static final String NEX_DEVICE_USE_ONLY_ANDROID = "Android"`
 
-    A possible value for thestrRenderModeparameter of NexALFactory.init.
+    A possible value for the strRenderMode parameter of NexALFactory.init.
 
 -  `static final String NEX_DEVICE_USE_JAVA = "JAVA"`
 
-    A possible value for thestrRenderModeparameter of NexALFactory.init.
+    A possible value for the strRenderMode parameter of NexALFactory.init.
 
 -  `static final String NEX_DEVICE_USE_OPENGL = "OPENGL"`
 
-    A possible value for thestrRenderModeparameter of NexALFactory.init.
+    A possible value for the strRenderMode parameter of NexALFactory.init.
 
 -  `static final String NEX_DEVICE_USE_ANDROID_3D = "Android 3D"`
 
-    A possible value for thestrRenderModeparameter of NexALFactory.init.
+    A possible value for the strRenderMode parameter of NexALFactory.init.
 
 -  `static final int NEX_AS_EARCOMFORT = 0x00000001`
 
-    One of the NexSound audio modes to be set by theuiAudioModeparameter in audioSetParam().
+    One of the NexSound audio modes to be set by th euiAudioMode parameter in audioSetParam().
 
 -  `static final int NEX_AS_REVERB = 0x00000002`
 
-    One of the NexSound audio modes to be set by theuiAudioModeparameter in audioSetParam().
+    One of the NexSound audio modes to be set by the uiAudioMode parameter in audioSetParam().
 
 -  `static final int NEX_AS_STEREO_CHORUS = 0x00000003`
 
-    One of the NexSound audio modes to be set by theuiAudioModeparameter in audioSetParam().
+    One of the NexSound audio modes to be set by the uiAudioMode parameter in audioSetParam().
 
 -  `static final int NEX_AS_MUSIC_ENHANCER = 0x00000004`
 
-    One of the NexSound audio modes to be set by theuiAudioModeparameter in audioSetParam().
+    One of the NexSound audio modes to be set by the uiAudioMode parameter in audioSetParam().
 
 -  `static final int NEX_AS_CINEMA_SOUND = 0x00000006`
 
-    One of the NexSound audio modes to be set by theuiAudioModeparameter in audioSetParam().
+    One of the NexSound audio modes to be set by the uiAudioMode parameter in audioSetParam().
 
 -  `static final int NEX_USE_RENDER_AND = 0x00000002 
 	
@@ -11887,15 +12057,15 @@ For details on usage, see the NexPlayer™ Engine package documentation.
 
 -  `static final int NEX_USE_RENDER_JAVA = 0x00000010`
 
-    Possiblereturnvalue for NexPlayer.GetRenderMode.
+    Possible return value for NexPlayer.GetRenderMode.
 
 -  `static final int NEX_USE_RENDER_OPENGL = 0x00000020`
 
-    Possiblereturnvalue for NexPlayer.GetRenderMode.
+    Possible return value for NexPlayer.GetRenderMode.
 
 -  `static final int NEX_USE_RENDER_IOMX = 0x00000040`
 
-    Possiblereturnvalue for NexPlayer.GetRenderMode.
+    Possible return value for NexPlayer.GetRenderMode.
 
 -  `static final int MEDIA_STREAM_DEFAULT_ID = 0xFFFFFFFF`
 
@@ -11931,103 +12101,103 @@ For details on usage, see the NexPlayer™ Engine package documentation.
 
 -  `static int RTSP_METHOD_DESCRIBE = 0x00000001`
 
-    This is a possible value for themethodsparameter of addRTSPHeaderFields.
+    This is a possible value for the methods parameter of addRTSPHeaderFields.
 
 -  `static int RTSP_METHOD_SETUP = 0x00000002`
 
-    This is a possible value for themethodsparameter of addRTSPHeaderFields.
+    This is a possible value for the methods parameter of addRTSPHeaderFields.
 
 -  `static int RTSP_METHOD_OPTIONS = 0x00000004`
 
-    This is a possible value for themethodsparameter of addRTSPHeaderFields.
+    This is a possible value for the methods parameter of addRTSPHeaderFields.
 
 -  `static int RTSP_METHOD_PLAY = 0x00000008`
 
-    This is a possible value for themethodsparameter of addRTSPHeaderFields.
+    This is a possible value for the methods parameter of addRTSPHeaderFields.
 
 -  `static int RTSP_METHOD_PAUSE = 0x00000010`
 
-    This is a possible value for themethodsparameter of addRTSPHeaderFields.
+    This is a possible value for the methods parameter of addRTSPHeaderFields.
 
 -  `static int RTSP_METHOD_GETPARAMETER = 0x00000020`
 
-    This is a possible value for themethodsparameter of addRTSPHeaderFields.
+    This is a possible value for the methods parameter of addRTSPHeaderFields.
 
 -  `static int RTSP_METHOD_TEARDOWN = 0x00000040`
 
-    This is a possible value for themethodsparameter of addRTSPHeaderFields.
+    This is a possible value for the methods parameter of addRTSPHeaderFields.
 
 -  `static int RTSP_METHOD_ALL`
 
-    This is a possible value for themethodsparameter of addRTSPHeaderFields.
+    This is a possible value for the methods parameter of addRTSPHeaderFields.
 
 -  `static final int RENDER_MODE_VIDEO_NONE = 0x00000000`
 
-    This is a possible value for theiFlagparameter of setRenderOption.
+    This is a possible value for the iFlag parameter of setRenderOption.
 
 -  `static final int RENDER_MODE_VIDEO_FILTERBITMAP = 0x00000001`
 
-    This is a possible value for theiFlagparameter of setRenderOption.
+    This is a possible value for the iFlag parameter of setRenderOption.
 
 -  `static final int RENDER_MODE_VIDEO_DITHERING = 0x00000002`
 
-    This is a possible value for theiFlagparameter of setRenderOption.
+    This is a possible value for the iFlag parameter of setRenderOption.
 
 -  `static final int RENDER_MODE_VIDEO_ANTIALIAS = 0x00000004`
 
-    This is a possible value for theiFlagparameter of setRenderOption.
+    This is a possible value for the iFlag parameter of setRenderOption.
 
 -  `static final int RENDER_MODE_VIDEO_ALLFLAG = 0xFFFFFFFF`
 
-    This is a possible value for theiFlagparameter of setRenderOption.
+    This is a possible value for the iFlag parameter of setRenderOption.
 
 -  `static final int NEXDOWNLOADER_OPEN_TYPE_CREATE = 0`
 
-    This is a possible value for the parametereTypein the method DownloaderOpen().
+    This is a possible value for the parameter eType in the method DownloaderOpen().
 
 -  `static final int NEXDOWNLOADER_OPEN_TYPE_APPEND = 1`
 
-    This is a possible value for the parametereTypein the method DownloaderOpen().
+    This is a possible value for the parameter eType in the method DownloaderOpen().
 
 -  `static final int NEXDOWNLOADER_STATE_NONE = 0`
 
-    This is a possible value for the parameterparam2of onDownloaderEventState.
+    This is a possible value for the parameter param2 of onDownloaderEventState.
 
 -  `static final int NEXDOWNLOADER_STATE_CLOSED = 2`
 
-    This is a possible value for the parameterparam2of onDownloaderEventState.
+    This is a possible value for the parameter param2 of onDownloaderEventState.
 
 -  `static final int NEXDOWNLOADER_STATE_STOP = 3`
 
-    This is a possible value for the parameterparam2of onDownloaderEventState.
+    This is a possible value for the parameter param2 of onDownloaderEventState.
 
 -  `static final int NEXDOWNLOADER_STATE_DOWNLOAD = 4`
 
-    This is a possible value for the parameterparam2of onDownloaderEventState.
+    This is a possible value for the parameter param2 of onDownloaderEventState.
 
 -  `static final int AVAILBITRATES_NONE = 0x00000000`
 
-    This is a possible value for theoptionparameter in setVideoBitrates(int [ ] bitrates, int option).
+    This is a possible value for the option parameter in setVideoBitrates(int [ ] bitrates, int option).
 
 -  `static final int AVAILBITRATES_MATCH = 0x00000001`
 
-    This is a possible value for theoptionparameter in setVideoBitrates(int [ ] bitrates, int option).
+    This is a possible value for the option parameter in setVideoBitrates(int [ ] bitrates, int option).
 
 -  `static final int AVAILBITRATES_NEAREST = 0x00000002`
 
-    This is a possible value for theoptionparameter in setVideoBitrates(int [ ] bitrates, int option).
+    This is a possible value for the option parameter in setVideoBitrates(int [ ] bitrates, int option).
 
 -  `static final int AVAILBITRATES_HIGH = 0x00000003`
 
-    This is a possible value for theoptionparameter in setVideoBitrates(int [ ] bitrates, int option).
+    This is a possible value for the option parameter in setVideoBitrates(int [ ] bitrates, int option).
 
 -  `static final int AVAILBITRATES_LOW = 0x00000004`
 
-    This is a possible value for theoptionparameter in setVideoBitrates(int [ ] bitrates, int option).
+    This is a possible value for the option parameter in setVideoBitrates(int [ ] bitrates, int option).
 
 -  `static final int AVAILBITRATES_INSIDERANGE = 0x00000005`
 
-    This is a possible value for theoptionparameter in setVideoBitrates(int [ ] bitrates, int option).
+    This is a possible value for the option parameter in setVideoBitrates(int [ ] bitrates, int option).
 
 -  `static final int OPTION_DYNAMIC_THUMBNAIL_INTERVAL = 1`
 
@@ -12053,7 +12223,7 @@ For details on usage, see the NexPlayer™ Engine package documentation.
 
 Sole constructor for NexPlayer™.
 
-After constructing a NexPlayer™ object, youmustcall NexPlayer.init before you can call any other methods
+After constructing a NexPlayer™ object, you must call NexPlayer.init before you can call any other methods
 
 #
 
@@ -12074,7 +12244,7 @@ This method adds aneventreceiver.
 - NexEventReceiver
 - NexPlayer.removeReleaseListener
  
-#### native int addHTTPHeaderFields ( String str)
+#### native int addHTTPHeaderFields (String str)
 
 This function adds additional header fields to be sent along with the HTTP headers when sending streaming requests (HLS and Smooth Streaming).
 
@@ -12098,7 +12268,7 @@ addHTTPHeaderFields("X-Example: test value.");
  
 Zero if successful, non-zero if there was an error.
  
-#### int addNexClient ( NexClient client)
+#### int addNexClient (NexClient client)
 
 This method adds a client module to NexPlayer™.
 
@@ -12152,7 +12322,7 @@ mNexPlayer.addReleaseListener(new NexPlayer.IReleaseListener() {
 - NexPlayer.IReleaseListener
 - NexPlayer.removeReleaseListener
  
-#### native int addRTSPHeaderFields ( int methods,String str)
+#### native int addRTSPHeaderFields (int methods, String str)
 
 This function adds an RTSP header to be included with all future RTSP requests.
 
@@ -12187,7 +12357,7 @@ addRTSPHeaderFields(RTSP_METHOD_SETUP | RTSP_METHOD_PLAY, "User-Agent: NexStream
  
 Zero if successful, non-zero if there was an error.
  
-#### native int audioSetParam ( int uiAudioMode,int uiEffectStrength,int uiBassStrength)
+#### native int audioSetParam (int uiAudioMode, int uiEffectStrength, int uiBassStrength)
 
 This audio effect interface enhances sound on NexPlayer™ but is only available in some product categories.
 
@@ -12231,7 +12401,7 @@ Zero if successful, or a non-zero error code, including:
  
 - `NOT_SUPPORT (0x8000000FL)` : The requested NexSound audio mode is not supported in this version.
 
-#### native int captureVideo ( int iCount,int iInterval)
+#### native int captureVideo (int iCount, int iInterval)
 
 This function begins capturing video frames.
 
@@ -12253,7 +12423,7 @@ any scheduled frames will be sent after the specified interval has elapsed.
  
 Zero if successful, non-zero if there was an error.
  
-#### int changeMaxBandWidth ( int iMaxBandWidth)
+#### int changeMaxBandWidth (int iMaxBandWidth)
 
 This method sets the maximum bandwidth for streaming playback dynamically during playback.
 
@@ -12283,7 +12453,7 @@ Zero if successful, otherwise non-zero if there was an error.
 NexABRController::changeMaxBandWidth()
  
  
-#### native int changeMaxBandWidthBps ( int maxBwBps)
+#### native int changeMaxBandWidthBps (int maxBwBps)
 
 This method sets the maximum bandwidth for streaming playback dynamically during playback.
 
@@ -12314,7 +12484,7 @@ Zero if successful, otherwise non-zero if there was an error.
  
 NexABRController::changeMaxBandWidth()
   
-#### native int changeMaxResolution ( int maxWidth, int maxHeight)
+#### native int changeMaxResolution (int maxWidth, int maxHeight)
 
 This method changes the maxWidth and maxHeight while playing content.
 
@@ -12333,7 +12503,7 @@ This only works on HLS content, and switching to a track with bigger maxWidth an
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
 
  
-#### int changeMinBandWidth ( int iMinBandWidth)
+#### int changeMinBandWidth (int iMinBandWidth)
 
 This method sets the minimum bandwidth for streaming playback dynamically during playback.
 
@@ -12391,7 +12561,7 @@ Zero if successful, otherwise non-zero if there was an error.
  
 NexABRController::changeMinBandWidth()
  
-#### int changeMinMaxBandWidth ( int iMinBandWidth, int iMaxBandWidth)
+#### int changeMinMaxBandWidth (int iMinBandWidth, int iMaxBandWidth)
 
 This method sets the minimum and maximum bandwidth for streaming playback dynamically during playback.
 
@@ -12403,7 +12573,7 @@ This applies in cases where there are multiple tracks at different bandwidths (s
 If this method returns success, the method `onStatusReport()` will be called with a msg parameter `NEXPLAYER_STATUS_REPORT_MINMAX_BANDWIDTH_CHANGED` Then, if the method `onStatusReport()` returns success, the minimum and maximum bandwidth will be changed.
 
 Note that to remove a minimum and maximum that has been set with this method (so that NexPlayer™ will
-again consider all tracks regardless of bandwidth), set both ofiMinBandWidth, andiMaxBandWidthto
+again consider all tracks regardless of bandwidth), set both of iMinBandWidth, and iMaxBandWidthto
 0x00000000.
 
 **Parameters**
@@ -12421,7 +12591,7 @@ Zero if successful, otherwise non-zero if there was an error.
  
 NexABRController::changeMinMaxBandWidth()
  
-#### native int changeMinMaxBandWidthBps ( int minBwBps,int maxBwBps)
+#### native int changeMinMaxBandWidthBps (int minBwBps, int maxBwBps)
 
 This method sets the minimum and maximum bandwidth for streaming playback dynamically during playback.
 
@@ -12441,8 +12611,8 @@ consider all tracks regardless of bandwidth), set both of `minBwBps`, and `maxBw
 
 | Name | Description | 
 |---|---|
-| minBwBps | Minimum bandwidth in bps (bits per second). To reset to no minimum bandwidth,minBwBps = 0x00000000|
-| maxBwBps | Maximum bandwidth in bps (bits per second). To reset to no maximum bandwidth,maxBwBps= 0x00000000| 
+| minBwBps | Minimum bandwidth in bps (bits per second). To reset to no minimum bandwidth, minBwBps = 0x00000000|
+| maxBwBps | Maximum bandwidth in bps (bits per second). To reset to no maximum bandwidth, maxBwBps= 0x00000000| 
  
 **Returns**
 
@@ -12452,7 +12622,7 @@ Zero if successful, otherwise non-zero if there was an error.
 
 NexABRController::changeMinMaxBandWidth()
  
-#### int changeSubtitleFD ( AssetFileDescriptor afd)
+#### int changeSubtitleFD (AssetFileDescriptor afd)
 
 Open the caption resource file which is attached in "res/raw" or "assets" folder.
 
@@ -12471,7 +12641,7 @@ case of failure.
  
 > **Warning** When building the APK, most of resources will be compressed. This makes it difficult to extract FileDescriptor. To avoid compressing, you MUST change your file’s extension. These extensions are allowed: ".jpg", ".jpeg", ".png", ".gif", ".wav", ".mp2", ".mp3", ".ogg", ".aac", ".mpg", ".mpeg", ".mid", ".midi", ".smf", ".jet", ".rtttl", ".imy", ".xmf", ".mp4", ".m4a", ".m4v", ".3gp", ".3gpp", ".3g2", ".3gpp2", ".amr", ".awb", ".wma", ".wmv"
  
-#### int changeSubtitleFD ( FileDescriptor fd,long offset,long length)
+#### int changeSubtitleFD (FileDescriptor fd, long offset, long length)
 
 Open the caption resource file which is attached in "res/raw" or "assets" folder.
 
@@ -12492,7 +12662,7 @@ case of failure.
  
 > **Warning** When building the APK, most of resources will be compressed. This makes it difficult to extract FileDescriptor. To avoid compressing, you MUST change your file’s extension. These extensions are allowed: ".jpg", ".jpeg", ".png", ".gif", ".wav", ".mp2", ".mp3", ".ogg", ".aac", ".mpg", ".mpeg", ".mid", ".midi", ".smf", ".jet", ".rtttl", ".imy", ".xmf", ".mp4", ".m4a", ".m4v", ".3gp", ".3gpp", ".3g2", ".3gpp2", ".amr", ".awb", ".wma", ".wmv"
  
-#### int changeSubtitlePath ( String path)
+#### int changeSubtitlePath (String path)
 
 This method allows the subtitle file for particular content to be changed during playback.
 
@@ -12512,11 +12682,11 @@ Zero if successful or a non-zero error code.
 
 This method ends all the work on the content currently open and closes content data.
 
-The content must be stoppedbeforecalling this method.
+The content must be stopped before calling this method.
 
-The correct way to finish playing content is to either wait for the end of content, or to callstopand wait for the stop operation to complete, then callclose.
+The correct way to finish playing content is to either wait for the end of content, or to call stop and wait for the stop operation to complete, then call close.
 
-> **Warning** However, do not callclosein IListener’s event handlers as this may give rise to a deadlock. A safe way to callcloseis to use the Android UI main thread’s message handler.
+> **Warning** However, do not call close in IListener’s event handlers as this may give rise to a deadlock. A safe way to call close is to use the Android UI main thread’s message handler.
  
 **Returns**
 
@@ -12574,16 +12744,33 @@ Note that this method cannot be called until after initializing NexPlayer™ by 
 
 **Parameters**
 
-| Name | Description | 
-|---|---|
-| strUrl | This is a string passing the URL to the content to be downloaded. |
-| strStorePath | This is a string indicating the path to where the downloaded file is saved. |
-| proxyPath | This is a string indicating the path to the proxy server.|
-| proxyPort | This is an integer indicating the port to use on the proxy server. |
-| eType | This is an integer indicating the type of event being opened. It will be one of:|
- 
-- **NEXDOWNLOADER\_OPEN\_TYPE\_CREATE = 0** : This creates a new Downloader event.
-- **NEXDOWNLOADER\_OPEN\_TYPE\_APPEND = 1** : This appends newly downloaded information to an existing file already begun. Note that not every server will support APPEND events so this should only be used conditional on the content server. |
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th>strUrl</th>
+  <td>This is a string passing the URL to the content to be downloaded.</td>
+</tr>
+<tr>
+  <th>strStorePath</th>
+  <td>This is a string indicating the path to where the downloaded file is saved.</td>
+</tr>
+<tr>
+  <th>proxyPath</th>
+  <td>This is a string indicating the path to the proxy server.</td>
+</tr>
+<tr>
+  <th>proxyPort</th>
+  <td>This is an integer indicating the port to use on the proxy server.</td>
+</tr>
+<tr>
+  <th rowspan="3">Key</th>
+</tr>
+  <tr><td><b>NEXDOWNLOADER\_OPEN\_TYPE\_CREATE = 0</b> : This creates a new Downloader event.</td></tr>
+  <tr><td><b>NEXDOWNLOADER\_OPEN\_TYPE\_APPEND = 1</b> : This appends newly downloaded information to an existing file already begun. Note that not every server will support APPEND events so this should only be used conditional on the content server.</td></tr>
+</table>
 
 **Returns**
  
@@ -12632,28 +12819,35 @@ Refer to the following steps to use this method accurately:
  
 Zero if successful, or an error code in the event of failure.
  
-#### native int enableTrack ( int enableoption)
+#### native int enableTrack (int enableoption)
 
 This method enables the disabled tracks due to temporary content and performance issues. It enables the disabled tracks due to temporary content issues (download fail (ex. 404, 502 error), playlist or response data from the server parsing failing ) and performance issues (decoding & rendering performances).
 
 > **Warning** This is only supported in HLS and DASH contents.
  
 **Parameters**
-
-| Name | Description | 
-|---|---|
-| enableoption | This can be used by bitwise or operation. This should be one of: <br> - NEXPLAYER\_TRACK\_ENABLE\_OPTION\_DISABLED\_TEMPORARY<br> - NEXPLAYER\_TRACK\_ENABLE\_OPTION\_DISABLED\_PERFORMANCE |
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th rowspan="3">enableoption</th>
+</tr>
+  <tr><td><b>NEXPLAYER_TRACK_ENABLE_OPTION_DISABLED_TEMPORARY</b></td></tr>
+  <tr><td><b>NEXPLAYER_TRACK_ENABLE_OPTION_DISABLED_PERFORMANCE</b></td></tr>
+</table>
 
 **Returns**
 
 Zero if successful or a non-zero error code.
  
-#### native int fastPlaySetPlaybackRate( float rate)
+#### native int fastPlaySetPlaybackRate(float rate)
 
 This function sets the video playback rate for thefastPlayfeature.
 
-HLS video content will be played at the speed set by the playback rate when thefastPlayfeature is activated
-by callingfastPlayStart. This rate can be set to anyfloatvalue (excluding zero), where positive values
+HLS video content will be played at the speed set by the playback rate when the fastPlay feature is activated
+by calling fastPlayStart. This rate can be set to any float value (excluding zero), where positive values
 will play content back at a faster speed and negative values will rewind content at the set rate faster than normal playback speed.
 
 If rate is set to zero, this method will return an error.
@@ -12669,7 +12863,7 @@ If rate is set to zero, this method will return an error.
  
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
   
-#### native int fastPlayStart (int msec,float rate)
+#### native int fastPlayStart (int msec, float rate)
 
 This method activates thefastPlayfeature in HLS content.
 
@@ -12678,7 +12872,7 @@ This method activates thefastPlayfeature in HLS content.
 The `fastPlay` feature allows NexPlayer™ to play HLS content at a speed other than normal playback speed.
 WhenfastPlayis activated, content is played more quickly than normal and there is no audio (similar to a fast forward feature).
 
-The player can also rewind quickly through HLS content using thefastPlayfeature by setting the `rate` parameter to a negative value.
+The player can also rewind quickly through HLS content using the fastPlay feature by setting the `rate` parameter to a negative value.
 
 To change the speed or direction of thefastPlayfeature, simply call the fastPlaySetPlaybackRate method and
 change therateparameter to the desired value.
@@ -12694,13 +12888,13 @@ change therateparameter to the desired value.
  
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
  
-#### int fastPlayStop ( boolean bResume)
+#### int fastPlayStop (boolean bResume)
 
 This function turns off thefastPlayfeature in HLS content.
 
 Once the `fastPlay` feature has been activated by calling fastPlayStart, this method must be called in order to stop fastPlay.
 
-In order to reactivate thefastPlayfeature after calling fastPlayStop, simply call the fastPlayStart method again. If fastPlayStop is called when fastPlay is not activated, an error will be returned.
+In order to reactivate the fastPlay feature after calling fastPlayStop, simply call the fastPlayStart method again. If fastPlayStop is called when fastPlay is not activated, an error will be returned.
 
 **Parameters**
 
@@ -12712,7 +12906,7 @@ In order to reactivate thefastPlayfeature after calling fastPlayStop, simply cal
 
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
  
-#### native int forceCallDRMCallback ( int index)
+#### native int forceCallDRMCallback (int index)
 
 For internal use only. Please do not use.
 
@@ -12734,7 +12928,7 @@ Retrieves the specified buffer information item.
 
 This method provides the ability to monitor the buffer conditions and returns the specified buffer information that has been requested.
 
-**Buffer Info Indexes:** The following integer constants identify different buffer information items that are available; they are passed in theinfo\_indexargument to specify which buffer information item the caller is interested in.
+**Buffer Info Indexes:** The following integer constants identify different buffer information items that are available; they are passed in the info\_index argument to specify which buffer information item the caller is interested in.
 
 Note that CTS stands for "Current Time Stamp".
 
