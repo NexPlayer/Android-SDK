@@ -2530,7 +2530,7 @@ the key ID of media drm stored with onOfflineKeyStoreListener.
  
 Implemented in `NexEventReceiver`.
 
-#### void onOfflineKeyStoreListener (NexPlayer mp,byte[ ]keyId)
+#### void onOfflineKeyStoreListener (NexPlayer mp, byte[ ]keyId)
 
 This method will be called by the `NexPlayer`™ engine when the keyId of media DRM should be stored.
 
@@ -2655,20 +2655,26 @@ be set with *setListener(IStatisticsListener listener)*.
  
 
 
-#### void onUpdated (int statisticsType,HashMap < IStatistics, Object > map)
+#### void onUpdated (int statisticsType, HashMap < IStatistics, Object > map)
 
 This method is called whenever statistics are updated and sent by `NexPlayer`™.
 
 The time interval at which general and system statistics are updated in *NexStatisticsMonitor* can be
 changed by calling the *setDuration()* method.
 
-**Parameters**
-
- 
-| Name            | Description                                                                                                                                                                                                                                                                                                                                                              |
-|-----------------|----------|
-| statistics Type | The type of statistics being updated, as an integer. This will be one of:    •*STATISTICS\_GENERAL*= 0, for general playback statistics,  •*STATISTICS\_INITIAL*= 1, for initial statistics when playback starts,  •*STATISTICS\_HTTP*= 2, for HTTP statistics during playback, or  •*STATISTICS\_SYSTEM*= 3, for system statistics during HLS, DASH or SS playback. |
-
+<table>
+<tr>
+  <th>Name</th>
+  <th>Description</th>
+ </tr>
+<tr>
+  <th rowspan="5">statistics Type</th>
+</tr>
+  <tr><td><b>STATISTICS_GENERAL</b>= 0, for general playback statistics</td></tr>
+  <tr><td><b>STATISTICS_INITIAL</b>= 1, for initial statistics when playback starts</td></tr>
+  <tr><td><b>STATISTICS_HTTP</b>= 2, for HTTP statistics during playback</td></tr>
+  <tr><td><b>STATISTICS_SYSTEM</b>= 3, for system statistics during HLS, DASH or SS playback</td></tr>
+</table>
  
 | Name | Description                                   |
 |------|---------------------------|
