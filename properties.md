@@ -204,7 +204,7 @@ This property should be called once, immediately after calling init but before c
 
 Check the HTTP Request and Response headers length.
 
-If this property is set, NexPlayer will check the HTTP request and response headers, and send them through `onHTTPRequestandonHTTPResponse`.
+If this property is set, NexPlayer will check the HTTP request and response headers, and send them through `onHTTPRequest`and `onHTTPResponse`.
 
 **Type:** int
 
