@@ -1783,7 +1783,7 @@ This property controls the ratio of skipped frames that will be tolerated before
 The formula used to determine if a track switch is necessary is:
 
 ```
-(^100) *(RenderedFrames / DecodedFrames) < TRACKDOWN\_VIDEO\_RATIO
+(^100) *(RenderedFrames / DecodedFrames) < TRACKDOWN_VIDEO_RATIO
 ```
 
 In other words, if this property is set to 70, and `ENABLE_TRACKDOWN` is set to 1, NexPlayer will require that at least 70% of the decoded frames be displayed. If less than 70% can be displayed (greater than 30% skipped frames), then the next lower bandwidth track will be selected.
