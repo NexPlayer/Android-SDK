@@ -17998,11 +17998,11 @@ An event will occur when setMediaStream is successful.
  
 ### NexVideoView.OnPauseCompleteListener Interface Reference
 
-The application must implement this interface in order to receive onPauseComplete events fromNexVideoView.
+The application must implement this interface in order to receive onPauseComplete events from NexVideoView.
 
 > **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from within IListener callbacks. The safest way to update the UI is to use android.os.Handler to post an event back to the main application thread.
   
-#### void onPauseComplete (NexPlayermp)
+#### void onPauseComplete ( )
 
 An event will occur whenpauseis successful.
 
@@ -18015,17 +18015,17 @@ An event will occur whenpauseis successful.
  
 ### NexVideoView.OnPreparedListener Interface Reference
 
-The application must implement this interface in order to receiveNexVideoViewevents when NexPlayer™ is ready for the playback.
+The application must implement this interface in order to receive NexVideoView events when NexPlayer™ is ready for the playback.
 
-This callback must be registered to operateNexVideoViewsuccessfully.
+This callback must be registered to operate NexVideoView successfully.
 
 > **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from within IListener callbacks. The safest way to update the UI is to use android.os.Handler to post an event back to the main application thread.
   
-#### void onPrepared (NexPlayermp)
+#### void onPrepared (NexPlayer mp)
 
 This method is called when setVideoPath or setVideoURI is successful.
 
-In case of an error, an onError event will occur instead of anonPreparedevent.
+In case of an error, an onError event will occur instead of an onPreparedevent.
 
 **Parameters**
 
@@ -18035,17 +18035,16 @@ In case of an error, an onError event will occur instead of anonPreparedevent.
  
 ### NexVideoView.OnResumeCompleteListener Interface Reference
 
-The application must implement this interface in order to receiveonResumeCompleteevents fromNexVideo-
-View.
+The application must implement this interface in order to receive onResumeComplete events from NexVideoView.
 
 > **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from within IListener callbacks. The safest way to update the UI is to use android.os.Handler to post an event back to the main application thread.
  
  
 #
 
-#### void onResumeComplete (NexPlayermp)
+#### void onResumeComplete (NexPlayer mp)
 
-An event will occur whenresumeis successful.
+An event will occur when resume is successful.
 
 **Parameters**
 
@@ -18055,7 +18054,7 @@ An event will occur whenresumeis successful.
  
 ### NexVideoView.OnSeekCompleteListener Interface Reference
 
-The application must implement this interface in order to receive events fromNexVideoViewwhenseekis
+The application must implement this interface in order to receive events from NexVideoView when seek is
 successful.
 
 > **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from within IListener callbacks. The safest way to update the UI is to use android.os.Handler to post an event back to the main application thread.
@@ -18074,8 +18073,7 @@ An event will occur when seekTo is successful.
   
 ### NexVideoView.OnStartCompleteListener Interface Reference
 
-The application must implement this interface in order to receiveonstartCompleteevents fromNexVideo-
-View.
+The application must implement this interface in order to receive onstartComplete events from NexVideoView.
 
 > **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from within IListener callbacks. The safest way to update the UI is to use android.os.Handler to post an event back to the main application thread.
 
@@ -18083,7 +18081,7 @@ View.
 
 An event will occur when start() is successful.
 
-In case of an error,onErrorwill occur instead of anonStartCompleteevent.
+In case of an error, onError will occur instead of an onStartComplete event.
 
 **Parameters**
 
@@ -18093,14 +18091,13 @@ In case of an error,onErrorwill occur instead of anonStartCompleteevent.
   
 ### NexVideoView.OnStopCompleteListener Interface Reference
 
-The application must implement this interface in order to receiveonStopCompleteevents fromNexVideo-
-View.
+The application must implement this interface in order to receive onStopComplete events from NexVideoView.
 
 > **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from within IListener callbacks. The safest way to update the UI is to use android.os.Handler to post an event back to the main application thread.
   
-#### void onStopComplete (NexPlayer mp,int result)
+#### void onStopComplete (NexPlayer mp, int result)
 
-An event will occur whenstopPlaybackis successful.
+An event will occur when stopPlayback is successful.
 
 
 **Parameters**
@@ -18112,7 +18109,7 @@ An event will occur whenstopPlaybackis successful.
  
 ### NexVideoView.OnTimedMetaRenderRenderListener Interface Reference
 
-The application must implement this interface in order to receiveTimedMetaevents fromNexVideoView.
+The application must implement this interface in order to receive TimedMeta events from NexVideoView.
 
 > **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from within IListener callbacks. The safest way to update the UI is to use android.os.Handler to post an event back to the main application thread. 
 
@@ -18145,7 +18142,7 @@ NexPlayer™ implements this when it receives any PIFF PlayReady content so that
 
 > **Deprecated** For internal use only. Please do not use.
 
-#### static native int initDRMManager ( String strEngineLibName) [static]
+#### static native int initDRMManager (String strEngineLibName) [static]
 
 Initializes and registers the PiffPlayReadyDRMManager.
 
@@ -18155,7 +18152,7 @@ Initializes and registers the PiffPlayReadyDRMManager.
 |---|---|
 |strEngineLibName|The relevant engine library name as a string.|
  
-#### static native int initDRMManagerMulti (Object nexPlayerHandle,String strEngineLibName) [static]
+#### static native int initDRMManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
 
 internal use only. Please do not use.
 
@@ -18203,7 +18200,7 @@ This method sets the #EXT-X-PROGRAM-DATE-TIME tag for the current HLS content.
 
 > **Deprecated** For internal use only. Please do not use.
 
-#### static native int initDLAPIExManagerMulti (Object nexPlayerHandle,String strEngineLibName) *[static]*
+#### static native int initDLAPIExManagerMulti (Object nexPlayerHandle, String strEngineLibName) *[static]*
 
 Internal use only. Please do not use.
 
@@ -18217,7 +18214,7 @@ Internal use only. Please do not use.
     internal use only.
 
 
-#### static native int registerRemoteFileIOMulti (Object nexPlayerHandle,String strEngineLibName) *[static]*
+#### static native int registerRemoteFileIOMulti (Object nexPlayerHandle, String strEngineLibName) *[static]*
 
 internal use only.
 
@@ -18278,7 +18275,7 @@ These segment options can be used to set the parameter *segOption* when calling 
 
 - `DEFAULT = (0x00000000)`
     
-    Default. `NexPlayer`™ will decide betweenQUICKMIXandLATEMIXoptions automatically.
+    Default. `NexPlayer`™ will decide between QUICKMIX and LATEMIX options automatically.
 - `QUICKMIX = (0x00000001)`
     
     `NexPlayer`™ will clear the buffer quickly and will start downloading new track segments more quickly.
@@ -18341,7 +18338,7 @@ This method gets the setting value correspondent to a specific key.
 
 The value correspondent to the key.
 
-#### boolean setValue (int key,int value)
+#### boolean setValue (int key, int value)
 
 This method sets the setting values for the properties of `NexPlayer`™.
 
@@ -18355,7 +18352,7 @@ This method sets the setting values for the properties of `NexPlayer`™.
 
 The value of the property.
 
-#### boolean setValue (int key,boolean value)
+#### boolean setValue (int key, boolean value)
 
 This method sets the setting values for the properties of `NexPlayer`™.
 
@@ -18431,7 +18428,7 @@ Initializes and registers the `SmoothStreamFragmentDRMManager`.
 |------------------|---------------------------|
 | strEngineLibName | The relevant engine library name as a string. |
 
-#### static native int initDRMManagerMulti (Object nexPlayerHandle,String strEngineLibName) [static]
+#### static native int initDRMManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
 
 Internal use only. Please do not use.
 
@@ -18475,7 +18472,7 @@ Initializes and registers the `SmoothStreamPlayReadyDRMManager`.
 |------------------|---------------------------|
 | strEngineLibName | The relevant engine library name as a string. |
 
-#### static native int initDRMManagerMulti (Object nexPlayerHandle,String strEngineLibName) *[static]*
+#### static native int initDRMManagerMulti (Object nexPlayerHandle, String strEngineLibName) *[static]*
 
 internal use only.
 
@@ -18534,11 +18531,11 @@ The system statistics code requested, as an integer.
 
 Implements `NexStatisticsMonitor.IStatistics`.
 
-#### CPU_USAGE = ( 0x00010000 )
+#### CPU_USAGE = (0x00010000)
 
 The current CPU usage, as a percentage, represented as a value between 0 and 1, where zero is 0 percent and 1 is 100 percent.
 
-#### FREE_MEMORY_KB = ( 0x00020000 )
+#### FREE_MEMORY_KB = (0x00020000)
 
 The current amount of memory free, in kilobytes, as a *long*.
 
