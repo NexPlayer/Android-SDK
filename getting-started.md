@@ -340,7 +340,7 @@ To playback offline any stored media DRM content, pass the offline key ID to the
 public void onOfflineKeyStoreListener(NexPlayer mp, byte[] keyId) {
 	if ( keyId != null ) {
 		NexOfflineStoreController.setOfflineStoreSetting(
-		NexPlayer.NexOfflineStoreSetting.STRING\_OFFLINE\_KEY\_ID,
+		NexPlayer.NexOfflineStoreSetting.STRING_OFFLINE_KEY_ID,
 		Base64.encodeToString(keyId, Base64.DEFAULT));
 	}
 }
