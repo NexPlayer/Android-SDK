@@ -1194,7 +1194,7 @@ This property should be set by calling setProperty() after init and before NexPl
 
 **Default:** null
 
-**Values:** Accurate language labels asStrings. For example, "eng" for English.
+**Values:** Accurate language labels as Strings. For example, "eng" for English.
  
 ### PREFER_LANGUAGE\_TEXT (532)
 
@@ -1212,7 +1212,7 @@ This property should be set by calling setProperty() after init and before NexPl
 
 **Default:** null
 
-**Values:** Accurate language labels asStrings. For example, "eng" for English.
+**Values:** Accurate language labels as Strings. For example, "eng" for English.
  
 ### PREFETCH_BUFFER\_SIZE (16)
 
