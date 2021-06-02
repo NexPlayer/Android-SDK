@@ -12998,7 +12998,7 @@ This function retrieves information from the current content.
 
 > **Note** The `getContentInfoInt` function also returns information on the current content. In some cases, the same information is available through both functions. However, some items are available only through one of the functions.
  
-**PERFORMANCE NOTE:** This allocates a new instance ofNexContentInformationevery time it is called,
+**PERFORMANCE NOTE:** This allocates a new instance of NexContentInformation every time it is called,
 which may place a burden on the garbage collector in some cases. If you need to access multiple fields, save the returned object in a variable. For cases that are particularly sensitive to performance, selected content information is available through getContentInfoInt, which doesn’t allocate any objects.
 
 **Returns**
