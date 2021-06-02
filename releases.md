@@ -1,9 +1,9 @@
 ## NexPlayer™ SDK for Android Release Notes
 
-### version 6.72.0.844
+### version 6.72.0.844 (28/05/2021)
 - [Add] EMSG events for HLS/fMP4
 
-### version 6.72.0.843
+### version 6.72.0.843 (18/05/2021)
 - [Update] ViewRight WebClient updated to version 4.3.8.0
 - [Improve] Improvements with Dolby passthrough
 
