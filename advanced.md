@@ -13009,13 +13009,13 @@ A NexContentInformation object containing information on the currently open cont
 
 getContentInfoInt
 
-#### Native int getContentInfoInt (int info\_index)
+#### native int getContentInfoInt(int info\_index)
 
 Retrieves the specified content information item.
 
 In most cases, this is equivalent to calling getContentInfo and accessing an individual field in the return value.
 
-However, there are a few items that are only available through this method, and for items available through both methods, this one may be more efficient in certain cases. See getContentInfo for more information.
+However, there are a few items that are only available through this method, and for items available through both methods, this one may be more efficient in certain cases. SeegetContentInfofor more information.
 
 Certain fields (such as the list of tracks) are only available through the full structure, and certain fields (such as frames displayed per second) are only available here.
 
@@ -13023,24 +13023,24 @@ Certain fields (such as the list of tracks) are only available through the full 
 
 **Also available in `getContentInfo`:**
 
-- **CONTENT\_INFO\_INDEX\_MEDIA\_TYPE (0)** Same as the mMediaType member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_MEDIA\_DURATION (1)** Same as the mMediaDuration member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_VIDEO\_CODEC (2)** Same as the mVideoCodec member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_VIDEO\_WIDTH (3)** Same as the mVideoWidth member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_VIDEO\_HEIGHT (4)** Same as the mVideoHeight member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_VIDEO\_FRAMERATE (5)** Same as the mVideoFrameRate member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_VIDEO\_BITRATE (6)** Same as the mVideoBitRate member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_AUDIO\_CODEC (7)** Same as the mAudioCodec member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_AUDIO\_SAMPLINGRATE (8)** Same as the mAudioSamplingRate member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_AUDIO\_NUMOFCHANNEL (9)** Same as the mAudioNumOfChannel member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_AUDIO\_BITRATE (10)** Same as the mAudioBitRate member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_MEDIA\_ISSEEKABLE (11)** Same as the mIsSeekable member ofNexContentInfo.
-- **CONTENT\_INFO\_INDEX\_MEDIA\_ISPAUSABLE (12)** Same as the mIsPausable member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_VIDEO\_FOURCC (13)** Same as the mVideoFourCC member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_VIDEO\_CODEC\_CLASS (14)** Same as the mVideoCodecClass member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_VIDEO\_PROFILE (15)** Same as the mVideoProfile member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_VIDEO\_LEVEL (16)** Same as the mIsVideoLevel member of NexContentInfo.
-- **CONTENT\_INFO\_INDEX\_VIDEO\_CODEC\_ERROR (17)** Same as the VideoCodecErrormember of NexContentInfo.
+- **CONTENT\_INFO\_INDEX\_MEDIA\_TYPE (0)** Same as the mMediaType member ofNexContentInfo
+- **CONTENT\_INFO\_INDEX\_MEDIA\_DURATION (1)** Same as the mMediaDuration member ofNexContentInfo
+- **CONTENT\_INFO\_INDEX\_VIDEO\_CODEC (2)** Same as the mVideoCodec member ofNexContentInfo
+- **CONTENT\_INFO\_INDEX\_VIDEO\_WIDTH (3)** Same as the mVideoWidth member ofNexContentInfo
+- **CONTENT\_INFO\_INDEX\_VIDEO\_HEIGHT (4)** Same as the mVideoHeight member ofNexContentInfo
+- **CONTENT\_INFO\_INDEX\_VIDEO\_FRAMERATE (5)** Same as the mVideoFrameRate member of NexContentInfo
+- **CONTENT\_INFO\_INDEX\_VIDEO\_BITRATE (6)** Same as the mVideoBitRate member of NexContentInfo
+- **CONTENT\_INFO\_INDEX\_AUDIO\_CODEC (7)** Same as the mAudioCodec member of NexContentInfo
+- **CONTENT\_INFO\_INDEX\_AUDIO\_SAMPLINGRATE (8)** Same as the mAudioSamplingRate member of NexContentInfo
+- **CONTENT\_INFO\_INDEX\_AUDIO\_NUMOFCHANNEL (9)** Same as the mAudioNumOfChannel member of NexContentInfo
+- **CONTENT\_INFO\_INDEX\_AUDIO\_BITRATE (10)** Same as the mAudioBitRate member of NexContentInfo
+- **CONTENT\_INFO\_INDEX\_MEDIA\_ISSEEKABLE (11)** Same as the mIsSeekable member ofNexContentInfo
+- **CONTENT\_INFO\_INDEX\_MEDIA\_ISPAUSABLE (12)** Same as the mIsPausable member of NexContentInfo
+- **CONTENT\_INFO\_INDEX\_VIDEO\_FOURCC (13)** Same as the mVideoFourCC member of NexContentInfo
+- **CONTENT\_INFO\_INDEX\_VIDEO\_CODEC\_CLASS (14)** Same as the mVideoCodecClass member of NexContentInfo
+- **CONTENT\_INFO\_INDEX\_VIDEO\_PROFILE (15)** Same as the mVideoProfile member of NexContentInfo
+- **CONTENT\_INFO\_INDEX\_VIDEO\_LEVEL (16)** Same as the mIsVideoLevel member of NexContentInfo
+- **CONTENT\_INFO\_INDEX\_VIDEO\_CODEC\_ERROR (17)** Same as the VideoCodecErrormember of NexContentInfo
 
 **Video Performance Information (Available only via `getContentInfoInt`):** The NexPlayer™ engine reads
 frames from the content, then decodes and displays each frame. If the device is not powerful enough for the
@@ -13088,7 +13088,7 @@ The integer value of the requested content information item.
 - getContentInfo
 - NexContentInformation
  
-#### Native int getCurrentPosition()
+#### native int getCurrentPosition()
 
 This method gets the current play time position of NexPlayer™ in the given content.
 
@@ -13096,7 +13096,7 @@ This method can be called at any time to check the current position.
 
 **Returns**
  
-The current play time position in msec(milliseconds).
+The current play time position inmsec(milliseconds).
  
 #### int getCurrentSoundEffect()
 
@@ -13115,7 +13115,7 @@ DATA\_INACTIVITY\_TIMEOUT by NEXPLAYER\_EVENT\_DATA\_INACTIVITY\_TIMEOUT, the st
  
 Returns a string of information for Network or Protocol errors, an empty string if none.
  
-#### Native int GetNearestIFramePos (int targetTS)
+#### native int GetNearestIFramePos ( int targetTS)
 
 This method returns the nearest I-Frame timestamp in front of the target position when seeking.
 
@@ -13131,7 +13131,7 @@ It can get the nearest timestamp of I-Frame in front of target position to use h
  
 Zero or a positive number if successful, a negative number if there was an error.
  
-#### int getProgramTime (PROGRAM\_TIME time)
+#### int getProgramTime(PROGRAM\_TIME time)
 
 This method gets the date and time information in HLS content when the HLS tag, #EXT-X-PROGRAM-DATE-TIME,
 is included.
@@ -13153,11 +13153,11 @@ Always zero.
 - PROGRAM\_TIME for more details
 - IListener.onProgramTime
   
-#### native int getProperties (int property)
+#### native int getProperties(int property)
 
 Gets the value of an individual NexPlayer™ property based on the numerical ID of the property.
 
-Normally, getProperty should be used instead of this method. Use this method only if you have a numeric property code.
+Normally, getProperty should be used instead of this method. Use this methodonlyif you have a numeric property code.
 
 For a full list of properties, see the NexProperty enum. To get the numeric code for a property, call the getPropertyCode method on the enum member.
 
@@ -13195,16 +13195,16 @@ Gets the value of an individual NexPlayer™ integer property. Properties contro
 
 The value of the property.
  
-#### Native int GetRenderMode ()
+#### native int GetRenderMode ()
 
 Returns the type of renderer in use by the NexPlayer™ engine.
 
 You must check the render mode using this method and adjust the application behavior appropriately. For details see Java Renderer or OpenGL Renderer.
 
-When using the Java renderer (NEX\_USE\_RENDER\_JAVA), the application must NOT call setOutputPosor
+When using the Java renderer (NEX\_USE\_RENDER\_JAVA), the application must NOT callsetOutputPosor
 setDisplay. Doing so may cause the application to crash if running under Honeycomb.
 
-When using the OpenGL renderer (NEX\_USE\_RENDER\_OPENGL), the application must NOT call setDisplay.
+When using the OpenGL renderer (NEX\_USE\_RENDER\_OPENGL), the application must NOT callsetDisplay.
 
 **Returns**
  
@@ -13214,7 +13214,8 @@ Render mode; one of:
 - **NEX\_USE\_RENDER\_JAVA** Don’t render to the display. Instead, each frame is decoded and converted
     to the appropriate color space, and then sent to the application to display.
 - **NEX\_USE\_RENDER\_OPENGL** Using OpenGL ES 2.0 to display frames.
-- **NEX\_USE\_RENDER\_IOMX** Using the hardware video renderer to display frames. Note that this renderer is used with Ice Cream Sandwich and higher versions of OS and only on supported hardware.
+- **NEX\_USE\_RENDER\_IOMX** Using the hardware video renderer to display frames. Note that this ren-
+    derer is used with Ice Cream Sandwich and higher versions of OS and only on supported hardware.
 
 #### native String getSARInfo()
 
@@ -13239,9 +13240,9 @@ The sample aspect ratio of the content as a string, for example "1:1".
  
 **See Also**
  
-getSARInfo (int[])
+getSARInfo(int[])
  
-#### void getSARInfo (int[] info)
+#### void getSARInfo(int[] info)
 
 This method can be used to retrieve the SAR (Sample Aspect Ratio) information of H.264 content as separate
 integers.
@@ -13261,7 +13262,7 @@ second is the height.|
  
 getSARInfo()
  
-#### native String getSDKName()
+5.91.3.49 native String getSDKName()
 
 This method returns the name of the NexPlayer™ SDK in use. It can be used for confirmation and for debugging purposes but should generally be ignored.
 
@@ -13281,7 +13282,7 @@ For more information about how this method may be used to timeshift playback in 
 
 **Returns**
 
-An array of two longs, the first long being the timestamp indicating the start of the seekable range and the
+An array of twolongs, the firstlongbeing the timestamp indicating the start of the seekable range and the
 second being the timestamp indicating the end of the seekable range.
  
 #### native int getState()
@@ -13300,11 +13301,11 @@ A constant indicating the current state. This is one of the following values:
 - NEXPLAYER\_STATE\_PLAY
 - NEXPLAYER\_STATE\_STOP
 
-#### native String getStringProperties (int property)
+#### native String getStringProperties(int property)
 
 Gets the string value of an individual NexPlayer™ property based on the numerical ID of the property.
 
-Normally, getStringProperty should be used instead of this method. Use this method only if you have a numeric
+Normally, getStringProperty should be used instead of this method. Use this methodonlyif you have a numeric
 property code.
 
 For a full list of properties, see the NexProperty enum. To get the numeric code for a property, call the `getPropertyCode` method on the enum member.
@@ -13347,11 +13348,11 @@ NexProperty for details.
 
 The string value of the property.
  
-#### native int getVersion (int mode)
+#### native int getVersion(int mode)
 
 Gets NexPlayer™ SDK version information.
 
-The return value is an integer; the meaning is based on the mode argument passed.
+The return value is an integer; the meaning is based on themodeargument passed.
 
 Generally, the components of the version are assembled as follows:
 
@@ -13370,7 +13371,7 @@ nexPlayer.getVersion(3);
 
 **Returns**
 
-Requested version information (see mode above).
+Requested version information (seemodeabove).
  
 #### native int GLDraw (int mode)
 
@@ -13392,25 +13393,25 @@ That class automatically calls GLDraw when needed.
 
 **Returns**
  
-Always zero. The return value should be ignored.
+Always zero, but may change in future versions. The return value should be ignored.
 
-#### native int GLInit (int width, int height)
+#### native int GLInit ( int width,int height)
 
 Informs NexPlayer™ of the current size of the GLSurfaceView subclass instance.
 
-This should be called whenever the size of the GLSurfaceView subclass instance changes, as well as when the
+This should be called whenever the size of theGLSurfaceViewsubclass instance changes, as well as when the
 instance is initially created. This is because internally, OpenGL APIs use a different coordinate system, and NexPlayer™ must know the pixel dimensions in order to map the OpenGL coordinate system to per-pixel coordinates.
 
 **Parameters**
 
 | Name | Description | 
 |---|---| 
-|width| Width of GLSurfaceView subclass instance, in pixels.|
-|height| Height of GLSurfaceView subclass instance, in pixels.|
+|width| Width ofGLSurfaceViewsubclass instance, in pixels.|
+|height| Height ofGLSurfaceViewsubclass instance, in pixels.|
  
 **Returns**
 
-Always 0. The return value should be ignored.
+Always 0, but may change in future versions. The return value should be ignored.
  
 #### int gotoCurrentLivePosition()
 
@@ -13418,14 +13419,14 @@ This method moves to the current live position after the actual playback positio
 
 Normally, when playing live content, previously recorded data (for example, a few seconds earlier than the actual live position) is played to avoid buffering. This method however ignores this concept and moves directly to the latest loaded playback position (where the server is currently being encoded).
 
-This method behaves in the same way as the method gotoCurrentLivePosition (boolean exact) with the parameter,
-exact, set to true. In other words, NexPlayer™ will seek exactly to the time specified by msec (milliseconds).
+This method behaves in the same way as the method gotoCurrentLivePosition(boolean exact) with the parameter,
+exact, set totrue. In other words, NexPlayer™ will seek exactly to the time specified bymsec(milliseconds).
 
 **Returns**
  
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
  
-#### native int gotoCurrentLivePosition (boolean exact)
+#### native int gotoCurrentLivePosition(boolean exact)
 
 This method moves to the current live position after the actual playback position.
 
@@ -13435,7 +13436,7 @@ Normally, when playing live content, previously recorded data (for example, a fe
 
 | Name | Description | 
 |---|---| 
-|exact| If exact is true, the player will seek exactly to the time specified by msec (milliseconds). Otherwise, the playhead will seek to the nearest approximate position for faster seeking performance. |
+|exact| If exact is true, the player will seek exactly to the time specified bymsec(milliseconds). Otherwise, the playhead will seek to the nearest approximate position for faster seeking performance. |
  
 **Returns**
 
@@ -13479,22 +13480,22 @@ mNexPlayer.init(this, 0)
 
 | Name | Description | 
 |---|---| 
-|context| The current context; from Activity subclasses, you can just pass this.|
+|context| The current context; fromActivitysubclasses, you can just pass this.|
 |logLevel| NexPlayer™ SDK logging level. This affects the messages that the SDK writes to the Android log.<br>**-1** : Do not output any log messages.<br>**0** : Output basic log messages only (recommended).<br>**1** ∼ **4** : Output detailed log messages; higher numbers result in more verbose log entries, but may cause performance issues in some cases and are not recommended for general release code.|
 
 **Returns**
 
-NexErrorCode.NONE if initialization succeeded; NexPlayer™ error code for the generated error in
+NexErrorCode.NONE if initialization succeeded; NexPlayer™ errorcode for the generated error in
 the case of a failure (in the case of failure, check the log for details).
  
  
-#### boolean isInitialized ()
+#### boolean isInitialized ( )
 
 Determines if NexPlayer™ is currently initialized.
 
-To initialize NexPlayer™, NexPlayer.init must be called. If that method returns true, then this method will also return true if called on the same instance of NexPlayer™.
+To initialize NexPlayer™, NexPlayer.init must be called. If that method returnstrue, then this method will also return true if called on the same instance of NexPlayer™.
 
-In some cases, it is necessary to call NexPlayer™ functions from event handlers in subclasses of Activity (such as `onPause` or `onStop`). In such event handlers, it is possible for them to be called before code that initializes NexPlayer™, or for them to be called after a failed initialization. Therefore, any calls to NexPlayer™ methods made from onPause or similar event handlers must be protected as follows:
+In some cases, it is necessary to call NexPlayer™ functions from event handlers in subclasses ofActivity(such as `onPause` or `onStop`). In such event handlers, it is possible for them to be called before code that initializes NexPlayer™, or for them to be called after a failed initialization. Therefore, any calls to NexPlayer™ methods made from onPause or similar event handlers must be protected as follows:
 
 ```java
 if( nexPlayer.isInitialized()) {
@@ -13505,7 +13506,7 @@ if( nexPlayer.isInitialized()) {
  
 true if NexPlayer™ is currently initialized.
  
-#### native int notifyHeadsetState (int uiOnOff)
+#### native int notifyHeadsetState(int uiOnOff)
 
 This method notifies the NexPlayer™ engine whether a wired headset has been plugged in or unplugged.
 
@@ -13527,13 +13528,13 @@ mNexPlayer.notifyHeadsetState(headSetState);
 
 | Name | Description | 
 |---|---|
-|uiOnOff| An integer indicating whether enhanced sound is on (a headset is plugged in) or off (the headset is unplugged) when enhanced sound is available in the NexPlayer™ SDK. Possible Values:<br>- on = 1<br>- off = 0|
+|uiOnOff| An integer indicating whether enhanced sound ison(a headset is plugged in) or off(the headset is unplugged) when enhanced sound is available in the NexPlayer™ SDK. Possible Values:<br>- on = 1<br>- off = 0|
 
 **Returns**
  
 Zero is successful or a non-zero error code.
  
-#### void onOfflineExpiredKeyFetchMode (bool eansetMode)
+5.91.3.63 void onOfflineExpiredKeyFetchMode(bool eansetMode)
 
 This method switch using either KEYEXPIRE\_RETRIEVE\_STORE mode or RETRIEVE mode when only using
 Offline Playback on media DRM.
@@ -13557,13 +13558,14 @@ When the stored info file is created by using NexOfflineStoreController and then
 This is an asynchronous operation that will run in the background (even for local content).
 
 When this operation completes, `onAsyncCmdComplete` is called with one of the following command constants
-(depending on the type specified in the open call):
+(depending on thetypespecified in the open call):
 
 - NEXPLAYER\_ASYNC\_CMD\_OPEN\_LOCAL
 - NEXPLAYER\_ASYNC\_CMD\_OPEN\_STREAMING
 - NEXPLAYER\_ASYNC\_CMD\_OPEN\_STORE\_STREAM
 
-Success or failure of the operation can be determined by checking the result argument passed to onAsyncCmdComplete. If the result is 0, the media was successfully opened; if it is any other value, the operation failed.
+Success or failure of the operation can be determined by checking theresultargument passed toonAsync-
+CmdComplete. If the result is 0, the media was successfully opened; if it is any other value, the operation failed.
 
 Calls to open must be matched with calls to NexPlayer.close.
 
@@ -13572,9 +13574,9 @@ Calls to open must be matched with calls to NexPlayer.close.
 | Name | Description | 
 |---|---|
 |path| The location of the content: a path (for local content) or URL (for remote content).|
-|smiPath| The path to a local subtitle file, the URL to load a subtitle file, or null for no subtitles. For streaming content that already includes subtitles, this should be null (using both types of subtitles at the same time will cause undefined behavior).|
+|smiPath| The path to a local subtitle file, the URL to load a subtitle file, or null for no subtitles. For streaming content that already includes subtitles, this should benull(using both types of subtitles at the same time will cause undefined behavior).|
 |externalPDPath | When not null, the external path used to play PD content downloaded by the Downloader module. This is only available for content in MP4 containers. |
-|type | This determines how the path argument is interpreted. This will be one of: <br>`NEXPLAYER_SOURCE_TYPE_LOCAL_NORMAL` to play local media (the path is a local file system path) <br>`NEXPLAYER_SOURCE_TYPE_STREAMING` to play remote media sources (including RTSP streaming, progressive download and HTTP Live streaming). The path is interpreted as a URL.<br>`NEXPLAYER_SOURCE_TYPE_STORE_STREAM` to store remote media content (only currently available with HTTP Live streaming (HLS) content and not supported for live content) for later offline playback. Other NEXPLAYER\_SOURCE\_∗values are not supported in this version and should not be used.|
+|type | This determines how the path argument is interpreted. This will be one of: <br>`NEXPLAYER_SOURCE_TYPE_LOCAL_NORMAL` to play local media (the path is a local file system path)<br>`NEXPLAYER_SOURCE_TYPE_STREAMING` to play remote media sources (including RTSP streaming, progressive download and HTTP Live streaming). The path is interpreted as a URL.<br>`NEXPLAYER_SOURCE_TYPE_STORE_STREAM` to store remote media content (only currently available with HTTP Live streaming (HLS) content and not supported for live content) for later offline playback.    Other NEXPLAYER\_SOURCE\_∗values are not supported in this version and should not be used.|
 | transportType | The network transport type to use on the connection. This should be one of:<br>`NEXPLAYER_TRANSPORT_TYPE_TCP`<br>`NEXPLAYER_TRANSPORT_TYPE_UDP`|
 
 **Returns**
@@ -13582,11 +13584,11 @@ Calls to open must be matched with calls to NexPlayer.close.
 The status of the operation: this is zero in the case of success, or a non-zero NexPlayer™ error code in the
 case of failure.
  
-> **Note** This only indicates the success or failure of starting the operation. Even if this reports success, the operation may still fail later, asynchronously, in which case the application is notified in onAsyncCmdComplete.
+> **Note** This only indicates the success or failure ofstartingthe operation. Even if this reports success, the operation may still fail later, asynchronously, in which case the application is notified in onAsyncCmdComplete.
  
-#### int open (String path, String smiPath, String externalPDPath, int type, int transportType, int bufferingTime)
+#### int open (String path, String smiPath, String externalPDPath,int type, int transportType, int bufferingTime)
 
-> **Deprecated** This API is deprecated. Please use NexPlayer.open (String, String, String, int, int) instead. Use `INITIAL_BUFFERING_DURATION` and `RE_BUFFERING_DURATION` of NexProperty instead
+> **Deprecated** This API is deprecated. Please use NexPlayer.open(String, String, String, int, int) instead. Use `INITIAL_BUFFERING_DURATION` and `RE_BUFFERING_DURATION` of NexProperty instead
 of the parameter `bufferingTime`.
 
 #### int openFD (AssetFileDescriptor afd)
@@ -13608,7 +13610,7 @@ case of failure.
  
 > **Warning** When building the APK, most of resources will be compressed. This makes it difficult to extract FileDescriptor. To avoid compressing, you MUST change your file’s extension. Below extensions are allowed: ".jpg", ".jpeg", ".png", ".gif", ".wav", ".mp2", ".mp3", ".ogg", ".aac", ".mpg", ".mpeg", ".mid", ".midi", ".smf", ".jet", ".rtttl", ".imy", ".xmf", ".mp4", ".m4a", ".m4v", ".3gp", ".3gpp", ".3g2", ".3gpp2", ".amr", ".awb", ".wma", ".wmv"
  
-#### int openFD ( FileDescriptor fd, long offset, long length)
+#### int openFD ( FileDescriptor fd,long offset,long length)
 
 Open the resource files which are attached in "res/raw" or "assets" folder.
 
@@ -13631,7 +13633,7 @@ case of failure.
  
 > **Warning** When building the APK, most of resources will be compressed. This makes it difficult to extract FileDescriptor. To avoid compressing, you MUST change your file’s extension. Below extensions are allowed: ".jpg", ".jpeg", ".png", ".gif", ".wav", ".mp2", ".mp3", ".ogg", ".aac", ".mpg", ".mpeg", ".mid", ".midi", ".smf", ".jet", ".rtttl", ".imy", ".xmf", ".mp4", ".m4a", ".m4v", ".3gp", ".3gpp", ".3g2", ".3gpp2", ".amr", ".awb", ".wma", ".wmv"
 
-#### int pause ()
+#### int pause()
 
 This method pauses the current playback.
 
@@ -13641,11 +13643,11 @@ Please note that when the hardware codec is in use, if the application is sent t
 
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
  
-#### native int playspeedcontrol (float fPlaySeed)
+#### native int playspeedcontrol(float fPlaySeed)
 
 This method controls the playback speed of content by the given percent.
 
-> **Note** Speed Control is an optional feature. This method makes it possible to allow users to adjust the playback speed of content, from a quarter of the original speed to double speed, by changing the value of the parameter fPlaySeed. For example, to play content at half-speed, fPlaySeedshould be set to 0.5.
+> **Note** Speed Control is an optional feature. This method makes it possible to allow users to adjust the playback speed of content, from a quarter of the original speed to double speed, by changing the value of the parameter fPlaySeed. For example, to play content at half-speed,fPlaySeedshould be set to 0.5
  
 This method doesn’t work if it is called when NexPlayer™ is stopped.
 
@@ -13659,7 +13661,7 @@ of the content.|
  
 > **Warning** When using this method with HLS or Smooth Streaming content, playing multitrack content may cause unstable performance. Therefore, playing content as a single track is encouraged.
  
-#### native int reconnectNetwork ()
+#### native int reconnectNetwork()
 
 This method allows NexPlayer™ to reconnect to the media server in the case of streaming content.
 
@@ -13671,39 +13673,39 @@ It allows NexPlayer™ to reconnect to a media server when network conditions ma
 
 Zero if successful or a non-zero error code.
  
-#### native int recPause ()
+#### native int recPause()
 
 Recording interface; not available in current version. Do not use.
 
 > **Deprecated** Not available in current version; do not use.
 
-#### native int recResume ()
+#### native int recResume()
 
 Recording interface; not available in current version. Do not use.
 
 > **Deprecated** Not available in current version; do not use.
 
-#### native int recStart (String path, int maxsize)
+#### native int recStart (String path,int maxsize)
 
 Recording interface; not available in current version. Do not use.
 
 > **Deprecated** Not available in current version; do not use.
 
-#### native int recStop ()
+#### native int recStop()
 
 Recording interface; not available in current version. Do not use.
 
 > **Deprecated** Not available in current version; do not use.
 
-#### void release ()
+#### void release()
 
 This method releases resources used by the NexPlayer™ instance.
 
 This should be called when the instance is no longer needed. After calling this method, the instance can no longer be used, and methods on it should not be called, except for getState which will return `NEXPLAYER_STATE_NONE.`
 
-#### boolean removeEventReceiver (NexEventReceiver receiver)
+#### boolean removeEventReceiver(NexEventReceiver receiver)
 
-This removes a receiver which was added with addEventReceiver.
+This removes a receiver which was added withaddEventReceiver.
 
 **Parameters**
 
@@ -13716,7 +13718,7 @@ This removes a receiver which was added with addEventReceiver.
 - NexEventReceiver
 - NexPlayer.addReleaseListener
  
-#### NexClient removeNexClient (int client\_id)
+#### NexClient removeNexClient ( int client\_id)
 
 This method removes a client module integrated into the NexPlayer™ SDK.
 
@@ -13728,11 +13730,11 @@ Note that client modules are optional features of the NexPlayer™ SDK. For more
 
 | Name | Description | 
 |---|---|
-|client\_id| The ID of the client module as an integer. This is the return value of addNexClient().|
+|client\_id| The ID of the client module as an integer. This is the return value ofaddNexClient().|
  
 **Returns**
  
-The removed client module as a NexClient object.
+The removed client module as aNexClientobject.
  
 **See Also**
  
@@ -13741,7 +13743,7 @@ The removed client module as a NexClient object.
  
 #### void removeReleaseListener (IReleaseListener listener)
 
-Removes a callback listener which was added with addReleaseListener.
+Removes a callback listener which was added withaddReleaseListener.
 
 **Parameters**
 
@@ -13762,13 +13764,13 @@ This method resumes playback beginning at the point at which the player was last
  
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
  
-#### native int seek (int msec, boolean exact)
+#### native int seek ( int msec,boolean exact)
 
 This method seeks the playback position to the specified time.
 
 This doesn’t work if NexPlayer™ is stopped or if the stream doesn’t support seeking, but does work if NexPlayer™ is playing or paused.
 
-Note that even if the parameter exact is TRUE, it is possible to minimize seek time by adjusting the NexProperty SEEK\_RANGE\_FROM\_RA\_POINT.
+Note that even if the parameterexactisTRUE, it is possible to minimize seek time by adjusting the NexProperty SEEK\_RANGE\_FROM\_RA\_POINT.
 
 Note that NexPlayer’s state will be changed to pause and resume automatically if this method is called during playback. Therefore, if getState is calling while NexPlayer is seeking, the UI can get NEXPLAYER\_STATE\_PAUSE.
 
@@ -13776,8 +13778,8 @@ Note that NexPlayer’s state will be changed to pause and resume automatically 
 
 | Name | Description | 
 |---|---|
-|msec| The offset in msec (milliseconds) from the beginning of the media to which the playback position should seek.|
-|exact| If exact is true, the player will seek exactly to the time specified by msec (milliseconds). Otherwise, the playhead will seek to the nearest approximate position for faster seeking performance.
+|msec| The offset inmsec(milliseconds) from the beginning of the media to which the playback position should seek.|
+|exact| If exact is true, the player will seek exactly to the time specified bymsec(milliseconds). Otherwise, the playhead will seek to the nearest approximate position for faster seeking performance.
  
 **Returns**
 
@@ -13793,8 +13795,8 @@ This function seeks the playback position exactly to a specific time.
 
 This doesn’t work if NexPlayer™ is stopped or if the stream doesn’t support seeking, but does work if NexPlayer™ is playing or paused.
 
-This method behaves in the same way as the method seek (int msec, boolean exact) with the second parameter,
-exact, set to true. In other words, NexPlayer™ will seek exactly to the time specified by msec (milliseconds).
+This method behaves in the same way as the method seek(int msec, boolean exact) with the second parameter,
+exact, set totrue. In other words, NexPlayer™ will seek exactly to the time specified bymsec(milliseconds).
 
 **Parameters**
 
@@ -13808,9 +13810,9 @@ Zero for success, or a non-zero NexPlayer™ error code in the event of a failur
  
 **See Also**
  
-NexPlayer.seek (int msec, boolean exact)
+NexPlayer.seek(int msec, boolean exact)
  
-#### native int setAudioPitch (int iPitchIndex)
+#### native int setAudioPitch ( int iPitchIndex)
 
 This method sets the pitch control settings for audio in content.
 
@@ -13819,7 +13821,7 @@ This method sets the pitch control settings for audio in content.
 The pitch of audio in content is adjusted compared to the original pitch of the audio. SettingiPitchIndex= 0
 will not change the pitch, but with each integer step, the pitch will be adjusted by another semitone.
 
-For example, if the original audio has a pitch of C, then with iPitchIndex= 1, the new pitch set will be a semitone higher than the original, or C sharp (D flat). Similarly,  if the pitch is to be lower than the original, iPitchIndex should be set to a negative value (in particular, for original audio with a pitch of C, iPitchIndex= -2 will change the pitch to A sharp (B flat)).
+For example, if the original audio has a pitch of C, then withiPitchIndex= 1, the new pitch set will be a semitone higher than the original, or C sharp (D flat). Similarly, if the pitch is to be lower than the original,iPitchIndex should be set to a negative value (in particular, for original audio with a pitch of C,iPitchIndex= -2 will change the pitch to A sharp (B flat)).
 
 **Parameters**
 
@@ -13833,27 +13835,27 @@ Range of pitch control (index): {-12, -11, -10, ... -1, 0, 1, ... 10, 11, 12} |
 
 Zero if successful, or an error code in the case of failure.
  
-#### native int setAutoVolume (int uiOnOff)
+#### native int setAutoVolume ( int uiOnOff)
 
-This method turns the Auto Volume feature on or off, but this feature is only available in some product categories.
+This method turns the Auto Volume featureonoroff, but this feature is only available in some product categories.
 
 > **Note** Auto Volume is an optional feature.
  
-When Auto Volume is turned on, NexPlayer™ automatically adjusts the volume level of different content so that
+When Auto Volume is turnedon, NexPlayer™ automatically adjusts the volume level of different content so that
 it is played at a consistent and optimal volume level, allowing the user to play different content without having to constantly adjust the volume when new content starts.
 
-By default, Auto Volume is turned off (identical to the behavior of the player in product categories that do not support this feature).
+By default, Auto Volume is turnedoff(identical to the behavior of the player in product categories that do not support this feature).
 
 **Parameters**
 
 | Name | Description | 
 |---|---| 
-|uiOnOff| This turns the Auto Volume feature on and. By default, this feature is off= 0.<br>Possible Values: <br>- on= 1<br>- off= 0|
+|uiOnOff| This turns the Auto Volume featureonand. By default, this feature isoff= 0.<br>Possible Values: <br>- on= 1<br>- off= 0|
 
 **Returns**
  
-The new value of Auto Volume. If Auto Volume was turned off, this will be 0.
-If Auto Volume was turned on, it will return 1.
+The new value of Auto Volume. If Auto Volume was turnedoff, this will be 0.
+If Auto Volume was turnedon, it will return 1.
 If Auto Volume is not supported in this version of the NexPlayer™, this will return the error, NOT\_SUPPORT
 (0x8000000FL).
  
@@ -13861,7 +13863,7 @@ If Auto Volume is not supported in this version of the NexPlayer™, this will r
 
 Sets a bitmap to be used to receive rendered frames for display, when using the Java-based renderer.
 
-For more information on this method, please also refer to the Java Renderer section of the NexPlayer™ Engine
+For more information on this method, please also refer to theJava Renderersection of the NexPlayer™ Engine
 documentation.
 
 **Parameters**
@@ -13880,20 +13882,20 @@ This method selects a caption (subtitle) track that will be used.
 
 Subtitles for the selected track will be passed to onTextRenderRender for display.
 
-This is used for file-based captions only. For streaming media with included captions, setMediaStream ()
+This is used for file-based captions only. For streaming media with included captions,setMediaStream()
 should be used instead, and local captions should be turned off since running both types of captions at the same time has undefined results.
 
 **Parameters**
 
 | Name                   | Description                                                                                                                                                                                          |
 |----|----------------------------------|
-| indexOfCaptionLanguage | An index into the mCaptionLanguages array specifying which language to use. If there are "n" entries in the caption array, then you may pass 0 ...n-1 to specify the language, "n" to turn off captions. |
+| indexOfCaptionLanguage | An index into the mCaptionLanguages array specifying which language to use. If there are n entries in the caption array, then you may pass 0 ...n-1 to specify the language, n to turn off captions. |
  
 **Returns**
  
 Zero if successful, non-zero if there was an error.
  
-#### native int setCEA608CaptionChannel (int nChannel)
+#### native int setCEA608CaptionChannel ( int nChannel)
 
 Sets the input channel for CEA 608 closed captions.
 
@@ -13916,15 +13918,15 @@ Since CEA 608 closed captions may include different information on the available
  
 Zero if successful or a non-zero error code.
  
-#### int setClientTimeShift (boolean bEnable, String strFileBufferPath, int uiTimeShiftBufferSize, int uiTimeShiftDuration)
+#### int setClientTimeShift (boolean bEnable, String strFileBufferPath, int uiTimeShiftBufferSize,int uiTimeShiftDuration)
 
 This method enables the client time shift feature in the NexPlayer™ SDK.
 
-Time shifting is a feature to store realtime data as it is received so that the user can watch past data while playing live content. When this feature is enabled, NexPlayer™ prepares for the time shift and only after pause is called, it stores received data from a live stream in local file storage with the specified buffer size and duration set with this API. As a result, the user can seek and pause even when the content playing is live. This method will be stopped when the method gotoCurrentLivePosition is called.
+Time shifting is a feature to store realtime data as it is received so that the user can watch past data while playing live content. When this feature is enabled, NexPlayer™ prepares for the time shift and only afterpauseis called, it stores received data from a live stream in local file storage with the specified buffer size and duration set with this API. As a result, the user can seek and pause even when the content playing is live. This method will be stopped when the methodgotoCurrentLivePositionis called.
 
-> **Note** This method should be called between calls to init() and open(). Furthermore, once open() is called,
-the parameter values cannot be changed unless the application is closed by calling close() and then
-initialized with init() again.
+> **Note** This method should be called between calls toinit()andopen(). Furthermore, onceopen()is called,
+the parameter values cannot be changed unless the application is closed by callingclose()and then
+initialized withinit()again.
  
 > **Warning** Values for the uiTimeShiftBufferSize and uiTimeShiftDuration parameter should be set
 carefully because each device has different capabilities and the NexPlayer™ SDK can’t guarantee that the
@@ -13938,10 +13940,10 @@ make more storage space available. When the player resumes, onAsyncCmdComplete i
 |---|---| 
 |bEnable| Sets whether to enable or disable the time shift feature.| 
 |strFileBufferPath| The folder name where temporary data for time shifting will be stored when there is no more storage available in the memory buffer. If there is enough memory and no folder is needed, this parameter will be NULL.|
-|uiTimeShiftBufferSize|Size of the memory buffer for the time shift feature in megabytes (MB). If the size set to this parameter is bigger than the actual memory available, extra realtime data will be saved in the folder set by the parameter strFileBufferPath.|
+|uiTimeShiftBufferSize|Size of the memory buffer for the time shift feature in megabytes (MB). If the size set to this parameter is bigger than the actual memory available, extra realtime data will be saved in the folder set by the parameterstrFileBufferPath.|
 |uiTimeShiftDuration|Maximum duration for the time shift feature, or how much time a user can shift back in live content in minutes.| 
-|uiMaxBackwardDuration|Maximum duration for the streaming data backup feature, or how much time (of streamed data files preceding the currentts file) can be stored. Normally, streamed data files preceding the latest ts file will be deleted to maintain the allowed memory buffer size. However this parameter allows the streamed data files preceding the latest ts file to be kept and stored if there is free space available. For example when the available memory buffer is larger than the value set for the parameters `uiTimeShiftBufferSize` or `uiTimeShiftDuration`, this parameter allows users to seek backwards in live content during playback for the specified amount of time. If this parameter is set to the default value 1, streamed data files for the 1 minute preceding the latest ts file will be kept. If this parameter is set to 0, all
-remaining storage space will be available to keep previously streamed data files. When this parameter is set to 0 and the parameter strFileBufferPathis set to save streamed data in another storage folder, this parameter will be automatically set to 1.
+|uiMaxBackwardDuration|Maximum duration for the streaming data backup feature, or how much time (of streamed data files preceding the currenttsfile) can be stored. Normally, streamed data files preceding the latest ts file will be deleted to maintain the allowed memory buffer size. However this parameter allows the streamed data files preceding the latesttsfile to be kept and stored if there is free space available. For example when the available memory buffer is larger than the value set for the parameters `uiTimeShiftBufferSize` or `uiTimeShiftDuration`, this parameter allows users to seek backwards in live content during playback for the specified amount of time. If this parameter is set to the default value 1, streamed data files for the 1 minute preceding the latesttsfile will be kept. If this parameter is set to 0, all
+remaining storage space will be available to keep previously streamed data files. When this parameter is set to 0 and the parameterstrFileBufferPathis set to save streamed data in another storage folder, this parameter will be automatically set to 1.
  
 **Returns**
 
@@ -13951,7 +13953,7 @@ Zero if successful, or an error code in the event of failure.
 
 gotoCurrentLivePosition
  
-#### native int SetConfigFilePath (String strConfPath)
+#### native int SetConfigFilePath(String strConfPath)
 
 Specifies the path to the renderer configuration file.
 
@@ -13967,7 +13969,7 @@ The path must be specified before opening any content, otherwise the renderer co
  
 **Returns**
  
-Always zero. The return value should be ignored.
+Always zero, but may change in future versions. The return value should be ignored.
  
 > **Deprecated** Do not use.
 
@@ -13991,13 +13993,13 @@ These settings can be continuously adjusted by calling the method multiple times
  
 **Returns**
 
-Always zero. The return value should be ignored.
+Always zero, but may change in future versions. The return value should be ignored.
  
-#### native int setDebugLogs (int codecLog, int RendererLog, int protocol\_Log)
+#### native int setDebugLogs (int codecLog,int RendererLog,int protocol\_Log)
 
 This method sets the debugging log levels related to codecs, rendering, and protocols in NexPlayer™.
 
-> **Warning** Calls to this method should be made after calling init but before calling open.
+> **Warning** Calls to this method should be made after callinginitbut before callingopen.
  
 By default, the parameters codecLog and RendererLog are set to -1 so that they are hidden and protocol\_Log is set to 0 so basic logs are produced. However when debugging applications, they can be set to a higher
 integer value so that more logs are generated.
@@ -14014,22 +14016,22 @@ integer value so that more logs are generated.
 
 Zero if successful or a non-zero error code.
  
-#### void setDisplay (SurfaceHolder sh)
+#### void setDisplay ( SurfaceHolder sh)
 
 This method sets the surface on which video will be displayed.
 
 > **Warning** This is NOT supported with the Java or OpenGL renderers, and should not be called if one of those renderers is in use.
  
-This function actually takes the android.view.SurfaceHolder associated with the surface on which the
+This function actually takes theandroid.view.SurfaceHolderassociated with the surface on which the
 video will be displayed.
 
-This function should be called from onVideoRenderPrepared after the surface has been created. In addition, if the surface object changes (for example, if the SurfaceHolder’s surfaceCreatedcallback is after the initial
+This function should be called from onVideoRenderPrepared after the surface has been created. In addition, if the surface object changes (for example, if theSurfaceHolder’ssurfaceCreatedcallback is after the initial
 setup), this function should be called again to provide the new surface.
 
-If the surface object is destroyed (for example, if the SurfaceHolder’s surfaceDestroyedcallback is after
+If the surface object is destroyed (for example, if theSurfaceHolder’ssurfaceDestroyedcallback is after
 the initial setup), this function should be called again to notify that the surface was destroyed.
 
-The surface should match the pixel format of the screen, if possible, or should bet set to PixelFormat.RGB\_-
+The surface should match the pixel format of the screen, if possible, or should bet set toPixelFormat.RGB\_-
 565.
 
 In general, the surface should be created as follows:
@@ -14073,9 +14075,9 @@ surfaceHolder.addCallback(new SurfaceHolder.Callback() {
 });
 ```
 
-In `onVideoRenderCreate`, the code should ensure that the surface has already been created before passing the surface holder to setDisplay. Because onViewRenderCreate can run asynchronously, it may need to wait until the surface is created by sleeping and polling.
+In `onVideoRenderCreate`, the code should ensure that the surface has already been created before passing the surface holder tosetDisplay. BecauseonViewRenderCreatecan run asynchronously, it may need to wait until the surface is created by sleeping and polling.
 
-For example, if using the example code above, onVideoRenderCreate would wait until mSurfaceExists becomes true, using something like:
+For example, if using the example code above,onVideoRenderCreatewould wait untilmSurfaceExists becomes true, using something like:
 
 ```java
 while(!mSurfaceExists)
@@ -14090,9 +14092,9 @@ It is strongly recommended to use `NexVideoRenderer` instead of using this metho
 **Parameters**
 | Name | Description | 
 |---|---|
-|sh| The android.view.SurfaceHolder holding the surface on which to display video.|
+|sh| Theandroid.view.SurfaceHolderholding the surface on which to display video.|
  
-#### int setDisplay (SurfaceHolder sh, int surfaceNumber)
+#### int setDisplay (SurfaceHolder sh,int surfaceNumber)
 
 This method sets the surface on which video will be displayed.
 
@@ -14100,21 +14102,21 @@ This is the same as setDisplay(SurfaceHolder), except that it takes an additiona
 
 In general, it’s better to use setDisplay(SurfaceHolder).
 
-It is strongly recommended to use NexVideoRenderer instead of using this method directly.
+It is strongly recommended to useNexVideoRendererinstead of using this method directly.
 
 **Parameters**
 | Name | Description | 
 |---|---|
-|sh| The android.view.SurfaceHolder holding the surface on which to display video.|
+|sh| Theandroid.view.SurfaceHolderholding the surface on which to display video.|
 |surfaceNumber| This integer sets the number of additional surfaces (currently must be zero).|
  
 **Returns**
 
 Zero if successful, non-zero if there was an error.
  
-#### void setDynamicThumbnailListener (IDynamicThumbnailListener listener)
+#### void setDynamicThumbnailListener(IDynamicThumbnailListener listener)
 
-This method sets and registers aIDynamicThumbnailListener listener.
+This method sets and registers aIDynamicThumbnailListenerlistener.
 
 **Parameters**
 
@@ -14126,7 +14128,7 @@ This method sets and registers aIDynamicThumbnailListener listener.
 
 NexPlayer.IDynamicThumbnailListener
   
-#### native int SetExternalPDFileDownloadSize (long ReceivedSize, long TotalSize)
+#### native int SetExternalPDFileDownloadSize(long ReceivedSize,long TotalSize)
 
 This method sets the size of the file being downloaded in the Downloader module.
 
@@ -14138,9 +14140,9 @@ ReceivedSize The size of portion of the file received so far, in bytes (B). Tota
 
 Zero if successful, another value in the case of failure.
  
-#### void setHTTPABRTrackChangeListener (IHTTPABRTrackChangeListener listener)
+#### void setHTTPABRTrackChangeListener(IHTTPABRTrackChangeListener listener)
 
-This method sets and registers aIHTTPABRTrackChangeListener listener.
+This method sets and registers aIHTTPABRTrackChangeListenerlistener.
 
 **Parameters**
 
@@ -14152,9 +14154,9 @@ This method sets and registers aIHTTPABRTrackChangeListener listener.
  
 NexPlayer.IHTTPABRTrackChangeListener
  
-#### native int setLicenseBuffer (String strBuffer)
+#### native int setLicenseBuffer(String strBuffer)
 
-This method inputs the license file information into a NexPlayer™ buffer. This should be called after calls to NexAlFactory::init and before calling `NexPlayer::setNexAlFactory`. The location of the license file included with the NexPlayer™ SDK Java files can be set using the method `setLicenseFile`.
+This method inputs the license file information into a NexPlayer™ buffer. This should be called after calls toNexAlFactory::initand before calling `NexPlayer::setNexAlFactory`. The location of the license file included with the NexPlayer™ SDK Java files can be set using the method `setLicenseFile`.
 
 **Parameters**
 
@@ -14185,7 +14187,7 @@ This should be called after NexAlFactory::init and before NexPlayer::setNexAlFac
 
 setLicenseBuffer(String strBuffer)
  
-##### void setLicenseRequestListener (INexDRMLicenseListener listener)
+#####  5.91.3.98 void setLicenseRequestListener (INexDRMLicenseListener listener)
 
 Registers a callback that will be invoked when new events occur.
 
@@ -14205,9 +14207,9 @@ The events dispatched to this callback interface serve three functions:
 - to notify the application when a command has completed, so that the application can issue any follow-up commands. For example, issuing start when open has completed.
 - to notify the application when there are state changes that the application may wish to reflect in the interface.
 
-All applications must implement this callback and provide certain minimal functionality. See the IListener documentation for a list of events and information on implementing them.
+All applicationsmustimplement this callback and provide certain minimal functionality. See the IListener documentation for a list of events and information on implementing them.
 
-In an Android application, there are two common idioms for implementing this. The most typical is to have the Activity subclass implement the IListener interface.
+In an Android application, there are two common idioms for implementing this. The most typical is to have the Activity subclass implement the IListenerinterface.
 
 The other approach is to define an anonymous class in-line:
 
@@ -14224,13 +14226,13 @@ mNexPlayer.setListener(new NexPlayer.IListener() {
 
 | Name | Description | 
 |---|---| 
-|listener| The object on which methods will be called when new events occur. This must implement the IListener interface.|
+|listener| The object on which methods will be called when new events occur. This must implement the IListenerinterface.|
  
-#### native int setMediaStream (int iAudioStreamId, int iTextStreamId, int iVideoStreamId, int iVideoCustomAttrId)
+#### native int setMediaStream (int iAudioStreamId, int iTextStreamId,int iVideoStreamId, int iVideoCustomAttrId)
 
 For media with multiple streams, this method selects the streams that will be presented to the user.
 
-This method should be called to set a specific media stream (video, audio, or text) while NexPlayer™ is playing content with multiple streams. To have NexPlayer™ prefer text streams in a particular language before playing content, the property `PREFER_LANGUAGE` should be set instead.
+This method should be called to set a specific media stream (video, audio, or text) while NexPlayer™ is playing content with multiple streams. To have NexPlayer™ prefer text streams in a particular language beforeplaying content, the property `PREFER_LANGUAGE` should be set instead.
 
 The full list of available streams (if any) can be found in the mArrStreamInformation array in NexContentInformation. Each stream is either an audio stream or a video stream, and one of each may be selected for presentation to the user. Please see Multi-Audio and Multi-Video Stream Playback for more explanation.
 
@@ -14260,11 +14262,11 @@ Please also see the sample code for more details on how to turn video on and off
 
 Zero if successful, non-zero if there was an error.
  
-#### native int setMediaStreamTrack (int iAudioStreamId, int iTextStreamId, int iVideoStreamId, int iVideoCustomAttrId, int iMediaType, int iAudioTrackId)
+#### native int setMediaStreamTrack ( int iAudioStreamId,int iTextStreamId,int iVideoStreamId,int iVideoCustomAttrId, int iMediaType,int iAudioTrackId)
 
 For media with multiple streams, this method selects the streams that will be presented to the user.
 
-This method should be called to set a specific media stream (video, audio, or text) while NexPlayer™ is playing content with multiple streams. To have NexPlayer™ prefer text streams in a particular language before playing content, the property `PREFER_LANGUAGE` should be set instead.
+This method should be called to set a specific media stream (video, audio, or text) while NexPlayer™ is playing content with multiple streams. To have NexPlayer™ prefer text streams in a particular language beforeplaying content, the property `PREFER_LANGUAGE` should be set instead.
 
 The full list of available streams (if any) can be found in the mArrStreamInformation array in NexContentInformation. Each stream is either an audio stream or a video stream, and one of each may be selected for presentation to the user. Please see Multi-Audio and Multi-Video Stream Playback for more explanation.
 
@@ -14276,7 +14278,7 @@ Some streams, for example in Smooth Streaming, may in turn have associated custo
 
 Setting any of the streams to -2 will disable it or turn it off. There are some restrictions though when using this setting:
 
-- The content must include both audio and video. This means it is not possible to set all of the parameters (iAudioStreamId, iTextStreamId, iVideoStreamId, iVideoCustomAttrId) equal to -2 at once. 
+- The content must include both audio and video. This means it is not possible to set all of the parameters (iAudioStreamId,iTextStreamId,iVideoStreamId,iVideoCustomAttrId) equal to -2 at once. 
 - If the player goes into the background, the UImustcall video off (setiVideoStreamId= -2) immediately to provide the audio only stream while the player is in the background.
 
 > **Note** To make it possible for an application to switch content tracks while in the background, it is necessary to make the Application Activity a service and it is recommended that the service be registered with the Android operating system to help ensure it won’t be closed when device resources are managed.
@@ -14316,7 +14318,7 @@ This method should be called to set a specific media track (audio only) while Ne
  
 Zero if successful, non-zero if there was an error.
  
-#### int setNetAddrTable (NexNetAddrTable table, int nNetAddrTableType)
+5.91.3.103 int setNetAddrTable(NexNetAddrTable table,int nNetAddrTableType)
 
 This method sets a table and table type to be used by the NexPlayer™ to retrieve host information when custom IP addresses should be used.
 
@@ -14346,7 +14348,7 @@ Sets the NexALFactory in order to inform what type of codec NexPlayer™ will us
 |---|---|
 | alFactory| The NexALFactory instance.|
  
-#### void setNexMediaDrmKeyServerUri (String keyUri)
+#### void setNexMediaDrmKeyServerUri ( String keyUri)
 
 This sets the Key Server’s URL to obtain keys to decrypt encrypted content.
 
@@ -14360,7 +14362,7 @@ This sets the Key Server’s URL to obtain keys to decrypt encrypted content.
  
 #### void setNexMediaDrmOptionalHeaderFields (HashMap<String, String> optionalHeaderFields)
 
-This method sets optional Parameters when sending requests to the Key Server of MediaDrm.
+This method sets optionalParameters when sending requests to the Key Server of MediaDrm.
 
 > **Warning** This must be called before `NexPlayer.open`.
  
@@ -14386,7 +14388,7 @@ This method registers an Offline Key listener for managing offline keys.
  
 - NexPlayer.IDynamicThumbnailListener
  
-#### native int setOptionDynamicThumbnail (int option, int param1, int param2)
+#### native int setOptionDynamicThumbnail ( int option,int param1,int param2)
 
 This method sets option parameters related to the Dynamic Thumbnail feature in Smooth Streaming when handling thumbnail data.
 
@@ -14396,13 +14398,13 @@ This method sets option parameters related to the Dynamic Thumbnail feature in S
 |---|---| 
 |option| The option property to set thumbnail data.|
 |param1 | The first parameter of the option property.|
-|param2 | The second parameter of the option property. If the option being set only needs one parameter, param2 will be NULL.|
+|param2 | The second parameter of theoptionproperty. If the option being set only needs one parameter, param2 will be NULL.|
  
 **Returns**
 
 Zero if successful, or an error code in the event of failure.
  
-#### native int setOutputPos (int iX, int iY, int iWidth, int iHeight)
+#### native int setOutputPos ( int iX,int iY,int iWidth,int iHeight)
 
 This method sets the output video’s position and size.
 
@@ -14425,13 +14427,13 @@ If the video is larger than the surface, or part of it is outside the surface, i
  
 **Returns**
  
-Always zero, the return value should be ignored.
+Always zero, but may change in future versions; the return value should be ignored.
  
-#### native int setProperties (int property, int value)
+#### native int setProperties(int property,int value)
 
 Sets the value of an individual NexPlayer™ integer property based on the numerical ID of the property.
 
-Normally, setProperty should be used instead of this method. Use this method only if you have a numeric property code.
+Normally, setProperty should be used instead of this method. Use this methodonlyif you have a numeric property code.
 
 For a full list of properties, see the NexProperty enum. To get the numeric code for a property, call the getPropertyCode method on the enum member.
 
@@ -14453,29 +14455,29 @@ setProperties(NexProperty.SUPPORT_RTSP.getPropertyCode(), 1);
 
 Zero if the property was set successfully; non-zero if there was an error.
  
-#### native int setProperties (int property, String value)
+#### native int setProperties (int property,String value)
 
 Sets the value of an individual NexPlayer™ string property based on the numerical ID of the property.
 
 This is a string version of setProperties(int, int).
 
-Normally, setProperty should be used instead of this method. Use this method only if you have a numeric property code.
+Normally, setProperty should be used instead of this method. Use this methodonlyif you have a numeric property code.
 
 **Parameters**
 |---|---| 
 |property| The numeric property code identifying the property to set.|
-|value| The new string value for the property.|
+|value| The new string  value for the property.|
  
 **Returns**
 
  
 Zero if the property was set successfully; non-zero if there was an error.
  
-#### native int setProperties (int property, byte[] value)
+#### native int setProperties(int property, byte[] value)
 
-> **Note** Internal usage. Please do not use.
+> **Note** For internal NexStreaming use only. Please do not use.
  
-#### int setProperty (NexProperty property, int value)
+#### int setProperty(NexProperty property,int value)
 
 Sets the value of an individual NexPlayer™ property.
 
@@ -14498,7 +14500,7 @@ NexProperty for more details on specific properties.
 
 Zero if the property was succesfully set; non-zero if there was an error.
  
-#### int setProperty (NexProperty property, String value)
+#### int setProperty(NexProperty property, String value)
 
 Sets the value of an individual NexPlayer™ property.
 
@@ -14521,7 +14523,7 @@ NexProperty for details.
  
 Zero if the property was succesfully set; non-zero if there was an error.
  
-#### void setProxyInfo (String proxyAddress, int proxyPort)
+#### void setProxyInfo(String proxyAddress,int proxyPort)
 
 This method sets the proxy setting for the requests, **only if the actual network configuration of the device has it.**
 
@@ -14532,11 +14534,11 @@ This method sets the proxy setting for the requests, **only if the actual networ
 |proxyAddress| The proxy server address to use.|
 |proxyPort| The proxy server port number to use.|
  
-The default value of proxy Address is null. The default value of proxy Port is -1.
+The default value of proxyAddress is null. The default value of proxyPort is -1.
 
 > **Deprecated** This API will be deprecated. Instead of this API, please use setProperties with NexProperty.PROXY\_ADDRESS and NexProperty.PROXY\_PORT values.
  
-#### native int setRenderOption (int iFlag)
+#### native int setRenderOption(int iFlag)
 
 This function configures the paint flags used with the Android bitmap rendering module.
 
@@ -14547,7 +14549,7 @@ There are multiple rendering modules that can be used for displaying video and N
 NexPlayer.init for more details on possible rendering modules.
  
 In the case where the rendering module uses bitmaps provided through the Android API, the rendering options
-specified here are used to set up the flags on the android.os.Paint object that is used to display the bitmap.
+specified here are used to set up the flags on theandroid.os.Paintobject that is used to display the bitmap.
 
 For all other rendering modules, the values set here are ignored.
 
@@ -14555,22 +14557,22 @@ For all other rendering modules, the values set here are ignored.
 
 | Name | Description | 
 |---|---|  
-|iFlag| This is an integer representing options for video rendering. This can be zero or more of the following values, combined together using a bitwise OR. Each value corresponds to an Android API flag available on a Paint object.|
+|iFlag| This is an integer representing options for video rendering. This can be zero or more of the following values, combined together using a bitwiseOR. Each value corresponds to an Android API flag available on a Paint object.|
  
 - **RENDER\_MODE\_VIDEO\_NONE (0x00000000)** No special paint flags are set.
 - **RENDER\_MODE\_VIDEO\_FILTERBITMAP (0x00000001)** Corresponds to
     android.os.Paint.FILTER\_BITMAP\_FLAG.
-- **RENDER\_MODE\_VIDEO\_ANTIALIAS (0x00000002)** Corresponds to android.-
+- **RENDER\_MODE\_VIDEO\_ANTIALIAS (0x00000002)** Corresponds toandroid.-
     os.Paint.ANTI\_ALIAS\_FLAG.
-- **RENDER\_MODE\_VIDEO\_DITHERING (0x00000004)** Corresponds to android.-
+- **RENDER\_MODE\_VIDEO\_DITHERING (0x00000004)** Corresponds toandroid.-
     os.Paint.DITHER\_FLAG.
 - **RENDER\_MODE\_VIDEO\_ALLFLAG (0xFFFFFFFF)** Enables all options.
 
 **Returns**
 
-Always zero, the return value should be ignored.
+Always zero, but may change in future versions; the return value should be ignored.
  
-#### native int setUserCookie (String strCookie)
+#### native int setUserCookie(String strCookie)
 
 This method sets a user cookie to be used while playing content.
 
@@ -14580,17 +14582,17 @@ In prior versions of the NexPlayer™ SDK, it was only possible to set a user co
 
 | Name | Description | 
 |---|---|  
-|strCookie| The user cookie to set, as a string. When setting a cookie string, it should start with "Set-Cookie:". For example:<br>`mNexPlayer.setUserCookie("Set-Cookie: [cookie string]");`<br> When setting two or more cookies, it should start with "Cookie:" and each cookies are separated by ";". For example:<br> `mNexPlayer.setUserCookie("Cookie: [cookie string1];[cookie string2];[cookie string3]...");`|
+|strCookie| The user cookie to set, as a string. When setting a cookie string, it should start with "Set-Cookie:". For example:<br>`mNexPlayer.setUserCookie("Set-Cookie: [cookie string]");`<br>When setting two or more cookies, it should start with "Cookie:" and each cookies are separated by ";". For example:<br> `mNexPlayer.setUserCookie("Cookie: [cookie string1];[cookie string2];[cookie string3]...");`|
  
 **Returns**
  
 Zero if successful, non-zero if there was an error.
   
-#### int setVideoBitrates (int[] bitrates)
+#### int setVideoBitrates(int[] bitrates)
 
 This method allows specific subtracks to be selected and played based on the bitrates of the tracks in HLS content.
 
-Only the tracks with the bitrates passed to this method with the parameter bitrates will be played by NexPlayer™.
+Only the tracks with the bitrates passed to this method with the parameterbitrateswill be played by NexPlayer™.
 
 **Parameters**
 
@@ -14606,7 +14608,8 @@ Zero if successful or a non-zero error code.
 
 This method allows specific subtracks to be selected and played based on the bitrates of the tracks in HLS content.
 
-Only the tracks with the bitrates passed on this method with the parameter bitrates will be played by NexPlayer™. However, choosing a different option with the parameter optional lows NexPlayer™ to choose and play
+Only the tracks with the bitrates passed on this method with the parameterbitrateswill be played by Nex-
+Player™. However, choosing a different option with the parameteroptionallows NexPlayer™ to choose and play
 the selected subtracks based on the passed bitrates differently.
 
 **Parameters**
@@ -14614,14 +14617,14 @@ the selected subtracks based on the passed bitrates differently.
 | Name | Description | 
 |---|---|  
 |bitrates| The bitrates of the HLS content subtracks to play, as an integer array.|
-|option| How HLS subtracks should be played based on the bitrates selected in bitrates. This will be one of:|
+|option| How HLS subtracks should be played based on the bitrates selected inbitrates. This will be one of:|
  
-- `AVAILBITRATES_NONE` = 0x00000000: Default. No restriction on subtracks other than the bitrates selected in bitrates.
-- `AVAILBITRATES_MATCH` = 0x00000001: Only use subtracks which have exact same bitrate as the selected bitrates passed in bitrates.
-- `AVAILBITRATES_NEAREST` = 0x00000002: Only use subtracks which have the nearest bitrates to the target bitrates described in the list passed in bitrates. For example, if the target bitrates passed are [300K, 600K] and the HLS playlist includes 100K,200K, 500K, 700K tracks, only the 200K (close to 300K) and 500K (close to 600K) tracks will be used.
+- `AVAILBITRATES_NONE` = 0x00000000: Default. No restriction on subtracks other than the bitrates selected inbitrates.
+- `AVAILBITRATES_MATCH` = 0x00000001: Only use subtracks which have exact same bitrate as the selected bitrates passed inbitrates.
+- `AVAILBITRATES_NEAREST` = 0x00000002: Only use subtracks which have the nearest bitrates to the target bitrates described in the list passed inbitrates. For example, if the target bitrates passed are [300K, 600K] and the HLS playlist includes 100K,200K, 500K, 700K tracks, only the 200K (close to 300K) and 500K (close to 600K) tracks will be used.
 - `AVAILBITRATES_HIGH` = 0x00000003: Only use subtracks which have bitrates equal to or higher than the target bitrate. The first bitrate in the list passed in bitrates is  the target bitrate, the rest will be ignored.
 - `AVAILBITRATES_LOW` = 0x00000004: Only use subtracks which have bitrates equal to or lower than the target bitrate. The first bitrate in the list passed in bitrates is the target bitrate, the rest will be ignored.
-- `AVAILBITRATES_INSIDERANGE` = 0x00000005: Only use subtracks which have bitrates inside the range defined by the bitrates passed in bitrates. The first bitrate in the list is taken as the lower boundary, the second as the upper boundary, and the rest of the list will be ignored. Subtracks with bitrates between the lower and upper boundaries will be used.
+- `AVAILBITRATES_INSIDERANGE` = 0x00000005: Only use subtracks which have bitrates inside the range defined by the bitrates passed inbitrates. The first bitrate in the list is taken as the lower boundary, the second as the upper boundary, and the rest of the list will be ignored. Subtracks with bitrates between the lower and upperboundaries will be used.
 
 **Returns**
 
@@ -14673,9 +14676,9 @@ It is not recommended to use this setting for volume controlled by the user; tha
 
 | Name | Description | 
 |---|---|  
-|fGain| This is a float between 0.0 and 1.0. It is set to 1.0 by default.|
+|fGain| This is afloatbetween 0.0 and 1.0. It is set to 1.0 by default.|
  
-#### int start (int msec)
+#### int start ( int msec)
 
 Starts playing media from the specified timestamp.
 
@@ -14688,7 +14691,8 @@ When this operation completes, onAsyncCmdComplete is called with one of the foll
 - NEXPLAYER\_ASYNC\_CMD\_START\_STREAMING
 - NEXPLAYER\_ASYNC\_CMD\_START\_STORE\_STREAM
 
-Success or failure of the operation can be determined by checking the result argument passed to onAsyncCmdComplete. If the result is 0, the media was successfully opened; if it is any other value, the operation failed.
+Success or failure of the operation can be determined by checking theresultargument passed toonAsync-
+CmdComplete. If the result is 0, the media was successfully opened; if it is any other value, the operation failed.
 
 **Parameters**
 
@@ -14701,9 +14705,9 @@ Success or failure of the operation can be determined by checking the result arg
 The status of the operation. This is zero in the case of success, or a non-zero NexPlayer™ error code in the
 case of failure.
  
-> **Note** This only indicates the success or failure of starting the operation. Even if this reports success, the operation may still fail later, asynchronously, in which case the application is notified in `onAsyncCmdComplete`.
+> **Note** This only indicates the success or failure ofstartingthe operation. Even if this reports success, the operation may still fail later, asynchronously, in which case the application is notified in `onAsyncCmdComplete`.
  
-#### native int start (int msec, boolean pauseAfterReady)
+#### native int start (int msec,boolean pauseAfterReady)
 
 Starts playing media from the specified timestamp.
 
@@ -14716,15 +14720,16 @@ When this operation completes, onAsyncCmdComplete is called with one of the foll
 - NEXPLAYER\_ASYNC\_CMD\_START\_STREAMING
 - NEXPLAYER\_ASYNC\_CMD\_START\_STORE\_STREAM
 
-Success or failure of the operation can be determined by checking the result argument passed to onAsyncCmdComplete. If the result is 0, the media was successfully opened; if it is any other value, the operation failed.
+Success or failure of the operation can be determined by checking theresultargument passed toonAsync-
+CmdComplete. If the result is 0, the media was successfully opened; if it is any other value, the operation failed.
 
 **Parameters**
 
 | Name | Description | 
 |---|---|  
-|msec| The offset (in milliseconds) from the beginning of the media at which to start playback. This should be zero to start at the beginning. This parameter will be ignored if content is opened with NEXPLAYER\_SOURCE\_TYPE\_STORE\_STREAM since the content will be stored instead of played. This parameter must be set to a valid value within the seekable range. The value of the seekable range can be obtained using the `getSeekableRangeInfo()` API. If the content is a live stream, it is recommended to use the LIVE\_VIEW\_OPTION property.|
+|msec| The offset (in milliseconds) from the beginning of the media at which to start playback. This should be zero to start at the beginning. This parameter will be ignored if content is opened with NEXPLAYER\_SOURCE\_TYPE\_STORE\_STREAMsince the content will be stored instead of played. This parameter must be set to a valid value within the seekable range. The value of the seekable range can be obtained using the `getSeekableRangeInfo()` API. If the content is a live stream, it is recommended to use the LIVE\_VIEW\_OPTION property.|
 |pauseAfterReady| If this value is true, NexPlayer™ will pause just after buffering and before play This parameter will be ignored if content is opened with the NEXPLAYER\_SOURCE\_TYPE\_STORE\_STREAM parameter.  
-Note that if this value is TRUE, NexPlayer’s state will be changed to NEXPLAYER\_STATE\_PAUSE when initial
+Note that if this value isTRUE, NexPlayer’s state will be changed to NEXPLAYER\_STATE\_PAUSE when initial
 buffering is done. This could take some time.|
 
 **Returns**
@@ -14732,7 +14737,7 @@ buffering is done. This could take some time.|
 The status of the operation. This is zero in the case of success, or a non-zero NexPlayer™ error code in the
 case of failure.
  
-> **Note** This only indicates the success or failure of starting the operation. Even if this reports success, the operation may still fail later, asynchronously, in which case the application is notified in onAsyncCmdComplete.
+> **Note** This only indicates the success or failure ofstartingthe operation. Even if this reports success, the operation may still fail later, asynchronously, in which case the application is notified inonAsyncCmdComplete.
  
 #### int stop ()
 
@@ -14742,13 +14747,13 @@ This function stops the current playback.
 
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
 
-#### native int timeBackward (int skiptime)
+#### native int timeBackward(int skiptime)
 
 Timeshift interface; not available in current version.
 
 > **Deprecated** Not available in current version; do not use.
 
-#### native int timeForward (int skiptime)
+#### native int timeForward(int skiptime)
 
 Timeshift interface; not available in current version.
 
@@ -14766,7 +14771,7 @@ Timeshift interface; not available in current version.
 
 > **Deprecated** Not available in current version; do not use.
 
-#### native int timeStart (String AudioFile, String VideoFile, int maxtime, int maxfilesize)
+5.91.3.129 native int timeStart(String AudioFile,String VideoFile,int maxtime,int maxfilesize)
 
 Timeshift interface; not available in current version.
 
@@ -14778,7 +14783,7 @@ Timeshift interface; not available in current version.
 
 > **Deprecated** Not available in current version; do not use.
 
-#### void videoOnOff (boolean bOn)
+#### void videoOnOff(boolean bOn)
 
 This method turns video rendering on or off.
 
@@ -14792,11 +14797,11 @@ If video rendering is turned off, any existing frame will remain on the display.
 |---|---| 
 |bOn| TRUE to render video, FALSE to turn off video rendering.|
  
-#### native int videoOnOff (int bOn, int bErase)
+#### native int videoOnOff(int bOn,int bErase)
 
 This method turns video rendering on or off.
 
-> **Warning** This method is deprecated. Use of video OnOff(boolean) is recommended over of this function.
+> **Warning** This method is deprecated. Use of videoOnOff(boolean) is recommended over of this function.
  
 > **Deprecated** Use `videoOnOff(boolean)` instead of this method.
 
@@ -14810,7 +14815,7 @@ should not be used.|
  
 **Returns**
  
-Always zero, the return value should be ignored.
+Always zero, but may change in future versions; the return value should be ignored.
  
 
 #### final int AVAILBITRATES\_HIGH = 0x00000003 [static]
@@ -14987,7 +14992,7 @@ Possible value for command parameter of onAsyncCmdComplete.
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-> **Deprecated**
+> **Deprecated** Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_ASYNC\_CMD\_PAUSE = 0x00000009 [static]
 
@@ -14997,25 +15002,25 @@ Possible value for command parameter of onAsyncCmdComplete.
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-> **Deprecated**
+> **Deprecated** Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_ASYNC\_CMD\_RECORD\_RESUME = 0x0000001D [static]
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-> **Deprecated**
+> **Deprecated** Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_ASYNC\_CMD\_RECORD\_START = 0x0000001A [static]
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-> **Deprecated**
+> **Deprecated** Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_ASYNC\_CMD\_RECORD\_STOP = 0x0000001B [static]
 
 Possible value forcommandparameter of onAsyncCmdComplete.
 
-> **Deprecated**
+> **Deprecated** Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_ASYNC\_CMD\_REINITVIDEO = 0x00000013 [static]
 
@@ -15059,13 +15064,13 @@ Possible value for command parameter of onAsyncCmdComplete.
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-> **Deprecated** 
+Deprecated Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_ASYNC\_CMD\_STEP\_SEEK = 0x0000000C [static]
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-> **Deprecated** 
+Deprecated Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_ASYNC\_CMD\_STOP = 0x00000008 [static]
 
@@ -15075,37 +15080,37 @@ Possible value for command parameter of onAsyncCmdComplete.
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-> **Deprecated** 
+> **Deprecated** Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_ASYNC\_CMD\_TIMESHIFT\_CREATE = 0x00000021 [static]
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-> **Deprecated** 
+> **Deprecated** Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_ASYNC\_CMD\_TIMESHIFT\_DESTROY = 0x00000022 [static]
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-> **Deprecated** 
+> **Deprecated** Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_ASYNC\_CMD\_TIMESHIFT\_FORWARD = 0x00000025 [static]
 
 Possible value forcommandparameter of `onAsyncCmdComplete`.
 
-> **Deprecated** 
+> **Deprecated** Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_ASYNC\_CMD\_TIMESHIFT\_PAUSE = 0x00000023 [static]
 
 Possible value for command parameter of `onAsyncCmdComplete`.
 
-> **Deprecated** 
+> **Deprecated** Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_ASYNC\_CMD\_TIMESHIFT\_RESUME = 0x00000024 [static]
 
 Possible value for command parameter of `onAsyncCmdComplete`.
 
-> **Deprecated** 
+> **Deprecated** Experimental; may or may not be present in future versions.
 
 #### final int NEXPLAYER\_SIGNAL\_STATUS\_NORMAL = 0 [static]
 
@@ -15272,7 +15277,7 @@ See that method for details.
 
 #### int RTSP\_METHOD\_DESCRIBE = 0x00000001 [static]
 
-This is a possible value for the methods parameter of addRTSPHeaderFields.
+This is a possible value for themethodsparameter of addRTSPHeaderFields.
 
 See that method for details.
 
@@ -15357,9 +15362,9 @@ If LANGUAGE is specified, this attribute must be included in a human-readable fo
 - `static final int **SOUND\_EFFECT\_HEAD\_TRACKING** = 0x04`
 - `static final int **SOUND\_EFFECT\_3DAUDIO\_SOLUTION01** = 0x08`
 
-#### int InstallSoundEffectLicenseFile (String licenseFilePath)
+#### int InstallSoundEffectLicenseFile ( String licenseFilePath )
 
-This method sets the license FilePath.
+This method sets the licenseFilePath.
 
 It is only supported with the SOUND\_EFFECT\_HEAD\_TRACKING option.
 
@@ -15369,7 +15374,7 @@ It is only supported with the SOUND\_EFFECT\_HEAD\_TRACKING option.
 |-----------------|------|
 | licenseFilePath | Path to the license file |
  
-#### int InstallSoundEffectLicenseKeyData (byte[ ] licenseKeyData)
+#### int InstallSoundEffectLicenseKeyData ( byte[ ] licenseKeyData )
 
 This method sets the LicenseKeyData.
 
@@ -15381,7 +15386,7 @@ It is only supported with the SOUND\_EFFECT\_HEAD\_TRACKING option.
 |-----------------|------|
 | licenseFilePath | Key data in the license file |
  
-#### int setSoundEffectEuler (float fAzimuth, float fElevation)
+#### int setSoundEffectEuler ( float fAzimuth, float fElevation )
 
 This method sets the fAzimuth and fElevation euler angles.
 
@@ -15394,7 +15399,7 @@ It is only supported with the SOUND\_EFFECT\_HEAD\_TRACKING option.
 | fAzimuth | The fAzimuth is azimuth (float, in degrees). |
 | fElevation | The fElevation value is elevation (float, in degrees). |
  
-#### int setSoundEffectEuler (float pitch, float yaw, float roll)
+#### int setSoundEffectEuler ( float pitch, float yaw, float roll )
 
 This method sets the pitch, yaw and roll euler angles.
 
@@ -15409,7 +15414,7 @@ It is only supported with the SOUND\_EFFECT\_3DAUDIO\_SOLUTION01 option.
 | roll | The roll value is roll degrees around the z axis. |
 
  
-#### int setSoundEffectOutputChannel (int numChannels)
+#### int setSoundEffectOutputChannel ( int numChannels )
 
 This method sets the OutputChannel.
 
@@ -15421,7 +15426,7 @@ It is only supported with the SOUND\_EFFECT\_HEAD\_TRACKING option.
 |-----------------|------|
 | numChannels | The numChannels is channel number of output. |
  
-#### int setSoundEffectPositionAngle (float x, float y, float z, float angle)
+#### int setSoundEffectPositionAngle ( float x, float y, float z, float angle )
 
 This method sets the Position Vector and Angle.
 
@@ -15434,14 +15439,15 @@ It is only supported with the SOUND\_EFFECT\_3DAUDIO\_SOLUTION01 option.
 | x | The z position that represents a vector or point in 3D space. |
 | y | The y position that represents a vector or point in 3D space. |
 | z | The z position that represents a vector or point in 3D space. |
-| angle | The angle rotating degrees about axis (x or y or z). |
+| angle | The angle rotating degrees about axis(x or y or z). |
 
  
-#### int setSoundEffectQuaternion (float w, float x, float y, float z)
+#### int setSoundEffectQuaternion ( float w, float x, float y, float z )
 
 This method sets the quaternion value.
 
-It is only supported with the SOUND\_EFFECT\_3DAUDIO\_SOLUTION01 or the SOUND\_EFFECT-HEAD\_TRACK-ING option.
+It is only supported with the SOUND\_EFFECT\_3DAUDIO\_SOLUTION01 or the SOUND\_EFFECT-HEAD\_TRACK-
+ING option.
 
 **Parameters**
 
@@ -15462,9 +15468,10 @@ To monitor HLS, DASH or SS playback statistics, after NexPlayer™ is created an
 
 1. First, create an instance of this NexStatisticsMonitor class,
 2. Next, set a listener to receive the events reporting statistics information with IStatisticsListener,
-3. Lastly, if desired, the time interval at which statistics are monitored can be changed with calls to setDuration.
+3. lastly, if desired, the time interval at which statistics are monitored can be changed with calls to setDuration.
 
-Depending on what information about playback is needed, different statistics can be retrieved from NexPlayer™, including general playback statistics (GeneralStatisticsMetric), statistics when initializing content (InitialStatisticsMetric), HTTP statistics (HttpStatisticsMetric), and system statistics during playback (SystemStatisticsMetric).
+Depending on what information about playback is needed, different statistics can be retrieved from NexPlayer™, including general playback statistics (GeneralStatisticsMetric), statistics when initializing content (InitialStatisticsMetric), HTTP statistics(HttpStatisticsMetric), and system statistics dur-
+ing playback (SystemStatisticsMetric).
 
 The available statistics are briefly summarized in the table below:
 
@@ -15779,7 +15786,7 @@ mMonitor.setDuration(NexStatisticsMonitor.SystemStatistic, seconds);
     or SS content in NexPlayer™.
 - `interface IStatistics`
 
-    This interface defines a set of statistics to be received from NexPlayer™ about HLS, DASH or SS playback.
+    This interface defines a set of statistics to be received fromNexPlayer™ aboutHLS, DASH or SS playback.
 - `interface IStatisticsListener`
 
     This interface defines the listener that will be used to receive statistics related to playback.
@@ -15788,33 +15795,33 @@ mMonitor.setDuration(NexStatisticsMonitor.SystemStatistic, seconds);
     An enumeration defining the possible types of HLS, DASH or SS media can be played by NexPlayer™.
 - `enum StatisticsError`
 
-    An enumeration of the statistics-related errors possible when using the NexStatisticsMonitor.
+    An enumeration of the statistics-related errors possible when using theNexStatisticsMonitor.
 - `enum SystemStatisticsMetric`
 
     This is an enumeration of the possible system statistics that can be requested during playback of HLS, DASH or SS
     content in NexPlayer™.
 
 
-#### NexStatisticsMonitor (NexPlayer np)
+#### NexStatisticsMonitor( NexPlayer np )
 
-Defines the NexStatisticsMonitor module that an application can use to retrieve statistics about playback
+Defines theNexStatisticsMonitormodule that an application can use to retrieve statistics about playback
 of HLS, DASH or SS content in NexPlayer™.
 
 **Parameters**
 
 | Name            | Description              |
 |-----------------|------|
-| np | The NexPlayer instance that the statistics monitor will receive events from. |
+| np | TheNexPlayerinstance that the statistics monitor will receive events from. |
  
 
 
-#### StatisticsError setDuration (int statisticsType, double seconds)
+#### StatisticsErrorsetDuration ( int statisticsType, double seconds )
 
 This method sets the interval of time at which playback statistics will be reported and sent (for HLS, DASH or SS
 content only).
 
 After a statistics listener has been set, this method can be called to change the interval at which general playback
-and system statistics are monitored at any time before starting playback.
+and system statistics are monitored at any timebeforestarting playback.
 
 The default interval of time for monitoring general and system statistics during HLS, DASH or SS playback is 5000
 ms or 5 seconds.
@@ -15826,7 +15833,7 @@ ms or 5 seconds.
 | Name            | Description              |
 |-----------------|------|
 | statisticsType | statisticsType The type of statistics to be retrieved at the interval set here. This should be STATISTICS\_GENERAL for general playback statistics or STATISTICS\_SYSTEM for monitoring system statistics during playback. |
-| seconds| The interval at which statistics will be monitored, in seconds, as a double.              |
+| seconds            | The interval at which statistics will be monitored, in seconds, as a double.              |
  
 **Returns**
 
@@ -15839,7 +15846,7 @@ if successful or the relevant NexStatistics error code (for example, RETURN\_ERR
 - SystemStatistics
 - StatisticsErrror
  
-#### void setListener (IStatisticsListener listener)
+#### void setListener ( IStatisticsListener listener )
 
 This method sets a listener to receive statistics events about HLS, DASH or SS playback in NexPlayer™.
 
@@ -15859,7 +15866,7 @@ begins.
  
 #### final int STATISTICS\_GENERAL = 0 [static]
 
-A possible argument value for the parameter statistics Type in the onUpdated() and setDuration()
+A possible argument value for the parameterstatisticsTypein the onUpdated() and setDuration()
  methods for the type of statistics being requested and received, for general playback statistics.
 
 #### final int STATISTICS\_HTTP = 2 [static]
@@ -15930,7 +15937,7 @@ A possible argument value for the parameter statisticsType in the onUpdated() an
 
 
 
-#### static JSONObject parseJSONObject (FileDescriptor storedInfoFD) [static]
+#### static JSONObject parseJSONObject ( FileDescriptor storedInfoFD ) [static]
 
 This method parses the store info file as JSONObject.
 
@@ -15944,7 +15951,7 @@ This method parses the store info file as JSONObject.
  
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
  
-#### static JSONObject parseJSONObject (File storedInfoFile) [static]
+#### static JSONObject parseJSONObject ( File storedInfoFile ) [static]
 
 This method parses the store info file as JSONObject.
 
@@ -15964,11 +15971,12 @@ This class provides information on a content stream.
 
 Content streams are listed in the mArrStreamInformation member of NexContentInformation. See there for details.
  
-#### NexStreamInformation (int iID, int iType, int currCustomAttrId, int currTrackId, int isIFrameTrack, int isDisabled, NexID3TagText name, NexID3TagText language, String strInStreamID, int representCodecType)
+#### NexStreamInformation( int iID, int iType, int currCustomAttrId, int currTrackId, int isIFrameTrack, int isDisabled, NexID3TagText name, NexID3TagText language, String strInStreamID, int representCodecType)
 
 This is the sole constructor for NexStreamInformation.
 
-The parameters match the members of the class one-to-one. Generally, it is not necessary to call the constructor; rather, objects of this class are created by NexPlayer™ internally and made available through mArrStreamInformation.
+The parameters match the members of the class one-to-one. Generally, it is not necessary to call the constructor; rather, objects of this class are created by NexPlayer™ internally and made available through mArrStream-
+Information.
 
 **Parameters**
 
@@ -15997,7 +16005,8 @@ This may be an empty array for formats that don’t have track information.
 The ID of the custom attribute within this stream that is currently active, or -1 if no custom attribute in this stream is
 currently active.
 
-This ID matches a value in NexCustomAttribInformation[].mID. If the NexCustomAttribInformation array is empty, this value is undefined.
+This ID matches a value in NexCustomAttribInformation[].mID. If the NexCustomAttrib-
+Information array is empty, this value is undefined.
 
 #### int mCurrTrackID
 
@@ -16058,7 +16067,7 @@ among different alternative streams).
 
 The type of codec available in the stream.
 
-it will be set to 0 until the stream is downloaded. If this is for CEA 608/708 captions embedded in the content, it will
+It will be set to 0 until the stream is downloaded. If this is for CEA 608/708 captions embedded in the content, it will
 be represented as NexContentInformation.NEX\_TEXT\_CEA.
 
 #### int mTrackCount
@@ -16403,8 +16412,8 @@ This class allows NexPlayer™ to handle thumbnail information in content.
 Follow the steps below in order to use the NexThumbnail class:
 
 1. Init() : Initializes the thumbnail instance.
-2. getInfo() : Gets the content information(original width, hight, pitch, rotation info).
-3. getData() : Gets the thumbnail output data, where choice of output image type(RGB565, RGB888...) should
+2. getInfo() : Gets the content information (original width, hight, pitch, rotation info).
+3. getData() : Gets the thumbnail output data, where choice of output image type (RGB565, RGB888...) should
     be made.
 4. Deinit() : Releases the thumbnail instance.
 
@@ -16603,7 +16612,7 @@ This may be any of the following values:
 
 The ID of the track.
 
-This is an arbitrary value, not an index, but can be matched to the currently playing track as indicated by mCurrTrackID. second parameter of the setMediaTrack.
+This is an arbitrary value, not an index, but can be matched to the currently playing track as indicated by mCurrTrackID. Second parameter of the setMediaTrack.
 
 #### int mType
 
@@ -16616,7 +16625,7 @@ This indicates the type of track:
 
 #### int mValid
 
-Indicates if this track is valid (that is, if the codecs, bit rates, and so on are supported by NexPlayer™).
+Indicates if this track is valid (that is, if the codecs, bitrates, and so on are supported by NexPlayer™).
 
 - `0` : Unsupported or invalid track
 - `1` : Valid and supported track
@@ -17014,7 +17023,7 @@ classes so that the developer can play the media content by only using a NexVide
 
 - `interface OnBufferingUpdateListener`
 
-    The application must implement this interface in order to receive buffering events fromNexVideoView.
+    The application must implement this interface in order to receive buffering events from NexVideoView.
 - `interface OnCompletionListener`
 
     The application must implement this interface in order to receiveNexVideoViewevents when playback is successful up to the end of the content.
@@ -17030,40 +17039,40 @@ classes so that the developer can play the media content by only using a NexVide
     The application must implement this interface in order to receive error events fromNexVideoView.
 - `interface OnExternalSubtitleChangedListener`
 
-    The application must implement this interface in order to receiveonExternalSubtitleChangedevents from
+    The application must implement this interface in order to receive onExternalSubtitleChanged events from
     NexVideoView.
 - `interface OnFastPlayListener`
 
-    The application must implement this interface in order to receivefastPlayrelated events fromNexVideoView.
+    The application must implement this interface in order to receive fast Play related events from NexVideoView.
 - `interface OnInfoListener`
 
-    This interface transfer updatedNexContentInformationto the application.
+    This interface transfer updated NexContentInformation to the application.
     
 - `interface OnMediaStreamChangedListener`
 
-    The application must implement this interface in order to receiveonMediaStreamChangedevents from NexVideoView.
+    The application must implement this interface in order to receive onMediaStreamChanged events from NexVideoView.
 - `interface OnPauseCompleteListener`
 
-    The application must implement this interface in order to receiveonPauseCompleteevents fromNexVideoView.
+    The application must implement this interface in order to receive onPauseComplete events from NexVideoView.
 - `interface OnPreparedListener`
 
-    The application must implement this interface in order to receiveNexVideoViewevents when NexPlayer™ is ready
+    The application must implement this interface in order to receive NexVideoView events when NexPlayer™ is ready
     for the playback.
 - `interface OnResumeCompleteListener`
 
-    The application must implement this interface in order to receiveonResumeCompleteevents fromNexVideoView.
+    The application must implement this interface in order to receive onResumeComplete events from NexVideoView.
 - `interface OnSeekCompleteListener`
 
-    The application must implement this interface in order to receive events fromNexVideoViewwhenseekis successful.
+    The application must implement this interface in order to receive events from NexVideoView when seek is successful.
 - `interface OnStartCompleteListener`
 
-    The application must implement this interface in order to receive onstartComplete events fromNexVideoView.
+    The application must implement this interface in order to receive onstartComplete events from NexVideoView.
 - `interface OnStopCompleteListener`
 
-    The application must implement this interface in order to receive onStopComplete events fromNexVideoView.
+    The application must implement this interface in order to receive onStopComplete events from NexVideoView.
 - `interface OnTimedMetaRenderRenderListener`
 
-    The application must implement this interface in order to receive TimedMeta events fromNexVideoView.
+    The application must implement this interface in order to receive TimedMeta events from NexVideoView.
 - `interface OnTimeUpdateListener`
 - `enum ScalingMode`
 
@@ -17171,8 +17180,8 @@ This method operates asynchronously, and when fastPlayStart has successfully com
 
 | Name   | Description                                                                                                                                                   |
 |--------|---------------|
-|msec | The time in the content at which to startfastPlay, inmilliseconds. | 
-|rate | The speed at which the video will play infastPlaymode. This speed is indicated by any
+|msec | The time in the content at which to start fastPlay, in milliseconds. | 
+|rate | The speed at which the video will play in fastPlay mode. This speed is indicated by any
 float value (but NOT zero), where negative values rewind the video at faster than normal
 playback speed and positive values play the video faster than normal (like fast forward). For
 example: - rate = 3.0 (fastPlay plays video at 3x normal speed) - rate = - 2.0 (fastPlay rewinds
@@ -17190,12 +17199,12 @@ Zero for success, or a non-zero NexPlayer™ error code in the event of a failur
 
 #### int fastPlayStop ( boolean bResume )
 
-This method turns off thefastPlayfeature in HLS content.
+This method turns off the fastPlay feature in HLS content.
 
-Once the fastPlay feature has been activated by calling fastPlayStart, this method must be called in order
+Once the fastPlay feature has been activated by calling fastPlay Start, this method must be called in order
 to stop fastPlay.
 
-This method operates asynchronously, and when fastPlayStop has successfully completed, and if OnFastPlayListener is registered on NexVideoView, an onFastPlayStop event will be called.
+This method operates asynchronously, and when fastPlay Stop has successfully completed, and if OnFastPlayListener is registered on NexVideoView, an onFastPlayStop event will be called.
 
 **Parameters**
 
@@ -17213,7 +17222,7 @@ Zero for success, or a non-zero NexPlayer™ error code in the event of a failur
 This method gets an object of the NexABRController.
 
 To use any specific feature provided by the NexABRController, use this method to call desired API to the
-NexABRControllerobject.
+NexABRController object.
 
 **Returns**
 
@@ -17244,7 +17253,7 @@ The percentage of buffered data.
  
 #### NexCaptionPaintergetCaptionPainter ( )
 
-This method gets an object of theNexCaptionPainter.
+This method gets an object of the  NexCaptionPainter.
 
 To use any specific feature provided by the NexCaptionPainter, use this method to call desired API to the NexCaptionPainter object.
 
@@ -17651,7 +17660,7 @@ This method registers a callback to be invoked when new timed metadata is ready 
 
 This method sets the value of an individual properties of the NexPlayer™.
 
-It’s recommended to call this method after getting theonConfigurationcallback by registering OnConfigurationListener on NexVideoView. We can not guarantee what result the NexPlayer™ will
+It’s recommended to call this method after getting the OnConfigurationcallback by registering OnConfigurationListener on NexVideoView. We can not guarantee what result the NexPlayer™ will
 return if this method is called at different state.
 
 **Parameters**
@@ -17712,7 +17721,7 @@ This method operates asynchronously, and when setVideoPath has successfully comp
 when error occurs, and if OnErrorListener is registered on NexVideoView, an onError event will be
 called.
 
-> **Note** To change the setting value ofNexvideoView,setSettingsshould be called before calling this method.
+> **Note** To change the setting value of NexvideoView, setSettings should be called before calling this method.
 
 **Parameters**
 
@@ -17728,7 +17737,7 @@ This method operates asynchronously, and when setVideoPath has successfully comp
 when error occurs, and if OnErrorListener is registered on NexVideoView, an onError event will be
 called.
 
-> **Note** To change the setting value ofNexvideoView,setSettingsshould be called before calling this method.
+> **Note** To change the setting value of NexvideoView, setSettings should be called before calling this method.
  
 **Parameters**
 
@@ -17969,10 +17978,10 @@ An event will occur when NexContentInformation is being updated.
 
 ### NexVideoView.OnMediaStreamChangedListener Interface Reference
 
-The application must implement this interface in order to receiveonMediaStreamChangedevents fromNex-
+The application must implement this interface in order to receive onMediaStreamChanged events from Nex-
 VideoView.
 
-> **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from withinIListenercallbacks. The safest way to update the UI is to use android.os.Handler to post an event back to the main application thread.
+> **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from within IListener callbacks. The safest way to update the UI is to use android.os.Handler to post an event back to the main application thread.
   
 #### void onMediaStreamChanged (NexPlayermp,intresult,intstreamType,intstreamID)
 
