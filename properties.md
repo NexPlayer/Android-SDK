@@ -349,7 +349,7 @@ This makes sure that the currently playing track is not switched to another one 
 
 Enables NexPlayer to deliver SEI (Supplemental Enhancement Information) in H.264 content to the application.
 
-When this property is set equal to 1 (enabled) and H.264 content includes SEI, NexPlayer delivers SEI picturetiming information through the onPictureTimingInfo method.
+When this property is set equal to 1 (enabled) and H.264 content includes SEI, NexPlayer delivers SEI picture timing information through the onPictureTimingInfo method.
 
 **Type:** unsigned int
 
