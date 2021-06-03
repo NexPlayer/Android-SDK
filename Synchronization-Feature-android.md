@@ -1,10 +1,8 @@
-# Enabling Synchronization Feature on Android
+# Enabling Video Synchronization Feature
 
 ## What is Nexplayer's synchronization feature?
 
-NexPlayer synchronization feature technology allows you to play a video stream synchronously
-on different devices using the DASH SPD value. This is also possible for HLS
-streams by controlling the SPD value from the client-side.
+NexPlayer synchronization feature technology allows you to sync the video arrival and play/stream video synchronously across different devices using the DASH SPD value. This is also possible for HLS streams by controlling the SPD value from the client-side.
 
 ## How to enable synchronization feature in the sample application
 
@@ -20,11 +18,11 @@ Here we have several fields that depending on our needs we will have to configur
 
 - *Note:* The other fields will be enabled when you enable the SPD option.
 
-**SPD Delay Time:** value between 500.0 ms and 20,000.0ms (default 2000.0ms).
+**SPD Delay Time:** Value between 500.0 ms and 20,000.0ms (default 2000.0ms).
 
-**SPD Sync Range:** value between 100.0 ms and 2000.0ms (default 300.0ms).
+**SPD Sync Range:** Value between 100.0 ms and 2000.0ms (default 300.0ms).
 
-**SPD Too Much Difference Time:** value between 2000.0and 10,000.0 ms (default
+**SPD Too Much Difference Time:** Value between 2000.0and 10,000.0 ms (default
 5000.0ms).
 
 **Sync to Device UTC:** Enable or disable. This field takes as reference the UTC time
