@@ -2,7 +2,7 @@
 
 ## What is Nexplayer's synchronization feature?
 
-NexPlayer synchronization feature technology allows you to sync the video arrival and play/stream video synchronously across different devices using the DASH SPD value. This is also possible for HLS streams by controlling the SPD value from the client-side.
+NexPlayer synchronization feature technology allows you to sync the video arrival and stream video synchronously across different devices using the DASH SPD value. This is also possible for HLS streams by controlling the SPD value from the client-side.
 
 ## How to enable synchronization feature in the sample application
 
@@ -95,8 +95,7 @@ Values:
 
 #### SET_SPD_SYNC_DIFF_TIME
 
-If the current playback is not more synchronized than this value, the player will speed
-up playback and make sync.
+If the current playback desynchronizes from the value, the player will slow down or speed up in order to re-synchronize.
 
 ```java
 mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_SYNC_DIFF_TIME, 100);
