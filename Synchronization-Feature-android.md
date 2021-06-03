@@ -42,7 +42,7 @@ Synchronization feature is highly dependent on the internet speed and the config
 
 - Only works with live content.
 - Device time should be adjusted correctly, incorrect device time or setting it
-manually might break the logic. This can be handledby using server time but
+manually might break the logic. This can be handled by using server time but
 the synchronisation won’t be precise as device time as server time is given in
 seconds, not in milliseconds as device time.
 - Setting a very low SPD value for the stream might affect smooth playback
