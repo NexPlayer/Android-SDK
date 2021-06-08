@@ -3266,10 +3266,6 @@ This must be called `after` `NexALFactory.init` has been called.
 
 Zero if successful, or a non-zero error code.
   
-#### void setCodecDownloadListener (ICodecDownListener listener)
-
->**Warning** This method is for internal NexStreaming usage only. Please do not use.
-
  
 ### NexALFactory.NexALFactoryErrorCode Enum Reference
 
@@ -5585,13 +5581,6 @@ This indicates the underline string style.
 
 
 - NexCaptionSetting.StringStyle
-
-
-### NexCaptionTextView Class Reference
-
-This class is used internally to manage captions.
-
-Please do not use. The other caption-related classes in NexPlayer™ should be used instead.
 
 
 **Classes**
@@ -14289,11 +14278,7 @@ Normally, setProperty should be used instead of this method. Use this methodonly
 
  
 Zero if the property was set successfully; non-zero if there was an error.
- 
-#### native int setProperties(int property, byte[] value)
-
-> **Note** For internal NexStreaming use only. Please do not use.
- 
+  
 #### int setProperty(NexProperty property,int value)
 
 Sets the value of an individual NexPlayer™ property.
