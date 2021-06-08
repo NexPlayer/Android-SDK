@@ -285,11 +285,6 @@ Widevine DRM applied content must receive the key required for descrambling from
 
 - `IWVDrmListener m_listener`
 
-#### native void enableWVDRMLogs ( boolean enable )
-
-For internal use only.
-
-Please do not use.
 
 #### int initDRMManager ( String strEnginePath, String strFilePath, String   strKeyServerURL, int offlineMode )
 
@@ -349,17 +344,6 @@ int offlineMode = 0;
 nexWVDRM.initDRMManagerMulti(mNexPlayer, strEngineLibName, strFilePath, strKeyServerURL, offlineMode);
 ```
 
-#### native void processCdmResponse ( byte[] response, long cach )
-
-For internal use only.
-
-Please do not use.
-
-#### native void releaseDRMManager ( )
-
-For internal use only.
-
-Please do not use.
 
 #### void setLicenseRequestListener ( INexDRMLicenseListener listener )
 
@@ -479,10 +463,3 @@ optionalHeaders.put(key2, value2);
 
 nexWVDRM.setNexWVDrmOptionalHeaderFields(optionalHeaders);
 ```
-
-#### native void setProperties ( int properties, int value )
-
-For internal use only.
-
-Please do not use.
-
