@@ -1035,7 +1035,7 @@ In most cases, the handling of these events is optional; NexPlayer™ will conti
  
 
 
-#### abstract void onMinMaxBandWidthChanged (NexErrorCode result, int minBwBps,  int maxBwBps) [abstract]
+#### void onMinMaxBandWidthChanged (NexErrorCode result, int minBwBps,  int maxBwBps) 
 
 This method will be called by the NexABRController when either the minimum or maximum bandwith allowed
 for streaming content is changed.
@@ -1054,7 +1054,7 @@ for streaming content is changed.
 - changeMaxBandWidth()
 - changeMinBandWidth()
  
-#### abstract void onTargetBandWidthChanged (NexErrorCode result, int reqBwBps, int selBwBps) [abstract]
+#### void onTargetBandWidthChanged (NexErrorCode result, int reqBwBps, int selBwBps)
 
 This method will be called by the NexABRController when the target bandwidth for streaming content is
 changed.
