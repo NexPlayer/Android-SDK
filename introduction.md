@@ -13,6 +13,8 @@ intellectual property licenses required for actual application. NexStreaming Cor
 Copyright for all documents, drawings and programs related with this specification are owned by NexStreaming
 Corp. All or any part of the specification shall not be reproduced nor distributed without prior written approval by NexStreaming Corp. Content and configuration of all or any part of the specification shall not be modified nor distributed without prior written approval by NexStreaming Corp.
 
+© Copyright 2010-2020 NexPlayer. All rights reserved.
+
 ### NexPlayer™ Capabilities and Limitations
 
 #### Operating Systems
