@@ -1460,10 +1460,6 @@ Controls whether or not the player honors cookies sent by the server.
 - **0:** Ignore HTTP cookie headers sent by the server.
 - **1:** Cookie headers received from a streaming server along with the initial manifest or playlist are included with further HTTP requests during the session.
 
-### SET_DURATION\_OF\_UPDATE\_CONTENT\_INFO (501)
-
-For internal use only. This should be otherwise ignored.
-
 ### SET_LIVEBACKOFF (504)
 
 Sets the SmoothStreamingLiveBackOffproperty when playing Smooth Streaming content.
