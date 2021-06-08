@@ -12,9 +12,6 @@ Initializes and registers the **AsfPlayReadyDRMManager**.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initDRMManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
-
-Internal use only. Please do not use.
 
 ### NexLogsToFile.Builder Class Reference
 
@@ -311,9 +308,6 @@ This method gets the text color of CEA 708 closed captions as an ARGB color.
 - static native int initDRMManager (String strEngineLibName)
 - static native int initDRMManagerMulti (Object nexPlayerHandle, String strEngineLibName)
 
-### DeceUVDRMManager Class Reference
-
-> **Deprecated** For internal use only. Please do not use.
 
 #### static native int initDRMManager (String strEngineLibName) [static]
 
@@ -325,13 +319,6 @@ Initializes and registers the **DeceUVDRMManager**.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initDRMManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
-
-Internal use only. Please do not use.
-
-### DRMManager Class Reference
-
-> **Deprecated** For internal use only. Please do not use.
 
 #### static native int initDRMManager (String strEngineLibName) [static]
 
