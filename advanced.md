@@ -330,10 +330,6 @@ Initializes and registers DRMManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initDRMManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
-
-Internal use only. Please do not use.
-
 ### NexCaptionSetting.EdgeStyle Enum Reference
 
 This enumeration defines the caption edge style.
@@ -657,12 +653,6 @@ The current play time in seconds, as along.
 
 This is the same as the count of NEXPLAYER\_EVENT\_TIME.
 
-### GetHttpAuthInfoManager Class Reference
-
-**Deprecated** For internal use only. Please do not use.
-
-
-
 #### static native int initManager (String strEngineLibName) [static]
 
 Initializes and registers the GetHttpAuthInfoManager.
@@ -673,16 +663,6 @@ Initializes and registers the GetHttpAuthInfoManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
-
-Internal use only. Please do not use.
-
-### GetKeyExtManager Class Reference
-
-> **Deprecated** For internal use only. Please do not use.
-
-
-
 #### static native int initManager (String strEngineLibName) [static]
 
 Initializes and registers the GetKeyExtManager.
@@ -693,16 +673,6 @@ Initializes and registers the GetKeyExtManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initManagerMulti ( Object nexPlayerHandle, String strEngineLibName) [static]
-
-Internal use only. Please do not use.
-
-### GetPDBlockManager Class Reference
-
-> **Deprecated** For internal use only. Please do not use.
-
-
-
 #### static native int initManager (String strEngineLibName) [static]
 
 Initializes and registers the GetPDBlockManager.
@@ -713,15 +683,6 @@ Initializes and registers the GetPDBlockManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
-
-Internal use only. Please do not use.
-
-### GetPlaylistInfoManager Class Reference
-
-> **Deprecated** For internal use only. Please do not use.
-
-
 #### static native int initManager (String strEngineLibName) [static]
 
 Initializes and registers the GetPlaylistInfoManager.
@@ -732,11 +693,7 @@ Initializes and registers the GetPlaylistInfoManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
-
-Internal use only. Please do not use.
-
-### GLRenderer Class Reference
+ ### GLRenderer Class Reference
 
 This is the view for displaying NexPlayer™ video output when using the OpenGL renderer.
 
@@ -799,13 +756,6 @@ The typical method of reinitializing the video renderer is to set this to true a
 glRenderer.mReInitRenderer = true;
 glRenderer.requestRender();
 ```
- 
-### HLSAES128DescrambleManager Class Reference
-
-> **Deprecated** For internal use only. Please do not use.
-
-
-
 #### static native int initManager (String strEngineLibName) [static]
 
 Initializes and registers the HLSAES128DescrambleManager.
@@ -816,10 +766,6 @@ Initializes and registers the HLSAES128DescrambleManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.| 
  
-#### static native int initManagerMulti (Object nexPlayerHandle, String strEngineLibName) [static]
-
-Internal use only. Please do not use.
-
 ### HLSTsDRMManager Class Reference
 
 This class allows NexPlayer™ to handle and descramble HLS TS encrypted content.
@@ -835,10 +781,6 @@ Initializes and registers the `HLSTsDRMManager`.
 | Name  | Description                                                                |
 |-------|----------------|
 | strEngineLibName | The relevant engine library name as a string. |
- 
-#### static native int initDRMManagerMulti (Object nexPlayerHandle,String strEngineLibName) [static]
-
-Internal use only. Please do not use.
 
 ### HTTPRetrieveDataManager Class Reference
 
@@ -854,10 +796,6 @@ Initializes and registers the `HTTPRetrieveDataManager`.
 |-------|----------------|
 | strEngineLibName | The relevant engine library name as a string. |
 | cachFolder | The folder to be used for the cache, as a string. |
- 
-#### static native int initManagerMulti (Object nexPlayerHandle, String strEngineLibName, String cachFolder) [static]
-
-Internal use only. Please do not use.
 
 ### NexStatisticsMonitor.HttpStatisticsMetric Enum Reference
 
@@ -1007,10 +945,6 @@ Initializes and registers the HTTPStoreDataManager.
 |-------|----------------|
 | cData | The caption data for the received line of text, as an array of characters. |
 | cachFolder     | The folder to be used for the cache, as a string.|
- 
-#### static native int initManagerMulti (Object nexPlayerHandle, String strEngineLibName, String cachFolder) [static]
-
-Internal use only. Please do not use.
 
 ### NexABRController.IABREventListener Interface Reference
 
@@ -1104,27 +1038,7 @@ This callback is called when NexPlayer meets `#EXT-X-KEY` tags while NexPlayer i
 If the DRM supports that key attribute, then it should return TRUE. Then, NexPlayer will call DRM callbacks
 depending on the encryption method. If the DRM does not support the key, then it should return FALSE.
 In this case, NexPlayer will not call the "getKeyFromExternal" callbacks and it will decrypt using its internal decryption function.
- 
-### NexALFactory.ICodecDownListener Interface Reference
-
-> **Warning** These methods are for internal usage only. Please do not use.
- 
-#### void onCodecDownloaderEventBegin (int param1, long param2)
-
-For internal use only. Please do not use.
-
-#### void onCodecDownloaderEventComplete (int param1, int result )
-
-For internal use only. Please do not use.
-
-#### void onCodecDownloaderEventError (NexALFactoryErrorCode errorcode )
-
-For internal use only. Please do not use.
- 
-#### void onCodecDownloaderProgress (int param1, int param2, long param3, long param4)
-
-For internal use only. Please do not use.
- 
+  
 ### NexPlayer.IDynamicThumbnailListener Interface Reference
 
 This interface must be implemented in order for the application to receive Dynamic Thumbnail events from NexPlayer™.
@@ -2905,27 +2819,6 @@ This method can be used to check if the current content contains the specific me
  
 *TRUE* if the media indicated exists, or *FALSE* if it does not exist in the current content.
   
-### MPDDescrambleManager Class Reference
-
-This class allows `NexPlayer`™ to support and handle encrypted SmoothStreaming manifests or HLS playlists.
-
-`NexPlayer`™ implements this when it receives the manifest or top level of a playlist so that it may be decrypted if
-required.
-
-As illustrated in the sample code, this registers the MPDDescramble callback function to handle any necessary
-decryption of encrypted manifests or playlists.
-
-```java
-	MPDDescrambleManager drmManager = new MPDDescrambleManager();
-	String strEnginePath;
-	strEnginePath = "/data/data/com.nexstreaming.nexplayersample/lib/libnexplayerengine.so";
-	drmManager.initManager(strEnginePath);
-```
- 
-> **Deprecated** For internal use only. Please do not use.
-
-
-
 #### static native int initManager (String strEngineLibName) *[static]*
 
 Initializes and registers the `MPDDescrambleManager`.
@@ -2935,10 +2828,6 @@ Initializes and registers the `MPDDescrambleManager`.
 | Name             | Description                                   |
 |------------------|---------------------------|
 | strEngineLibName | The relevant engine library name as a string. |
- 
-#### static native int initManagerMulti (Object nexPlayerHandle,String strEngineLibName) *[static]*
-
-> Internal use only. Please do not use.
 
 ### NexNetAddrTable.NetAddrTableInfo Class Reference
 
