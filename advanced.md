@@ -9003,19 +9003,11 @@ The same command has been called already in the same state or the command is inv
 
 E.g. If an open API is called while processing an open API, the engine does not regard it as an error.
 
-#### HTTPDOWNLOADER_ERROR_EVENT_FULL = (0x00100000 + 9, NexErrorCategory.DOWNLOADER, "Http downloader event is full")
-
-**Deprecated** For internal use only. Please do not use.
-
 #### HTTPDOWNLOADER_ERROR_HAS_NO_EFFEECT = (0x00100000 + 7, NexErrorCategory.DOWNLOADER, "Http downloader - method has no effect")
 
 The user attempted to call the same method many times.
 
 All duplicates(except the first one) will be regarded as an error.
-
-#### HTTPDOWNLOADER_ERROR_WRITE_FAIL = (0x00100000 + 6, NexErrorCategory.DOWNLOADER, "Http downloader file writing failure")
-
-**Deprecated** For internal use only. Please do not use.
 
 #### INVALID_MEDIA = ( 0x00000007,NexErrorCategory.CONTENT_ERROR, "File contains invalid syntax")
 
@@ -10326,12 +10318,6 @@ Initializes and registers `NexHLSAES128DRMManager`.
 |------------------|---------|
 | strEngineLibName | The relevant engine library name as a *string*. |
 
-#### native int initDRMManagerMulti (Object nexPlayerHandle, String strEnginePath)
-
-For internal use only.
-
-Please do not use.
-
 #### void setAESCallbackListener (IAESCallbackListener listener)
 
 This method sets and registers a *IAESCallbackListener* listener.
@@ -10590,14 +10576,6 @@ A possible return value for `NexID3TagText.getEncodingType`.
 
 A possible return value for `NexID3TagText.getEncodingType`.
 
-### NexLog Class Reference
-
-API for sending log output.
-
-Generally, use the `NexLog.v() NexLog.d() NexLog.i() NexLog.w()` and `NexLog.e()` methods.
-
-> **Deprecated** For internal use only. Please do not use.
-
 #### static void d (String tag, String msg) *[static]*
 
 This method sends a DEBUG log message.
@@ -10677,31 +10655,6 @@ Runnable
 **Protected Member Functions**
 
 - void **finalize** () throws Throwable
-
-### NexLogStringQueue Class Reference
-
-**Classes**
-
-- `class CharUnit`
-    
-	This class defines a character unit in CEA 708 closed captions.
-
-
-**Public Attributes**
-
-- `CharUnit mCharAttr`
-
-**Static Public Attributes**
-
-- `static final int LOGSTRQ_MAX_LINE = 15`
-- `static final int LOGSTRQ_MAX_COUNT_IN_A_ROW = 42`
-
-**See Also**
- 
-- NexEIA708CaptionView
-- NexEIA708Struct
-  
-> **Deprecated** For internal use only. Please do not use.
 
 #### int GetHeight ()
 
@@ -12671,10 +12624,6 @@ Note that this method cannot be called until after initializing NexPlayer™ by 
 **Returns**
 
 Zero if successful, or an error code in the event of failure.
- 
-#### native int dummyAPI(int apiidx, String p1, String p2, String p3, String p4, String p5, String p6, String p7, String p8)
-
-For internal use only. Please do not use.
 
 #### native int enableDynamicThumbnail()
 
@@ -12782,10 +12731,6 @@ In order to reactivate the fastPlay feature after calling fastPlayStop, simply c
 
 Zero for success, or a non-zero NexPlayer™ error code in the event of a failure.
  
-#### native int forceCallDRMCallback (int index)
-
-For internal use only. Please do not use.
-
 #### native int getAudioSessionId()
 
 This method gets an audio session ID in order to use Android’s audio effects with NexPlayer™.
@@ -12973,10 +12918,6 @@ This method can be called at any time to check the current position.
 **Returns**
  
 The current play time position inmsec(milliseconds).
- 
-#### int getCurrentSoundEffect()
-
-For internal use only. Please do not use.
 
 #### String getDetailedError()
 
@@ -15193,33 +15134,6 @@ This is a possible value for methods parameter of addRTSPHeaderFields.
 
 See that method for details.
 
-
-### NexPlayer.NexRTStreamInformation Class Reference
-
-> **Note** For internal use only.
-
-**Protected Attributes**
-
-- String **mMasterMpd**
-- String **mMasterMpdUrl**
-- String **mInitialMpd**
-- String **mInitialMpdUrl**
-- String **mStartSegUrl**
-- long **mCurNetworkBw**
-- long **mCurTrackBw**
-- long **mNumOfRedirect**
-- long **mNumOfSegDownRate**
-- long **mNumOfSegFailToParse**
-- long **mNumOfSegInBuffer**
-- long **mNumOfSegReceived**
-- long **mNumOfSegFailToReceive**
-- long **mNumOfSegRequest**
-- long **mNumOfSegTimeout**
-- long **mNumOfTrackSwitchDown**
-- long **mNumOfTrackSwitchUp**
-- long **mNumOfBytesRecv** 
-
- 
 ### NexSessionData Class Reference
 
 #### String mValue
@@ -15907,15 +15821,6 @@ different alternative streams).
 For HLS content, this value is filled when the TYPE attribute is CLOSED-CAPTIONS. In this case, this value must
 be one of the following values: "CC1", "CC2", "CC3", "CC4" or "SERVICEn", where n must be an integer between
 1 and 63.
-
-#### int mIsDisabled
-
-This indicates whether a track is disabled or not.
-
-Tracks will be disabled if the content requires an unsupported codec (audio or video).
- 
-> **Note** This value should only be used for verification and should not be changed. This value is only for NexPlayer™’s
-internal use.
  
 #### int mIsIframeTrack
 
@@ -16279,38 +16184,6 @@ EGL Config setup.
 | hasDepth | |
 | hasStencil | |
  
-### NexThumbnail Class Reference
-
-The primary interface to the NexThumbnail class.
-
-This class allows NexPlayer™ to handle thumbnail information in content.
-
-Follow the steps below in order to use the NexThumbnail class:
-
-1. Init() : Initializes the thumbnail instance.
-2. getInfo() : Gets the content information (original width, hight, pitch, rotation info).
-3. getData() : Gets the thumbnail output data, where choice of output image type (RGB565, RGB888...) should
-    be made.
-4. Deinit() : Releases the thumbnail instance.
-
-> **Author** NexStreaming Corporation
- 
-> **Deprecated** For internal use only. Please do not use.
-**Classes**
-
-- `class ThumbnailInformation`
-
-**Public Attributes**
-
-- `int mNativeNexThumbnailClient` = 0
-
-**Static Public Attributes**
-
-- `static final int OUTPUT\_TYPE\_RGB565` = 4
-- `static final int OUTPUT\_TYPE\_RGB888` = 6
-
-
-
 #### native int GetIFrameCount ( int startTS )
 
 This method returns the I-Frame count.
@@ -16558,13 +16431,6 @@ Constructor for NexVideoRenderer.
 **See Also**
  
 - NexVideoRenderer.NexVideoRenderer(android.content.Context)
-
-
-#### void clearCanvas ( )
-
-This method requests that the NexVideoRenderer view display a blank canvas (black).
-
-> **Deprecated** For internal use only. Please do not use.
  
 #### int getColorDepth ( )
 
@@ -18013,14 +17879,6 @@ This method is called when new timed metadata is ready for display in HLS.
 
 - `void onTime (NexPlayer mp, int currTime)`
 
-### PiffPlayReadyDRMManager Class Reference
-
-This class allows NexPlayer™ to support and handle PIFF PlayReady encrypted content.
-
-NexPlayer™ implements this when it receives any PIFF PlayReady content so that it may be decrypted if required.
-
-> **Deprecated** For internal use only. Please do not use.
-
 #### static native int initDRMManager ( String strEngineLibName) [static]
 
 Initializes and registers the PiffPlayReadyDRMManager.
@@ -18031,10 +17889,6 @@ Initializes and registers the PiffPlayReadyDRMManager.
 |---|---|
 |strEngineLibName|The relevant engine library name as a string.|
  
-#### static native int initDRMManagerMulti (Object nexPlayerHandle,String strEngineLibName) [static]
-
-internal use only. Please do not use.
-
 ### NexPlayer.PROGRAM_TIME Class Reference
 
 This class handles the date and time information included in the #EXT-X-PROGRAM-DATE-TIME tag in HLS content.
@@ -18074,30 +17928,6 @@ This method sets the #EXT-X-PROGRAM-DATE-TIME tag for the current HLS content.
 - `void provisionRequired` (NexMediaDrmSession session)
 - `void onProvisionError` (Exception error)
 - `void onProvisionCompleted ()`
-
-### RegisterDLAPIExManager Class Reference
-
-> **Deprecated** For internal use only. Please do not use.
-
-#### static native int initDLAPIExManagerMulti (Object nexPlayerHandle,String strEngineLibName) *[static]*
-
-Internal use only. Please do not use.
-
-### remoteFileIOManager Class Reference
-
-**Static Public Member Functions**
-
-- `static native int registerRemoteFileIO (String strEngineLibName)`
-- `static native int registerRemoteFileIOMulti (Object nexPlayerHandle, String strEngineLibName)`
-    
-    internal use only.
-
-
-#### static native int registerRemoteFileIOMulti (Object nexPlayerHandle,String strEngineLibName) *[static]*
-
-internal use only.
-
-Please do not use.
 
 ### NexTextureView.Renderer Class Reference
 
@@ -18289,14 +18119,6 @@ This will be one of the following values :
 - `PixelFormat.RGBA_8888`
 - `PixelFormat.RGB_565`
 
-### SmoothStreamFragmentDRMManager Class Reference
-
-This class allows `NexPlayer`™ to support and handle Smooth Streaming fragment encrypted content.
-
-`NexPlayer`™ implements this when it receives any Smooth Streaming fragment content so that it may be decrypted if required.
-
-**Deprecated** For internal use only. Please do not use.
-
 #### static native int initDRMManager (String strEngineLibName) [static]
 
 Initializes and registers the `SmoothStreamFragmentDRMManager`.
@@ -18306,18 +18128,6 @@ Initializes and registers the `SmoothStreamFragmentDRMManager`.
 | Name             | Description                                   |
 |------------------|---------------------------|
 | strEngineLibName | The relevant engine library name as a string. |
-
-#### static native int initDRMManagerMulti (Object nexPlayerHandle,String strEngineLibName) [static]
-
-Internal use only. Please do not use.
-
-### SmoothStreamPiffDRMManager Class Reference
-
-This class allows `NexPlayer`™ to support and handle Smooth Streaming Piff encrypted content.
-
-`NexPlayer`™ implements this when it receives any Smooth Streaming Piff content so that it may be decrypted if required.
-
-**Deprecated** For internal use only. Please do not use.
 
 #### static native int initDRMManager (String strEngineLibName) *[static]*
 
@@ -18329,18 +18139,6 @@ Initializes and registers the `SmoothStreamPiffDRMManager`.
 |------------------|---------------------------|
 | strEngineLibName | The relevant engine library name as a string. |
 
-#### static native int initDRMManagerMulti (Object nexPlayerHandle,String strEngineLibName) *[static]*
-
-Internal use only. Please do not use.
-
-### SmoothStreamPlayReadyDRMManager Class Reference
-
-This class allows `NexPlayer`™ to support and handle Smooth Streaming PlayReady encrypted content.
-
-`NexPlayer`™ implements this when it receives any Smooth Streaming PlayReady content so that it may be decrypted if required.
-
-> **Deprecated** For internal use only. Please do not use.
-
 #### static native int initDRMManager (String strEngineLibName) *[static]*
 
 Initializes and registers the `SmoothStreamPlayReadyDRMManager`.
@@ -18350,12 +18148,6 @@ Initializes and registers the `SmoothStreamPlayReadyDRMManager`.
 | Name             | Description                                   |
 |------------------|---------------------------|
 | strEngineLibName | The relevant engine library name as a string. |
-
-#### static native int initDRMManagerMulti (Object nexPlayerHandle,String strEngineLibName) *[static]*
-
-internal use only.
-
-Please do not use.
 
 ### NexStatisticsMonitor.StatisticsError Enum Reference
 
