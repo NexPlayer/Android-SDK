@@ -284,3 +284,7 @@ Corp. All or any part of the specification shall not be reproduced nor distribut
 - NexPlayer360 SDK
 
 - NexPlayer Unity Plugin
+
+**All Android 1.6 and above phones and tablets are supported**
+
+**Dedicated API for DRM integration**
