@@ -473,7 +473,7 @@ If the value is less than availability start time in MPD, media not found will o
 
 Allows NexPlayer to switch to a lower bandwidth track if the resolution or bitrate of the current track is too high for the device to play smoothly.
 
-Under normal operation, NexPlayer switches tracks based solely on current network conditions. When this property is enabled, NexPlayer will also switch to a lower bandwith track if too many frames are skipped during playback.
+Under normal operation, NexPlayer switches tracks based solely on current network conditions. When this property is enabled, NexPlayer will also switch to a lower bandwidth track if too many frames are skipped during playback.
 
 This is useful for content that is targeted for a variety of devices, some of which may not be powerful enough to handle the higher quality streams.
  
@@ -646,7 +646,7 @@ See `TOO_MUCH_LOSTFRAME_DURATION` for details about the insertion of silence for
  
 ### IGNORE_AV\_SYNC (121)
 
-Whentrue(1), this property causes audio/video synchronization to be bypassed; not currently supported.
+When true(1), this property causes audio/video synchronization to be bypassed; not currently supported.
 
 In this state, audio and video are played back independently as soon as data is received.
 
@@ -685,7 +685,7 @@ If this property is enabled, NexPlayer will ignore those extra RU column reset c
 
 ### IGNORE_CEA608\_TEXTMODE\_COMMAND (514)
 
-Allows NexPlayer to ignore thetext modecommand in CEA608 closed captions.
+Allows NexPlayer to ignore the text mode command in CEA608 closed captions.
 
 This property may be useful in cases where CEA 608 closed captions have been implemented in ways other than strictly following the standard specifications which include extra text mode commands. It allows NexPlayer to properly display those alternatively implemented captions in video content.
 
@@ -718,7 +718,7 @@ If further buffering is required later in the playback process, the value of the
 
 Specifies the segment offset when starting playback.
 
-This property may have different meaning depending on the LIVE\_VIEW\_OPTION.
+This property may have a different meaning depending on the LIVE\_VIEW\_OPTION.
 
 If `LIVE_VIEW_OPTION` is set to `LIVE_VIEW_RECENT`, then this property specifies the offset of segment from the live edge when starting playback. For example; 
 
@@ -736,7 +736,7 @@ This property is not currently defined for other `LIVE_VIEW_OPTION`.
 
 Specifies the segment offset in time when starting playback.
 
-This property may have different meaning depending on the LIVE\_VIEW\_OPTION. This property has higher priority than `LIVE_OFFSET_SEGMENT_COUNT`. If `LIVE_VIEW_OPTION` is set to `LIVE_VIEW_RECENT`, then this property specifies the time offset of segment from the live edge when starting playback. For example, if the duration of each segment is 6 seconds:
+This property may have a different meaning depending on the LIVE\_VIEW\_OPTION. This property has higher priority than `LIVE_OFFSET_SEGMENT_COUNT`. If `LIVE_VIEW_OPTION` is set to `LIVE_VIEW_RECENT`, then this property specifies the time offset of segment from the live edge when starting playback. For example, if the duration of each segment is 6 seconds:
 
 **1** ∼ **6000:** The player will select the last segment in the manifest.
 
@@ -763,7 +763,7 @@ This must be one of the following values:
 
 - **LIVE_VIEW\_RECENT (0x00000000)** Start playback from the most recently received media segment (.ts) files of the HLS live playlist. For example, if 5.ts is the latest media segment (.ts), playback will begin at the beginning of that segment.
 
-- **LIVE_VIEW\_RECENT\_BYTARGETDUR (0x00000001)** Start playback from the most recently received media segement (.ts) files, based on the value set for the EXT-X-TARGETDURATION tag in the HLS live playlist. (The player will begin playback at the media segment that is immediately precedes the media segment that is three times (x3) the target duration before the latest media segment file loaded). As a concrete example, if the target duration is set to 12 seconds and the total duration of currently loaded media segments is 48 seconds, playback will begin at the media file that immediately precedes the media segment with the timestamp at 12 (48-36) seconds. If this example HLS playlist includes media segment files 1.ts (duration of 10 seconds), 2.ts (9 sec), 3.ts (11 sec), 4.ts (10 sec), and 5.ts (8 sec), then playback will begin at the first media segment, 1.ts, because it immediate precedes the 2.ts segment (where the timestamp at 12 seconds occurs).
+- **LIVE_VIEW\_RECENT\_BYTARGETDUR (0x00000001)** Start playback from the most recently received media segement (.ts) files, based on the value set for the EXT-X-TARGETDURATION tag in the HLS live playlist. (The player will begin playback at the media segment that immediately precedes the media segment that is three times (x3) the target duration before the latest media segment file loaded). As a concrete example, if the target duration is set to 12 seconds and the total duration of currently loaded media segments is 48 seconds, playback will begin at the media file that immediately precedes the media segment with the timestamp at 12 (48-36) seconds. If this example HLS playlist includes media segment files 1.ts (duration of 10 seconds), 2.ts (9 sec), 3.ts (11 sec), 4.ts (10 sec), and 5.ts (8 sec), then playback will begin at the first media segment, 1.ts, because it immediate precedes the 2.ts segment (where the timestamp at 12 seconds occurs).
 
 - **LIVE_VIEW\_FIRST (0x00000002)** Unconditionally start HLS playback from the first entry in the HLS playlist.
 
@@ -791,7 +791,7 @@ This is a possible setting for the `LIVE_VIEW_OPTION` property; see that propert
 
 ### LOCK\_END\_DATE (0x000A0002)
 
-For limited time versions of NexPlayer, this indicates the end date of the limited period of valid use.
+For limited-time versions of NexPlayer, this indicates the end date of the limited period of valid use.
 
 Time locked versions of NexPlayer will only be valid and play content during the period defined by the properties `LOCK_START_DATE` and `LOCK_END_DATE`, and will otherwise return an error `PLAYER_ERROR_TIME_LOCKED`.
 
@@ -869,8 +869,8 @@ This must be one of the following values:
     player at runtime. During playback, the latency may increase or decrease because it may change depending
     on the network environment.
 - **LOW\_LATENCY\_BUFFEROPTION\_CONST\_BUFFER (0x00000002)** The latency value is calculated by the
-    player at the beginning of playback and maintains the value unchanged during playback. The latency in
-    creases more than when using Auto Buffer Mode, but the rebuffering will be reduced and try to maintain
+    player at the beginning of playback and maintains the value unchanged during playback. The latency increases 
+    more than when using Auto Buffer Mode, but the rebuffering will be reduced and will try to maintain
     constant latency after rebuffering.
 
 **Type:** unsigned integer
@@ -980,7 +980,7 @@ This is used to prevent NexPlayer from attempting to play tracks that are encode
 
 ### MIN_BUFFER\_DURATION (142)
 
-The minumum duration of prefetch buffer to resume filling the buffer.
+The minimum duration of prefetch buffer to resume filling the buffer.
 
 If the duration of content available in the filling buffer is less than this value, filling of the buffer will be resumed until the buffer status meets a condition set by either MAX\_BUFFER\_RATE or MAX\_BUFFER\_DURATION.
 
@@ -992,7 +992,7 @@ If the duration of content available in the filling buffer is less than this val
  
 ### MIN_BUFFER\_RATE (140)
 
-The minumum filled percentage of the prefetch buffer to resume filling the buffer.
+The minimum filled percentage of the prefetch buffer to resume filling the buffer.
 
 If the prefetch buffer is less full than the value set by this property, the buffer will resume filling until the buffer status meets a condition set by either MAX\_BUFFER\_RATE or MAX\_BUFFER\_DURATION.
 
@@ -1098,7 +1098,7 @@ By default, this property is set to 0 to download the first TS file completely t
  
 ### PLAYABLE\_FOR\_NOT\_SUPPORT\_AUDIO\_CODEC (48)
 
-If set to 0, returns an error or generates an error event if the audio codec is not supported.
+If set to 0, it returns an error or generates an error event if the audio codec is not supported.
 
 The default behavior (if this is 1) is to allow media playback even if the audio codec is not supported.
 
@@ -1108,7 +1108,7 @@ The default behavior (if this is 1) is to allow media playback even if the audio
 
 ### PLAYABLE_FOR\_NOT\_SUPPORT\_VIDEO\_CODEC (49)
 
-If set to 0, returns an error or generates an error event if the video codec is not supported.
+If set to 0, it returns an error or generates an error event if the video codec is not supported.
 
 The default behavior (if this is 1) is to allow media playback even if the video codec is not supported.
 
@@ -1181,8 +1181,8 @@ mNexPlayer.setProperty(NexProperty.PREFER\_LANGUAGE, "eng");
 
 Sets the language to use for audio in multi-stream content, before content is played.
 
-This property can be used to set the preferred language of audio streams to be used in content, before Nex
-Player begins playing content.
+This property can be used to set the preferred language of audio streams to be used in content, before 
+NexPlayer begins playing content.
 
 > **Warning** To change any media stream while content is playing, the method setMediaStream should be called instead. To set the preferred language for both audio and text streams to the same language, use the NexProperty, PREFER\_LANGUAGE, instead.
  
@@ -1784,7 +1784,7 @@ The formula used to determine if a track switch is necessary is:
 
 In other words, if this property is set to 70, and `ENABLE_TRACKDOWN` is set to 1, NexPlayer will require that at least 70% of the decoded frames be displayed. If less than 70% can be displayed (greater than 30% skipped frames), then the next lower bandwidth track will be selected.
 
-A performance-based track switch **permanently** limits the maximum bandwidth of tracks that are eligible for play back until the content is closed. For this reason, setting this ratio higher than the default value of 70 is strongly discouraged (This differs from the bandwidth-based algorithm, which continuously adapts to current network bandwidth).
+A performance-based track switch **permanently** limits the maximum bandwidth of tracks that are eligible for playback until the content is closed. For this reason, setting this ratio higher than the default value of 70 is strongly discouraged (This differs from the bandwidth-based algorithm, which continuously adapts to current network bandwidth).
 
 **Type:** integer
 **Range:** 0 to 100
