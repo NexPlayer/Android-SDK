@@ -2,9 +2,9 @@
 
 VAST is a Video Ad Serving Template for structuring ad tags that serve ads to video players. Using an XML schema, VAST transfers important metadata about an ad from the ad server to a video player. Initially launched in 2008, VAST has since played an important role in the growth of the digital video marketplace. Link:http://www.iab.com/guidelines/digital-video-ad-serving-template-vast-4-0/
 
-The Interactive Media Ads (IMA) SDKs enable publishers to display ads into video, audio, and game content. This SDK provides a set of APIs to make video ad requests to any VAST-compliant ad server, inperpret the ad responses, report metrics to the ad servers, support players in handling ad playback, and incorporate key buying signals such as Active View viewability, IDFA/ADID, content targeting, and more. Link: https://developers.google.com/interactive-media-ads/ 
+The Interactive Media Ads (IMA) SDKs enable publishers to display ads into video, audio, and game content. This SDK provides a set of APIs to make video ad requests to any VAST-compliant ad server, interpret the ad responses, report metrics to the ad servers, support players in handling ad playback, and incorporate key buying signals such as Active View viewability, IDFA/ADID, content targeting, and more. Link: https://developers.google.com/interactive-media-ads/ 
 
-NexPlayer SDK provides a module which enables customers to playback content with VAST ads. Although developers can integrate the IMA-SDK with the NexPlayer SDK, we strongly recommend using the pre-integrated SDK. Handling IMA-SDK features to playback the VAST templete will be easier and more efficient with the 
+NexPlayer SDK provides a module that enables customers to playback content with VAST ads. Although developers can integrate the IMA-SDK with the NexPlayer SDK, we strongly recommend using the pre-integrated SDK. Handling IMA-SDK features to playback the VAST template will be easier and more efficient with the 
 NexPlayer SDK exclusive features.
 
 ## VAST Integration Components
@@ -34,13 +34,13 @@ as you work through your IMA implementation. Link: Google Developers https://dev
 *Figure 1.3: NexPlayer with VAST Components*
 
  - (a) NexAdsPlayer is a wrapping class of VideoAdPlayer, VideoProgressUpdate, and UIContainer.
- - (b) VideoAdPlayer is a ad player of IMA-SDK.
+ - (b) VideoAdPlayer is an ad player of IMA-SDK.
  - (c) The UIContainer is set with VideoView.
  - (d) VideoProgressUpdate can be implemented with the duration of ad player.
 
 ### Basic VAST Sample Guide
 
-This guide will show how to integrate the NexIMAWrapper into a VAST sample video player application. It is required to set the VideoView when create NexIMAWrapper with some conditons.
+This guide will show how to integrate the NexIMAWrapper into a VAST sample video player application. It is required to set the VideoView when creating NexIMAWrapper with some conditions.
 
 - 1. Conditions
  - (a) Include Google Play service in your application following (Reference- Google Developers: Setting Up Google Play Services https://developers.google.com/android/guides/setup) and add the following to your application-level ‘build.gradle’ file.
@@ -90,7 +90,7 @@ protected void onCreate(Bundle icicle) {
 }
 ```
 
- - (d) To create NexIMAWrapper, context and ViewGroup is needed.
+ - (d) To create NexIMAWrapper, context and ViewGroup are needed.
  - (e) In NexIMAWrapper constructor, NexAdsPlayer instance is created internally, and implements listener interfaces so the IMA-SDK can be notified when your video content finishes or not with an error.
  - (f) If NexIMAWrapper gets a notification of content completion, or an error from NexAdsPlayer, NexIMAWrapper calls AdsLoader.contentComplete() to notify IMA-SDK.
  - (g) After created NexIMAWrapper, you should set the listeners and actions of VAST.
@@ -199,13 +199,13 @@ This interface can be implemented in an application in order to receive AD point
 
 #### void onAdPointsLoaded (int[] adPoints)
 
-This method indicates when point of ADs is successfully loaded.
+This method indicates when a point of ADs is successfully loaded.
 
 **Parameters**
 
 | Name  | Description  | 
 |---|---|
-|adPoints| Array of point of ADs while generating the event.|
+|adPoints| The array of point of ADs while generating the event.|
 
 #### void onAdUrlLoaded(int startTime,String adUrl)
 
@@ -277,7 +277,7 @@ Ads logic for handling the IMA SDK integration code and events.
 
 Sole constructor for NexIMAWrapper.
 
-After constructing a NexIMAWrapper object, youmustcall NexIMAWrapper.setContentPlayer before you can call
+After constructing a NexIMAWrapper object, you must call NexIMAWrapper.setContentPlayer before you can call
 any other methods
 
 **Parameters**
@@ -296,7 +296,7 @@ This method can be used after calling NexIMAWrapper.onAdsManagerLoaded
 
 #### void onAdError (AdErrorEvent adErrorEvent)
 
-An event raised when there is an error loading or playing ads.
+An event is raised when there is an error loading or playing ads.
 
 **Parameters**
 
@@ -326,7 +326,7 @@ An event raised when ads are successfully loaded from the ad server via an AdsLo
 
 #### void play (int startTime)
 
-Starts contents playback.
+Starts content playback.
 
 **Parameters**
 
