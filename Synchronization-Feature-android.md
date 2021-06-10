@@ -6,13 +6,13 @@ NexPlayer synchronization feature technology allows you to sync the video arriva
 
 ## How to enable synchronization feature in the sample application
 
-To get started we need an apk and at least two devices.
+To get started, we need an apk and at least two devices.
 Steps to enable Synchronization:
 
 
 - Go to the three dots → Settings → SPD Settings.
 
-Here we have several fields that depending on our needs we will have to configure.
+Here we have several fields that, depending on our needs, we will have to configure.
 
 **SPD:** Enabled (this field is used to enable and disable SPD).
 
@@ -60,7 +60,7 @@ mNexPlayer.setProperty(NexPlayer.NexProperty.ENABLE_SPD_SYNC_TO_GLOBAL_TIME, 1);
 ```
 
 
-To set the SPD value from the client side for both DASH and HLS you can set the
+To set the SPD value from the client-side for both DASH and HLS you can set the
 SPD value per property ( ```SET_PRESENTATION_DELAY``` or 590) as shown below:
 
 ```java
