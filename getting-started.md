@@ -185,7 +185,7 @@ The NexCaptionPainter™ renders a variety of subtitle formats including:
 
 ### To use NexCaptionPainter
 
-NexCaptionPainter always needs to know the video output size in the application so that the subtitles can be correctly positioned. If a change into the video size is produced, that information should be notify to NexCaptionPainter.
+NexCaptionPainter always needs to know the video output size in the application so that the subtitles can be correctly positioned. If a change into the video size is produced, that information should be notified to NexCaptionPainter.
 
 **See Also**
 
@@ -204,7 +204,7 @@ Lastly, **setUserCaptionSettings** will be helpful to make your own caption styl
 - NexCaptionSetting
 - NexCaptionWindowRect
 
-When a caption renderer is in use, it always needs to know the video output size in the application so that subtitles can be correctly positioned. This means that when video changes size, that information should also be passed to the relevant caption renderer. Please see the relevant caption renderers for additional details on which methods to use to implement each kind of subtitles.
+When a caption renderer is in use, it always needs to know the video output size in the application so that subtitles can be correctly positioned. This means that when the video changes size, that information should also be passed to the relevant caption renderer. Please see the relevant caption renderers for additional details on which methods to use to implement each kind of subtitles.
 
 Lastly, note that in the case of CEA 608 closed captions, both **setOutputPos** and **setRenderArea** should be called when implementing the captions.
 
@@ -429,7 +429,7 @@ Succinctly:
 
 This means that an application must:
 
-- first check the device render mode (to see if the hardware renderer is available) by calling the method **NexPlayer.GetRenderMode** and - then switch the rendering mode in the call to the **onVideoRenderPrepared** method based on that render mode.
+- First, check the device render mode (to see if the hardware renderer is available) by calling the method **NexPlayer.GetRenderMode** and - then switch the rendering mode in the call to the **onVideoRenderPrepared** method based on that render mode.
 
 Please also review the sample code for details.
 
@@ -485,7 +485,7 @@ To use the OpenGL renderer, the application must create an instance of the GLRen
 
 By default, the frame is stretched to fill the entire surface. The rectangle in which the video is drawn can be changed by calling **setOutputPos**. This rectangle is in screen pixels (not in the OpenGL coordinate space) but the position is relative to the GLRenderer.
 
-In addition, an application must also do the following, in order to support the OpenGL renderer:
+In addition, an application must also do the following in order to support the OpenGL renderer:
 
 1. Call NexPlayer™’s **init** method, passing the model name of the current device (you can attempt to force the use of the OpenGL renderer for debugging purposes by passingNEX\_DEVICE\_USE\_OPENGLinstead of the device name).
 
@@ -509,7 +509,7 @@ if(UseOpenGL) {
 }
 ```
 
-> **Note** Once the GLRenderer has been created, the onSurfaceCreated and onSurfaceChanged methods of GLSurfaceView.Renderer will be automatically called.onSurfaceChanged is also called when the size of the surface has changed (for example, due to a device orientation change).
+> **Note** Once the GLRenderer has been created, the onSurfaceCreated and onSurfaceChanged methods of GLSurfaceView. Renderer will be automatically called.onSurfaceChanged is also called when the size of the surface has changed (for example, due to a device orientation change).
 
 4. In the implementation of *GLSurfaceView.Renderer.onSurfaceChanged*, **NexPlayer.GLInit** must be called to inform NexPlayer™ of the new size of the surface:
 
@@ -751,7 +751,7 @@ mNexPlayer.setProperty(NexPlayer.NexProperty.PARTIAL_PREFETCH, 1);
 	mNexPlayer.setProperty(NexPlayer.NexProperty.RE_BUFFERING_DURATION, 500);
 	```  
 	
-	> **Note** Buffering may occur frequently when bandwidth (Throughput) is not sufficient to deliver a
+	> **Note** Buffering may frequently occur when bandwidth (Throughput) is not sufficient to deliver a
 	segment or chunk in time.
 	                  
          		
