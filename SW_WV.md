@@ -1,6 +1,6 @@
 # WV DRM Integration with NexPlayerSDK for Android
 
-Widevine DRM (as known as WV DRM) is a DRM technique compatible with MediaDrm, made by Google. MediaDrm is supported from Android JellyBean 4.3 and up, and it supports DASH only. To use the same technique on lower version of Android devices such as Ice Cream Sandwich, or apply to HLS, use this DRM module. The Widevine
+Widevine DRM (as known as WV DRM) is a DRM technique compatible with MediaDrm, made by Google. MediaDrm is supported from Android JellyBean 4.3 and up, and it supports DASH only. To use the same technique on a lower version of Android OS such as Ice Cream Sandwich, or apply to HLS, use this DRM module. The Widevine
 DRM module of the NexPlayer SDK uses the common encryption (cenc) algorithm to receive the encrypted media
 file from the media server and to receive and decrypt the decryptable key from the Widevine server. Therefore, you
 have to enter the URL where you can get the content and key to the NexPlayer SDK. In addition, for the offline store
@@ -237,7 +237,7 @@ and reading contents should be input. This document describes the APIs that can 
 	- Software module that decrypts through the information specified through the NexWVDRM class in NexWVDRM.java.
 
 
-(a) This binary file contains WV DRM module, so it MUST be in thelibsfolder.
+(a) This binary file contains WV DRM module, so it MUST be in the libs folder.
 (b) Software module that decrypts through the information specified through the NexWVDRM class in Nex-
 WVDRM.java.
 
@@ -301,7 +301,7 @@ immediately uses or store to the specified path by offline mode
 |------------------------|-------------------------------------------------------------------------------------------|
 | strEngineLibName | The relevant engine library name as a string. Register for communication between NexPlayer SDK Engine and Widevine DRM module. |
 | strFilePath | This is the path to store the key and authentication information received from the License server when Store / Retrieve play is performed. In the Offline state, it can not connect to the License Server and stores the received authentication information to a file. This information should be used only Widevine DRM module of the certified player inside because it is encrypted. |
-| strKeyServerURL | This is a license server URL that can receive information for descrambling WidevineDRM contens |
+| strKeyServerURL | This is a license server URL that can receive information for descrambling WidevineDRM contents |
 | offlineMode | Select the offline playback mode to use. 0: On-line mode. NexPlayer will open a temporary DRM session, which does not store any session handles. Network connection is required. 1: Storing mode. NexPlayer will open a permanent DRM session, and store it after opening it. Network connection is required. 2: Retrieving mode. NexPlayer will find a stored DRM session, and then restore it. 3: Storing + Retrieving mode. NexPlayer will find a stored DRM session. If it exists, then NexPlayer will restore it; if not, the engine will create a new session and then store it. Network connection is required. |
 
 ```java
@@ -318,8 +318,7 @@ nexWVDRM.initDRMManager(strEngineLibName, strFilePath, strKeyServerURL, offlineM
 The minimum necessary information for playing a plurality of Widevine DRM contents is initialized and registered in
 the Widevine DRM module.
 
-When this API was called service certification will be retrieved automatically internally. This method is for using multi
-instances For multiple instances, the function pointer of NexPlayer SDK Engine is registered as a callback function
+When this API is called, service certification will be retrieved automatically internally. This method is for multiple instances: the function pointer of NexPlayer SDK Engine is registered as a callback function
 of Widevine DRM module, and authentication information is requested and received from the license server for
 descrambling of contents. And, this information immediately uses or store to the specified path by offline mode
 
@@ -329,7 +328,7 @@ descrambling of contents. And, this information immediately uses or store to the
 |------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | nexplayerInstance | Update the callbacks registered in the previously created NexPlayer SDK Engine. |
 | strEngineLibName | The relevant engine library name as a string. Register for communication between NexPlayer SDK Engine and Widevine DRM module. |
-| strFilePath | This is the path to store the key and authentication information received from the License server when Store / Retrieve play is performed. In the Offline state, it can not connect to the License Server and stores the received authentication information to a file. This informa- tion should be used only Widevine DRM module of the certified player inside because it is encrypted. |
+| strFilePath | This is the path to store the key and authentication information received from the License server when Store / Retrieve play is performed. In the Offline state, it can not connect to the License Server and stores the received authentication information to a file. This information should be used only Widevine DRM module of the certified player inside because it is encrypted. |
 | strKeyServerURL | This is a license server URL that can receive information for descrambling Widevine DRM contents. |
 | offlineMode                   | Select the offline playback mode to use. 0: On-line mode. NexPlayer will open a temporary DRM session, which does not store any session handles. Network connection is required. 1: Storing mode. NexPlayer will open a permanent DRM session, and store it after opening it. Network connection is required. 2: Retrieving mode. NexPlayer will find a stored DRM session, and then restore it. 3: Storing + Retrieving mode. NexPlayer will find a stored DRM session. If it exists, then NexPlayer will restore it; if not, the engine will create a new session and then store it. Network connection is required.                                                                                                                                                                                          |
 
