@@ -1,4 +1,4 @@
-- [NexPlayer™ SDK for Android](/introduction.md) 
+- [NexPlayer SDK for Android](/introduction.md) 
 - [Getting Started](/getting-started.md)
 - [Properties](/properties.md) 
 - Advanced Usage
@@ -6,9 +6,9 @@
     - [SW DRM](/SW_WV.md) 
     - [Logging To File](/log2File.md) 
     - [Loggging Callback](/logging_callback.md) 
-    - [API Documentation](/advanced.md)
     - [Synchronization Feature](/Synchronization-Feature-android.md)
-- 3rd Party Integration
+    - [API Documentation](/advanced.md)
+- 3rd Party Integrations
     - [VAST](/vast.md) 
     - [Agama](/Agama.md) 
     - [Agora](/agora.md)

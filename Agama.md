@@ -1,24 +1,23 @@
-# Agama Integration with NexPlayer™ SDK for Android
+# Agama Integration with NexPlayer SDK for Android
 
 ### Legal Notices
 
 **Disclaimer for Intellectual Property**
 
 This product is designed for general purpose, and accordingly the customer is responsible for all or any of
-intellectual property licenses required for actual application. NexStreaming Corp. does not provide any indemnification for any intellectual properties owned by third party.
+intellectual property licenses required for actual application. NexStreaming. does not provide any indemnification for any intellectual properties owned by third party.
 
 **Copyright**
 
-Copyright for all documents, drawings and programs related with this specification are owned by NexStreaming
-Corp. All or any part of the specification shall not be reproduced nor distributed without prior written approval
-by NexStreaming Corp. Content and configuration of all or any part of the specification shall not be modified
-nor distributed without prior written approval by NexStreaming Corp.
+Copyright for all documents, drawings and programs related with this specification are owned by NexStreaming. All or any part of the specification shall not be reproduced nor distributed without prior written approval
+by NexStreaming. Content and configuration of all or any part of the specification shall not be modified
+nor distributed without prior written approval by NexStreaming.
 
 ### Using the Agama Client Module
 
-From version 6.10 of the NexPlayer™ SDK, a new module has been added to make it easier to integrate Agama
-into applications with NexPlayer™.
-For more information on how to use the NexPlayer™ SDK with Agama, please see: NexAgamaClient.
+From version 6.10 of the NexPlayer SDK, a new module has been added to make it easier to integrate Agama
+into applications with NexPlayer.
+For more information on how to use the NexPlayer SDK with Agama, please see: NexAgamaClient.
 
 ## Class Documentation
 
@@ -28,7 +27,7 @@ For more information on how to use the NexPlayer™ SDK with Agama, please see: 
 
 - `enum AGAMA_PROPERTY`
 
-	This enumeration includes the properties that must be set to integrate Agama client module into NexPlayer™.
+	This enumeration includes the properties that must be set to integrate Agama client module into NexPlayer.
 
 **Static Public Member Functions**
 
@@ -80,7 +79,7 @@ For more information on how to use the NexPlayer™ SDK with Agama, please see: 
 
 **Detailed Description**
 
-This enumeration includes the properties that must be set to integrate Agama client module into NexPlayer™.
+This enumeration includes the properties that must be set to integrate Agama client module into NexPlayer.
 
 The values of the different properties can be set by calling the setProperty method of the relevant client class.
 
@@ -148,11 +147,11 @@ protected void onCreate(Bundle savedInstanceState) {
 **See Also**
 
 
-- NexPlayer.addNexClient in the NexPlayer™ SDK
+- NexPlayer.addNexClient in the NexPlayer SDK
 
-- NexPlayer.removeNexClient in the NexPlayer™ SDK
+- NexPlayer.removeNexClient in the NexPlayer SDK
 
-- NexPlayer.getClientStatus in the NexPlayer™ SDK
+- NexPlayer.getClientStatus in the NexPlayer SDK
 
 #### Object getProperty (com.nexstreaming.nexplayerengine.NexAgamaClient.AGAMA_PROPERTY key)
 
@@ -236,7 +235,7 @@ This method should be called before exiting the application.
 
 #### void setExternalParams (int key, String value)
 
-This method sets the value of any *string* external parameter for the Agama client module in NexPlayer™.
+This method sets the value of any *string* external parameter for the Agama client module in NexPlayer.
 
 **Parameters**
 
@@ -261,7 +260,7 @@ This method sets the value of any *string* external parameter for the Agama clie
 
 #### void setExternalParams (int key, int value)
 
-This method sets the value of any *integer* external parameter for the Agama client module in NexPlayer™.
+This method sets the value of any *integer* external parameter for the Agama client module in NexPlayer.
 
 <table>
 <tr>
@@ -282,7 +281,7 @@ This method sets the value of any *integer* external parameter for the Agama cli
 
 #### void setProperty (com.nexstreaming.nexplayerengine.NexAgamaClient.AGAMA_PROPERTY key,int value) throws IllegalArgumentException
 
-This method sets the value of any *integer* property for the Agama client module in NexPlayer™.
+This method sets the value of any *integer* property for the Agama client module in NexPlayer.
 
 **Parameters**
 
@@ -307,7 +306,7 @@ This method sets the value of any *integer* property for the Agama client module
 
 #### void setProperty (com.nexstreaming.nexplayerengine.NexAgamaClient.AGAMA_PROPERTY key,String value) throws IllegalArgumentException
 
-This method sets the value of any *integer* property for the Agama client module in NexPlayer™.
+This method sets the value of any *integer* property for the Agama client module in NexPlayer.
 
 **Parameters**
 
@@ -332,7 +331,7 @@ This method sets the value of any *integer* property for the Agama client module
 
 #### void setProperty (com.nexstreaming.nexplayerengine.NexAgamaClient.AGAMA_PROPERTY key,long value) throws IllegalArgumentException
 
-This method sets the value of any *long* property for the Agama client module in NexPlayer™.
+This method sets the value of any *long* property for the Agama client module in NexPlayer.
 
 **Parameters**
 

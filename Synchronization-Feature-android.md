@@ -30,7 +30,6 @@ Here we have several fields that, depending on our needs, we will have to config
 
   <img width="20%" height="40%" text-align="center" src="./assets/1.jpg" alt="1" >
 
-
 Once we have configured what we need, we will play the content with SPD in the
 section.
 
@@ -41,16 +40,11 @@ Synchronization feature is highly dependent on the internet speed and the config
 ### Limitations
 
 - Only works with live content.
-- Device time should be adjusted correctly, incorrect device time or setting it
-manually might break the logic. This can be handled by using server time but
-the synchronisation won’t be precise as device time as server time is given in
-seconds, not in milliseconds as device time.
-- Setting a very low SPD value for the stream might affect smooth playback
-experience as it won’t allow the player to create enough buffer.
-
+- Device time should be adjusted correctly, incorrect device time or setting it manually might break the logic. This can be handled by using server time but the synchronisation won’t be precise as device time as server time is given in seconds, not in milliseconds as device time.
+- Setting a very low SPD value for the stream might affect smooth playback experience as it won’t allow the player to create enough buffer.
+- Synchronization feature is highly dependent on the internet speed and the configuration of the manifest.
 
 ## How to enable synchronization feature from the code
-
 
 NexPlayer synchronization can be enabled by setting the following property:
 
@@ -58,7 +52,6 @@ NexPlayer synchronization can be enabled by setting the following property:
 ```java
 mNexPlayer.setProperty(NexPlayer.NexProperty.ENABLE_SPD_SYNC_TO_GLOBAL_TIME, 1);
 ```
-
 
 To set the SPD value from the client-side for both DASH and HLS you can set the
 SPD value per property ( ```SET_PRESENTATION_DELAY``` or 590) as shown below:
@@ -72,12 +65,9 @@ find the delayed segment provided by the live content server.
 
 ### Advanced configuration
 
-
-You can control the synchronization behaviour further by adjusting the below
-properties.
+You can control the synchronization behaviour further by adjusting the below properties.
 
 #### ENABLE_SPD_SYNC_TO_DEVICE_TIME
-
 
 Enables synchronization to device UTC for more accurate behaviour.
 
@@ -91,7 +81,6 @@ Values:
 
 - 0: Disabled device UTC
 - 1: Enabled device UTC
-
 
 #### SET_SPD_SYNC_DIFF_TIME
 
@@ -117,15 +106,3 @@ mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_TOO_MUCH_DIFF_TIME,5000);
 Unit: msec (1/1000 sec)
 
 Default: 5000 (5 seconds)
-
-## Things to consider
-
-
-- You should make sure suggestedPresentationDelay is present in DASH
-manifest otherwise synchronisation won't work.
-- For HLS, you should set ```SET_PRESENTATION_DELAY``` property as mentioned
-above.
-- You should make sure there is enough distance from the live edge to provide
-a smooth playback which should be adjusted with *suggestedPresentationDelay* and ```SET_PRESENTATION_DELAY``` properties. If
-there is not enough space to buffer from the live edge, playback might be
-effected.

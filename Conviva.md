@@ -1,26 +1,23 @@
-# Conviva Integration with NexPlayer™ SDK for Android
+# Conviva Integration with NexPlayer SDK for Android
 
 ## Legal Notices
 
 **Disclaimer for Intellectual Property**
 
 This product is designed for general purpose, and accordingly the customer is responsible for all or any of
-intellectual property licenses required for actual application. NexStreaming Corp. does not provide any indentification for any intellectual properties owned by third party.
+intellectual property licenses required for actual application. NexStreaming. does not provide any indentification for any intellectual properties owned by third party.
 
 **Copyright**
 
-Copyright for all documents, drawings and programs related with this specification are owned by NexStreaming
-Corp. All or any part of the specification shall not be reproduced nor distributed without prior written approval
-by NexStreaming Corp. Content and configuration of all or any part of the specification shall not be modified
-nor distributed without prior written approval by NexStreaming Corp.
+Copyright for all documents, drawings and programs related with this specification are owned by NexStreaming. All or any part of the specification shall not be reproduced nor distributed without prior written approval by NexStreaming. Content and configuration of all or any part of the specification shall not be modified nor distributed without prior written approval by NexStreaming.
 
-© Copyright 2010-2019 NexStreaming Corp. All rights reserved.
+© Copyright 2010-2019 NexStreaming Europe SL. All rights reserved.
 
 ## Using the Conviva Client Module
 
-From version 6.10 of the NexPlayer™ SDK, a new module has been added to make it easier to integrate Conviva
-into applications with NexPlayer™.
-For more information on how to use the NexPlayer™ SDK with Conviva, please see: NexConvivaClient.
+From version 6.10 of the NexPlayer SDK, a new module has been added to make it easier to integrate Conviva
+into applications with NexPlayer.
+For more information on how to use the NexPlayer SDK with Conviva, please see: NexConvivaClient.
 
 
 ## Class Documentation
@@ -31,7 +28,7 @@ For more information on how to use the NexPlayer™ SDK with Conviva, please see
 
 - `enum CONVIVA_PROPERTY`
 
-	This enumeration includes the properties that must be set to integrate the Conviva client 	module into NexPlayer™.
+	This enumeration includes the properties that must be set to integrate the Conviva client 	module into NexPlayer.
 
 **Static Public Attributes**
 
@@ -51,7 +48,7 @@ For more information on how to use the NexPlayer™ SDK with Conviva, please see
 
 **Detailed Description**
 
-This enumeration includes the properties that must be set to integrate the Conviva client module into NexPlayer™.
+This enumeration includes the properties that must be set to integrate the Conviva client module into NexPlayer.
 
 The values of the different properties can be set by calling the setProperty method of the relevant client class.
 
@@ -98,9 +95,9 @@ public void onCreate(Bundle icicle) {
 ```	
 **See Also**
 
-- NexPlayer.addNexClient in the NexPlayer™ SDK
-- NexPlayer.removeNexClient in the NexPlayer™ SDK
-- NexPlayer.getClientStatus in the NexPlayer™ SDK
+- NexPlayer.addNexClient in the NexPlayer SDK
+- NexPlayer.removeNexClient in the NexPlayer SDK
+- NexPlayer.getClientStatus in the NexPlayer SDK
 
 #### NexConvivaClient()
 
@@ -211,7 +208,7 @@ returned.
 
 #### void sendSessionEvent (String name, Map<String, Object> eventAttr)
 
-This method sends the session events related to the Conviva client module sessions in NexPlayer™.
+This method sends the session events related to the Conviva client module sessions in NexPlayer.
 
 **Parameters**
 
@@ -234,7 +231,7 @@ For more information on how custom tags can be used with Conviva, please refer t
 
 #### void setProperty (CONVIVA_PROPERTY key, String value)
 
-This method sets the value of any property for the Conviva client module in NexPlayer™.
+This method sets the value of any property for the Conviva client module in NexPlayer.
 
 **Parameters**
 
@@ -250,7 +247,7 @@ This method sets the value of any property for the Conviva client module in NexP
 
 #### void setProperty (CLIENT_PROPERTY key, boolean value)
 
-This method sets the value of any property for the Conviva client module in NexPlayer™.
+This method sets the value of any property for the Conviva client module in NexPlayer.
 
 **Parameters**
 

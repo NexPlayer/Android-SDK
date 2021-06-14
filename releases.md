@@ -1,4 +1,4 @@
-## NexPlayer™ SDK for Android Release Notes
+## NexPlayer SDK for Android Release Notes
 
 ### version 6.72.0.844 (28/05/2021)
 - [Add] EMSG events for HLS/fMP4

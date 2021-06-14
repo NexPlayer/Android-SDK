@@ -2,24 +2,23 @@
 
 ## Media Playback
 
-Playback is controlled through the **NexPlayer**™ class, which handles acquisition and decoding of the media data.
+Playback is controlled through the **NexPlayer** class, which handles acquisition and decoding of the media data.
 
-The application creates an instance of this class and issues commands to it by calling instance methods. NexPlayer™ carries out these commands asynchronously and notifies the application of changes in status.
+The application creates an instance of this class and issues commands to it by calling instance methods. NexPlayer carries out these commands asynchronously and notifies the application of changes in status.
 
-The application is also notified when NexPlayer™ needs a surface on which to display video or an audio track
-object through which to play audio. The application must create the relevant objects when necessary or supply references to existing instances that NexPlayer™ can use. For more information, see the **onVideoRenderCreate**, **onVideoRenderRender**, **onVideoRenderDelete**, **onAudioRenderCreate**, and **onAudioRenderDelete** methods in **IVideoRendererListener** and **IListener**.
+The application is also notified when NexPlayer needs a surface on which to display video or an audio track object through which to play audio. The application must create the relevant objects when necessary or supply references to existing instances that NexPlayer can use. For more information, see the **onVideoRenderCreate**, **onVideoRenderRender**, **onVideoRenderDelete**, **onAudioRenderCreate**, and **onAudioRenderDelete** methods in **IVideoRendererListener** and **IListener**.
 
-It is possible to set certain properties on the NexPlayer™ instance, which affect how media is played back, how audio/video synchronization is handled, which player features are enabled, and so on. In general, the default property settings are suitable for most applications. However, if you are developing a streaming media application that uses HLS (HTTP Live Streaming), you may want to adjust the buffering time.
+It is possible to set certain properties on the NexPlayer instance, which affect how media is played back, how audio/video synchronization is handled, which player features are enabled, and so on. In general, the default property settings are suitable for most applications. However, if you are developing a streaming media application that uses HLS (HTTP Live Streaming), you may want to adjust the buffering time.
 
 For more information on properties, see **NexProperty**.
 
 The application may also need to handle displaying of decoded frames, if the Java rendering method is being used. This is necessary to support Honeycomb. See **Honeycomb Support** for more details.
 
-Notifications are handled through the **IListener** and **IVideoRendererListener** interfaces. The application must provide objects which implement these interfaces, and must call **setListener** and **IVideoRendererListener** to associate them with the NexPlayer™ instance.
+Notifications are handled through the **IListener** and **IVideoRendererListener** interfaces. The application must provide objects which implement these interfaces, and must call **setListener** and **IVideoRendererListener** to associate them with the NexPlayer instance.
 
-> **Warning** This must be the first thing the application does after instantiating NexPlayer™, before calling any other methods.
+> **Warning** This must be the first thing the application does after instantiating NexPlayer, before calling any other methods.
 
-Once the event listener and video rendering interfaces have been set up, the application may call methods on the NexPlayer™ object to control the media source. Certain calls, such as *open* and *close* must be given in matched pairs. The basic structure of calls for media playback is as follows:
+Once the event listener and video rendering interfaces have been set up, the application may call methods on the NexPlayer object to control the media source. Certain calls, such as *open* and *close* must be given in matched pairs. The basic structure of calls for media playback is as follows:
 
 - NexPlayer.open()
     - NexPlayer.start()
@@ -33,9 +32,9 @@ Once the event listener and video rendering interfaces have been set up, the app
 
 ### State Diagram
 
-NexPlayer™ handles state-changing API functions asynchronously. The player’s state will not be changed immediately even if the API is called. Therefore, UI applications should check the player’s state using **getState** before calling the API. After calling any state-changing API function, UI applications must wait for the onAsyncCmdComplete message from the player before calling any further state-changing API functions.
+NexPlayer handles state-changing API functions asynchronously. The player’s state will not be changed immediately even if the API is called. Therefore, UI applications should check the player’s state using **getState** before calling the API. After calling any state-changing API function, UI applications must wait for the onAsyncCmdComplete message from the player before calling any further state-changing API functions.
 
-NexPlayer™ has five possible states:
+NexPlayer has five possible states:
 
 - NEXPLAYER\_STATE\_NONE
 - NEXPLAYER\_STATE\_CLOSED
@@ -48,9 +47,8 @@ NexPlayer™ has five possible states:
 
 ### Seek Sequence
 
-1. Requests for NexPlayer™ to open, seek, pause, stop and resume are placed in a queue and handled in the
-    order they are received.
-2. When a queued operation completes, NexPlayer™ will notify the application by calling the **onAsyncCmdComplete** method in the listener.
+1. Requests for NexPlayer to open, seek, pause, stop and resume are placed in a queue and handled in the order they are received.
+2. When a queued operation completes, NexPlayer will notify the application by calling the **onAsyncCmdComplete** method in the listener.
 3. Some of the requests can take significant time to complete (depending on various factors, for example, network conditions). Therefore, the recommended practice is for the application to issue only one request at a time and wait for that request to complete.
 4. In order to provide the best user experience, after calling seek(), the application should wait for the associated `onAsyncCmdComplete` callback before calling `seek()` again. In the meantime, if the user continues to request seek operations (such as by dragging a seek bar in the user interface), the application should remember only the most recent seek request and issue that request after receiving `onAsyncCmdComplete`.
 
@@ -95,15 +93,14 @@ case NexPlayer.NEXPLAYER_ASYNC_CMD_SEEK:
 
 ### Advice for Applications
 
-It is recommended that *android:theme="@android:style/Theme.NoTitleBar"* be used in AndroidManifest.xml instead of *android:theme="@android:style/Theme.Wallpaper.NoTitleBar"*
-since this setting may cause unwanted side effects in fonts when the OpenGL renderer is in use.
+It is recommended that *android:theme="@android:style/Theme.NoTitleBar"* be used in AndroidManifest.xml instead of *android:theme="@android:style/Theme.Wallpaper.NoTitleBar"* since this setting may cause unwanted side effects in fonts when the OpenGL renderer is in use.
 
-Developers are also encouraged to use all of the files and folders included in the SDK/libs folder with the NexPlayer™ SDK. If application size is an issue, please refer to **Selective Codec Support and Required Libraries**.
+Developers are also encouraged to use all of the files and folders included in the SDK/libs folder with the NexPlayer SDK. If application size is an issue, please refer to **Selective Codec Support and Required Libraries**.
 
 
 ## Enabling Modified HTTP Requests
 
-In order to modify an HTTP Request with NexPlayer™ :
+In order to modify an HTTP Request with NexPlayer :
 
 1. Add the following code:
 
@@ -139,9 +136,9 @@ See **onModifyHttpRequest** for more information.
 
 ## Supported Subtitles, Timed Text, and Closed Captions
 
-> **Warning** In content where both CEA 608/708 closed captions and WebVTT text tracks exist, NexPlayer™ will automatically display the WebVTT text cues but this can be changed by setting the NexProperty. ENABLE\_WEBVTT to 0 with setProperty.
+> **Warning** In content where both CEA 608/708 closed captions and WebVTT text tracks exist, NexPlayer will automatically display the WebVTT text cues but this can be changed by setting the NexProperty. ENABLE\_WEBVTT to 0 with setProperty.
 
-The NexPlayer™ supports a variety of subtitle formats including:
+The NexPlayer supports a variety of subtitle formats including:
 
 1. Local subtitle files (.srt/.smi/.sub)
 2. 3GPP and CFF (TTML) timed text
@@ -151,7 +148,7 @@ The NexPlayer™ supports a variety of subtitle formats including:
 
 ### Selective Support for Text Caption Formats
 
-The NexPlayer™ SDK provides multiple different libraries related to text captions to support the different formats of captions possible in content.
+The NexPlayer SDK provides multiple different libraries related to text captions to support the different formats of captions possible in content.
 
 The following libraries are related to text captions and are located in the *libs* folder in your project:
 
@@ -175,7 +172,7 @@ Different subtitle formats also require different rendering, which is possible w
 
 ## Rendering Captions with NexCaptionPainter
 
-The NexCaptionPainter™ renders a variety of subtitle formats including:
+The NexCaptionPainter renders a variety of subtitle formats including:
 
 1. Local subtitle files (.srt/.smi/.sub)
 2. Timed text markup language (TTML)
@@ -221,7 +218,7 @@ Lastly, note that in the case of CEA 608 closed captions, both **setOutputPos** 
 ## Multi-Audio and Multi-Video Stream Playback
 
 Certain streaming protocols provide multiple audio and video streams of the same content which are generally
-intended to be selected by the user. NexPlayer™ provides the **setMediaStream()** API to allow these streams to be selected from the User Interface while content is being played.
+intended to be selected by the user. NexPlayer provides the **setMediaStream()** API to allow these streams to be selected from the User Interface while content is being played.
 
 The full list of available streams (if any) for particular content can be found in the **mArrStreamInformation** array in NexContentInformation.
 
@@ -253,7 +250,7 @@ There are three possible use cases available:
 ## Storing Streaming Content for Offline Playback
 
 In some circumstances, media player users may want the option to download and store streaming content to be
-played back when they are offline and cannot access a network. A developer can now offer users this feature with the NexPlayer™ SDK.
+played back when they are offline and cannot access a network. A developer can now offer users this feature with the NexPlayer SDK.
 
 > **Warning** This feature is only currently supported for VoD content that is provided with the HLS and DASH protocols.
 
@@ -265,9 +262,9 @@ percentage (0 to 100) of the content that has been successfully downloaded. Once
 
 > **Note** Please note that the same value used to call NexPlayer.setVideoBitrate when storing the streaming content must also be used when opening the stored content to play it offline.
 
-This mode of using the NexPlayer™ engine only supports basic APIs such as *open()*, *start()*, *stop()*, and *close()*.
+This mode of using the NexPlayer engine only supports basic APIs such as *open()*, *start()*, *stop()*, and *close()*.
 
-Content stored by the user with this feature can even be played back offline in different applications (not just the NexPlayer™-SDK-based app used to store the content).
+Content stored by the user with this feature can even be played back offline in different applications (not just the NexPlayer-SDK-based app used to store the content).
 
 #### 1.10.1 API Sequence to Store HLS or DASH Content
 ![](assets/api_seq_storingHLS.jpg)
@@ -313,8 +310,7 @@ To play stored content offline, there must be a stored info file. When this file
 
 1. Create instances of NexPlayer and NexALFactory, and initialize them.
 2. Call **open** () or **openFD** () to open media.
-3. When the cmd NEXPLAYER\_ASYNC\_CMD\_OPEN\_STREAMING is passed to onAsyncCmdComplete(), call
-    NexPlayer.start to begin playing content.
+3. When the cmd NEXPLAYER\_ASYNC\_CMD\_OPEN\_STREAMING is passed to onAsyncCmdComplete(), call NexPlayer.start to begin playing content.
     
 ![](assets/api_seq_offline_retrieve.png)
 
@@ -418,41 +414,15 @@ if( storeInfo != null ) {
 }
 ```
 
-## Jelly Bean Support
-
-Starting from the *Jelly Bean* version of the Android operating system (version 4.1), only the OpenGL video renderer is supported when the software decoder is in use. The other video renderers may not be used on devices running Jelly Bean if the software decoder must be used. The NexPlayer™ SDK is also adding support for the hardware (HW) decoder for devices running Jelly Bean and this means that in order to handle all cases, application source code should be able to handle switching between the OpenGL renderer (on devices where the HW decoder is not supported) and the hardware (HW) renderer.
-
-Succinctly:
-
-- When a device running Jelly Bean must use the software decoder, the OpenGL renderer must be used.
-- When a device running Jelly Bean can use the hardware decoder, the hardware renderer must be used.
-
-This means that an application must:
-
-- First, check the device render mode (to see if the hardware renderer is available) by calling the method **NexPlayer.GetRenderMode** and - then switch the rendering mode in the call to the **onVideoRenderPrepared** method based on that render mode.
-
-Please also review the sample code for details.
-
-## Honeycomb Support
-
-Under theHoneycombversion of the Android operating system, only the OpenGL ES 2.0 or Java-based video renderers are currently supported. Both of these renderers require supporting code in the application. This means that in order to support Honeycomb, you must implement either OpenGL ES 2.0 or Java renderer support in your application. For other Android OS versions, this is not necessary, although on some devices there may be performance advantages from using the OpenGL ES 2.0 renderer. While either the OpenGL ES 2.0 renderer or the Java renderer will work on Honeycomb, it is recommended to use the OpenGL ES 2.0 renderer, as performance is generally better with that renderer, and implementation is easier.
-
-See **OpenGL Renderer** and **Java Renderer** for details.
-
-In addition, use caution with the following APIs on Honeycomb:
-
-- **setOutputPos** is not supported with the Java renderer. For this same functionality, you may perform scaling yourself in theonVideoRenderRendercallback (see the **Java Renderer** explanation for details). You may call this from the OpenGL renderer.
-- **setDisplay** is not supported on Honeycomb at all and must NOT be called. It is also not supported by the OpenGL renderer and must not be called if the OpenGL renderer is being used.
-
 ## Renderers
 
-Depending on the Android OS version and device specifications, the NexPlayer™ offers support for different renderers to render and display video as summarized in the table below, where OpenGL, Android, and Java indicate the OpenGL, Java, and Android renderers.
+Depending on the Android OS version and device specifications, the NexPlayer offers support for different renderers to render and display video as summarized in the table below, where OpenGL, Android, and Java indicate the OpenGL, Java, and Android renderers.
 
 - Android: NEX\_USE\_RENDER\_AND
 - OpenGL: NEX\_USE\_RENDER\_OPENGL
 - HW Renderer: NEX\_USE\_RENDER\_IOMX
 
-As of version 6.1, the NexPlayer™ SDK also offers **NexVideoRenderer**, a video renderer that automatically
+As of version 6.1, the NexPlayer SDK also offers **NexVideoRenderer**, a video renderer that automatically
 handles video rendering tasks for an application by choosing the most appropriate renderer based on the device and version of the operating system. Use of this renderer greatly simplifies the handling of video rendering tasks and is thus highly recommended.
 
 **See Also**
@@ -471,25 +441,25 @@ Through this process, UI will receive onAsyncCmdComplete:NEXPLAYER\_ASYNC\_CMD\_
 
 ### OpenGL Renderer
 
-This version of the NexPlayer™ engine supports OpenGL ES 2.0 rendering. This renderer may be used on devices
+This version of the NexPlayer engine supports OpenGL ES 2.0 rendering. This renderer may be used on devices
 running Froyo and later and is the default renderer for Honeycomb and Ice Cream Sandwich (ICS). This is also the **ONLY** renderer supported for Jelly Bean when the software codec must be used by a device. However *there are certain Froyo devices that do NOT support the OpenGL Renderer*. In these cases, it is necessary to check which renderer is in use when **NexPlayer.open** is called by also calling **GetRenderMode**.
 
-If this is not implemented by the application, another renderer must be specifically requested when calling NexPlayer™’s **init** method.
+If this is not implemented by the application, another renderer must be specifically requested when calling NexPlayer’s **init** method.
 
 > **Warning** When testing an application, please note that the OpenGL renderer does not work in the Android emulator provided with the Android SDK. If an application is to be tested in the emulator, it will be necessary to use one of the other renderers available. Testing content using the OpenGL renderer must happen on an actual device, not through the emulator.*
 
 > **Note** While the Android renderer may be the default renderer for Gingerbread, there are instances where another renderer may provide better performance on certain devices. In particular, while the Kindle Fire runs on Gingerbread, the OpenGL renderer is recommended because it provides better performance. See init for
 more details.
 
-To use the OpenGL renderer, the application must create an instance of the GLRenderer class (supplied as part of the NexPlayer™ SDK). GLRenderer is a GLSurfaceView subclass, and the video frame will be displayed within it.
+To use the OpenGL renderer, the application must create an instance of the GLRenderer class (supplied as part of the NexPlayer SDK). GLRenderer is a GLSurfaceView subclass, and the video frame will be displayed within it.
 
 By default, the frame is stretched to fill the entire surface. The rectangle in which the video is drawn can be changed by calling **setOutputPos**. This rectangle is in screen pixels (not in the OpenGL coordinate space) but the position is relative to the GLRenderer.
 
 In addition, an application must also do the following in order to support the OpenGL renderer:
 
-1. Call NexPlayer™’s **init** method, passing the model name of the current device (you can attempt to force the use of the OpenGL renderer for debugging purposes by passingNEX\_DEVICE\_USE\_OPENGLinstead of the device name).
+1. Call NexPlayer’s **init** method, passing the model name of the current device (you can attempt to force the use of the OpenGL renderer for debugging purposes by passingNEX\_DEVICE\_USE\_OPENGLinstead of the device name).
 
-2. After initializing NexPlayer™, In **onVideoRenderPrepared**, check which renderer is being used to determine if it is the OpenGL renderer. Any special code to support the OpenGL renderer should be conditional based on the renderer in use. To determine the current renderer in use, call **GetRenderMode** and check the result, as follows:
+2. After initializing NexPlayer, In **onVideoRenderPrepared**, check which renderer is being used to determine if it is the OpenGL renderer. Any special code to support the OpenGL renderer should be conditional based on the renderer in use. To determine the current renderer in use, call **GetRenderMode** and check the result, as follows:
 
 ```java
 if(mNexPlayer.GetRenderMode() == NexPlayer.NEX_USE_RENDER_OPENGL) {
@@ -511,7 +481,7 @@ if(UseOpenGL) {
 
 > **Note** Once the GLRenderer has been created, the onSurfaceCreated and onSurfaceChanged methods of GLSurfaceView. Renderer will be automatically called.onSurfaceChanged is also called when the size of the surface has changed (for example, due to a device orientation change).
 
-4. In the implementation of *GLSurfaceView.Renderer.onSurfaceChanged*, **NexPlayer.GLInit** must be called to inform NexPlayer™ of the new size of the surface:
+4. In the implementation of *GLSurfaceView.Renderer.onSurfaceChanged*, **NexPlayer.GLInit** must be called to inform NexPlayer of the new size of the surface:
 
 	```java
 	public void onSurfaceChanged(GL10 gl, int width, int height) {
@@ -529,7 +499,7 @@ if(UseOpenGL) {
 	}
 	```
 
-6. When NexPlayer™ is ready to display a new frame, it calls **onVideoRenderRender**. For most rendering modes, there is nothing to be done in reponse, but for OpenGL, it is necessary to request a rendering pass from the GLRenderer as follows:
+6. When NexPlayer is ready to display a new frame, it calls **onVideoRenderRender**. For most rendering modes, there is nothing to be done in reponse, but for OpenGL, it is necessary to request a rendering pass from the GLRenderer as follows:
     
 	```java
 		if(UseOpenGL) {
@@ -543,44 +513,39 @@ This causes the GLRenderer to render its contents.
 
 ### Java Renderer
 
-This version of the NexPlayer™ engine supports Java-based rendering in addition to the usual video rendering
-methods. However, the Java renderer is never automatically selected; if you wish to use the Java-based renderer, you must explicitly request it when calling NexPlayer™’s *init* method. Please note though that from the Jelly Bean operating system, the Java renderer is **not** supported.
+This version of the NexPlayer engine supports Java-based rendering in addition to the usual video rendering
+methods. However, the Java renderer is never automatically selected; if you wish to use the Java-based renderer, you must explicitly request it when calling NexPlayer’s *init* method. Please note though that from the Jelly Bean operating system, the Java renderer is **not** supported.
 
-With Java-based rendering, NexPlayer™ doesn’t display the video after it is decoded, but rather passes each frame to the application, which then must display the frames as they are received.
+With Java-based rendering, NexPlayer doesn’t display the video after it is decoded, but rather passes each frame to the application, which then must display the frames as they are received.
 
 Java-based rendering tends to be slower, particularly on low-end devices, but allows the application to perform post-processing or custom scaling operations on each frame.
 
-On the *Honeycomb* operating system, only Java-based rendering or OpenGL renderer is supported. Therefore, in order to support Honeycomb, your application must implement one of the two.
-
-If for some reason, you wish to force the use of the Java renderer, you can do so by passing **NEX\_DEVICE\_USE\_JAVA** to NexPlayer™’s **init** method.
+If for some reason, you wish to force the use of the Java renderer, you can do so by passing **NEX\_DEVICE\_USE\_JAVA** to NexPlayer’s **init** method.
 
 To support the Java renderer, the application must do the following:
 
-- In **onVideoRenderCreate**, the application must create a bitmap that NexPlayer™ can render frames into.
-NexPlayer™ can render in either RGBA8888 or RGB565. The color depth is specified in the call to NexPlayer™’s **init** method. The bitmap you create here must match that color depth. Once the bitmap has been created, it must be registered with the player engine by calling **SetBitmap**. Here’s the recommended way to support the Java renderer in `onVideoRenderCreate`:
+- In **onVideoRenderCreate**, the application must create a bitmap that NexPlayer can render frames into.
+NexPlayer can render in either RGBA8888 or RGB565. The color depth is specified in the call to NexPlayer’s **init** method. The bitmap you create here must match that color depth. Once the bitmap has been created, it must be registered with the player engine by calling **SetBitmap**. Here’s the recommended way to support the Java renderer in `onVideoRenderCreate`:
 
 ```java
 private ByteBuffer mRGBBuffer = null;
 private Bitmap mFrameBitmap = null;
 
-public void onVideoRenderCreate(NexPlayer mp, int width, int height, Object rgbBuffer)
-{
+public void onVideoRenderCreate(NexPlayer mp, int width, int height, Object rgbBuffer) {
 	// ...other necessary onVideoRenderCreate code goes here...
 
-	if(mNexPlayer.GetRenderMode() == NexPlayer.NEX_USE_RENDER_JAVA)
-	{
-		if(this.mScreenPixelFormat == PixelFormat.RGBA_8888)
-		{
+	if(mNexPlayer.GetRenderMode() == NexPlayer.NEX_USE_RENDER_JAVA) {
+		if(this.mScreenPixelFormat == PixelFormat.RGBA_8888) {
 			mFrameBitmap = Bitmap.createBitmap(width, height, Config.ARGB_8888);
 		}
-		else
-		{
+		else {
 			mFrameBitmap = Bitmap.createBitmap(width, height, Config.RGB_565);
 		}
 		mNexPlayer.SetBitmap( mFrameBitmap );
 	}
 }
 ```
+
 - The application must implement **onVideoRenderRender**. The bitmap registered in `onVideoRenderCreate` will have been filled in with the rendered frame before this method was called. The application must draw that bitmap to the screen, taking into account scaling and other factors. This can be done using standard Android API calls and standard Java methods. Scaling should be taken into account. See the sample application that accompanies the SDK for an example implementation of this method.
 
 **Determining the Renderer:** To determine the current renderer in use, call **GetRenderMode**. For example, to determine if the Java renderer is in use:
@@ -593,13 +558,13 @@ if(mNexPlayer.GetRenderMode() == NexPlayer.NEX_USE_RENDER_JAVA) {
 
 ## Support for Time Shift in Live Content
 
-This version of the NexPlayer™ SDK introduces support for timeshifting playback in HLS Live content. While content may be viewed live, a certain amount of time in the past or future may also be available to be played, depending on the server for the given content. NexPlayer™ uses the method `getSeekableRangeInfo` to determine the range within content where `seek` can be performed and thus within which playback may be timeshifted.
+This version of the NexPlayer SDK introduces support for timeshifting playback in HLS Live content. While content may be viewed live, a certain amount of time in the past or future may also be available to be played, depending on the server for the given content. NexPlayer uses the method `getSeekableRangeInfo` to determine the range within content where `seek` can be performed and thus within which playback may be timeshifted.
 
 Please also see **getSeekableRangeInfo()** for more information.
 
 ## Setting AV Synchronization
 
-When using NexPlayer™ to playback audio-video content, audio-video synchronization is optimized internally but there may still be some devices that display video slightly out of sync with the audio. To support devices like these, the audio-video synchronization may be set manually using the NexProperty **AV\_SYNC\_OFFSET** and the best value to set this property for a particular device must be determined by guessing and testing.
+When using NexPlayer to playback audio-video content, audio-video synchronization is optimized internally but there may still be some devices that display video slightly out of sync with the audio. To support devices like these, the audio-video synchronization may be set manually using the NexProperty **AV\_SYNC\_OFFSET** and the best value to set this property for a particular device must be determined by guessing and testing.
 
 The code of the included sample application illustrates how this property can be set to different values for specific devices.
 
@@ -618,25 +583,25 @@ Log.d(TAG, "Device Model Name : " + android.os.Build.MODEL + " Dev Offset Time :
 mNexPlayer.setProperty(NexProperty.AV_SYNC_OFFSET, mDevAVSyncOffset);
 ```
 
-Appropriate values for any devices displaying AV-sync issues can be determined by trial and error with different values, but most devices’ AV synchronization should generally be handled by NexPlayer™ internally.
+Appropriate values for any devices displaying AV-sync issues can be determined by trial and error with different values, but most devices’ AV synchronization should generally be handled by NexPlayer internally.
 
 ## Buffer Support
 
-NexPlayer™ loads content data into buffers in a device’s memory to prepare for playback (the so-called Prefetch
-buffer in NexPlayer™). Buffer settings can be adjusted in multiple ways with the properties listed below:
+NexPlayer loads content data into buffers in a device’s memory to prepare for playback (the so-called Prefetch
+buffer in NexPlayer). Buffer settings can be adjusted in multiple ways with the properties listed below:
 
 - **To Control Buffer Size** :
  - `PREFETCH_BUFFER_SIZE`: This property sets the size of the prefetch buffer to prepare for playback.
  The default value is 50MB but depending on the content size, this value can be adjusted accordingly. If the buffer status satisfies either limit set by MAX\_BUFFER\_RATE or MAX\_BUFFER\_DURATION, the filling of the prefetch buffer will be stopped even though there may be spare space still available in the prefetch buffer.
 
-- **To Control Buffering Duration** : NexPlayer™ uses two separate properties to determine buffering time, `INITIAL_BUFFERING_DURATION` and `RE_BUFFERING_DURATION`.
+- **To Control Buffering Duration** : NexPlayer uses two separate properties to determine buffering time, `INITIAL_BUFFERING_DURATION` and `RE_BUFFERING_DURATION`.
 
  - `INITIAL_BUFFERING_DURATION`: This property defines the initial time to buffer before beginning streaming playback (HLS, RTSP, etc). The default value is 5 seconds and when the buffer status meets this value set by `INITIAL_BUFFERING_DURATION`, the player will pause the filling of the buffer. This value is generally lower so that playback can begin as quickly as possible.
  - `RE_BUFFERING_DURATION`: This property defines how much content should be buffered when additional buffering during streaming playback (HLS, RTSP, etc) is necessary. The default value is 5 seconds and when the buffer status meets this value set by RE\_BUFFERING\_DURATION, the buffering will be paused. This re-buffering duration is also used when seeking in content (if the target seek destination time falls outside of the previously buffered content data).
 
 ### How Buffering Operates in General
 
-NexPlayer™ will start filling the prefetch buffer automatically when the amount of data loaded in memory becomes
+NexPlayer will start filling the prefetch buffer automatically when the amount of data loaded in memory becomes
 less than the value set by a property defining the buffering minimum. Similarly, the buffer will stop loading data
 segments when the memory is filled more than the value set by a property defining a maximum buffered amount.
 The actual properties defining this behavior operate differently depending on the protocol type of the content, but
@@ -653,7 +618,7 @@ these operations will run automatically in the background and can be adjusted wi
  - `MAX_BUFFER_DURATION`: If the duration of content available in the filling prefetch buffer is greater
        than this value, buffering will be paused until the buffer status meets the condition of MIN\_BUFFER\_DURATION again. The default value is 300 seconds.
 
-- **For HTTP Protocols** : For HTTP protocols, only properties defining buffering maximums, MAX\_BUFFER\_DURATION and MAX\_BUFFER\_RATE, are available. The properties work in the same way as for non-HTTP protocols. After being paused automatically, buffering will automatically resume after 10% of the buffer is exhausted. Note that when MAX\_BUFFER\_DURATION and MAX\_BUFFER\_RATE are both set, NexPlayer™ will apply the first maximum value that is met. For example, if the percentage set by MAX\_BUFFER\_RATE is passed first, the prefetch buffering will automatically pause even if the buffer is less full than the duration value set for MAX\_BUFFER\_DURATION.
+- **For HTTP Protocols** : For HTTP protocols, only properties defining buffering maximums, MAX\_BUFFER\_DURATION and MAX\_BUFFER\_RATE, are available. The properties work in the same way as for non-HTTP protocols. After being paused automatically, buffering will automatically resume after 10% of the buffer is exhausted. Note that when MAX\_BUFFER\_DURATION and MAX\_BUFFER\_RATE are both set, NexPlayer will apply the first maximum value that is met. For example, if the percentage set by MAX\_BUFFER\_RATE is passed first, the prefetch buffering will automatically pause even if the buffer is less full than the duration value set for MAX\_BUFFER\_DURATION.
 
 ## Client Time Shift
 
@@ -719,7 +684,8 @@ Figure 1.11: Seek to forward
 ![](assets/how_client_timeshift_works_6.png)
  
 Figure 1.12: Pause again
- 
+
+
 ## Low Latency
 
 Low latency technology can make the user view the live content as close to real-time as possible.
@@ -762,7 +728,6 @@ mNexPlayer.setProperty(NexPlayer.NexProperty.PARTIAL_PREFETCH, 1);
 	mNexPlayer.setProperty(NexPlayer.NexProperty.RE_BUFFERING_DURATION, 2000);
 	```    
          
-	 
 	> **Note** Buffering will rarely occur, but the latency will be slightly longer than the initial buffering time you set up.
              
        
@@ -789,45 +754,3 @@ Otherwise, buffering may occur frequently.
 	```java
 	mNexPlayer.setProperty(NexPlayer.NexProperty.LOW_LATENCY_BUFFER_OPTION, NexPlayer.NexProperty. LOW_LATENCY_BUFFEROPTION_CONST_BUFFER);
 	```
-
-## Video Synchronization
-
-Video Synchronization technology be able to make the user view the same screen of live streaming content on
-multiple devices simultaneously.
-
-**How to enable video synchronization mode** :
-
-- **Case 1** : To use Video synchronization in the sdk, please set the following properties.
-
-	```java   
-	mNexPlayer.setProperty(NexPlayer.NexProperty.ENABLE_SPD_SYNC_TO_GLOBAL_TIME, 1);
-	mNexPlayer.setProperty(NexPlayer.NexProperty.PARTIAL_PREFETCH, 1);
-	mNexPlayer.setProperty(NexPlayer.NexProperty.LIVE_VIEW_OPTION, 3);
-	```
-			       
-- **Case 2**: To sync end users by DASH-SPD.
-   	- If the MPD has suggestedPresentationDelay, then the player will render A/V frame with `suggestedPresentationDelay` latency. So end users will see the same video that is `suggestedPresentationDelay` seconds behind the live.
-
-- **Case 3** : To sync end users by HLS-PDT.
-   - Since HLS does not have SPD, the presentation delay to PDT time should be set manually.
-   - Please set the presentation delay as below:
-
-	```java
-	mNexPlayer.setProperty(NexPlayer.NexProperty.SET_APPLS_PROGRAM_DATE_TIME_PRESENTATION_DELAY, DelayValueInMsec);
-	```
-
- Then the player will work the same as DASH-SPD case such as suggestedPresentationDelay which is set to DelayValueInMsec. The end users are able to be both controlled the latency and synchronized by using this property in HLS.
-		
-- **Case 4** : Additional detailed methods:
-	
-	- If the current playback is not more synchronized compared to this value, the player will speed up playback and make sync.
-
-		```java
-		mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_SYNC_DIFF_TIME, MaxDiffValueMsec);
-		```
-	
-	- If playback is out of sync compared to this value, the player will jump to synchronize the video rather than make it by speeding up. 
-
-		```java
-		mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_TOO_MUCH_DIFF_TIME, TooMuchSyncDiffValueMsec);
-		```				

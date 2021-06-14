@@ -2,15 +2,15 @@
 
 ## Using the FreeWheel Client Module
 
-From version 6.15 of the NexPlayer™ SDK, a new module has been added to make it easier to integrate FreeWheel into applications with NexPlayer™.
+From version 6.15 of the NexPlayer SDK, a new module has been added to make it easier to integrate FreeWheel into applications with NexPlayer.
 
-For more information on how to use the NexPlayer™ SDK with FreeWheel, please see: `NexFreeWheelClient` 
+For more information on how to use the NexPlayer SDK with FreeWheel, please see: `NexFreeWheelClient` 
 
 ## Class Documentation
 
 ### NexFreeWheelClient Class Reference
 
-This class allows the FreeWheel client module to be easily integrated into the NexPlayer™ SDK.
+This class allows the FreeWheel client module to be easily integrated into the NexPlayer SDK.
 
 In order to integrate the FreeWheel client module, please do the following:
 
@@ -20,7 +20,7 @@ In order to integrate the FreeWheel client module, please do the following:
 NexFreeWheelClient mFreeWheelClient = new NexFreeWheelClient();
 ```
 
-- Add the FreeWheel client module to NexPlayer™ by calling:
+- Add the FreeWheel client module to NexPlayer by calling:
 
  ```java
 mNexPlayer.addNexClient(mFreeWheelClient);
@@ -76,7 +76,7 @@ Constructs a new Stream Stitcher Helper instance for the FreeWheel service.
 
 #### void handleMetaData (String key, String value, long msec)
 
-This method lets the NexPlayer™ SDK handle metadata updates for the FreeWheel client module.
+This method lets the NexPlayer SDK handle metadata updates for the FreeWheel client module.
 
 It is supposed to pass TIT2 for the Stream Stitcher.
 

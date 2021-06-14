@@ -270,7 +270,7 @@ A string with modified key attribute. NexWVDRM will send this \c string without 
 
 ### NexWVDRM Class Reference
 
-This class allows NexPlayer™ to handle and descramble Widevine HLS content.
+This class allows NexPlayer to handle and descramble Widevine HLS content.
 
 NexWVDRM provides an API for assigning information to NexPlayer to play Widevine DRM applied content.
 Widevine DRM applied content must receive the key required for descrambling from the specified license server. The license server sends the key only to the authenticated user. So NexPlayer must know the information that can be authenticated from the license server and the URL of the license server. NexPlayer also offers offline playback for Widevine content. To do this, select On (store / retrieve / store & retrieve) / OFF. NexWVDRM provides an API to specify such information and applies the specified information to Widevine module so that Widevine DRM contents can be played back stably.

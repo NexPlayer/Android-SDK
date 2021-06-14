@@ -2,7 +2,7 @@
 
 ***
 
-# NexPlayer SDK for Android Documentation
+# NexPlayer™ SDK for Android Documentation
 
 ### Capabilities and Limitations
 
@@ -180,9 +180,8 @@ _Subject to additional and/or 3rd party licenses_
 **Disclaimer for Intellectual Property**
 
 This product is designed for general purpose, and accordingly the customer is responsible for all or any of
-intellectual property licenses required for actual application. NexStreaming Corp. does not provide any indemnification for any intellectual properties owned by third party.
+intellectual property licenses required for actual application. NexStreaming. does not provide any indemnification for any intellectual properties owned by third party.
 
 **Copyright**
 
-Copyright for all documents, drawings and programs related with this specification are owned by NexStreaming
-Corp. All or any part of the specification shall not be reproduced nor distributed without prior written approval by NexStreaming Corp. Content and configuration of all or any part of the specification shall not be modified nor distributed without prior written approval by NexStreaming Corp.
+Copyright for all documents, drawings and programs related with this specification are owned by NexStreaming. All or any part of the specification shall not be reproduced nor distributed without prior written approval by NexStreaming. Content and configuration of all or any part of the specification shall not be modified nor distributed without prior written approval by NexStreaming.

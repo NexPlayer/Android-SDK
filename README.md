@@ -1,6 +1,6 @@
 <img width="70%" text-align="center" src="./assets/logo.png" alt="NexPlayer" >
 
-# NexPlayer™ SDK for Android
+# NexPlayer SDK for Android
 
 You can check our full documentation here:
 
@@ -14,7 +14,7 @@ Feel free to contact us to request a demo
 
 * support@nexplayer.com
 
-## NexPlayer™ SDK for Android Release Notes
+## NexPlayer SDK for Android Release Notes
 
 ### version 6.72.0.844 (28/05/2021)
 - [Add] EMSG events for HLS/fMP4
