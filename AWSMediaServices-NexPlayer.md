@@ -7,8 +7,8 @@
 #### Overview
 
 In order to use NexPlayer’s streaming capabilities in your NexPlayer
-project, you will need to have a video player stack which can stream in
-formats compatible with your target devices. In this guide we will set up a new
+project, you will need to have a video player stack that can stream in
+formats compatible with your target devices. In this guide, we will set up a new
 MPEG-DASH stream for playback on a mobile device. We will use a few
 different services for this, including a subset of Amazon Web Services AWS.
 
@@ -24,8 +24,8 @@ The key components are:
     this guide.
 3. Video content delivery support. We will use Amazon **CloudFront** in this
     guide.
-4. A capable device. Currently NexPlayer is supported on many devices
-    including **iOS,Android, PlayStation, Xbox, WebOS,Tizen** and more!
+4. A capable device. Currently, NexPlayer is supported on many devices
+    including **iOS, Android, PlayStation, Xbox, WebOS, Tizen** and more!
 
 #### Amazon S3
 
@@ -50,7 +50,7 @@ Amazon Simple Storage Service S3.
 
 ##### AWS Elemental MediaConvert - MPEG-DASH
 
-Now, Let’s get started with [AWS Elemental Media Convert](https://docs.aws.amazon.com/mediaconvert/latest/ug/implementing-digital-rights-management-drm.html).Additional
+Now, Let’s get started with [AWS Elemental Media Convert](https://docs.aws.amazon.com/mediaconvert/latest/ug/implementing-digital-rights-management-drm.html). Additional
 information can be found [here](https://docs.aws.amazon.com/mediaconvert/latest/ug/getting-started.html).
 
 1. Navigate to your AWS Elemental MediaConvert console and create a
@@ -68,7 +68,7 @@ information can be found [here](https://docs.aws.amazon.com/mediaconvert/latest/
 			- Use the inputs and outputs folders you created previously.
         - For the purpose of this guide, we have renamed the service role
        that will be created to “Mediaconvert_IntegrationGuide_Role”.
-        - Within the output you will need to specify parameters for the
+        - Within the output, you will need to specify parameters for the
        Video encoding type you wish to create.
        	- We will select MPEG_4 AVC (H.264).
 		- We will set the bitrate to 640000 bits / second
@@ -83,9 +83,9 @@ information can be found [here](https://docs.aws.amazon.com/mediaconvert/latest/
 
 Now that you have processed a video file, you’ll learn how to host that file using [Amazon CloudFront](https://aws.amazon.com/cloudfront/). CloudFront is a CDN which accelerates the delivery of your video content.
 
-If you would like to stream the file directly, you would need to make a public S3 bucket. In a typical scenario, you’d prefer that these resources be guarded and connected to securely. Moreover, CloudFront is an edge based platform which can deliver your content securely.
+If you would like to stream the file directly, you would need to make a public S3 bucket. In a typical scenario, you’d prefer that these resources be guarded and connected to securely. Moreover, CloudFront is an edge based platform that can deliver your content securely.
 
-There are many configuration options, but let’s get started by making a new CloudFront distribution. We’ll go through the more common configurations settings.
+There are many configuration options, but let’s get started by making a new CloudFront distribution. We’ll go through the more common configuration settings.
 
 1. Navigate to your Amazon CloudFront console.
 2. Click _“Create Distribution”_
@@ -122,12 +122,12 @@ https://{cloudfronturl}/{videoname}
 
 #### Overview
 
-In the previous section you created a static video asset using AWS
+In the previous sections you created a static video asset using AWS
 Elemental MediaConvert. You created a new S3 bucket which hosted your
 input video file and your output MPEG-DASH manifest.
 
 In this section, you will use AWS Elemental MediaConvert to create an
-HLS stream from the same input video file. You will then learn how to use AWS Elemental MediaPackage to package and stream a video file with an automatic CloudFront distribution.
+HLS stream from the same input video file. You will then learn how to use AWS Elemental MediaPackage to package and stream a video file with automatic CloudFront distribution.
 
 We will be utilizing this VOD Static File flow:
 
@@ -155,15 +155,15 @@ AWS Elemental MediaPackage requires that we have an HLS stream.
 2. You will need to specify an Input location.
     
 3. Add an Output Group to the job.
-    - For our purposes, we would like to create an HLS stream,so we
+    - For our purposes, we would like to create an HLS stream, so we
        will select Apple HLS.
-    - You will need to specify an Output location.
+    - You will need to specify an output location.
        - Set the destination of the target file. We will set this to the “outputs” folder we created previously.
-    - Within the output you will need to specify parameters for the
+    - Within the output, you will need to specify parameters for the
        Video encoding type you wish to create.
 		- Your output type and bitrate may be different, but here are the settings we’ve used for our video.
 		-  Select MPEG_4 AVC (H.264).
-		-  Set the bitrate to 640000 bits / second
+		-  Set the bitrate to 640000 bits/second
 	- If you have used this output group before, you will need to specify a name modifier.
 		- We recommend “_hls”
 
@@ -172,7 +172,7 @@ AWS Elemental MediaPackage requires that we have an HLS stream.
        able to operate.
     - To configure your IAM role, choose AWS integration from the left
        navigation pane and then find the section Service access.		- If this is your first time, you might need to select Create a new service role, configure permissions.	
-		- Then you will need to select to your S3 input and output locations
+		- Then you will need to select your S3 input and output locations
 	
 	- For the purposes of this guide, we have created a new service
     role and named it “MediaConvert_IntegrationGuide_Role_NVirginia”.
@@ -195,7 +195,7 @@ the previous section. One difference with AWS Elemental MediaConvert is
 that you would need to apply the DRM during that phase one time. With this
 setup, you are able to apply the DRM dynamically. So, if you had a 24 hour
 video where you want to apply DRM to some but not all of it, you need to be
-able to use JIT packaging. Additionally, if you setup live streaming, you will
+able to use JIT packaging. Additionally, if you set up live streaming, you will
 always need to use the AWS Elemental MediaPackage setup, so this is a
 great time to learn.
 
@@ -203,7 +203,7 @@ Now that we’ve provided a reason to use this flow, let’s check it out!
 
 1. Navigate to your AWS Elemental MediaPackage console
     - Expand the “Video on demand” group
-2. First you will need to create a Packaging group
+2. First, you will need to create a Packaging group
     - All you need to create the group is is an id		- Enter an ID
 		- Create the group
 
@@ -236,7 +236,7 @@ Now that we’ve provided a reason to use this flow, let’s check it out!
           bucket and object.
 5. Now navigate to Assets
     - Select the asset you created
-    - Under playback details you will see a URL for playback.
+    - Under playback details, you will see a URL for playback.
     - Now you can play from that URL!
     - But wait, let’s set up our Packaging group to useCloudFront.
 
@@ -249,7 +249,7 @@ Now we need a CDN to host the stream. We will be using Amazon CloudFront again. 
     - Click “ _Create Distribution_ ”
 2. Fill in your Origin Domain Name
     - To get the domain name, within Media Connect, navigate to
-       Packaging group. Copy the Domain name listed for the new
+       the Packaging group. Copy the Domain name listed for the new
        Packaging group you created in the previous steps.
 3. Leave the Origin path empty
 4. Give a descriptive Origin ID
@@ -260,12 +260,12 @@ Now we need a CDN to host the stream. We will be using Amazon CloudFront again. 
     - We will Use Only U.S., Canada, and Europe
     - You can use any price class you like.
 7. Click “ _Create Distribution_ ”
-8. Now, to build the URL for your asset, navigate toAssets.
+8. Now, to build the URL for your asset, navigate to Assets.
     - Click on your new video asset to reveal the URL
     - Copy the portion of the url after the domain name that you set up.
        This is the “video name” or “path” and is the part of the url after
        amazonaws.com
-    - Now, get the CloudFront URL for your new distributionand combine it with the “video name”
+    - Now, get the CloudFront URL for your new distribution and combine it with the “video name”
 		- https://{cloudfronturl}/{videoname}
 
 #### Your Project
@@ -279,7 +279,7 @@ https://{cloudfronturl}/{videoname}
 
 #### Conclusion
 
-Thank you for going through our guide on how to setup Video On Demand for
+Thank you for going through our guide on how to set up Video On Demand for
 your assets using AWS Media Services and NexPlayer.
 
 
@@ -289,7 +289,7 @@ your assets using AWS Media Services and NexPlayer.
 
 In order to use NexPlayer’s streaming capabilities in your NexPlayer
 project, you will need to have a video player stack which can stream in
-formats compatible with your target devices. In this guide we will set up a
+formats compatible with your target devices. In this guide, we will set up a
 stream for playback on your device. We will use a few different services for
 this, including a subset of Amazon Web Services.
 
@@ -322,8 +322,8 @@ The key components are:
     guide.
 8. Function scheduling support. We will use Amazon **CloudWatch** in this
     guide.
-9. A capable device. Currently NexPlayer is supported on many devices
-    including **iOS,Android, PlayStation, Xbox, WebOS,Tizen** and more!
+9. A capable device. Currently, NexPlayer is supported on many devices
+    including **iOS, Android, PlayStation, Xbox, WebOS, Tizen** and more!
 
 
 10. Encoder support. We will create a live stream using the free and
@@ -333,8 +333,8 @@ The key components are:
 
 #### Stream from S3
 
-The first thing you will need is a live stream. In this guide we’re going to begin
-by streaming directly from a video file within S3.This guide assumes that you
+The first thing you will need is a live stream. In this guide, we’re going to begin
+by streaming directly from a video file within S3. This guide assumes that you
 have already worked through the VOD Static File guide where we add a video
 file to Amazon S3.
 
@@ -456,7 +456,7 @@ the MediaLive channel's Schedule every minute.
 #### AWS Elemental MediaPackage
 
 You need to create a channel in [AWS Elemental MediaPackage](https://console.aws.amazon.com/mediapackage/home).Additionally,
-you will use an automated feature to automatically setup a CloudFront
+you will use an automated feature to automatically set up a CloudFront
 distribution for that channel.
 
 1. Under Live content, click Create a new channel
@@ -465,14 +465,14 @@ distribution for that channel.
        - Live stream with MP4
     - To enable CloudFront click the radio button to create a CloudFront distribution for this channel.
 
-2. At this point you can now proceed to the AWS ElementalMediaLive setup.
+2. At this point, you can now proceed to the AWS ElementalMediaLive setup.
 	- Create a channel
 	- Specify a new output group in your AWS Elemental MediaLive channel for the AWS Elemental MediaPackage channel you create.
 
 3. Now you need to create an endpoint.
     - Click “ _Add endpoints_ ”.
     - ID: NexPlayerIntegrationGuideS3MpegDashEndpoint
-    - In this example we will create an MPEG-DASH endpoint,but you should know that Media Tailor also works with HLS.
+    - In this example, we will create a MPEG-DASH endpoint, but you should know that Media Tailor also works with HLS.
 	- Packager setting: DASH-ISO
 	- Save
 
@@ -535,7 +535,7 @@ You can learn more about our Ad Decision Server [here](https://aws.amazon.com/bl
 
 ##### AWS Elemental MediaTailor
 
-Now that you have packaged your file for distribution,let’s learn how to place
+Now that you have packaged your file for distribution, let’s learn how to place
 ads within the distribution using [AWS Elemental MediaTailor](https://aws.amazon.com/mediatailor/).
 
 1. Click Create configuration
@@ -546,7 +546,7 @@ ads within the distribution using [AWS Elemental MediaTailor](https://aws.amazon
 		2. If your video already has ad markers, you can skip that step.
     - Ad decision server: Use the url for the VAST xml file you uploaded.
 2. Now you can get your video by taking the MediaTailor url prefix and
-    appending index.mpd
+    appending the index.mpd
 
 #### Your Project
 
@@ -622,7 +622,7 @@ Guide: “OBS Studio to AWS Elemental MediaLive to AWS”.
 
 Now it’s time to start the stream.
 
-1. In AWS Elemental MediaLive, on the Channels page,choose the radio
+1. In AWS Elemental MediaLive, on the Channels page, choose the radio
     button next to your new channel.
     - The buttons along the top are enabled.
 2. Choose Start.
@@ -641,5 +641,5 @@ https://{cloudfronturl}/{videoname}
 
 #### Conclusion
 
-Thank you for going through our guide on how to setup Live Streams for your
+Thank you for going through our guide on how to set up Live Streams for your
 assets using AWS Media Services and NexPlayer.
