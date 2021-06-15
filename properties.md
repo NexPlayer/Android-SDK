@@ -1,8 +1,6 @@
 # Properties
 
-There are a wide array of properties that can be adjusted to control the behavior of various aspects of the player, from buffer time (how many seconds of streaming content are buffered before playback begins) to the behavior of the player under various error conditions (whether or not to allow audio-only playback if an unsupported video codec is detected, for example).
-
-Properties are identified with an integer identifier from the NexProperty enumeration.
+There are a wide array of properties that can be adjusted to control the behavior of various aspects of the player. Properties are identified with an integer identifier from the NexProperty enumeration.
 
 The value of each property is an unsigned integer. For some properties, it may be necessary to cast this to a different type. See the individual property documentation for details. If no type is specified, it is safe to treat the property as an unsigned integer.
 
@@ -12,8 +10,7 @@ To set a property, call setProperty on the NexPlayer instance. To get the curren
 
 **Property Fine-Tuning Guidelines**
 
-The default values for the properties should be acceptable for most common cases. However, in some cases,
-adjusting the properties will give better performance or better behavior.
+The default values for the properties should be acceptable for most common cases. However, in some cases, adjusting the properties will give better performance or better behavior.
 
 **Fine-Tuning Buffering Time**
 
@@ -23,8 +20,8 @@ There are two settings for buffering time: the initial time (the first time data
 
 ```java
 void setBufferingTime( NexPlayer hNexPlayer ) {
-	hNexPlayer.setProperty(NexProperty.INITIAL_BUFFERING_DURATION, 8000);
-	hNexPlayer.setProperty(NexProperty.RE_BUFFERING_DURATION, 8000);
+	mNexPlayer.setProperty(NexProperty.INITIAL_BUFFERING_DURATION, 8000);
+	mNexPlayer.setProperty(NexProperty.RE_BUFFERING_DURATION, 8000);
 }
 ```
 
@@ -34,7 +31,7 @@ Properties can also be identified by numeric value. This is how NexPlayer identi
 
 If you must work with the numeric property identifiers directly, you can retrieve them using the getPropertyCode method of a member of this enum, and the methods getProperties(int) and setProperties(int, int) can be used to get or set a property based on the numeric identifier.
 
-**int getPropertyCode ()**
+**int getPropertyCode()**
 
 Gets the integer code for the NexPlayer property.
 
@@ -55,8 +52,6 @@ Setting this property to true(1) bypasses this exception and forces the system t
 **Type:** boolean
 
 **Default:** 0
-
-> **Warning** This property is not supported in this API version.
  
 ### APPLS_FORCESTART\_AVTRACK (198)
 
@@ -251,6 +246,17 @@ Set this to zero to disable timeout (NexPlayer will wait indefinitely for a resp
 
 **Default:** 60000 (60 seconds)
 
+### DATA_INACTIVITY\_TIMEOUT\_WARNING(135)
+
+The amount of time to wait for a server response before generating an error(warning) event. If there is no response from the server for longer than the amount of time specified here, an error (actually warning) event will be generated but playback will continue to play until the time of DATA\_INACTIVITY\_TIMEOUT.
+
+**Type:** unsigned integer
+
+**Unit:** msec (1/1000 sec)
+
+**Default:** 50000 (50 seconds)
+
+
 ### DOWNLOADER_HTTP\_HEADER (0x00090002)
 
 This property adds additional header fields to be sent along with the HTTP headers when sending streaming requests (HLS and Smooth Streaming) from the Downloader module.
@@ -303,8 +309,6 @@ In the case where content contains both CEA 608 and CEA 708 closed captions and 
 ### ENABLE_DECODER\_SEAMLESS (571)
 
 This sets whether or not to activate seamless playback when switching to another track.
-
-It can be used from Android os 4.4 and up.
 
 **Type:** int
 
@@ -391,10 +395,7 @@ mNexPlayer.setProperty(NexProperty.ENABLE_ID3_TTML, 1);
 
 This property should only be called once, after calling init but before calling open.
 
-**Warning**
-
- 
-Do not use with PARTIAL\_PREFETCH.
+> **Warning** Do not use with PARTIAL\_PREFETCH.
  
 **Type:** boolean
 
@@ -409,10 +410,7 @@ Do not use with PARTIAL\_PREFETCH.
 
 Enables NexPlayer to deliver an HTTP Request (to be used by NexPlayer) to the application.
 
-When this property is set equal to 1 (enabled), NexPlayer delivers the HTTP Request that NexPlayer will use to the application.
-
-This property is related to the onModifyHttpRequest method. For more information on how to modify HTTP
-requests, please see the introductory section Enabling Modified HTTP Requests.
+When this property is set equal to 1 (enabled), NexPlayer delivers the HTTP Request to the onModifyHttpRequest listener on the application side.
 
 **Type:** boolean
 
@@ -427,6 +425,20 @@ requests, please see the introductory section Enabling Modified HTTP Requests.
  
 NexPlayer.IListener.onModifyHttpRequest
  
+
+### ENABLE_SPD\_SYNC\_TO\_GLOBAL\_TIME (591)
+
+Enables synchronization to UTC time (SPD).
+
+**Type:** int
+
+**Default:** 0
+
+**Values:**
+
+- **0:** SPD disabled.
+- **1:** SPD enabled.
+
 ### ENABLE_SPD\_SYNC\_TO\_DEVICE\_TIME (594)
 
 Enables synchronization to device UTC (SPD).
@@ -439,20 +451,6 @@ Enables synchronization to device UTC (SPD).
 
 - **0:** Disabled device UTC
 - **1:** Enabled device UTC
-
-
-### ENABLE_SPD\_SYNC\_TO\_GLOBAL\_TIME (591)
-
-Enables synchronization to UTC time(SPD).
-
-**Type:** int
-
-**Default:** 0
-
-**Values:**
-
-- **0:** SPD disabled.
-- **1:** SPD enabled.
 
 ### SET_REFERENCE\_SERVER\_UTC (596)
 
@@ -473,12 +471,11 @@ If the value is less than availability start time in MPD, media not found will o
 
 Allows NexPlayer to switch to a lower bandwidth track if the resolution or bitrate of the current track is too high for the device to play smoothly.
 
-Under normal operation, NexPlayer switches tracks based solely on current network conditions. When this property is enabled, NexPlayer will also switch to a lower bandwidth track if too many frames are skipped during playback.
+Under normal operation, NexPlayer switches tracks based only on current network conditions. When this property is enabled, NexPlayer will also switch to a lower bandwidth track if too many frames are skipped during playback.
 
 This is useful for content that is targeted for a variety of devices, some of which may not be powerful enough to handle the higher quality streams.
  
-The `TRACKDOWN_VIDEO_RATIO` property controls the threshold at which the track change will occur, if frames
-are being skipped.
+The `TRACKDOWN_VIDEO_RATIO` property controls the threshold at which the track change will occur, if frames are being skipped.
 
 **Type:** boolean
 
@@ -536,9 +533,9 @@ Indicates whether or not the NexSound audio solution, speed control component, D
 
 As audio solutions components are optional in the NexPlayer SDK, this property can be used to checked their availability.
 
-When this property is set equal to 1 (enabled), NexPlayer uses NexSound audio solution and speed control.
-
-When this property is set equal to 2 (enabled), NexPlayer uses DTS audio solution and headphone X. When this property is set equal to 4 (enabled), NexPlayer uses DTS audio solution and head tracking.
+- When this property is set equal to 1 (enabled), NexPlayer uses NexSound audio solution and speed control.
+- When this property is set equal to 2 (enabled), NexPlayer uses DTS audio solution and headphone X.
+- When this property is set equal to 4 (enabled), NexPlayer uses DTS audio solution and head tracking.
 
 This property is related to the `notifyHeadsetState` method.
 
@@ -567,8 +564,6 @@ If this is set to 0, the player will not display the first video frame until the
 
 Once audio has started, the behavior for both settings is the same; this only affects what is displayed while the player is waiting for audio data.
 
-Under old versions of the SDK (prior to the addition of this property) the default behavior was as though this property were set to zero.
-
 **Type:** boolean
 
 **Default:** 1
@@ -584,16 +579,15 @@ Controls the algorithm used for bitrate switching when playing an HLS stream.
 **Values:**
 
 - **0:** Use a more aggressive algorithm: up-switching happens sooner.
-- **1:** Use a more conservative algorithm: up-switching happens only if a significant amount of extra bandwidth is available beyond that required to support the given bitrate. This is similar to the iPhone algorithm.
+- **1:** Use a more conservative algorithm: up-switching happens only if a significant amount of extra bandwidth is available beyond that required to support the given bitrate.
 
 ### HTTP_CREDENTIAL (134)
 
 Additional HTTP headers to use to supply credentials when a 401 response is received from the server.
 
-The string should be in the form of zero or more HTTP headers (header name and value), and each header
-(including the last) should be terminated with a CRLF sequence, for example:
+The string should be in the form of zero or more HTTP headers (header name and value), and each header (including the last) should be terminated with a CRLF sequence, for example:
 
-"id: test1\r\npw: 12345\r\n"
+```"id: test1\r\npw: 12345\r\n"```
 
 The particulars of the headers depend on the server and the authentication method being used.
 
@@ -619,46 +613,8 @@ If set value is 0, the duration is set to the segment duration(#EXT-X-TARGETDURA
 
 **Values:**
 
-- **0:** Retry only for the duration of segment(#EXT-X-TARGETDURATION).
+- **0:** Retry only for the duration of segment (#EXT-X-TARGETDURATION).
 - **Above 0:** Retry only for the value(msec).
- 
-### IGNORE_ABNORMAL\_SEGMENT\_TIMESTAMP (508)
-
-Ignores abnormal segment timestamps.
-
-If it is 1 or enabled, NexPlayer will ignore abnormal segment timestamps. If it is 0 or disabled, NexPlayer will not ignore any abnormal segment timestamps.
-
-**Type:** boolean
-
-> **Warning** This property is not supported in this API version.
- 
-### IGNORE_AUDIO\_LOST\_FRAME (119)
-
-If set to 1, lost audio frames are always ignored (silence is never inserted).
-
-See `TOO_MUCH_LOSTFRAME_DURATION` for details about the insertion of silence for lost audio frames.
-
-**Type:** boolean
-
-**Default:** 0
-
-> **Warning** This property is not supported in this API version.
- 
-### IGNORE_AV\_SYNC (121)
-
-When true(1), this property causes audio/video synchronization to be bypassed; not currently supported.
-
-In this state, audio and video are played back independently as soon as data is received.
-
-This property can be enabled if audio and video synchronization are not important, and if real-time behavior is needed between the server and the client.
-
-In normal cases, this should not be used (it should be set to zero) because it will cause video and audio to quickly lose synchronization for most normal media streams.
-
-**Type:** boolean
-
-**Default:** 0
-
-> **Warning** This property is not supported in this API version.
  
 ### IGNORE_CARRIAGERETURN\_WHEN\_RECEIVE\_ROLLUP (511)
 
@@ -668,8 +624,7 @@ Because CEA 608 closed captions support the Roll Up (RU) mode, the player starts
 
 The RU command can however have two meanings according to the specifications. One indicates the start of Roll Up mode. The other indicates that the line should be erased and the prompt(cursor) moved to the left hand edge of the display (to prepare for a new caption).
 
-In the event that some content contains many extra RU commands in the stream, captions may not be displayed
-properly because they will not be displayed fully and will be continuouly erased from the screen.
+In the event that some content contains many extra RU commands in the stream, captions may not be displayed properly because they will not be displayed fully and will be continuouly erased from the screen.
 
 If this property is enabled, NexPlayer will ignore those extra RU column reset commands and thus will not erase the affected line or move the cursor.
 
@@ -763,7 +718,7 @@ This must be one of the following values:
 
 - **LIVE_VIEW\_RECENT (0x00000000)** Start playback from the most recently received media segment (.ts) files of the HLS live playlist. For example, if 5.ts is the latest media segment (.ts), playback will begin at the beginning of that segment.
 
-- **LIVE_VIEW\_RECENT\_BYTARGETDUR (0x00000001)** Start playback from the most recently received media segement (.ts) files, based on the value set for the EXT-X-TARGETDURATION tag in the HLS live playlist. (The player will begin playback at the media segment that immediately precedes the media segment that is three times (x3) the target duration before the latest media segment file loaded). As a concrete example, if the target duration is set to 12 seconds and the total duration of currently loaded media segments is 48 seconds, playback will begin at the media file that immediately precedes the media segment with the timestamp at 12 (48-36) seconds. If this example HLS playlist includes media segment files 1.ts (duration of 10 seconds), 2.ts (9 sec), 3.ts (11 sec), 4.ts (10 sec), and 5.ts (8 sec), then playback will begin at the first media segment, 1.ts, because it immediate precedes the 2.ts segment (where the timestamp at 12 seconds occurs).
+- **LIVE_VIEW\_RECENT\_BYTARGETDUR (0x00000001)** Start playback from the most recently received media segement (.ts) files, based on the value set for the `EXT-X-TARGETDURATION` tag in the HLS live playlist. (The player will begin playback at the media segment that immediately precedes the media segment that is three times (x3) the target duration before the latest media segment file loaded). As a concrete example, if the target duration is set to 12 seconds and the total duration of currently loaded media segments is 48 seconds, playback will begin at the media file that immediately precedes the media segment with the timestamp at 12 (48-36) seconds. If this example HLS playlist includes media segment files 1.ts (duration of 10 seconds), 2.ts (9 sec), 3.ts (11 sec), 4.ts (10 sec), and 5.ts (8 sec), then playback will begin at the first media segment, 1.ts, because it immediate precedes the 2.ts segment (where the timestamp at 12 seconds occurs).
 
 - **LIVE_VIEW\_FIRST (0x00000002)** Unconditionally start HLS playback from the first entry in the HLS playlist.
 
@@ -862,16 +817,9 @@ Set a low latency buffer option.
 
 This must be one of the following values:
 
-- **LOW\_LATENCY\_BUFFEROPTION\_NONE (0x00000000)** The latency value is set by INITIAL\_BUFFERIN
-    G\_DURATION and RE\_BUFFERING\_DURATION of NexProperty. It should set the reliable value depending
-    on the bitrate of content and network environment.
-- **LOW\_LATENCY\_BUFFEROPTION\_AUTO\_BUFFER (0x00000001)** The latency value is calculated by the
-    player at runtime. During playback, the latency may increase or decrease because it may change depending
-    on the network environment.
-- **LOW\_LATENCY\_BUFFEROPTION\_CONST\_BUFFER (0x00000002)** The latency value is calculated by the
-    player at the beginning of playback and maintains the value unchanged during playback. The latency increases 
-    more than when using Auto Buffer Mode, but the rebuffering will be reduced and will try to maintain
-    constant latency after rebuffering.
+- **LOW\_LATENCY\_BUFFEROPTION\_NONE (0x00000000)** The latency value is set by INITIAL\_BUFFERING\_DURATION and RE\_BUFFERING\_DURATION of NexProperty. It should set the reliable value depending on the bitrate of content and network environment.
+- **LOW\_LATENCY\_BUFFEROPTION\_AUTO\_BUFFER (0x00000001)** The latency value is calculated by the player at runtime. During playback, the latency may increase or decrease because it may change depending on the network environment.
+- **LOW\_LATENCY\_BUFFEROPTION\_CONST\_BUFFER (0x00000002)** The latency value is calculated by the player at the beginning of playback and maintains the value unchanged during playback. The latency increases more than when using Auto Buffer Mode, but the rebuffering will be reduced and will try to maintain constant latency after rebuffering.
 
 **Type:** unsigned integer
 
@@ -893,10 +841,9 @@ This is a possible setting for the LOW\_LATENCY\_BUFFER\_OPTION property; see th
 
 The maximum duration of prefetch buffer to pause filling the buffer.
 
-If the duration of content available in the filling prefetch buffer is greater than this value, filling of the buffer will be
-paused until the buffer status meets the condition of MIN\_BUFFER\_DURATION.
+If the duration of content available in the filling prefetch buffer is greater than this value, filling of the buffer will be paused until the buffer status meets the condition of MIN\_BUFFER\_DURATION.
 
-> **Warning** Note that when setting `MAX_BUFFER_DURATION` to a specific value, the value chosen must be at least twice the value of `RE_BUFFERING_DURATION`. If a smaller value is chosen, the value of `MAX_BUFFER_DURATION` will automatically be increased to twice the value of RE_BUFFERING_DURATION. For example, if `RE_BUFFERING_DURATION=5000` ms and one tries to set `MAX_BUFFER_DURATION` to 7000 ms, `MAX_BUFFER_DURATION` will automatically be set to 10000 ms instead.
+> **Warning** Note that when setting `MAX_BUFFER_DURATION` to a specific value, the value chosen must be at least twice the value of `RE_BUFFERING_DURATION`. If a smaller value is chosen, the value of `MAX_BUFFER_DURATION` will automatically be increased to twice the value of `RE_BUFFERING_DURATION`. For example, if `RE_BUFFERING_DURATION=5000` ms and one tries to set `MAX_BUFFER_DURATION` to 7000 ms, `MAX_BUFFER_DURATION` will automatically be set to 10000 ms instead.
  
 **Type:** unsigned integer
 
@@ -918,7 +865,7 @@ If the prefetch buffer is more than this value percent full, filling the buffer 
  
 ### MAX_BW (117)
 
-When using HLS ABR, this is the maximum allowable bandwidth.
+When usinG ABR, this is the maximum allowable bandwidth.
 
 Any track with a bandwidth greater than this value will not be played back.
 
@@ -946,7 +893,7 @@ This property should be called after init but before calling open.
 
 Limits the H.264 profile that can be selected from an HLS playlist.
 
-Under normal operation, the track with the highest supported H.264 profile is selected from an HLS playlist. If this property is set, no track with a profile higher than this value will be selected.
+Under normal operation, the track with the highest supported H.264 profile is selected from the playlist. If this property is set, no track with a profile higher than this value will be selected.
 
 This should be set to zero for no limit.
 
@@ -1004,7 +951,7 @@ If the prefetch buffer is less full than the value set by this property, the buf
  
 ### MIN_BW (516)
 
-When using HLS ABR, this is the minimum allowable bandwidth.
+When using ABR, this is the minimum allowable bandwidth.
 
 Any track with a bandwidth smaller than this value will not be played back.
 
@@ -1018,13 +965,11 @@ Any track with a bandwidth smaller than this value will not be played back.
 
 ### NEW_TRACK\_SELECTION\_MODE (510)
 
-Sets the track selection mode NexPlayer will use when playing Smooth Streaming content.
+Sets the track selection mode NexPlayer will use when playing a content.
 
 This property determines how a new track is selected when starting to play new Smooth Streaming content. Based on the mode set here, NexPlayer will prefer the specified range of tracks when selecting which to play first.
 
 While the default setting of selecting high bitrate tracks will be acceptable generally, there may be certain circumstances in which it is preferable that a lower bitrate track be selected first, and this property offers that flexibility.
-
-Please see the sample code for an example of how to use this property.
 
 **Type:** unsigned integer
 
@@ -1139,7 +1084,7 @@ PREFER\_BANDWIDTH
 
 ### PREFER_BANDWIDTH (129)
 
-This property sets the preferred bandwidth when switching tracks during streaming play.
+This property sets the preferred bandwidth when switching tracks during live playback.
 
 Under normal operation (when this property is zero), if the available network bandwidth drops below the minimum needed to play the current track without buffering, the player will immediately switch to a lower bandwidth track, if one is available, to minimize any time spent buffering.
 
@@ -1150,10 +1095,6 @@ If this property is set, the player will attempt to choose only tracks above the
 **Unit:** kbps (Kbits per second)
 
 **Default:** 0
-
-**See Also**
-
-PREFER\_AV
  
 ### PREFER_LANGUAGE (530)
 
@@ -1181,8 +1122,7 @@ mNexPlayer.setProperty(NexProperty.PREFER\_LANGUAGE, "eng");
 
 Sets the language to use for audio in multi-stream content, before content is played.
 
-This property can be used to set the preferred language of audio streams to be used in content, before 
-NexPlayer begins playing content.
+This property can be used to set the preferred language of audio streams to be used in content, before NexPlayer begins playing content.
 
 > **Warning** To change any media stream while content is playing, the method setMediaStream should be called instead. To set the preferred language for both audio and text streams to the same language, use the NexProperty, PREFER\_LANGUAGE, instead.
  
@@ -1248,7 +1188,7 @@ Set the proxy port number.
 
 ### RE_BUFFERING\_DURATION (10)
 
-The number of milliseconds of media to buffer if additional buffering is required during streaming playback (HLS, RTSP, etc).
+The number of milliseconds of media to buffer if additional buffering is required during playback .
 
 This is the amount of audio and video that NexPlayer buffers when the buffer becomes empty during playback (requiring additional buffering). After open() is called, this property can be set at any time during playback by calling setProperty.
 
@@ -1259,104 +1199,6 @@ For the initial buffering, the value of the property INITIAL\_BUFFERING\_DURATIO
 **Unit:** msec (1/1000 sec)
 
 **Default:** 5000 (5 seconds)
-
-### REQUEST_RADIO\_METADATA\_MODE (515)
-
-Allows NexPlayer to add an explicit request for metadata in internet radio stream content.
-
-> **Warning** This is currently only supported in SHOUTcast and IceCast HLS content.
- 
-If an explicit request for metadata is not made, a server may or may not send internet radio stream metadata even if it exists.
-
-Setting this property to 1 means an explicit request for internet radio stream metadata will be included with every content request sent to a server. If this property is set to 2, NexPlayer will only add an explicit request for metadata **after** initially receiving content and identifying it as a SHOUTcast or Icecast stream.
-
-**Values:**
-
-- **0 : DEFAULT :** Default mode. Does not add an additional explicit request for internet radio stream metadata.
-- **1 : INSERT\_HEADER :** Always inserts a header with a request for internet radio stream metadata (with every content request).
-- **2 : INSERT\_HEADER\_AFTER\_TRIAL :** If NexPlayer determines content is a SHOUTcast or Icecast stream, a header with an explicit request for metadata will be added to subsequent server requests.
- 
-### RFC_BUFFER\_COUNT (0x00070001)
-
-Controls the maximum number of pages the player can allocate for the remote file cache.
-
-The remote file cache stores data that has been read from disk or received over the network (this includes local, streaming and progressive content).
-
-In general, this value should not be changed, as an incorrect setting can adversely affect performance, particularly when seeking.
-
-In order to play multiplexed content, at least one audio chunk and one video chunk must fit inside a single RFC buffer page. For certain formats (PIFF, for example) at very high bitrates, the chunks may be too big to fit in a single page, in which case the RFC buffer page size will need to be increased. If the system has limited memory resources, it may be necessary to decrease the buffer count when increasing the page size.
-
-Increasing the page size can increase seek times, especially for data received over the network (progressive download and streaming cases), so this value should not be changed unless there are issues playing specific content that cannot be solved in another way.
-
-**Type:** unsigned integer
-
-**Unit:** number of buffers
-
-**Default:** 20
-
-> **Warning** This property is not supported in this API version.
- 
-### RFC_BUFFER\_PAGE\_SIZE (0x00070002)
-
-Controls the size of each page in the remote file cache.
-
-Use caution when adjusting this value. Improper settings may adversely affect performance, or may cause some content to fail to play.
-
-**See Also**
- 
-RFC\_BUFFER\_COUNT for a detailed description.
- 
-**Type:** unsigned integer
-
-**Unit:** kilobytes (kB)
-
-**Default:** 256
-
-> **Warning** This property is not supported in this API version.
-
-### RTP_PORT\_MAX (23)
-
-The maximum possible port number for the RTP port that is created when performing RTSP streaming over UDP.
-
-**Type:** unsigned integer
-
-**Default:** 7000
-
-> **Warning** This property is not supported in this API version.
-
-### RTP_PORT\_MIN (22)
-
-The minimum possible port number for the RTP port that is created when performing RTSP streaming over UDP.
-
-**Type:** unsigned integer
-
-**Default:** 6000
-
-> **Warning** This property is not supported in this API version.
-
-### SEEK_NEAREST\_IDR\_FRAME (217)
-
-Sets the idr frame search option during seek.
-
-If you want to search nearest IDR frame set 
-
-```
-SEEK_NEAREST_IDR_FRAME_DURING_LOCAL(1) | SEEK_NEAREST_IDR_FRAME_DURING_STREAMING(2)
-``` 
-
-as content type.
-
-**Type:** unsigned integer
-
-**Default:** SEEK\_NEAREST\_IDR\_FRAME\_DURING\_STREAMING(2)
-
-**Values:**
-
-- **0:** not search the nearest idr-frame.
-- **1:** search the nearest idr-frame on Local Content.
-- **2:** search the nearest idr-frame on Streaming Content.
- 
-> **Warning** This property is not supported in this API version.
  
 ### SEEK_RANGE\_FROM\_RA\_POINT (102)
 
@@ -1418,9 +1260,7 @@ This property should be called after init but before calling open.
  
 ### SET_PRESENTATION\_DELAY (590)
 
-For DASH, use suggestedPresentationDelay to synchronize end users.
-
-For HLS, use the #EXT-X-PROGRAM-DATE-TIME tag to sync end users.
+This property overrides the suggestedPresentationDelay value of the DASH manifest.
 
 **Type:** unsigned integer
 
@@ -1428,24 +1268,6 @@ For HLS, use the #EXT-X-PROGRAM-DATE-TIME tag to sync end users.
 
 **Default:** 2000 (2 sec)
  
-### SET_CEA608\_TYPE (502)
-
-Sets the type of caption display for CEA 608 captions, but is a deprecated property.
-
-Because CEA 608 closed captions include multiple text attributes and additional display modes, in past versions of the NexPlayer SDK, this property allowed these captions to be displayed more simply in BASIC form (where the CEA 608 captions were essentially treated in the same way as other forms of subtitles) or allowed the player to fully support all attributes and display modes available with CEA 608 specifications.
-
-Because the BASIC mode did not always easily allow the player to display the captions in such a way that they were easily read, especially with live content, and to always support the full specification, this property has been deprecated and CEA 608 closed captions are always fully implemented according to the specification, as if this property were set to 1.
-
-**Type:** unsigned integer
-
-**Default:** 0
-
-**Values:**
-
-- 0 : BASIC: Captions displayed one row at a time.
-- 1 : FULL: Each character in the Closed Captions added individually. This type of caption display supports all CEA 608 text attributes and display specifications.
-
-> **Deprecated** Do not use.
 
 ### SET_COOKIE (500)
 
@@ -1462,7 +1284,7 @@ Controls whether or not the player honors cookies sent by the server.
 
 ### SET_LIVEBACKOFF (504)
 
-Sets the SmoothStreamingLiveBackOffproperty when playing Smooth Streaming content.
+Sets the SmoothStreamingLiveBackOff property when playing Smooth Streaming content.
 
 This property sets the duration of content (closest to live) that cannot yet be accessed or downloaded by the player.
 
@@ -1576,7 +1398,7 @@ This is useful to determine whether to display the speed control in the user int
 
 ### START\_NEARESTBW (555)
 
-Sets a target bandwidth (before playing HLS content) when selecting which track to play as playback starts.
+Sets a target bandwidth (before playing the content) when selecting which track to play as playback starts.
 
 While NexPlayer automatically chooses an ideal track to play based on several factors including device capability and network conditions, there may be situations in which starting playback from a track with a bandwidth near a particular bandwidth is desired.
 
@@ -1608,7 +1430,7 @@ If it is 1, it forces the video and audio to start at the same time. If it is 0,
 
 ### SUPPORT_ABR (116)
 
-If set to 1, enables HLS Adaptive Bit Rate (ABR) support.
+If set to 1, enables Adaptive Bit Rate (ABR) support.
 
 **Type:** boolean
 
@@ -1627,8 +1449,6 @@ If set to 1, enables Apple HTTP Live Streaming (HLS) support.
 This property enables the Eye Pleaser feature.
 
 If the decoding or display of video frames takes too long, it may be necessary to skip some frames in order to maintain a normal rate of playback. Under normal operation, frames are skipped immediately to catch up. When Eye Pleaser is enabled, skipped frames are spread out to try to make playback appear smoother.
-
-Note that in older versions of the NexPlayer SDK, this property was also called USE\_EYEPLEASER.
 
 **Type:** integer
 
@@ -1689,22 +1509,6 @@ If set to 1, enables Microsoft Windows Media Streaming support.
 
 **Default:** 0
 
-### SW_DECODED\_VIDEO\_BUFFER\_COUNT (200)
-
-Sets the size of the buffer used to receive decoded video frames when the software video codec is used.
-
-Setting the buffer size in advance based on device system performance can improve decoding performance with
-the SW codec, as more data can be decoded and saved in the buffer.
-
-> **Note** This property must be used with the property `USE_SYNCTASK` set to 1.
- 
-**Type:** unsigned integer
-
-**Unit:** decoded video frame count
-
-**Default:** 0
- 
-> **Warning** This property is not supported in this API version.
 
 ### TIMED_ID3\_META\_KEY (521)
 
@@ -1732,15 +1536,13 @@ This property must be set before NexPlayer.open is called.
 
 The number of milliseconds that video is allowed to run behind audio before the system begins skipping frames to maintain synchronization.
 
-For example, 70 means that if the current video time is more than 70msec behind the audio time, the current video frame will be skipped. This is used to adjust video and audio synchronization.
-
-> **Note** As of version 6.33, the default value changed from 200 msec to 70 msec.
+For example, 70 means that if the current video time is more than 70ms behind the audio time, the current video frame will be skipped. This is used to adjust video and audio synchronization.
  
 **Type:** unsigned integer
 
-**Unit:** msec (1/1000 sec)
+**Unit:** ms (1/1000s)
 
-**Default:** 70 (0.07 sec)
+**Default:** 70 (0.07s)
 
 ### TIMESTAMP_DIFFERENCE\_VDISP\_WAIT (13)
 
@@ -1750,27 +1552,9 @@ For example, -50 means that if the current video time is more than 50 msec ahead
  
 **Type:** integer (should be negative)
 
-**Unit:** msec (1/1000 sec)
+**Unit:** ms (1/1000s)
 
-**Default:** -50 (50msec)
-
-### TOO_MUCH\_LOSTFRAME\_DURATION (105)
-
-Maximum amount of silence to insert to make up for lost audio frames.
-
-Under normal operation, if audio frames are lost (if there is a time gap in received audio frames), silence will be inserted automatically to make up the gap.
-
-However, if the number of audio frames lost represents a span of time larger than the value set for this property, it is assumed that there is a network problem or some other abnormal condition and silence is not inserted.
-
-This prevents, for example, a corruption in the time stamp in an audio frame from causing the system to insert an exceptionally long period of silence (which could possibly prevent further audio playback or cause other unusual behavior).
-
-**Type:** unsigned integer
-
-**Unit:** msec (1/1000 sec)
-
-**Default:** 20000 (20 seconds)
-
-> **Warning** This property is not supported in this API version.
+**Default:** -50 (50ms)
 
 ### TRACKDOWN_VIDEO\_RATIO (132)
 
@@ -1789,25 +1573,6 @@ A performance-based track switch **permanently** limits the maximum bandwidth of
 **Type:** integer
 **Range:** 0 to 100
 **Default:** 70
-
-### USE_SYNCTASK (187)
-
-Sets whether or not NexPlayer should use SyncTask feature; not currently supported.
-
-When the software video codec is being used, SyncTask can improve decoding performance.
-
-> **Note** This property must be set before playing content so it must be set when the codec mode (SW) is selected, prior to calling NexPlayer.init or NexPlayer.open.
- 
-**Type:** unsigned integer
-
-**Default:** 1
-
-**Values:**
-
-- **0:** Do not use SyncTask.
-- **1:** Use SyncTask.
- 
-> **Warning** This property is not supported in this API version.
  
 ### USERAGENT_STRING (58)
 
