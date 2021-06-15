@@ -213,44 +213,10 @@ This use case is a combination of cases 1 and 2, where a main video stream provi
 - setMediaStream()
 - NexStreamInformation for more details about available content streams.
 
-## Storing Streaming Content for Offline Playback
 
-In some circumstances, media player users may want the option to download and store streaming content to be played back when they are offline and cannot access a network. A developer can now offer users this feature with the NexPlayer SDK.
+## Offline Playback
 
-> **Warning** This feature is only currently supported for VoD content that is provided with the HLS and DASH protocols.
-
-Streaming content can be downloaded and stored as quickly as network condition allow without playing the content by calling *NexPlayer.open()* with the *type* parameter set to *NEXPLAYER\_SOURCE\_TYPE\_STORE\_STREAM*.
-
-The offline storage progress can be monitored with the asynchronous command complete values *NEXPLAYER\_ASYNC\_CMD\_OPEN\_STORE\_STREAM* and *NEXPLAYER\_ASYNC\_CMD\_START\_STORE\_STREAM* as well as with the status report message *NEXPLAYER\_STATUS\_REPORT\_DOWNLOAD\_PROGRESS*, which delivers the percentage (0 to 100) of the content that has been successfully downloaded. Once the desired content has been successfully downloaded, it can be played at any time by calling *NexPlayer.open()* with the type parameter set to *NEXPLAYER\_SOURCE\_TYPE\_STREAMING* and the URL used to store the content.
-
-> **Note** Please note that the same value used to call NexPlayer.setVideoBitrate when storing the streaming content must also be used when opening the stored content to play it offline.
-
-This mode of using the NexPlayer engine only supports basic APIs such as *open()*, *start()*, *stop()*, and *close()*.
-
-Content stored by the user with this feature can even be played back offline in different applications (not just the NexPlayer-SDK-based app used to store the content).
-
-#### 1.10.1 API Sequence to Store HLS or DASH Content
-![](assets/api_seq_storingHLS.jpg)
-
-*Figure 1.1: Sequence diagram for storing HLS or DASH content*
- 
-#### 1.10.2 API Sequence to Play Stored HLS or DASH Content Offline
-![](assets/api_seq_offlinePlayback.jpg)
- 
-Figure 1.2: Sequence diagram for playing HLS or DASH content
- 
-*See Also*
-
-- NEXPLAYER\_SOURCE\_TYPE\_STORE\_STREAM
-- NexPlayer.open
-
-## New Offline Playback
-
-The new offline playback feature is an expansion, which is a better way of saving and managing the data required for offline playback storing than a database. 
-
-In the new offline playback, every storing step will create a file that contains stored info instead of a database. Using this file and calling this API once will enable *Continue Store and Retrieve*.
-
-> **Note** The new offline playback does not support storing and playing content simultaneously. If you wish to do both actions, please use the previous offline playback method.
+In the offline playback, each store operation will create a file that contains stored info instead of a database. Using this file and calling this API once will enable *Continue Store and Retrieve*.
 
 ### How to Store HLS or DASH content
 
