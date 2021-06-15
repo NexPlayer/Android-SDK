@@ -1,7 +1,5 @@
 # MediaDRM NexPlayerSDK for Android
 
-### MediaDrm Components
-
 ![](assets/mediadrm_overview.png)
 
 Encrypted content is prepared using an encryption server and stored in a content library. The encrypted content is streamed or downloaded from the content library to client devices via content servers. Licenses to view the content are obtained from the License Server.
@@ -53,96 +51,6 @@ This API is used for setting optionalParameters when sending requests to the Key
 4. (Optional) If your key server needs more information, then you can set it using `setNexMediaDrmOptionalHeaderFields` API.
 5. Open the content.
 6. NexPlayer will get credentials from the Key Server, and then play content automatically.
-
-### How to store and retrieve Media DRM content
-
-To play MediaDrm content without internet connection, you should store the content before playback. If the user enables storing mode, then NexPlayer will request a specified KeyID from MediaDrm and pass it through an event listener. The user MUST store it using his/her own way such as saving it in a database.
-
-NexPlayer provides 2 ways for storing content:
-
-1. Storing with playback
-You can save content during playback. In this mode, NexPlayer will store the content you see on the screen, so if you skip anysections, NexPlayer will not store those sections.
-
-	- Register an HTTP Store callback:
-    
-	    ```java
-	    HTTPStoreDataManager.initManagerMulti(Object nexPlayerHandle, String strEngineLibName, String cachFolder);
-	    ```
-	   NexPlayer will store cache files under “cacheFolder”.
-	   
-	- Register IOfflineKeyListener:
-	
-		```java
-	    void onOfflineKeyStoreListener(NexPlayer mp, byte[] keyId);
-	    ```
-	   A generated KeyID will be sent by this listener method. You should store it in your own way.
-	   
-	- Open the URL and play content.
-		
-		```java
-		 public int open(String path, String smiPath, String externalPDPath, int type, int transportType)
-		```
-		The 4th param, “type” should be `NEXPLAYER_SOURCE_TYPE_STREAMING`.
-
-
-2. Storing WITHOUT playback
-    In this mode, NexPlayer will store every content in sequence.
-
-	- Register an HTTP Store callback:
-    
-	    ```java
-	    HTTPStoreDataManager.initManagerMulti(Object nexPlayerHandle, String strEngineLibName, String cachFolder);
-	    ```
-	   NexPlayer will store cache files under “cacheFolder”.
-	   
-	- Register IOfflineKeyListener:
-	
-		```java
-	    void onOfflineKeyStoreListener(NexPlayer mp, byte[] keyId);
-	    ```
-	   A generated KeyID will be sent by this listener method. You should store it in your own way.
-	   
-	- Open the URL and play content.
-		
-		```java
-		 public int open(String path, String smiPath, String externalPDPath, int type, int transportType)
-		```
-		The 4th param, “type” should be `NEXPLAYER_SOURCE_TYPE_STORE_STREAM`.
-		
-**Retrieving stored content from cache files**
-
-To play stored MediaDrm files, you should register a retrieve callback function and recover a DRM session via KeyID.
-
-1. Register an HTTP Retrieve callback:
-
-	```java
-	HTTPRetrieveDataManager.initManagerMulti(Object nexPlayerHandle, String strEngineLibName, String cachFolder);
-	```
-	
-	NexPlayer will find cached data from “cacheFolder”.
-
-2. Register IOfflineKeyListener:
-
-	```java
-	byte[] onOfflineKeyRetrieveListener(NexPlayer mp);
-	```
-	
-	When NexPlayer restores a DRM session, and retrieving callback is enabled, NexPlayer will trigger this callback to acquire KeyID that is provided via onOfflineKeyStoreListener.
-
-3. Open the URL and play content.
-
-	```java
-	public int open(String path, String smiPath, String externalPDPath, int type, int transportType)
-	```
-	
-	The 4th param, “type” should be `NEXPLAYER_SOURCE_TYPE_STREAMING`.
-
-
-## New Offline Playback
-
-The new offline playback feature is an expansion, which is a better way of saving and managing the data required for offline playback storing than a database. 
-
-In the new offline playback, every storing step will create a file that contains stored info instead of a database. Using this file and calling this API once will enableContinue Store and Retrieve.
 
 ### How To Store MediaDrm Content
 
