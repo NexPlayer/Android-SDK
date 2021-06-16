@@ -2,7 +2,7 @@
 
 ### AsfPlayReadyDRMManager Class Reference
 
-#### static native int initDRMManager (String strEngineLibName) [static]
+#### static native int initDRMManager (String strEngineLibName)
 
 Initializes and registers the **AsfPlayReadyDRMManager**.
 
@@ -28,9 +28,9 @@ Initializes and registers the **AsfPlayReadyDRMManager**.
 
 This enumeration sets the text display and background colors of CEA 608 closed captions.
 
-Each color option has an ARGB hexacode associated with the foreground color or background color of the caption to be displayed, as well as a unique value to be used to identify which color is to be selected.
+Each color option has an ARGB hex code associated with the foreground color or background color of the caption to be displayed, as well as a unique value to be used to identify which color is to be selected.
 
-#### static CaptionColor fromValue (int value) [static]
+#### static CaptionColor fromValue (int value)
 
 This gets the caption color to be used with CEA 608 closed captions in FULL mode from the integer value.
 
@@ -43,30 +43,26 @@ This gets the caption color to be used with CEA 608 closed captions in FULL mode
 **Returns**
 
 The caption color to be used.
+
  
-**See Also**
- 
-The enumerator `CaptionColor` for more details on the possible captions and color values to be used.
- 
-#### int getBGColor ()
+#### int getBGColor()
 
 This gets the background color of the character to be displayed with CEA 608 closed captions in FULL mode.
 
 **Returns**
 
-The background color to be displayed as an ARGB hexacode. Please see the enumerator CaptionColor for
+The background color to be displayed as an ARGB hex code. Please see the enumerator CaptionColor for
 the possible hexacodes and their associated colors.
  
-#### int getFGColor ()
+#### int getFGColor()
 
 This gets the text or foreground color of the character to be displayed with CEA 608 closed captions in FULL mode.
 
 **Returns**
  
-The text color to be displayed as an ARGB hexacode. Please see the enumerator CaptionColor for the possible
-hexacodes and their associated colors.
+The text color to be displayed as an ARGB hex code. Please see the enumerator CaptionColor for the possible hex codes and their associated colors.
  
-#### int getValue ()
+#### int getValue()
 
 This gets the integer value of the CaptionColor enumerator, to be used with CEA 608 closed captions in FULL mode.
 
@@ -164,21 +160,21 @@ This sets the CEA 608 closed captions text or background color semi-transparent 
 
 This enumeration sets how CEA 608 closed captions will be displayed (in FULL mode only).
 
-#### staticCaptionModefromValue ( intvalue) [static]
+#### static CaptionMode.fromValue(int value)
 
 This gets the mode that captions should be displayed based on the integer value of the enumeration.
 
 **Returns**
 
-The CaptionMode to be used to display CEA 608 closed captions. Please see the enumeration for details on the different modes.
+The CaptionMode to be used to display CEA 608 closed captions.
 
-#### int getValue ()
+#### int getValue()
 
 This gets the integer value of the CaptionMode enumeration for CEA 608 closed captions.
 
 **Returns**
 
-The integer value of the CaptionMode to be used. See the CaptionMode enumeration for more details.
+The integer value of the CaptionMode to be used.
 
 #### None = (0)
 
@@ -202,26 +198,11 @@ This may include 2, 3, or 4 rows displayed and "rolling" at once.
 
 Only text will be displayed. This mode is used for example in emergency broadcast situations.
 
-### NexVideoView.Settings.CEARenderMode Enum Reference
-
-This enumeration defines the possible modes for CEA rendering.
-
-**Public Member Functions**
-
-- **CEARenderMode** (int value)
-- int **getInteger** ()
-
-**Public Attributes**
-
-- **CEA\_608** = (0)
-- **CEA\_708** = (1)
-- int **mValue**
-
 ### NexClosedCaption.Charset Enum Reference
 
 This enumerator defines the encoding character set to be used for CEA 608 closed captions (in FULL mode only).
 
-#### static Charset fromValue (int value) [static]
+#### static Charset fromValue (int value)
 
 This gets the character set to be used for encoding based on the integer value.
 
@@ -303,13 +284,7 @@ This method gets the text color of CEA 708 closed captions as an ARGB color.
 
 ### DashDRMManager Class Reference
 
-**Static Public Member Functions**
-
-- static native int initDRMManager (String strEngineLibName)
-- static native int initDRMManagerMulti (Object nexPlayerHandle, String strEngineLibName)
-
-
-#### static native int initDRMManager (String strEngineLibName) [static]
+#### static native int initDRMManager (String strEngineLibName)
 
 Initializes and registers the **DeceUVDRMManager**.
 
@@ -320,7 +295,7 @@ Initializes and registers the **DeceUVDRMManager**.
 | strEngineLibName | The relevant engine library name as a string.|
  
 
-#### static native int initDRMManager (String strEngineLibName) [static]
+#### static native int initDRMManager (String strEngineLibName)
 
 Initializes and registers DRMManager.
 
@@ -370,13 +345,6 @@ These are available caption edge styles :
 - void **releaseThread** ()
 - int **swapBuffers** ()
 
-### NexEIA708Struct.EIA708Service Class Reference
-
-This class defines a CEA 708 service.
-
-**Public Member Functions**
-
-- void **SetCurrentWindow** (int WinID)
 
 ### NexEIA708Struct.EIA708Window Class Reference
 
@@ -388,8 +356,7 @@ This method appends a character to the end of a CEA 708 closed caption.
 
 #### void ClearUpdate ()
 
-This method resets the mUpdate paramater that indicates whether CEA 708 closed caption data has been updated
-or not.
+This method resets the mUpdate paramater that indicates whether CEA 708 closed caption data has been updated or not.
 
 #### void ClearWindow ()
 
@@ -411,7 +378,7 @@ This method gets the ARGB color windows for CEA 708 closed captions.
 
 This method gets the height of the window for CEA 708 closed captions.
 
-#### int GetTextLine (NexLogStringQueue.CharUnit[ ] cData, int index)
+#### int GetTextLine(NexLogStringQueue.CharUnit[ ] cData, int index)
 
 This method gets a line of text in CEA 708 closed captions.
 
@@ -422,7 +389,6 @@ This method gets a line of text in CEA 708 closed captions.
 | cData | The caption data for the received line of text, as anarray of characters.|
 | index | The index of the line of text, as an integer.|
   
-
 #### int GetTextLineCount ( )
 
 This method gets the number of the current line of text in CEA 708 closed captions.
@@ -486,17 +452,6 @@ This method makes the CEA 708 closed caption window visible when called.
 
 This method toggles the CEA 708 closed caption window when called.
 
-### NexMediaDrmSessionManager.EventListener Interface Reference
-
-**Public Member Functions**
-
-- void **onDrmKeysLoaded** (byte[ ] keySetId, byte[ ] sessionId)
-- void **onDrmSessionManagerError** (Exception e)
-- void **onDrmKeyStatusChanged** (List<NexMediaDrm.KeyStatus>KeyStatusInfo, byte[ ] sessionId)
-- void **onDrmKeyExpired** (Exception e)
-- void **onDrmKeysRestored** ()
-- void **onDrmKeysRemoved** ()
-
 ### NexStatisticsMonitor.FileType Enum Reference
 
 An enumeration of the possible types of files being handled by NexPlayer during HLS, DASH or SS playback.
@@ -515,7 +470,7 @@ Gets the ***FileType*** code as an integer.
 
 The requested ***FileType*** code as an integer.
  
-#### static FileType toFileType (int code) [static]
+#### static FileType toFileType (int code)
 
 This method gets the ***FileType*** from the integer code of the ***FileType***.
 
@@ -593,8 +548,7 @@ This is the same as NexRTStreamInformation.mNumOfSegTimeout.
 
 #### NUM\_SEG\_DOWN\_RATE = ( 0x00000700 )
 
-The number of segments that have an actual read bitrate below the bitrate specified in the profile, where the read
-bitrate is the speed at which the segments are read from the network.
+The number of segments that have an actual read bitrate below the bitrate specified in the profile, where the read bitrate is the speed at which the segments are read from the network.
 
 This is the same as NexRTStreamInformation.mNumOfSegDownRate.
 
@@ -653,7 +607,7 @@ The current play time in seconds, as along.
 
 This is the same as the count of NEXPLAYER\_EVENT\_TIME.
 
-#### static native int initManager (String strEngineLibName) [static]
+#### static native int initManager (String strEngineLibName)
 
 Initializes and registers the GetHttpAuthInfoManager.
 
@@ -663,7 +617,7 @@ Initializes and registers the GetHttpAuthInfoManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initManager (String strEngineLibName) [static]
+#### static native int initManager (String strEngineLibName)
 
 Initializes and registers the GetKeyExtManager.
 
@@ -673,7 +627,7 @@ Initializes and registers the GetKeyExtManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initManager (String strEngineLibName) [static]
+#### static native int initManager (String strEngineLibName)
 
 Initializes and registers the GetPDBlockManager.
 
@@ -683,7 +637,7 @@ Initializes and registers the GetPDBlockManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
-#### static native int initManager (String strEngineLibName) [static]
+#### static native int initManager (String strEngineLibName)
 
 Initializes and registers the GetPlaylistInfoManager.
 
@@ -693,7 +647,7 @@ Initializes and registers the GetPlaylistInfoManager.
 |---|---|
 | strEngineLibName | The relevant engine library name as a string.|
  
- ### GLRenderer Class Reference
+### GLRenderer Class Reference
 
 This is the view for displaying NexPlayer video output when using the OpenGL renderer.
 
@@ -711,7 +665,6 @@ The sole constructor.
 |np| The NexPlayer object that will provide the video frames to display in this view.|
 |listener| An object that implements GLRenderer.IListener, for receiving notifications about changes to the size of the surface.|
 |colorDepth| Video output image color depth (this must be the same value passed when initializing NexPlayer).<br>**1** : RGBA\_8888<br>**4** : RGB\_565|
-
 
 
 #### void release ()
@@ -756,7 +709,8 @@ The typical method of reinitializing the video renderer is to set this to true a
 glRenderer.mReInitRenderer = true;
 glRenderer.requestRender();
 ```
-#### static native int initManager (String strEngineLibName) [static]
+
+#### static native int initManager (String strEngineLibName)
 
 Initializes and registers the HLSAES128DescrambleManager.
 
@@ -770,9 +724,7 @@ Initializes and registers the HLSAES128DescrambleManager.
 
 This class allows NexPlayer to handle and descramble HLS TS encrypted content.
 
-
-
-#### static native int initDRMManager (String strEngineLibName) [static]
+#### static native int initDRMManager (String strEngineLibName)
 
 Initializes and registers the `HLSTsDRMManager`.
 
@@ -786,7 +738,7 @@ Initializes and registers the `HLSTsDRMManager`.
 
 This class allows NexPlayer to support and handle offline HLS and Smooth Streaming content.
  
-#### static native int initManager (String strEngineLibName, String cachFolder) [static]
+#### static native int initManager (String strEngineLibName, String cachFolder)
 
 Initializes and registers the `HTTPRetrieveDataManager`.
 
@@ -842,7 +794,7 @@ This enumeration defines the parameter key, for parameters related to HTTP stati
 - **RESOURCE\_URL** = ( 0x00000000 )
     The resource URL, as a *String*.
 - **FILE\_TYPE** = ( 0x00000001 )
-	 The file type being received, as a *`FileType`*.
+	 The file type being received, as a `FileType`.
 - **SEG\_NO** = ( 0x00000002 )
     The current segment number, as an integer.
 - **SEG\_DURATION** = ( 0x00000003 )
@@ -858,15 +810,10 @@ This enumeration defines the parameter key, for parameters related to HTTP stati
 - **ERROR\_CODE** = ( 0x00000008 )
     The error code.
 
-**See Also**
- 
-HttpStatisticsMetric
  
 #### HttpStatisticsParamKey (int code)
 
 Sets the HTTP statistics parameter key.
-
-
 
 #### final int getCode ()
 
@@ -880,13 +827,13 @@ The HTTP statistics parameter key requested, as an integer.
 
 The current number of bytes received, as a *long*.
 
-A parameter for the HTTP statistics, *DATA\_RECEIVED* and *DOWN\_END*.
+A parameter for the HTTP statistics, `DATA_RECEIVED` and `DOWN_END`.
 
 #### CONTENT\_LENGTH = ( 0x00000007 )
 
 The current length of the HLS, DASH or SS content received so far, as a *long*.
 
-A parameter for the HTTP statistic,DATA\_RECEIVED.
+A parameter for the HTTP statistic, DATA\_RECEIVED.
 
 #### ERROR\_CODE = ( 0x00000008 )
 
@@ -910,8 +857,7 @@ A parameter for the HTTP statistic, *DOWN\_START*.
 
 The resource URL, as a *String*.
 
-A possible parameter for the HTTP statistics, *DOWN\_START*, *CONNECT*, *CONNECTED*, *HEADER\_RECEIVED*,
- *DATA\_RECEIVED*, *DOWN\_END*, and *ERROR*.
+A possible parameter for the HTTP statistics, *DOWN\_START*, *CONNECT*, *CONNECTED*, *HEADER\_RECEIVED*, *DATA\_RECEIVED*, *DOWN\_END*, and *ERROR*.
 
 #### SEG\_DURATION = ( 0x00000003 )
 
@@ -932,10 +878,8 @@ The bandwidth of the current track, as an integer.
 A parameter for the HTTP statistic, *DOWN\_START*.
 
 ### HTTPStoreDataManager Class Reference
- 
 
-
-#### static native int initManager (String strEngineLibName, String cachFolder) [static]
+#### static native int initManager (String strEngineLibName, String cachFolder)
 
 Initializes and registers the HTTPStoreDataManager.
 
@@ -955,11 +899,9 @@ NexABRController will call the methods provided in this interface automatically 
 In most cases, the handling of these events is optional; NexPlayer will continue to play content back normally without the application doing anything special in response to the events received.
  
 
-
 #### void onMinMaxBandWidthChanged (NexErrorCode result, int minBwBps,  int maxBwBps) 
 
-This method will be called by the NexABRController when either the minimum or maximum bandwith allowed
-for streaming content is changed.
+This method will be called by the NexABRController when either the minimum or maximum bandwith allowed for streaming content is changed.
 
 **Parameters**
 
@@ -989,26 +931,20 @@ For example, if content has three tracks at bandwidths of 500k, 900k, and 1200k 
 | result | NexErrorCode object for the specified error code.|
 | reqBwBps | The requested target bandwidth to select a track, in bps (bits per second)|
 | selBwBps | The actual bandwidth of the track selected, in bps (bits per second)|
- 
-**See Also**
- 
-- setTargetBandWidth
 
 
 ### NexHLSAES128DRMManager.IAESCallbackListener Interface Reference
 
 An interface for GetKeyExternal and IsSupportKey Callbacks.
 
-This must be implemented by the UI.
+This must be implemented by the application.
 
 
-
-#### byte [ ] getKeyFromExternal (String strKeyUrl)
+#### byte[] getKeyFromExternal (String strKeyUrl)
 
 Callback function to retrieve an encryption key from an HLS playlist over HTTPS for descrambling.
 
 This function is called each time a new playlist is received and an encryption key is available in the playlist.
-
 
 **Parameters**
 
@@ -1035,8 +971,7 @@ This callback is called when NexPlayer meets `#EXT-X-KEY` tags while NexPlayer i
  
 **Returns**
 
-If the DRM supports that key attribute, then it should return TRUE. Then, NexPlayer will call DRM callbacks
-depending on the encryption method. If the DRM does not support the key, then it should return FALSE.
+If the DRM supports that key attribute, then it should return TRUE. Then, NexPlayer will call DRM callbacks depending on the encryption method. If the DRM does not support the key, then it should return FALSE.
 In this case, NexPlayer will not call the "getKeyFromExternal" callbacks and it will decrypt using its internal decryption function.
   
 ### NexPlayer.IDynamicThumbnailListener Interface Reference
@@ -1045,17 +980,13 @@ This interface must be implemented in order for the application to receive Dynam
 
 NexPlayer will call the methods provided in this interface automatically during playback to notify the application when various Dynamic Thumbnail events have occurred.
 
-In most cases, the handling of these events is optional; NexPlayer will continue play content back normally
-without the application doing anything special in response to the events received.
- 
-
+In most cases, the handling of these events is optional; NexPlayer will continue play content back normally without the application doing anything special in response to the events received.
 
 #### void onDynamicThumbnailData (NexPlayer mp, int width, int height, int cts, Object bitmap)
 
 This method will be called by the NexPlayer engine when thumbnail data is created.
 
-If the `enableDynamicThumbnail()` method is called before Smooth Streaming content is in the open state,
-then this method will be called and gets the thumbnail information associated with the content.
+If the `enableDynamicThumbnail()` method is called before Smooth Streaming content is in the open state, then this method will be called and gets the thumbnail information associated with the content.
 
 **Parameters**
 
@@ -1089,10 +1020,8 @@ NexPlayer will call the methods provided in this interface automatically during 
 
 In most cases, the handling of this event is optional; NexPlayer will continue to play content normally without the application doing anything special in response to the event received.
 
-> **Note** To use the method defined by this interface, NexProperty.ENABLE\_HTTPABRTRACKCHANGE\_CALLBACK
-should be enabled before calling open.
+> **Note** To use the method defined by this interface, NexProperty.ENABLE\_HTTPABRTRACKCHANGE\_CALLBACK should be enabled before calling open.
  
-
 
 #### int onHTTPABRTrackChange (NexPlayer mp, int param1, int param2, int param3)
 
@@ -1139,53 +1068,6 @@ start and close can not be called immediately, but must wait until the first com
 > **Warning** However, do not call close in these event handlers as this may give rise to a deadlock. A safe way to call `close` is to use the Android UI main thread’s message handler.
 
 > See each individual `IListener` method for a recommendation on how to implement that method in your application.
-
-**Public Attributes**
-
-- `int eNEXPLAYER_STATUS_NONE = 0x00000000`
-
-	Possible value for msg parameter of onStatusReport.
-
-- `int eNEXPLAYER_AUDIO_GET_CODEC_FAILED = 0x00000001`
-
-	Possible value for msg parameter of onStatusReport.
-
-- `int eNEXPLAYER_VIDEO_GET_CODEC_FAILED = 0x00000002`
-
-	Possible value for msg parameter of onStatusReport.
-
-- `int eNEXPLAYER_AUDIO_INIT_FAILED = 0x00000003`
- 
-	Possible value for msg parameter of onStatusReport.
- 
-- `int eNEXPLAYER_VIDEO_INIT_FAILED = 0x00000004`
-
-	Possible value for msg parameter of onStatusReport.
-
-- `int eNEXPLAYER_TRACK_CHANGED = 0x00000005`
-    
-	Possible value for msg parameter of onStatusReport.
-
-- `int eNEXPLAYER_STREAM_CHANGED = 0x00000006`
-
-	Possible value for msg parameter of onStatusReport.
-
-- `int eNEXPLAYER_DSI_CHANGED = 0x00000007`
-
-	Possible value for msg parameter of onStatusReport.
-
-- `int eNEXPLAYER_OBJECT_CHANGED = 0x00000008`
-
-	Possible value for msg parameter of onStatusReport.
-
-- `int eNEXPLAYER_CONTENT_INFO_UPDATED = 0x00000009`
-
-	Possible value for msg parameter of onStatusReport.
-
-- `int NEXPLAYER_STATUS_MAX = 0xFFFFFFFF`
-
-	Possible value for msg parameter of onStatusReport.
-
 
 
 #### void onAsyncCmdComplete (NexPlayer mp, int command, int result, int param1, int param2)
@@ -1359,10 +1241,6 @@ Below are the possible error codes for `async_command_value`.
 
 Notification that the audio rendering thread has been created.
 
-Under previous versions of the SDK, it was necessary to create and manage the audio renderer. However, under
-the current version this is done automatically, and the on AudioRenderCreate method should be empty or
-contain only diagnostic code.
-
 **Parameters**
 
 | Name  | Description  | 
@@ -1376,9 +1254,6 @@ contain only diagnostic code.
 #### void onAudioRenderDelete(NexPlayer mp)
 
 Notification that the audio rendering thread has been destroyed.
-
-Under previous versions of the SDK, it was necessary to destroy the audio renderer. However, under the current version this is done automatically, and the on AudioRenderDelete method should be empty or contain only
-diagnostic code.
 
 **Parameters**
 
@@ -1704,53 +1579,6 @@ time can then be used to help sync content and text streams or to determine when
  
 getProgramTime
 
-> Implemented in NexEventReceiver.
-
-#### void onRecording (NexPlayer mp,int recDuration,int recSize)
-
-This reports NexPlayer’s recording status.
-
-
-**Parameters**
-
-| Name  | Description  | 
-|---|---|
-| mp | The NexPlayer object generating the event.|  
-| recDuration | An integer indicating the duration of the recording so far.|  
-| recSize | An integer indicating the size of the recording so far.|   
- 
-> **Deprecated** Not available in current version; do not use.
-
-> Implemented in NexEventReceiver.
-
-#### void onRecordingEnd (NexPlayer mp,int success)
-
-This indicates when NexPlayer recording has ended.
-
-**Parameters**
-
-| Name  | Description  | 
-|---|---|
-| mp | The NexPlayer object generating the event.|  
-| success | |  
-
- 
-> **Deprecated** Not available in current version; do not use.
-
-> Implemented in NexEventReceiver.
-
-#### void onRecordingErr (NexPlayer mp, int err)
-
-This indicates when there has been a NexPlayer recording error.
-
-**Parameters**
-
-| Name  | Description  | 
-|---|---|
-| mp | The NexPlayer object generating the event.|  
-| err | An error while recording. |  
- 
-> **Deprecated** Not available in current version; do not use.
 
 > Implemented in NexEventReceiver.
 
@@ -1793,43 +1621,12 @@ NexPlayer’s signal status has been changed.
  
 > Implemented in NexEventReceiver.
 
-#### void onStartAudioTask ( NexPlayer mp )
-
-The NexPlayer audio task has started.
-
-> **Deprecated** This method is only included for compatibility with older code and should not be used. This is provided for compatibility with older code, and new applications may safely ignore this event.
-
-**Parameters**
-
-| Name  | Description  | 
-|---|---|
-| mp | The NexPlayer object generating the event.|  
- 
-> Implemented in NexEventReceiver.
-
-#### void onStartVideoTask ( NexPlayer mp )
-
-The NexPlayer video task has started.
-
-> **Deprecated** This method is only included for compatibility with older code and should not be used.
-
-This is provided for compatibility with older code, and new applications may safely ignore this event.
-
-**Parameters**
-
-| Name  | Description  | 
-|---|---|
-| mp | The NexPlayer object generating the event.|  
- 
-> Implemented in NexEventReceiver.
 
 #### void onStateChanged ( NexPlayer mp, int pre, int now )
 
 NexPlayer’s state has been changed.
 
-This method is called when NexPlayer’s state has been changed but it does not mean that the changing operation
-has completed. Therefore, the next operation can be carried out only after the event onAsyncCmdComplete is
-received, not when this event, onStateChanged, is called.
+This method is called when NexPlayer’s state has been changed but it does not mean that the changing operation has completed. Therefore, the next operation can be carried out only after the event onAsyncCmdComplete is received, not when this event, onStateChanged, is called.
 
 **Parameters**
 
@@ -1878,14 +1675,14 @@ Failed to determine the video codec. This notification can happen at the beginni
  The videocodec failed to initialize. This can happen for several reasons. The container mayindicate the wrong video codec, or the video stream may be incorrect or corrupted,or the video stream may use a codec version or features that NexPlayer doesn’tsupport.
 
 - `NEXPLAYER_STATUS_REPORT_TRACK_CHANGED (0x00000005)` 
- The track haschanged. This happens for protocols such as HLS that provide the content in multipleformats or at multiple resolutions or bitrates. The ID of the new track can be found in mCurrTrackID, and also in param1. When this event occurs, NexPlayer also generates a NEXPLAYER_CONTENT_INFO_UPDATED event.
+ The track haschanged. This happens for protocols such as HLS that provide the content in multipleformats or at multiple resolutions or bitrates. The ID of the new track can be found in mCurrTrackID, and also in param1. When this event occurs, NexPlayer also generates a NEXPLAYER\_CONTENT\_INFO\_UPDATED event.
 
 - `NEXPLAYER_STATUS_REPORT_STREAM_CHANGED (0x00000006)` 
  The streambeing played back has changed (between the states AudioOnly, VideoOnly and Audio+Video). The new stream type is in mMediaType, and also in param1.
 
 - `NEXPLAYER_STATUS_REPORT_DSI_CHANGED (0x00000007)` 
  An attribute relating to the video or audio format (such as the resolution, bitrate, etc.)` 
- has changed.This is considered Decoder Specific Information (DSI).
+ has changed. This is considered Decoder Specific Information (DSI).
 
 - `NEXPLAYER_STATUS_REPORT_OBJECT_CHANGED (0x00000008)` 
  One of thecodec objects in use has changed (that is, the audio or video codec in use haschanged). See mAudioCodec and mVideoCodec to get the ID of the new codec.
@@ -1894,8 +1691,7 @@ Failed to determine the video codec. This notification can happen at the beginni
  The content information has changed. When onStatusReport is called with any other non Failure value for msg, it will also be called with this as well. This is a good place to monitor insignificant changes to the content information.
 
 - `NEXPLAYER_STATUS_REPORT_DOWNLOAD_PROGRESS (0x00000080)` 
- Reports the progress made storing content for offline play. This message will be calledwhen content is opened with NEXPLAYER_SOURCE_TYPE_STORE_STREAM type.For this notification, the parameterparam1returns the percentage of downloadingcomplete (0
--100).
+ Reports the progress made storing content for offline play. This message will be calledwhen content is opened with NEXPLAYER\_SOURCE\_TYPE\_STORE\_STREAM type.For this notification, the parameter param1 returns the percentage of downloading completed (0-100).
 
 - `NEXPLAYER_STATUS_REPORT_AVMODE_CHANGED (0x0000000A)` 
  Thestream being played back has changed and the new stream has a different mediatype. This event happens whenever the state changes between video-only, audio-only and audio-video. param1 contains the new media type: 1 for audio, 2 for video, 3 for both.
@@ -1913,20 +1709,20 @@ Failed to determine the video codec. This notification can happen at the beginni
  Either the Minimum bandwidth or Maximum bandwidth has beenchanged.
 
 - `NEXPLAYER_STATUS_REPORT_STREAM_RECV_PAUSE (0x00000060)` 
- Whenthe prefetch buffer exceeds the maximum value, the player pauses the buffer control.The user can adjust the maximum value of the prefetch buffer by using setProperty ofthe properties MAX_BUFFER_RATE or MAX_BUFFER_DURATION.
+ Whenthe prefetch buffer exceeds the maximum value, the player pauses the buffer control.The user can adjust the maximum value of the prefetch buffer by using setProperty ofthe properties MAX\_BUFFER\_RATE or MAX\_BUFFER\_DURATION.
 
 - `NEXPLAYER_STATUS_REPORT_STREAM_RECV_RESUME (0x00000061)` 
- Whenthe prefetch buffer is below the minimum value, the player resumes the buffer control. The user can adjust the mimimum value of the prefetch buffer by using setProperty ofthe properties MIN_BUFFER_RATE or MIN_BUFFER_DURATION.
+ Whenthe prefetch buffer is below the minimum value, the player resumes the buffer control. The user can adjust the mimimum value of the prefetch buffer by using setProperty ofthe properties MIN\_BUFFER\_RATE or MIN\_BUFFER\_DURATION.
 
 - `NEXPLAYER_STATUS_REPORT_DOWNLOAD_PROGRESS (0x00000080)` 
- Reports the progress made storing content for offline play. This message will be calledwhen content is opened with NEXPLAYER_SOURCE_TYPE_STORE_STREAM type.For this notification, the parameter param1 returns the percentage of downloadingcomplete (0-100).
+ Reports the progress made storing content for offline play. This message will be calledwhen content is opened with NEXPLAYER\_SOURCE\_TYPE\_STORE\_STREAM type.For this notification, the parameter param1 returns the percentage of downloadingcomplete (0-100).
 
 - `NEXPLAYER_STATUS_REPORT_MAX (0xFFFFFFFF)` 
  This value is reserved; do not use it.
 
 > Implemented in NexEventReceiver. 
  
-#### void onTextRenderInit ( NexPlayer mp, int numTracks )
+#### void onTextRenderInit( NexPlayer mp, int numTracks )
  
 Called when initially beginning playback of media content with associated subtitles.
  
@@ -1939,7 +1735,7 @@ Called when initially beginning playback of media content with associated subtit
  
 > Implemented in NexEventReceiver.
  
-#### void onTextRenderRender ( NexPlayer mp, int trackIndex, NexClosedCaption textInfo )
+#### void onTextRenderRender( NexPlayer mp, int trackIndex, NexClosedCaption textInfo )
  
 This function is called when new subtitle data is ready for display. This is called whenever playback reaches a point in time where subtitles on any track need to be displayed or cleared. The text to display is provided in a NexClosedCaption object as a byte array; it is the responsibility of the application to convert this to text with the appropriate encoding. Where possible, the encoding information will be provided in the NexClosedCaption.mEncodingType, but many subtitle file formats do not explicitly specify an encoding, so it may be necessary for the application to guess the encoding or allow the user to select it. 
 
@@ -1989,252 +1785,11 @@ NexID3TagInformation for more details on the available metadata information.
  
 > Implemented in NexEventReceiver.
 
-#### void onTimeshift ( NexPlayer mp, int currTime, int TotalTime )
-
-This is a deprecated method that formerly reported NexPlayer’s Time shift status.
-
-**Parameters**
-
-| Name  | Description  | 
-|---|---|
-| mp | The NexPlayer object generating the event.|
-| currTime | The current time.|
-| TotalTime | The total time.| 
- 
-> **Deprecated** Not available in current version; do not use.
-
-> Implemented in NexEventReceiver.
-
-#### void onTimeshiftErr ( NexPlayer mp, int err )
-
-This is a deprecated method that formerly reported any NexPlayer Time shift error.
-
-> **Deprecated** Not available in current version; do not use.
-
-> Implemented in NexEventReceiver.
-
-#### void onVideoRenderCapture ( NexPlayer mp, int width, int height, int pixelbyte, Object bitmap )
-
-Called when a frame of video has been captured.
-
-> **Deprecated** Not available in current version; use IVideoRendererListener instead.
-
-After calling captureVideo to set up video capture, this function will be called whenever a frame is captured, and can process the captured frame as necessary.
-
-```java
-Bitmap bitmap = Bitmap.createBitmap(width, height, pixelbyte==2?Config.RGB_565:Config.ARGB_8888 );
-ByteBuffer RGBBuffer = (ByteBuffer)rgbBuffer;
-RGBBuffer.asIntBuffer();
-bitmap.copyPixelsFromBuffer(RGBBuffer);
-```
-
-**Parameters**
-
-| Name  | Description  | 
-|---|---|
-| mp | The NexPlayer object to which this event applies.|
-| width | The width of the captured frame.|
-| height | The height of the captured frame.| 
-| pixelbyte | The number of bytes per pixel (2 for RGB565; 4 for RGBA).| 
-| bitmap | The object where the captured video frame data is stored.| 
- 
-> Implemented in NexEventReceiver.
-
-#### void onVideoRenderCreate ( NexPlayer mp, int width, int height, Object rgbBuffer )
-
-This method is called when NexPlayer needs the application to create a surface on which to render the video.
-
-> **Deprecated** Not available in current version; use IVideoRendererListener instead.
-
-The application must respond to this by calling setDisplay.
-
-Generally speaking, the application will actually create the surface earlier, during GUI layout, and will simply use the existing handle in response to this call. There are, however, some threading considerations. See setDisplay for details.
-
-**Parameters**
-
-| Name  | Description  | 
-|---|---|
-| mp | The NexPlayer object to which this event applies.|
-| width | The width of the source video.|
-| height | The height of the source video.|
-| rgbBuffer | Direct RGB Buffer(RGB565 format). This RGB buffer is shared with NexPlayer Engine native code.|
- 
-> Implemented in NexEventReceiver.
-
-#### void onVideoRenderDelete ( NexPlayer mp )
-
-This method is called when NexPlayer no longer needs the render surface.
-
-> **Deprecated** Not available in current version; use IVideoRendererListener instead.
-
-If a surface was created in onVideoRenderCreate, this is the place to destroy it. However, if (as in most cases) an existing surface was used, then this function need not take any special action, other than updating whatever state the application needs to track.
-
-**Parameters**
-
-| Name  | Description  | 
-|---|---|
-| mp | The NexPlayer object to which this event applies.|
- 
-> Implemented in NexEventReceiver.
-
-#### void onVideoRenderPrepared ( NexPlayer mp )
-
-This method is called when NexPlayer recognizes which video render type will be used.
-
-> **Deprecated** Not available in current version; use IVideoRendererListener instead.
-
-At first, NexPlayer does not know which renderer will be used. When this method is called, the application can determine the video renderer mode by calling GetRenderMode and prepare for the specified video renderer, as in the following example code:
-
-```java
-public void onVideoRenderPrepared(NexPlayer mp) {
-	if(mNexPlayer.GetRenderMode() == NexPlayer.NEX_USE_RENDER_OPENGL) {
-		UseOpenGL = true;
-		mHandler.post(new Runnable() {
-			public void run() {
-				mVideoSurfaceView.setVisibility(View.INVISIBLE);
-				int colorDepth = 4;
-				if(glRenderer == null)
-				{
-					glRenderer = new GLRenderer(mContext, mNexPlayer, this, colorDepth);
-					FrameLayout view = (FrameLayout)findViewById(R.id.gl_container);
-					view.addView(glRenderer);
-				}
-				else if(mInitGLRenderer == true)
-				{
-					glRenderer.mReInitRenderer = true;
-					glRenderer.requestRender();
-				}
-				else
-				{
-					glRenderer.setVisibility(View.VISIBLE );
-				}
-			}
-		});
-	}
-	else
-	{
-		UseOpenGL = false;
-		mHandler.post(new Runnable() {
-			public void run() {
-				if(mNexPlayer.GetRenderMode() == NexPlayer.NEX_USE_RENDER_AND)
-				{
-					mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_NORMAL);//For Gingerbread Android Renderer
-				}
-				else
-				{
-					mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);//For HWRenderer
-				}
-				if(glRenderer != null)
-				{
-					glRenderer.setVisibility(View.INVISIBLE );
-					glRenderer = null;
-				}
-				mVideoSurfaceView.setVisibility(View.VISIBLE); // This invokes nexPlayer.setDisplay(mSurfaceHolderForSW, 0);
-			}
-		});
-	}
-}
-```
-**Parameters**
- 
-| Name  | Description  | 
-|---|---|
-| mp | The NexPlayer object to which this event applies.|
- 
-> Implemented in NexEventReceiver.
-
-#### void onVideoRenderRender ( NexPlayer mp )
-
-This requests to display Video frame data at JAVA application.
-
-> **Deprecated** Not available in current version; use IVideoRendererListener instead.
-
-**Parameters**
-
-| Name  | Description  | 
-|---|---|
-| mp | The NexPlayer object to which this event applies.|
- 
-> Implemented in NexEventReceiver.
-
-#### int eNEXPLAYER\_AUDIO\_GET\_CODEC\_FAILED = 0x00000001
-
-Possible value for msg parameter of onStatusReport.
-
-> **Deprecated** Renamed; use NexPlayer#NEXPLAYER\_STATUS\_REPORT\_AUDIO\_GET\_CODEC\_FAILED instead.
-
-#### int eNEXPLAYER\_AUDIO\_INIT\_FAILED = 0x00000003
-
-Possible value for msg parameter of onStatusReport.
-
-> **Deprecated** Renamed; use NexPlayer#NEXPLAYER\_STATUS\_REPORT\_AUDIO\_INIT\_FAILED instead.
-
-#### int eNEXPLAYER\_CONTENT\_INFO\_UPDATED = 0x00000009
-
-Possible value for msg parameter of onStatusReport.
-
-> **Deprecated** Renamed; use NexPlayer#NEXPLAYER\_STATUS\_REPORT\_CONTENT\_INFO\_UPDATED instead.
-
-#### int eNEXPLAYER\_DSI\_CHANGED = 0x00000007
-
-Possible value for msg parameter of onStatusReport.
-
-> **Deprecated** Renamed; use NexPlayer#NEXPLAYER\_STATUS\_REPORT\_DSI\_CHANGED instead.
-
-#### int eNEXPLAYER\_OBJECT\_CHANGED = 0x00000008
-
-Possible value for msg parameter of onStatusReport.
-
-> **Deprecated** Renamed; use NexPlayer#NEXPLAYER\_STATUS\_REPORT\_OBJECT\_CHANGED instead.
-
-#### int eNEXPLAYER\_STATUS\_NONE = 0x00000000
-
-Possible value for msg parameter of onStatusReport.
-
-> **Deprecated** Renamed; use NexPlayer#NEXPLAYER\_STATUS\_REPORT\_NONE instead.
-
-#### int eNEXPLAYER\_STREAM\_CHANGED = 0x00000006
-
-Possible value for msg parameter of onStatusReport.
-
-> **Deprecated** Renamed; use NexPlayer#NEXPLAYER\_STATUS\_REPORT\_STREAM\_CHANGED instead.
-
-#### int eNEXPLAYER\_TRACK\_CHANGED = 0x00000005
-
-Possible value for msg parameter of onStatusReport.
-
-> **Deprecated** Renamed; use NexPlayer#NEXPLAYER\_STATUS\_REPORT\_TRACK\_CHANGED instead.
-
-#### int eNEXPLAYER\_VIDEO\_GET\_CODEC\_FAILED = 0x00000002
-
-Possible value for msg parameter of onStatusReport.
-
-> **Deprecated** Renamed; use NexPlayer#NEXPLAYER\_STATUS\_REPORT\_VIDEO\_GET\_CODEC\_FAILED in-
-stead.
-
-#### int eNEXPLAYER\_VIDEO\_INIT\_FAILED = 0x00000004
-
-Possible value for msg parameter of onStatusReport.
-
-> **Deprecated** Renamed; use NexPlayer#NEXPLAYER\_STATUS\_REPORT\_VIDEO\_INIT\_FAILED instead.
-
-#### int NEXPLAYER\_STATUS\_MAX = 0xFFFFFFFF
-
-Possible value for msg parameter of onStatusReport.
-
-This value is deprecated and has been renamed. Use NEXPLAYER\_STATUS\_REPORT\_MAX instead.
-
-> **Deprecated** Renamed; use NexPlayer#NEXPLAYER\_STATUS\_REPORT\_MAX instead.
-
 ### GLRenderer.IListener Interface Reference
 
-The application must implement this interface in order to receive notification when the size of the OpenGL surface (the video rendering surface) changes.
+The application must implement this interface in order to receive notification when the size of the OpenGL surface (the video rendering surface) changes. This is specified in the constructor for `GLRenderer`.
 
-This is specfified in the constructor for `GLRenderer`.
-
-Do not confuse this with `NexPlayer.IListener`, a separate interface.
-
-
+> Do not confuse this with `NexPlayer.IListener`, a separate interface.
 
 #### void onGLChangeSurfaceSize ( int width, int height )
 
@@ -2261,7 +1816,6 @@ In most cases, the handling of these events is optional; `NexPlayer` will contin
 
 See each individual *IListener* method for a recommendation on how to handle the event in the application.
  
-
 
 #### void onDisplayedRectChanged ( )
 
@@ -2302,7 +1856,7 @@ desired resolution and aspect ratio.
 
 The application must implement this interface in order to receive events from `NexPlayer`.
 
-#### byte [ ] onLicenseRequest ( byte[ ]requestData)**
+#### byte[] onLicenseRequest ( byte[ ]requestData)**
 
 This method provides the license request data that will be used by DRM Client.
 
@@ -2395,7 +1949,7 @@ This is the same as *NexRTStreamInformation.mStartSegUrl*.
 
 #### void onOfflineKeyExpiredListener (NexPlayer mp)
 
-This method will be called by the `NexPlayer` engine when the keyId of media DRM should be expired.
+This method will be called by the NexPlayer engine when the keyId of media DRM should be expired.
 
 **Parameters**
 
@@ -2408,10 +1962,8 @@ This method will be called by the `NexPlayer` engine when the keyId of media DRM
  
 the key ID of media drm stored with onOfflineKeyStoreListener.
  
- 
-Implemented in `NexEventReceiver`.
 
-#### byte [ ] onOfflineKeyRetrieveListener (NexPlayer mp)
+#### byte[] onOfflineKeyRetrieveListener (NexPlayer mp)
 
 This method will be called by the `NexPlayer` engine when the keyId of media DRM should be retrieved.
 
@@ -2425,11 +1977,8 @@ This method will be called by the `NexPlayer` engine when the keyId of media DRM
  
 **Returns**
 
+The key ID of media drm stored with onOfflineKeyStoreListener.
  
-the key ID of media drm stored with onOfflineKeyStoreListener.
- 
- 
-Implemented in `NexEventReceiver`.
 
 #### void onOfflineKeyStoreListener (NexPlayer mp, byte[ ]keyId)
 
@@ -2442,25 +1991,15 @@ This method will be called by the `NexPlayer` engine when the keyId of media DRM
 |-------|---------|
 | mp    | The `NexPlayer` object generating the event. |
 | keyId | The Key ID of Media drm for offline playback.   |
- 
-**Returns**
 
  
-void.
- 
- 
-Implemented in `NexEventReceiver`.
 
 ### NexOfflineStoreController.IOfflineStoreListener Interface Reference
 
 This interface allows the application to get events about the Offline Store from `NexOfflineStoreController`.
 
-When stroing data to `NexOfflineStoreController`, the user must call `setListener(IOfflineStoreListener i)` to get events
-before startOfflineStore. When the user wants to call an API that edits UI-related APIs or the state of OfflineStore
-such as `stopOfflineStore()` from `IOfflineStoreListener` callback, they must use a Handler in order for the API to be
+When stroing data to `NexOfflineStoreController`, the user must call `setListener(IOfflineStoreListener i)` to get events before startOfflineStore. When the user wants to call an API that edits UI-related APIs or the state of OfflineStore such as `stopOfflineStore()` from `IOfflineStoreListener` callback, they must use a Handler in order for the API to be
 able to run on the main application thread.
-
-
 
 
 #### void onDownloadEnd ( boolean completed)
@@ -2498,22 +2037,14 @@ This event is called when there is an error.
  
 ### NexPlayer.IReleaseListener Interface Reference
 
-This interface can be implemented in an application in order to receive `NexPlayer` release events from `NexPlayer`.
+This interface can be implemented in an application in order to receive NexPlayer release events from NexPlayer.
 
-In most cases, the handling of these events is optional; `NexPlayer` will continue playback normally without the
-application doing anything special in response to the events received.
+In most cases, the handling of these events is optional; NexPlayer will continue playback normally without the application doing anything special in response to the events received.
 
-**See Also**
-
-- `NexPlayer.addReleaseListener`
-
-- `NexPlayer.removeReleaseListener`
- 
  
 ### NexStatisticsMonitor.IStatistics Interface Reference
 
-
-This interface defines a set of statistics to be received from `NexPlayer` *about* HLS, DASH or SS playback.
+This interface defines a set of statistics to be received from NexPlayer about HLS, DASH or SS playback.
 
 Every set of statistics (general, initial, HTTP, and system statistics) implements this interface.
 
@@ -2521,39 +2052,25 @@ Every set of statistics (general, initial, HTTP, and system statistics) implemen
 
  
 - GeneralStatistics
-
 - InitialStatistics
-
 - HTTPStatistics
-
 - SystemStatistics
  
- 
-
 
 #### int getCode ( )
 
 This method gets a statistics code.
 
-Implemented in `NexStatisticsMonitor.SystemStatisticsMetric`, `NexStatisticsMonitor.HttpStatisticsMetric`, `Nex-
-StatisticsMonitor.InitialStatisticsMetric`, and `NexStatisticsMonitor.GeneralStatisticsMetric`.
+Implemented in `NexStatisticsMonitor.SystemStatisticsMetric`, `NexStatisticsMonitor.HttpStatisticsMetric`, `NexStatisticsMonitor.InitialStatisticsMetric`, and `NexStatisticsMonitor.GeneralStatisticsMetric`.
 
 
 ### NexStatisticsMonitor.IStatisticsListener Interface Reference
 
 This interface defines the listener that will be used to receive statistics related to playback.
 
-Any listener created to receive statistics from `NexPlayer` must implement this interface.
+Any listener created to receive statistics from NexPlayer must implement this interface.
 
-Once an instance of *NexStatisticsMonitor* is created, a statistics listener implementing this interface can
-be set with *setListener(IStatisticsListener listener)*.
-
-**See Also**
-
- 
-- `setListener`
-
- 
+Once an instance of *NexStatisticsMonitor* is created, a statistics listener implementing this interface can be set with *setListener(IStatisticsListener listener)*.
 
 
 #### void onUpdated (int statisticsType, HashMap < IStatistics, Object > map)
@@ -2581,49 +2098,33 @@ changed by calling the *setDuration()* method.
 |------|---------------------------|
 | map  | The updated statistics object as a *HashMap*. |
  
-**See Also**
-
- 
-- `setDuration`
   
 ### NexPlayer.IVideoRendererListener Interface Reference
 
 The application must implement this interface in order to receive video renderer-specific events from NexPlayer.
 
-> **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may
-not be safe to call UI-related functions from within *IListener* callbacks. The safest way to update the UI is
-to use *android.os.Handler* to post an event back to the main application thread.
+> **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from within *IListener* callbacks. The safest way to update the UI is to use *android.os.Handler* to post an event back to the main application thread.
  
-
-> **Note** This interface replaces the deprecated methods in `IListener` that received video renderer-specific events from
-`NexPlayer`. Note that in existing older applications, the video renderer related methods of `IListener` (now
-deprecated) can be reused.
+> **Note** This interface replaces the deprecated methods in `IListener` that received video renderer-specific events from `NexPlayer`. Note that in existing older applications, the video renderer related methods of `IListener` (now deprecated) can be reused.
  
-`NexPlayer` will call the methods provided in this interface automatically during playback to notify the application
-when various video renderer-specific events have occurred.
+`NexPlayer` will call the methods provided in this interface automatically during playback to notify the application when various video renderer-specific events have occurred.
 
-In most cases, the handling of these events is optional; `NexPlayer` will continue playback normally without the
-application doing anything special. There are a few exceptions to this which are listed below.
+In most cases, the handling of these events is optional; `NexPlayer` will continue playback normally without the application doing anything special. There are a few exceptions to this which are listed below.
 
 See each individual *IVideoRendererListenermethod* for a recommendation on how to implement that
 method in your application.
 
 **See Also**
 
- 
 - `NexPlayer.setVideoRendererListener`
-
 - `NexVideoRenderer`
- 
- 
 
 
 #### void onVideoRenderCapture (NexPlayer mp, int width, int height, int pixelbyte, Object bitmap)
 
 Called when a frame of video has been captured.
 
-After calling `captureVideo` to set up video capture, this function will be called whenever a frame is captured, and can
-process the captured frame as necessary.
+After calling `captureVideo` to set up video capture, this function will be called whenever a frame is captured, and can process the captured frame as necessary.
 
 ```java
 	Bitmap bitmap = Bitmap.createBitmap(width, height, pixelbyte==2?Config.RGB\_565:Config.ARGB\_8888 );
@@ -2634,7 +2135,6 @@ process the captured frame as necessary.
 
 **Parameters**
 
- 
 | Name      | Description                                               |
 |-----------|-------------------|
 | mp        | The `NexPlayer` object to which this event applies.    |
@@ -2651,9 +2151,7 @@ This method is called when `NexPlayer` needs the application to create a surface
 
 The application must respond to this by calling `setDisplay`.
 
-Generally speaking, the application will actually create the surface earlier, during GUI layout, and will simply use
-the existing handle in response to this call. There are, however, some threading considerations. See `setDisplay` for
-details.
+Generally speaking, the application will actually create the surface earlier, during GUI layout, and will simply use the existing handle in response to this call. There are, however, some threading considerations. See `setDisplay` for details.
 
 **Parameters**
 
@@ -2670,9 +2168,7 @@ Implemented in `NexEventReceiver`.
 
 This method is called when `NexPlayer` no longer needs the render surface.
 
-If a surface was created in *onVideoRenderCreate*, this is the place to destroy it. However, if (as in most cases)
-an existing surface was used, then this function need not take any special action, other than updating whatever state
-the application needs to track.
+If a surface was created in *onVideoRenderCreate*, this is the place to destroy it. However, if (as in most cases) an existing surface was used, then this function need not take any special action, other than updating whatever state the application needs to track.
 
 
 **Parameters**
@@ -2687,9 +2183,7 @@ Implemented in `NexEventReceiver`.
 
 This method is called when `NexPlayer` recognizes which type of video renderer will be used.
 
-At first, `NexPlayer` does not know which renderer will be used. When this method is called, the application can
-determine the video renderer mode by calling `GetRenderMode` and prepare for the specified video renderer, as in
-the following example code:
+At first, `NexPlayer` does not know which renderer will be used. When this method is called, the application can determine the video renderer mode by calling `GetRenderMode` and prepare for the specified video renderer, as in the following example code:
 
 ```java
 	public void onVideoRenderPrepared(NexPlayer mp) {
@@ -2755,7 +2249,6 @@ Implemented in `NexEventReceiver`.
 This requests to display Video frame data at JAVA application.
 
 **Parameters**
-
  
 | Name | Description                                            |
 |------|----------------|
@@ -2763,11 +2256,6 @@ This requests to display Video frame data at JAVA application.
  
 Implemented in `NexEventReceiver`.
 
-### NexWVDRMSession.IWVDRMSessionListener Interface Reference
-
-**Public Member Functions**
-
-- `void processResonsde (byte[ ] arrResponse, long cach)`
 
 ### NexStatisticsMonitor.MediaType Enum Reference
 
@@ -2785,11 +2273,8 @@ These media types include:
 
  
 - GeneralStatistics
-
-- `isMediaExist( MediaType mediaType, int mediaComposition )`
+- isMediaExist( MediaType mediaType, int mediaComposition )
  
- 
-
 
 #### int getCode ( )
 
@@ -2800,7 +2285,7 @@ Gets the integer code for the `MediaType`.
 The integer code for the specified `MediaType`.
  
  
-#### static boolean isMediaExist (MediaType mediaType,int mediaComposition) *[static]*
+#### static boolean isMediaExist (MediaType mediaType,int mediaComposition)
 
 This method indicates whether or not the requested media exists in the current content.
 
@@ -2881,18 +2366,14 @@ This class allows applications to control and use ABR-related methods within the
 
 An instance of *NexABRController* can be called once `NexPlayer` has been created and initialized.
 
-
 **Classes**
 
-- `interface IABREventListener`
-    
+- `interface IABREventListener`    
     This interface must be implemented in order for the application to receiveABRControlevents from *NexABRController*.
-- `enum SegmentOption`
-    
+- `enum SegmentOption`    
     This enum defines the options possible for how `NexPlayer` should handle existing buffered content as a track
     changes (due to a set target bandwidth).
-- `enum TargetOption`
-    
+- `enum TargetOption`    
     This enumeration defines the possible options for how an application should use a target bandwidth set.
 
  
@@ -2900,19 +2381,13 @@ An instance of *NexABRController* can be called once `NexPlayer` has been create
 
 Sole constructor for *NexABRController*.
 
-The application must create an instance of the *NexABRController* class to control ABR-related methods which
-for example change the minimum/maximum allowed bandwidths or the target bandwidth for streaming content with
-multiple tracks.
+The application must create an instance of the *NexABRController* class to control ABR-related methods which for example change the minimum/maximum allowed bandwidths or the target bandwidth for streaming content with multiple tracks.
  
-
-
 #### NexErrorCode changeMaxBandWidth(int maxBwBps)
 
 This method sets the maximum bandwidth for streaming playback dynamically during playback.
 
-This applies in cases with content where there are multiple tracks at different bandwidths (such as in the case of
-HLS). The player will not consider any track over the maximum bandwidth when determining whether a track change
-is appropriate, even if it detects more bandwidth available.
+This applies in cases with content where there are multiple tracks at different bandwidths (such as in the case of HLS). The player will not consider any track over the maximum bandwidth when determining whether a track change is appropriate, even if it detects more bandwidth available.
 
 **Parameters**
 
@@ -2922,16 +2397,13 @@ is appropriate, even if it detects more bandwidth available.
  
 **Returns**
 
- 
 NexErrorCode
  
 #### NexErrorCode changeMinBandWidth(int minBwBps)
 
 This method sets the minimum bandwidth for streaming playback dynamically during playback.
 
-This applies in cases with content where there are multiple tracks at different bandwidths (such as in the case of H-
-LS). The player will not consider any track under the minimum bandwidth when determining whether a track change
-is appropriate, even if it detects less bandwidth available.
+This applies in cases with content where there are multiple tracks at different bandwidths (such as in the case of HLS). The player will not consider any track under the minimum bandwidth when determining whether a track change is appropriate, even if it detects less bandwidth available.
 
 **Parameters**
 
@@ -2941,7 +2413,6 @@ is appropriate, even if it detects less bandwidth available.
  
 **Returns**
 
- 
 NexErrorCode
  
  
@@ -2949,12 +2420,9 @@ NexErrorCode
 
 This method sets the minimum and maximum bandwidth for streaming playback dynamically during playback.
 
-This applies in cases where there are multiple tracks at different bandwidths (such as in the case of HLS). The
-player will not consider any track under the minimum, and over the maximum bandwidth when determining whether
-a track change is appropriate, even if it detects less, and more bandwidth available.
+This applies in cases where there are multiple tracks at different bandwidths (such as in the case of HLS). The player will not consider any track under the minimum, and over the maximum bandwidth when determining whether a track change is appropriate, even if it detects less, and more bandwidth available.
 
 **Parameters**
-
  
 | Name     | Description                                 |
 |----------|-------------------------|
@@ -2963,26 +2431,17 @@ a track change is appropriate, even if it detects less, and more bandwidth avail
  
 **Returns**
 
- 
 NexErrorCode
   
 #### NexErrorCode setABREnabled(boolean enabled)
 
 This method sets whether ABR methods should be used or not.
 
-In general, `NexPlayer` plays streaming content, including content with multiple tracks at different bandwidths such
-as HLS, by choosing the optimal track according to network conditions and device performance. This is the default
-behavior of `NexPlayer` and this occurs when ABR is enabled (or calling *setABREnabled* with the parameter
-enabledset to *TRUE*).
+In general, `NexPlayer` plays streaming content, including content with multiple tracks at different bandwidths such as HLS, by choosing the optimal track according to network conditions and device performance. This is the default behavior of `NexPlayer` and this occurs when ABR is enabled (or calling *setABREnabled* with the parameter enabledset to *TRUE*).
 
-However, there may be instances when an application may want to set limits on which tracks should be selected
-and played by `NexPlayer` in order to provide a specific user experience, and to force `NexPlayer`to stay on a
-particular bandwidth track, regardless of network conditions. In cases like this, in order to keep playing a track at
-a target bandwidth (set with *setTargetBandWidth*) this method must be called to disable `NexPlayer`’s ABR
-behavior (with the parameter *enabled* set to *FALSE*).
+However, there may be instances when an application may want to set limits on which tracks should be selected and played by `NexPlayer` in order to provide a specific user experience, and to force `NexPlayer`to stay on a particular bandwidth track, regardless of network conditions. In cases like this, in order to keep playing a track at a target bandwidth (set with *setTargetBandWidth*) this method must be called to disable `NexPlayer`’s ABR behavior (with the parameter *enabled* set to *FALSE*).
 
-> **Warning** This method must be called with *enabled* set to *FALSE* `before` calling *setTargetBandWidth* if the
-application should continue playing the target bandwidth regardless of network conditions.
+> **Warning** This method must be called with *enabled* set to *FALSE* `before` calling *setTargetBandWidth* if the application should continue playing the target bandwidth regardless of network conditions.
  
 **Parameters**
 
@@ -2991,20 +2450,12 @@ application should continue playing the target bandwidth regardless of network c
 | enabled | - `TRUE` : ABR enabled. `NexPlayer` will handle track changes automatically. - `FALSE` : ABR disabled. `NexPlayer` will continue playing the target bandwidth track     set, regardless of network conditions. |
 
 **Returns**
-
  
 NexErrorCode
- 
-**See Also**
-
- 
-- `setTargetBandWidth`
   
-
 #### void setIABREventListener(IABREventListener listener)
 
 This method sets and registers an *IABREventListener* listener for the application playing content with `NexPlayer`.
-
 
 **Parameters**
 
@@ -3013,10 +2464,6 @@ This method sets and registers an *IABREventListener* listener for the applicati
 |----------|-----------------------|
 | listener | `IABREventListener` |
  
-**See Also**
-
- 
-- `NexABRController.IABREventListener`
   
 #### NexErrorCode setTargetBandWidth(int targetBwBps, SegmentOption segOption, TargetOption targetOption)
 
@@ -3026,7 +2473,6 @@ This method should be called after `NexPlayer.open()`. This applies in cases wit
 
 **Parameters**
 
- 
 | Name         | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |--------------|----------------|
 | targetBwBps  | Target bandwidth in bps (bits per second).                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
@@ -3048,7 +2494,7 @@ NexErrorCode
 
 The primary interface to the `NexALFactory`.
 
-`NexALFactory` handles codecs and renderer selection for the `NexPlayer` SDK starting from `NexPlayer` SDK version 6.0. To use the `NexPlayer` SDK, the application must create an instance of the `NexALFactory` class (supplied as part of the `NexPlayer` SDK).
+`NexALFactory` handles codecs and renderer selection for the `NexPlayer` SDK. To use the `NexPlayer` SDK, the application must create an instance of the `NexALFactory` class (supplied as part of the `NexPlayer` SDK).
 
 In addition, an application must also do the following:
 
@@ -3191,21 +2637,15 @@ An array of the codecs available to be downloaded from the server.
 
 Returns the NexALFactoryContext.
 
-This method is called by the `NexPlayer` Engine. This is just for native methods. Don’t use this method for other
-purposes.
+This method is called by the `NexPlayer` Engine. This is just for native methods. Don’t use this method for other purposes.
 
 #### boolean init (Context context, String strModel, String strRenderMode, int logLevel, int colorDepth)
 
 Initializes `NexALFactory`.
 
-`NexPlayer` automatically detects the devices where HW codecs and H.264 Main/High profiles can be supported
-so there is no need to indicate any specific device model to the player.
+`NexPlayer` automatically detects the devices where HW codecs and H.264 Main/High profiles can be supported so there is no need to indicate any specific device model to the player.
 
-> **Warning** Although it is possible to change the device model parameter, *strModel*, it is not recommended because
-changing the model name may result in the H/W decoder not working properly. Please do NOT change
-the device model name in the sample code. Similarly, although it is possible to change the render mode
-parameter, *strRenderMode*, `NexPlayer` is only guaranteed to work properly with *strRenderMode*
-set to *NEX\_DEVICE\_USE\_AUTO*. Please do NOT change the render mode in the sample code.
+> **Warning** Although it is possible to change the device model parameter, *strModel*, it is not recommended because changing the model name may result in the H/W decoder not working properly. Please do NOT change the device model name in the sample code. Similarly, although it is possible to change the render mode parameter, *strRenderMode*, `NexPlayer` is only guaranteed to work properly with *strRenderMode* set to *NEX\_DEVICE\_USE\_AUTO*. Please do NOT change the render mode in the sample code.
 
 **Parameters**
 
@@ -3214,8 +2654,8 @@ set to *NEX\_DEVICE\_USE\_AUTO*. Please do NOT change the render mode in the sam
 |---------------|------------------------|
 | context       | The current context; from *Activity* subclasses, you can just pass *this*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | srtModel      | Device model name. `NexPlayer` includes multiple renderer modules, and past versions of the player selected the module most suitable to the device based on this value. The renderer is now set by the parameter *strRenderMode*. Under normal use, you should pass the MODEL as available via the Android API in *android.os.Build.MODEL*. For example:  	*nexALFactory.init(this, android.os.Build.MODEL, 	NEX\_DEVICE\_USE\_AUTO, 0, 1);*     `NexPlayer` uses this to select the most appropriate renderer if no renderer is selected (*NULL* is passed) with the parameter *strRenderMode* below. For OS versions up to Gingerbread, this is always the Android Renderer (although from Froyo, other renderers are supported as well) if the SW codec is in use. For Honeycomb and Ice Cream Sandwich (ICS), this is always the OpenGL renderer when the SW codec is in use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| srtRenderMode | The Renderer to use, as a string. The recommended render mode to use is *NEX\_DEVICE\_USE\_AUTO*, which will choose the most appropriate render mode automatically. For devices that support the hardware codec, this will be:   - `NEX\_USE\_RENDER\_IOMX.` For devices that don’t support the hardware codec, this     will be one of the software renderers. While most devices should work properly with     OpenGL, occasionally another rendering module may be beneficial, for example if a device supports 3D rendering, if an application doesn’t implement support for the OpenGL renderer, or for devices running older versions of the Android OS. In some other     cases, such as the Kindle Fire running on Gingerbread, while the default renderer is     Android, the OpenGL renderer is recommended because of improved performance.     The available software renderers are:        `- NEX\_DEVICE\_USE\_AUTO ("Auto")` Added in `NexPlayer` SDK version 6.1.2, this           chooses which renderer to use automatically.        `- NEX\_DEVICE\_USE\_ONLY\_ANDROID ("Android")` Use only standard Android           API bitmaps to display frames. This is usually slower, but is more portable.        `- NEX\_DEVICE\_USE\_JAVA ("JAVA")` Use the Java renderer.        `- NEX\_DEVICE\_USE\_OPENGL ("OPENGL")` Use the OpenGL renderer.        `- NEX\_DEVICE\_USE\_ANDROID\_3D ("Android 3D")` Use the 3D video renderer           with standard Android API bitmaps. |
-| logLevel      | `NexPlayer` SDK logging level. This affects the messages that the SDK writes to the Android log.   - **-1** : Do not output any log messages. (If you do not want to output any log messages     in NexPlayerSample App, you should set the loglevel to 0xF0000000.) - **0** : Output basic log messages only (recommended). - **1** ∼ **4** : Output detailed log messages; higher numbers result in more verbose log entries, but may cause performance issues in some cases and are not recommended for general release code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| srtRenderMode | The Renderer to use, as a string. The recommended render mode to use is *NEX\_DEVICE\_USE\_AUTO*, which will choose the most appropriate render mode automatically. |
+| logLevel      | NexPlayer SDK logging level. This affects the messages that the SDK writes to the Android log.   - **-1** : Do not output any log messages. - **0** : Output basic log messages only (recommended). - **1** ∼ **4** : Output detailed log messages; higher numbers result in more verbose log entries, but may cause performance issues in some cases and are not recommended for general release code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | colorDepth    | colorDepth Video output image color depth.   - **1** : RGBA\_8888 - **4** : RGB\_565                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 **Returns**
@@ -3284,16 +2724,16 @@ Because this is a Java *enum*, it is very easy to include the name of the error 
 just the number values. For example, the following code logs the errors that are received from `NexALFactory`:
 
 ```java
-	void onCodecDownloaderEventError(NexALFactoryErrorCode errorCode) {
-	{
-		NexLog.d( "onError",
-			"Received the error: "
-				+ errorCode.getDesc()
-				+ " ("
-				+ errorCode.getIntegerCode()
-				+ ")."
-		);
-	}
+void onCodecDownloaderEventError(NexALFactoryErrorCode errorCode) {
+{
+	NexLog.d( "onError",
+		"Received the error: "
+			+ errorCode.getDesc()
+			+ " ("
+			+ errorCode.getIntegerCode()
+			+ ")."
+	);
+}
 ```
 
 **Public Attributes**
@@ -3304,7 +2744,7 @@ just the number values. For example, the following code logs the errors that are
 - `ERROR_SW_CODEC_DOWNLOAD_CONNECTION_FAIL` = (-11, "Connection failure.")
 
 
-#### static NexALFactoryErrorCode fromIntegerValue (int code) *[static]*
+#### static NexALFactoryErrorCode fromIntegerValue (int code)
 
 This method gets the error code of a given *NexALFactoryError*, from a given integer value.
 
@@ -3477,7 +2917,7 @@ This key indicates the caption text color.
  
 - `NexClosedCaption.CaptionColor` for available caption font colors.
  
-#### final int COLOR\_WINDOW = 0x00000103 [static]
+#### final int COLOR\_WINDOW = 0x00000103
 
 Possible key value for *key* parameter of `setValue(int, CaptionColor)`.
 
@@ -3562,25 +3002,13 @@ changes, the `NexCaptionPainter` must also be updated in order for captions to b
 
 In particular, the `NexCaptionPainter` in an application requires the following information:
 
-- `Rendering Area Information:` Whenever the video output in an application UI changes its size or the orientation changes, the new size information should also be passed to the `NexCaptionPainter`class by calling the
-    `NexCaptionPainter.setRenderingArea` method.
-- `New Caption Data:` Whenever new caption data is received, it should be passed to the `NexCaptionPainter`
-    by calling the `NexCaptionPainter.setDataSource` method.
+- `Rendering Area Information:` Whenever the video output in an application UI changes its size or the orientation changes, the new size information should also be passed to the `NexCaptionPainter`class by calling the `NexCaptionPainter.setRenderingArea` method.
+- `New Caption Data:` Whenever new caption data is received, it should be passed to the `NexCaptionPainter`     by calling the `NexCaptionPainter.setDataSource` method.
 
-When it is necessary to clear captions from the screen, for example when seeking in or stopping content, calling the
-`NexCaptionPainter.clear` method will remove the captions existing on the screen.
+When it is necessary to clear captions from the screen, for example when seeking in or stopping content, calling the `NexCaptionPainter.clear` method will remove the captions existing on the screen.
 
-When you want to set attributes to the captions, the `NexCaptionSetting` should be passed to `NexCaptionPainter` by
-calling the `NexCaptionPainter.setUserCaptionSettings` method.
+When you want to set attributes to the captions, the `NexCaptionSetting` should be passed to `NexCaptionPainter` by calling the `NexCaptionPainter.setUserCaptionSettings` method.
 
-
-**Public Attributes**
-
-- `SparseIntArray cachedMappedFontColors`
-
-**Protected Member Functions**
-
-- `void onLayout (boolean changed, int l, int t, int r, int b)`
 
 #### NexCaptionPainter(Context context,int captionType)
 
@@ -3597,8 +3025,7 @@ This is an alternative constructor for the `NexCaptionPainter`.
 
 This is an alternative constructor for the `NexCaptionPainter`.
 
-> **Warning** If the caption view has to be used in Android xml, this constructor must be called. CEA-608 caption type will
-be selected as a default.
+> **Warning** If the caption view has to be used in Android xml, this constructor must be called. CEA-608 caption type will be selected as a default.
  
 **Parameters**
 
@@ -3608,27 +3035,20 @@ be selected as a default.
 | attrs   | The set of attributes associated with the view. |
  
 
-
 #### int getCaptionType ()
 
 This is a method to get the type of caption to be displayed.
 
 **Returns**
-
  
 the type of the caption to be displayed.
  
-**See Also**
-
- 
-- caption types in `NexContentInformation` class
  
 #### NexCaptionSetting getUserCaptionSettings ( )
 
 This method gets the attributes of the captions.
 
 **Returns**
-
  
 The attributes of the captions. If the user has not set this before, it will returned the default properties.
  
@@ -4249,33 +3669,7 @@ method makes this possible.
 |------------------|--------|
 | disableUnderline | If set to TRUE, the renderer will ignore underline attributes even in content with closed captions that have underline attributes. If set to FALSE, the renderer will underline captions if the content’s caption information includes an underline attribute. |
  
-#### void setEmbossBlurRadius (float radius)
 
-This method sets the blur radius of the Emboss Mask filter used when a user sets CEA 608 captions to be ’Raised’
-or ’Depressed’ in the UI.
-
-**Parameters**
-
- 
-| Name   | Description                                |
-|--------|------------------------|
-| radius | The blur radius of the Emboss Mask filter. |
- 
-@deprecated This API is deprecated.
-
-#### void setEmbossSpecular (float specular)
-
-This method sets the specular level of the Emboss Mask filter used when a user sets CEA 608 captions to be
-’Raised’ or ’Depressed’ in the UI.
-
-**Parameters**
-
- 
-| Name     | Description                                   |
-|----------|---------------------------|
-| specular | The specular level of the Emboss Mask filter. |
- 
-@deprecated This API is deprecated.
 
 #### void setFGCaptionColor (CaptionColor foreground, int fgOpacity)
 
@@ -4475,7 +3869,6 @@ This method lets users control the CEA 608 closed caption font size in `NexPlaye
 | textSize | The size of the desired caption text, in points.                 |
  
 **See Also**
-
  
 - `NexCaptionRenderer.setFonts`
  
@@ -4533,8 +3926,6 @@ TIMEDTEXT for 3GPP timed text, pass a `NexClosedCaption` object with the new tim
  
 3. **Clear Timed Text on the Screen** : Whenever timed text must be cleared from the screen (for example when
     seeking or stopping content), calling clear and invalidate will `clear` any existing text from the device screen.
-
-This class replaces the NexCaptionRendererFor3GPPTT in earlier versions of the `NexPlayer` SDK.
 
 To display CEA 608 closed captions however, please use `NexCaptionRenderer`.
 
@@ -5050,11 +4441,6 @@ For a full list of colors , please refer to `NexClosedCaption.CaptionColor`.
 | windowColor   | The window color, or null to use the color from the original caption data.          |
 | windowOpacity | The window color opacity as an integer, from 0 (transparent) to 255 (fully opaque). |
  
-#### void setCenterAlignment ( )
-
-This property sets the captions properties in order to be rendered aligned to the center.
-
-**Deprecated** Use `NexCaptionPainter` class instead of this method.
 
 #### void setData (NexClosedCaption data)
 
@@ -5528,13 +4914,11 @@ value (desired argb color) using append() or put().
 mNexCaptionSetting.mappedFontColors.append(Color.WHITE, Color.GRAY);
 mNexCaptionSetting.mappedFontColors.put(Color.WHITE, Color.GRAY);
 
-
 #### StringStyle mBold
 
 This indicates the bold string style.
 
 **See Also**
-
 
 - NexCaptionSetting.StringStyle
 
@@ -5543,7 +4927,6 @@ This indicates the bold string style.
 This indicates edge style of caption.
 
 **See Also**
-
 
 - NexCaptionSetting.EdgeStyle
 
@@ -5565,9 +4948,7 @@ This indicates the italic string style.
 
 #### NexCaptionWindowRect mRelativeWindowRect
 
-This indicates the position of caption.
-
-It can be set to a percentage of the caption render area.
+This indicates the position of caption. It can be set to a percentage of the caption render area.
 
 **See Also**
 
@@ -5579,60 +4960,10 @@ This indicates the underline string style.
 
 **See Also**
 
-
 - NexCaptionSetting.StringStyle
 
 
-**Classes**
-
-- `class SubStringDrawInfo`
-
-**Public Member Functions**
-
-- `NexCaptionTextView (Context context)`
-
-**Protected Member Functions**
-
-- `void setCaptionStroke (CaptionColor color, int opacity, float strokeWidth)`
-- `void setCaptionStroke (int color, float strokeWidth)`
-- `void setRaised (boolean isTrue)`
-- `void setRaised (boolean isTrue, int raisedColor)`
-- `void setDepressed (boolean isTrue)`
-- `void setDepressed (boolean isTrue, int depColor)`
-- `void setUniform (boolean isTrue)`
-- `void setDropShadow (boolean isTrue)`
-- `void setDropShadow (boolean isTrue, int color)`
-- `void setDropShadow (boolean isTrue, float radius, float dx, float dy, int color)`
-- `void initEdgeStyle ()`
-- `int  getColorFromCapColor (CaptionColor cColor, int cOpacity)`
-- `void setBaseTextColor (int color)`
-- `void setBaseBackgroundColors (Spannable spannableString)`
-- `void onDraw (Canvas canvas)`
-
-**Protected Attributes**
-
-- `float[ ] APPLY_SHADOW_PARAM = {0.0f, 0.0f, 0.0f}`
-
-
 ### NexCaptionView Class Reference
-
-
-**Public Attributes**
-
-- `final int CAPTION_EDGE_ATTR_NONE = 0`
-- `final int CAPTION_EDGE_ATTR_DROP_SHADOW = 1`
-- `final int CAPTION_EDGE_ATTR_RAISED = 2`
-- `final int CAPTION_EDGE_ATTR_DEPRESSED = 3`
-- `final int CAPTION_EDGE_ATTR_UNIFORM = 4`
-
-**Static Public Attributes**
-
-- `static final String LOG_TAG = "NexCaptionViewer"`
-
-**Protected Member Functions**
-
-- `void onDraw (Canvas canvas)`
-- `void onLayout (boolean arg0, int arg1, int arg2, int arg3, int arg4)`
 
 #### void changeFontSize ( float *sizePercentage* )
 
@@ -5682,8 +5013,7 @@ By enabling this option, the bold attributes in the caption data are ignored and
 
 This property specifies the rendering area within the displayed video area.
 
-This information is used by the renderer when video is scaled to a different size so that the rendering area can also
-be scaled proportionally.
+This information is used by the renderer when video is scaled to a different size so that the rendering area can also be scaled proportionally.
 
 **Parameters**
 
@@ -5740,7 +5070,7 @@ If captions are "depressed", they should be displayed as if pressed into the vid
 
 #### void setEmbossBlurRadius ( float *radius* )**
 
-This method sets the blur radius of the Emboss Mask filter used when a user sets caption to be ’Raised’ or ’De-pressed’ in the UI.
+This method sets the blur radius of the Emboss Mask filter used when a user sets caption to be ’Raised’ or ’Depressed’ in the UI.
 
 
 **Parameters**
@@ -5780,14 +5110,14 @@ For a full list of colors , please refer to NexClosedCaption.CaptionColor.
 | foreground | The foreground color, or null to use the color from the original caption data. |
 | fgOpacity  | The foreground opacity, from 0 (transparent) to 255 (fully opaque).            |
 
-#### void setFonts (Typeface *normType*, Typeface *boldType*, Typeface *italicType*, Typeface *boldItalicType*)
+#### void setFonts (Typeface *normType*, Typeface *boldType*, Typeface *italicType*, Typeface  *boldItalicType*)
 
 This method sets the fonts to be used for the captions.
 
 Four typefaces may be specified for different combinations of bold and italic. The caption renderer will select the appropriate typeface from among these based on the captions being displayed.
 
 
-For best results, specify all four typefaces. Any typeface can be set tonull, in which case the system default typeface will be used.
+For best results, specify all four typefaces. Any typeface can be set to null, in which case the system default typeface will be used.
 
 **Parameters**
 
@@ -5886,7 +5216,7 @@ This indicates that the position is adjusted by NexPlayer.
 
 It should be set to false if the position is set by the user.
 
-Default: true Automatically adjusted by NexPlayer
+Default: true. Automatically adjusted by NexPlayer
 
 #### int heightPercent
 
@@ -5901,7 +5231,7 @@ This indicates ifthe position is set by user or not.
 
 It should be set to true if the position set by the user should be applied instead of the position set by the content.
 
-Default: false Set by content.
+Default: false. Set by content.
 
 #### int widthPercent
 
@@ -5926,12 +5256,9 @@ It can be set to a percentage of the vertical caption render area.
 
 This class handles the subtitles and closed captions data of content.
 
-NexPlayer uses this class to handle SMI, SRT, SUB, and Smooth Streaming subtitles as well as CEA 608 and
-CEA 708 closed captions included in HLS content, 3GPP and CFF timed text as well as WebVTT text tracks.
+NexPlayer uses this class to handle SMI, SRT, SUB, and Smooth Streaming subtitles as well as CEA 608 and CEA 708 closed captions included in HLS content, 3GPP and CFF timed text as well as WebVTT text tracks.
 
->Warning Certain methods though may only be called to handle specifically CEA 608 closed captions, CEA 708 closed
-captions, timed text, or WebVTT text tracks, so care must be taken when implementing support for those
-captions.
+> Warning Certain methods though may only be called to handle specifically CEA 608 closed captions, CEA 708 closed captions, timed text, or WebVTT text tracks, so care must be taken when implementing support for those captions.
 
 Text information from standard subtitle files (SMI, SRT, SUB, and Smooth Streaming subtitles) is handled by the getTextData method while the text of CEA 608 close captions, 3GPP timed text, and WebVTT captions must each be handled separately by, respectively, getString, getTextDataFor3GPPTT, and getTextDataForWebVTT. In the case of CFF timed text (TTML), text data is handled separately by the getTextDataforTTML method.
 
@@ -5940,6 +5267,7 @@ For CEA 708 closed captions, please see NexEIA708Struct and NexEIA708CaptionView
 The instance of NexClosedCaption is delivered through the onTextRenderRender method for regular subtitles.
 
 When timed text, CEA 608 closed captions, or WebVTT are implemented however, it is necessary to create and display the captions in a separate caption renderer, like NexCaptionRendererForTimedText, NexCaptionRenderer, and. For example, CEA 608 captions can be displayed one character at a time and thus the position of each character must be considered. The vertical position of each character is set by a row number, rowbetween 0 and 15, while the horizontal position of the character is set by a column number, colbetween 0 and 32. NexPlayer.IListener.onTextRenderRender, NexCaptionRenderer, NexEIA708Struct, NexEIA708CaptionView, NexCaptionRendererForTimedText, and NexCaptionRendererForWebVTT for additional details.
+
 **Classes**
 
 - `enum CaptionColor`
@@ -6045,109 +5373,7 @@ When timed text, CEA 608 closed captions, or WebVTT are implemented however, it 
 
 
 
-**Static Public Attributes**
-
-- `static final int TEXT_TYPE_UNKNOWN = 0`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int TEXT_TYPE_GENERAL = 1`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int TEXT_TYPE_EXTERNAL_TTML = 5`
-
-
-	This is a possiblereturnvalue for NexClosedCaption.getTextType().
-
-- `static final int TEXT_TYPE_ATSCMH_CC = 0x11`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int TEXT_TYPE_ATSCMH_BAR = 0x12`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int TEXT_TYPE_ATSCMH_AFD = 0x13`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int TEXT_TYPE_NTSC_CC_CH1 = 0x14`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int TEXT_TYPE_NTSC_CC_CH2 = 0x15`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int TEXT_TYPE_3GPP_TIMEDTEXT = 0x20`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int TEXT_TYPE_TTML_TIMEDTEXT = 0x25`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int TEXT_TYPE_WEBVTT = 0x30`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int TEXT_TYPE_SMI = 0x40`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int TEXT_TYPE_SRT = 0x41`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int TEXT_TYPE_SUB = 0x42`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getTextType().
-- `static final int ENCODING_TYPE_ISO8859_1 = 0x0`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-- `static final int ENCODING_TYPE_UTF16 = 0x1`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-- `static final int ENCODING_TYPE_UTF16_BE = 0x2`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-- `static final int ENCODING_TYPE_UTF8 = 0x3`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-- `static final int ENCODING_TYPE_ASCII = 0x10`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-- `static final int ENCODING_TYPE_UNICODE = 0x20`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-- `static final int ENCODING_TYPE_EUC_KR = 0x21`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-- `static final int ENCODING_TYPE_UNKNOWN = 0xFFFFFFFF`
-
-
-    This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-- `static final int ROLLED_OUT_ROW = -1`
-
-
-    In FULL mode, when CEA 608 closed captions are to be displayed and "rolled up" with animation, this defines the row that is being "rolled out" of the display during the animation, in other words the row that is disappearing as the next, new row of captions appears.
-
-**Static Protected Attributes**
-
-- `static final float[ ] DEFAULT_RAISED_PARAM = {2.0f, 0.0f, 3.0f}`
-- `static final float[ ] DEFAULT_DEPRESSED_PARAM = {2.0f, -3.0f, -3.0f}`
-- `static final float[ ] DEFAULT_SHADOW_PARAM = {####f, 0.0f, ####f}`
-- `static final int DEFAULT_SHADOW_COLOR = 0xCC000000`
-
+In FULL mode, when CEA 608 closed captions are to be displayed and "rolled up" with animation, this defines the row that is being "rolled out" of the display during the animation, in other words the row that is disappearing as the next, new row of captions appears.
 
 
 #### int getAlignTypeForWebVTT ( )
@@ -6156,7 +5382,6 @@ This method gets the align type data of a WebVTT cue.
 
 **Returns**
 
- 
 A byte array with the align type data for the content’s WebVTT.
  
  
@@ -6214,26 +5439,6 @@ The background color to display.
  
 CaptionColor for color options available for CEA 608 closed captions in FULL mode.
  
-#### int getBGColor ( )
-
-This method returns the background color of CEA 608 closed captions.
-
-**Returns**
-
- 
-The background color of the displayed caption text as an ARGB hexacode. This will be one of:
- 
-- White = 0xFFFFFFFF
-- Green = 0xFF00FF00
-- Blue = 0xFF0000FF
-- Cyan = 0xFF00FFFF
-- Red = 0xFFFF0000
-- Yellow = 0xFFFFFF00
-- Magenta = 0xFFFF00FF
-- Black = 0xFF000000 (default)
-- Transparent = 0x00000000
-
-> **Deprecated** Do not use.
 
 #### int getBGColorforTTML ( )
 
@@ -6246,27 +5451,6 @@ It corresponds to the tts:backgroundColorattribute, and specifies the color of t
  
 The background color of the timed text (TTML) as an integer.
  
- 
-#### int getCaptionColor ( )
-
-This method returns the text display color of CEA 608 closed captions.
-
-**Returns**
-
- 
-The color of the displayed caption text as an ARGB hexacode. This will be one of:
- 
-- White = 0xFFFFFFFF (default)
-- Green = 0xFF00FF00
-- Blue = 0xFF0000FF
-- Cyan = 0xFF00FFFF
-- Red = 0xFFFF0000
-- Yellow = 0xFFFFFF00
-- Magenta = 0xFFFF00FF
-- Black = 0xFF000000
-- Transparent = 0x00000000
-
-> **Deprecated** Do not use.
 
 #### CaptionModegetCaptionMode ( )
 
@@ -6347,7 +5531,7 @@ This gets the character to display in CEA 608 closed captions (FULL mode).
  
 The character to be displayed.
  
-#### CharsetgetCharset (int row, int col)
+#### Charset getCharset (int row, int col)
 
 This gets the encoding set for the character in CEA 608 closed captions.
 
@@ -6378,40 +5562,7 @@ This property specifies the ContinuousKaraoke.
  
 TRUE if YES , FALSE if No.
  
-#### int getCueIDForWebVTT ( )
 
-This method gets the ID of the current WebVTT text cue.
-
-**Returns**
-
- 
-The ID of the current WebVTT text cue, as an integer.
- 
- 
-> **Deprecated** Do not use.
-
-#### List < byte[ ] > getCueTagListForWebVTT ( )
-
-This method gets the list of WebVTT cue tags in WebVTT text tracks in content.
-
-**Returns**
-
- 
-A list of byte arrays with the WebVTT cue tags.
- 
-> **Deprecated** Do not use.
-
-#### int getCurrentTimeStampForWebVTT ( )
-
-This method gets the current timestamp for WebVTT text cue captions.
-
-**Returns**
-
- 
-The current timestamp of WebVTT text cue captions, as an integer.
- 
- 
-> **Deprecated** Do not use.
 
 #### int getDirectionForWebVTT ( )
 
@@ -6477,11 +5628,9 @@ The ending timestamp of the WebVTT text cue as an integer.
 
 This method gets the height of the region area where timed text (TTML) in content is to be displayed.
 
-It corresponds to the height dimension specified in tts:extentattribute, and may also be the height of the root
-container region.
+It corresponds to the height dimension specified in tts:extentattribute, and may also be the height of the root container region.
 
-Note that if the tts:extentattribute is set toauto, the display region should be considered to have the same
-height as the root container extent.
+Note that if the tts:extentattribute is set toauto, the display region should be considered to have the same height as the root container extent.
 
 **Returns**
 
@@ -6611,17 +5760,6 @@ The alignment of the text. This will be one of the following values:
 - Centre (1)
 - Right (-1)
 
-#### String getHtmlDataForWebVTT ( )
-
-This method gets the HTML data for WebVTT text cues in WebVTT text tracks in content.
-
-**Returns**
-
- 
-a string including the HTML data of the specified WebVTT text cue.
- 
- 
-> **Deprecated** Do not use.
 
 #### int getIndent ( )
 
@@ -6638,8 +5776,7 @@ The horizontal position at which to display the caption. This will be an integer
 
 This method gets the line height of timed text (TTML) in content.
 
-It corresponds to the tts:lineHeightattribute, and can be used to vertically space out lines of timed text
-(TTML) when displayed.
+It corresponds to the tts:lineHeightattribute, and can be used to vertically space out lines of timed text (TTML) when displayed.
 
 **Returns**
 
@@ -6672,11 +5809,9 @@ The opacity of the timed text (TTML) as afloatbetween 0 and 1.
  
 #### TTML\_StyleLength[ ] getOrigin ( )
 
-This method gets the origin of the text display region for timed text (TTML) in content with respect to the root
-container extent or external authoring context.
+This method gets the origin of the text display region for timed text (TTML) in content with respect to the root container extent or external authoring context.
 
-This corresponds to the tts:originattribute and will either beauto, where the origin can be treated as the same as the root container origin, or as two lengths, the first of which must be interpreted as the x coordinate and
-the second as the y coordinate of the origin of the text display region.
+This corresponds to the tts:originattribute and will either beauto, where the origin can be treated as the same as the root container origin, or as two lengths, the first of which must be interpreted as the x coordinate and the second as the y coordinate of the origin of the text display region.
 
 **Returns**
 
@@ -6697,17 +5832,6 @@ If only one length is specified, it applies to all edges of the text display box
 The available padding lengths as a TTML\_StyleLength array.
  
  
-#### int [ ] getRegionAnchorForWebVTT ( )
-
-This method gets the region anchor data of a WebVTT cue.
-
-**Returns**
-
- 
-A byte array with the region anchor data for the content’s WebVTT.
-
- 
-> **Deprecated** Do not use.
 
 #### String getRegionIDForWebVTT ( )
 
@@ -6720,8 +5844,7 @@ A String with region ID of the content’s WebVTT text.
  
 #### long getRollUpElapsedTime ( )
 
-This gets the time to be taken to "roll up" between rows or the animation time for CEA 608 closed captions in FULL
-mode.
+This gets the time to be taken to "roll up" between rows or the animation time for CEA 608 closed captions in FULL mode.
 
 **Returns**
 
@@ -6730,8 +5853,7 @@ The time in milliseconds it takes for a row to "roll up" to the next row, as alo
  
 #### int getRollUpNumRows ( )
 
-This gets the number of roll-up rows to be displayed when CEA 608 closed captions are to be displayed "rolling up"
-in FULL mode.
+This gets the number of roll-up rows to be displayed when CEA 608 closed captions are to be displayed "rolling up" in FULL mode.
 
 **Returns**
 
@@ -6742,8 +5864,7 @@ The number of roll up rows to be displayed: 2, 3, or 4.
 
 This method returns the text’s vertical position for CEA 608 closed captions only.
 
-CEA 608 closed captions are positioned vertically based on this value. There are 15 possible rows in which the
-captions can be displayed, 1 being at the top of the screen and 15 at the bottom.
+CEA 608 closed captions are positioned vertically based on this value. There are 15 possible rows in which the captions can be displayed, 1 being at the top of the screen and 15 at the bottom.
 
 **Returns**
 
@@ -6876,7 +5997,7 @@ This property gets the coordination of the rectangle text box.
  
 The coordination of the rectangle text box.
  
-#### byte [ ] getTextData ( )
+#### byte[] getTextData ( )
 
 This method gets the text data of local subtitle files in content.
 
@@ -6891,7 +6012,7 @@ The caption text of CEA 608 closed captions can be received by calling NexClosed
  
 A byte array of the subtitle text data for the current content.
  
-#### byte [ ] getTextDataFor3GPPTT ( )
+#### byte[] getTextDataFor3GPPTT ( )
 
 This property gets data of the text.
 
@@ -6900,7 +6021,7 @@ This property gets data of the text.
  
 Data of the text.
  
-#### byte [ ] getTextDataforTTML ( )
+#### byte[] getTextDataforTTML ( )
 
 This method is used to handle the text data for timed text (TTML) in content.
 
@@ -6910,7 +6031,7 @@ This method is used to handle the text data for timed text (TTML) in content.
 A byte array with the text data for the content’s timed text (TTML).
  
  
-#### byte [ ] getTextDataForWebVTT ( )
+#### byte[] getTextDataForWebVTT ( )
 
 This method gets the text data for a WebVTT cue.
 
@@ -6960,8 +6081,7 @@ The current TextKaraoke class.
 
 This method gets the text outline style to be used to display timed text (TTML) in text outline.
 
-It corresponds to thetts:textOutlineattribute and is returned as a TTML\_TextOutlineStyleLength object
-including the color, outline thickness, and blur radius if present.
+It corresponds to the `tts:textOutline` attribute and is returned as a TTML\_TextOutlineStyleLength object including the color, outline thickness, and blur radius if present.
 
 **Returns**
 
@@ -7001,18 +6121,7 @@ This method gets the full text of a caption from WebVTT text tracks as a string.
  
 The WebVTT cue text as a string.
  
- 
-#### List < byte[ ] > getTextStrListForWebVTT ( )
 
-This method gets a list of the text strings in WebVTT text cues content.
-
-**Returns**
-
- 
-A list of byte arrays containing the strings of WebVTT cue text.
- 
- 
-> **Deprecated** Do not use.
 
 #### TextStylegetTextStyle ( )
 
@@ -7097,36 +6206,13 @@ The alignment of the text. This will be one of the following values:
 - Centre (1)
 - Bottom (-1)
 
-#### int [ ] getViewportAnchorForWebVTT ( )
 
-This method gets the viewport anchor data of a WebVTT region.
-
-**Returns**
-
- 
-A byte array with the viewport anchor data for the content’s WebVTT.
- 
- 
-> **Deprecated** Do not use.
-
-#### int getWidthForWebVTT ( )
-
-This method gets the width data of a WebVTT region.
-
-Returns
-
- 
-A byte array with the width data for the content’s WebVTT.
- 
- 
-> **Deprecated** Do not use.
 
 #### TTML\_WritingModegetWritingModeforTTML ( )
 
 This method gets the writing mode of timed text (TTML) in content.
 
-It corresponds to thetts:writingModeattribute and indicates how timed text (TTML) should be displayed in
-the text display region.
+It corresponds to the tts:writingMode attribute and indicates how timed text (TTML) should be displayed in the text display region.
 
 **Returns**
 
@@ -7167,7 +6253,6 @@ This method gets the zIndex for timed text (TTML) in content.
 It corresponds to the tts:zIndexattribute, and defines the front-to-back order of timed text (TTML) region areas if they overlap. For example, if several blocks of timed text (TTML) were to be staggered, layered, and displayed at once, the block with the zIndex of 2 would be in front (like the top sheet of paper in a pile), the block with zIndex of 1 would be next, and the block with zIndex of 0 would be under the others (like the bottom sheet of paper in pile).
 
 **Returns**
-
  
 The zIndex of the timed text (TTML) as an int.
  
@@ -7176,7 +6261,7 @@ The zIndex of the timed text (TTML) as an int.
 
 This method determines whether or not timed text (TTML) in content should be displayed in bold.
 
-It corresponds to the tts:fontWeightattribute.
+It corresponds to the tts:fontWeight attribute.
 
 **Returns**
 
@@ -7188,7 +6273,7 @@ TRUE if the timed text (TTML) should be displayed in bold or FALSE if it should 
 
 This method determines whether timed text (TTML) in content is displayed automatically or not.
 
-It corresponds to the tts:displayattribute, and allows certain text to be displayed in timed intervals while other text remains on the screen.
+It corresponds to the tts:display attribute, and allows certain text to be displayed in timed intervals while other text remains on the screen.
 
 **Returns**
 
@@ -7214,15 +6299,6 @@ If the background is not to be displayed, it will be transparent and the backgro
  
 TRUE if background color is to be displayed, FALSE if not.
  
-#### int isEnable ( )
-
-This method controls whether CEA 608 closed captions are enabled or disabled.
-
-**Returns**
-
-Always 0.
- 
-> **Deprecated** Do not use.
 
 #### boolean isFlashing (int row, int col)
 
@@ -7257,17 +6333,7 @@ This determines if the character in CEA 608 closed captions is to be displayed i
 
  
 `TRUE` if italicized, `FALSE` if not.
- 
-#### int isItalic ( )
 
-This method determines CEA 608 closed captions italics.
-
-**Returns**
-
- 
-Zero if the text is displayed normally; 1 if the text should be displayed initalics.
- 
-Deprecated Do not use.
 
 #### boolean isLarge (int row, int col)
 
@@ -7284,15 +6350,6 @@ This determines if the character in CEA 608 closed captions is to be displayed i
 
 TRUE if bold , FALSE if not.
  
-#### int isOpaque ( )
-
-This method determines the opacity of CEA 608 closed captions background color.
-
-**Returns**
-
-Always 1 (opaque) for CEA 608 closed captions.
- 
-> **Deprecated** Do not use.
 
 #### boolean isOverflowVisibleforTTML ( )
 
@@ -7345,15 +6402,6 @@ This determines if the character in CEA 608 closed captions is to be underlined 
 
 `TRUE` if underlined, `FALSE` if not.
  
-#### int isUnderline ( )
-
-This method determines whether CEA 608 closed captions are underlined.
-
-**Returns**
-
-Zero if the text is displayed normally; 1 if the text should be underlined.
- 
-> **Deprecated** Do not use.
 
 #### boolean isVisibilityforTTML ( )
 
@@ -7385,75 +6433,7 @@ It corresponds to the tts:directionattribute, which indicates whether timed text
 **Returns**
  
 `TRUE` if text is to be displayed left-to-right like standard Latin script, or `FALSE` if it should be displayed right-to-left.
- 
-#### void setHtmlDataForWebVTT (byte[ ] textData, int byteLen)
 
-This method sets a String with the full HTML data about a WebVTT text track cue.
-
-**Parameters**
-
-| Name    | Description                |
-|---------|--------|
- 
-|textData| A byte array with the full HTML data about the WebVTT cue.|
-|byteLen| The length of the HTML data in the parameter,textData.|
-
-> **Deprecated** Do not use.
-
-#### void setTextForWebVTT (byte[ ] textData, int byteLen)
-
-This method sets the text data of WebVTT text tracks in content.
-
-**Parameters**
-
-| Name    | Description                |
-|---------|--------|
-|textData| A byte array with the text data of the WebVTT text cue to be set.|
-|byteLen| The length of the WebVTT text data in the parameter,textData.|
-
-> **Deprecated** Do not use.
-
-
-#### final int ENCODING\_TYPE\_ASCII = 0x10 [static]
-
-This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-
-#### final int ENCODING\_TYPE\_EUC\_KR = 0x21 [static]
-
-This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-
-#### final int ENCODING\_TYPE\_ISO8859\_1 = 0x0 [static]
-
-This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-
-#### final int ENCODING\_TYPE\_UNICODE = 0x20 [static]
-
-This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-
-#### final int ENCODING\_TYPE\_UNKNOWN = 0xFFFFFFFF [static]
-
-This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-
-#### final int ENCODING\_TYPE\_UTF16 = 0x1 [static]
-
-This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-
-#### final int ENCODING\_TYPE\_UTF16\_BE = 0x2 [static]
-
-This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-
-#### final int ENCODING\_TYPE\_UTF8 = 0x3 [static]
-
-This is a possiblereturnvalue for NexClosedCaption.getEncodingType().
-
-#### byte [ ] mCEA708Data
-
-This is an array containing the CEA 708 closed caption data for the given content.
-
-**See Also**
- 
-- NexEIA708Struct
-- NexEIA708CaptionView
  
 #### int mCEA708Len
 
@@ -7466,85 +6446,85 @@ This is the service number of the CEA 708 closed captions to be used to display 
 
 Different service numbers contain different closed caption data for the same content, for example captions of different languages.
  
-#### final int ROLLED\_OUT\_ROW = -1 [static]
+#### final int ROLLED\_OUT\_ROW = -1
 
 In FULL mode, when CEA 608 closed captions are to be displayed and "rolled up" with animation, this defines the row that is being "rolled out" of the display during the animation, in other words the row that is disappearing as the next, new row of captions appears.
 
 This can be ignored if animation of the display is not being used.
 
-#### final int TEXT\_TYPE\_3GPP\_TIMEDTEXT = 0x20 [static]
+#### final int TEXT\_TYPE\_3GPP\_TIMEDTEXT = 0x20
 
 This is a possible return value for NexClosedCaption.getTextType().
 
 It indicates the contents include 3GPP timed text.
 
-#### final int TEXT\_TYPE\_ATSCMH\_AFD = 0x13 [static]
+#### final int TEXT\_TYPE\_ATSCMH\_AFD = 0x13
 
 This is a possible return value for NexClosedCaption.getTextType().
 
 This format is not currently supported.
 
-#### final int TEXT\_TYPE\_ATSCMH\_BAR = 0x12 [static]
+#### final int TEXT\_TYPE\_ATSCMH\_BAR = 0x12
 
 This is a possible return value for NexClosedCaption.getTextType().
 
 This format is not currently supported.
 
-#### final int TEXT\_TYPE\_ATSCMH\_CC = 0x11 [static]
+#### final int TEXT\_TYPE\_ATSCMH\_CC = 0x11
 
 This is a possible return value for NexClosedCaption.getTextType().
 
 This format is not currently supported.
 
-#### final int TEXT\_TYPE\_EXTERNAL\_TTML = 5 [static]
+#### final int TEXT\_TYPE\_EXTERNAL\_TTML = 5
 
 This is a possible return value for NexClosedCaption.getTextType().
 
 This indicates that the text type is external TTML (∗.dfxp, or the Distribution Format Exchange Profile).
 
-#### final int TEXT\_TYPE\_GENERAL = 1 [static]
+#### final int TEXT\_TYPE\_GENERAL = 1
 
 This is a possible return value for NexClosedCaption.getTextType().
 
 This indicates general text type and requires no special processing of the text.
 
-#### final int TEXT\_TYPE\_NTSC\_CC\_CH1 = 0x14 [static]
+#### final int TEXT\_TYPE\_NTSC\_CC\_CH1 = 0x14
 
 This is a possible return value for NexClosedCaption.getTextType().
 
 It indicates the contents include CEA 608 closed captions on Data Channel 1 and processes the attributes accordingly.
 
-#### final int TEXT\_TYPE\_NTSC\_CC\_CH2 = 0x15 [static]
+#### final int TEXT\_TYPE\_NTSC\_CC\_CH2 = 0x15
 
 This is a possible return value for NexClosedCaption.getTextType().
 
 It indicates the contents include CEA 608 closed captions on Data Channel 2 and processes the attributes accordingly.
 
-#### final int TEXT\_TYPE\_SMI = 0x40 [static]
+#### final int TEXT\_TYPE\_SMI = 0x40
 
 This is a possible return value for NexClosedCaption.getTextType().
 
-#### final int TEXT\_TYPE\_SRT = 0x41 [static]
+#### final int TEXT\_TYPE\_SRT = 0x41
 
 This is a possible return value for NexClosedCaption.getTextType().
 
-#### final int TEXT\_TYPE\_SUB = 0x42 [static]
+#### final int TEXT\_TYPE\_SUB = 0x42
 
 This is a possible return value for NexClosedCaption.getTextType().
 
-#### final int TEXT\_TYPE\_TTML\_TIMEDTEXT = 0x25 [static]
+#### final int TEXT\_TYPE\_TTML\_TIMEDTEXT = 0x25
 
 This is a possible return value for NexClosedCaption.getTextType().
 
 It indicates the contents include CFF timed text (TTML).
 
-#### final int TEXT\_TYPE\_UNKNOWN = 0 [static]
+#### final int TEXT\_TYPE\_UNKNOWN = 0
 
 This is a possible return value for NexClosedCaption.getTextType().
 
 When the text type is unknown, NexPlayer doesn’t perform any special processing on the text (the same as in the case of general subtitles.)
 
-#### final int TEXT\_TYPE\_WEBVTT = 0x30 [static]
+#### final int TEXT\_TYPE\_WEBVTT = 0x30
 
 This is a possible return value for NexClosedCaption.getTextType().
 
@@ -7642,11 +6622,9 @@ Possible Values:
 
 ### NexContentInformation Class Reference
 
-Provides information on content.
+Provides information on content. This is returned by NexPlayer.getContentInfo. See that method for details.
 
-This is returned by NexPlayer.getContentInfo. See that method for details.
-
-#### static String getMediaCodecMimeType (int mediaType, int codecType) [static] , [protected]
+#### static String getMediaCodecMimeType (int mediaType, int codecType)
 
 This method converts codec information to mime type.
 
@@ -7654,15 +6632,15 @@ This method converts codec information to mime type.
  
 Returns mime type of the given codec type
  
-#### final int H264\_BASELINE\_PROFILE = 66 [static]
+#### final int H264\_BASELINE\_PROFILE = 66
 
 Possible H.264 profile value for mVideoProfile.
 
-#### final int H264\_HIGH\_PROFILE = 100 [static]
+#### final int H264\_HIGH\_PROFILE = 100
 
 Possible H.264 profile value for mVideoProfile.
 
-#### final int H264\_MAIN\_PROFILE = 77 [static]
+#### final int H264\_MAIN\_PROFILE = 77
 
 Possible H.264 profile value for mVideoProfile.
 
@@ -7720,19 +6698,6 @@ Possible Values:
 
 - 0 : SW codec
 - 1 : HW codec
-
-#### int mAudioFourCC
-
-Additional information about the audio codec in use, namely the FOURCC (or "four character code") of the codec.
-
-When the audio codec of the current content is DTS, this will be one of the following values:
-
-- 0x64747363 : DTSC
-- 0x64747363 : DTSH
-- 0x64747363 : DTSL
-- 0x64747363 : DTSE
- 
-> **Warning** This information is not supported by current API version.
  
 #### int mAudioNumOfChannel
 
@@ -7945,269 +6910,189 @@ This is one of:
 - H264\_HIGH\_PROFILE
 
 
-#### final int NEX\_TEXT\_3GPP\_TIMEDTEXT = 0x#### [static]
+#### final int NEX\_TEXT\_3GPP\_TIMEDTEXT = 0x####
 
 Possible caption type for subtitles for mCaptionType, when content includes timed text.
 
-#### final int NEX\_TEXT\_CEA = 0x#### [static]
+#### final int NEX\_TEXT\_CEA = 0x####
 
 Possible caption type for subtitles for mCaptionType, content can include CEA-608 or CEA-708.
 
-#### final int NEX\_TEXT\_CEA608 = 0x#### [static]
+#### final int NEX\_TEXT\_CEA608 = 0x####
 
 Possible caption type for subtitles for mCaptionType, when content includes CEA-608.
 
-#### final int NEX\_TEXT\_CEA708 = 0x#### [static]
+#### final int NEX\_TEXT\_CEA708 = 0x####
 
 Possible caption type for subtitles for mCaptionType, when content includes CEA-708.
 
-#### final int NEX\_TEXT\_EXTERNAL\_SMI = 0x00000002 [static]
+#### final int NEX\_TEXT\_EXTERNAL\_SMI = 0x00000002
 
 Possible caption type for subtitles for mCaptionType, when content includes SMI subtitles.
 
-#### final int NEX\_TEXT\_EXTERNAL\_SRT = 0x00000003 [static]
+#### final int NEX\_TEXT\_EXTERNAL\_SRT = 0x00000003
 
 Possible caption type for subtitles for mCaptionType, when content includes SRT subtitles.
 
-#### final int NEX\_TEXT\_EXTERNAL\_SUB = 0x00000004 [static]
+#### final int NEX\_TEXT\_EXTERNAL\_SUB = 0x00000004
 
 Possible caption type for subtitles for mCaptionType, when content includes SUB subtitles.
 
-#### final int NEX\_TEXT\_TTML = 0x#### [static]
+#### final int NEX\_TEXT\_TTML = 0x####
 
 Possible caption type for subtitles for mCaptionType, when content includes TTML timed text.
 
-#### final int NEX\_TEXT\_UNKNOWN = 0x00000000 [static]
+#### final int NEX\_TEXT\_UNKNOWN = 0x00000000
 
 Possible caption type for subtitles for mCaptionType, when content includes subtitles in an unrecognized format.
 
-#### final int NEX\_TEXT\_WEBVTT = 0x#### [static]
+#### final int NEX\_TEXT\_WEBVTT = 0x####
 
 Possible caption type for subtitles for mCaptionType, when content includes WebVTT text tracks.
 
-#### final int NEXOTI\_AAC = 0x00000040 [static]
+#### final int NEXOTI\_AAC = 0x00000040
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_AAC\_GENERIC = 0x00000041 [static]
+#### final int NEXOTI\_AAC\_GENERIC = 0x00000041
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_AAC\_PLUS = 0x00000041 [static]
+#### final int NEXOTI\_AAC\_PLUS = 0x00000041
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_AC3 = 0x00002000 [static]
+#### final int NEXOTI\_AC3 = 0x00002000
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_AC4 = 0x00002002 [static]
+#### final int NEXOTI\_AC4 = 0x00002002
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_AMR = 0x000000D0 [static]
-
-Possible speech codec value for mAudioCodec.
-
-This is not supported in the current version; do not use it.
-
-Deprecated Not supported in the current version; do not use.
-
-#### final int NEXOTI\_AMRWB = 0x000000D4 [static]
-
-Possible speech codec value for mAudioCodec.
-
-This is not supported in the current version; do not use it.
-
-Deprecated Not supported in the current version; do not use.
-
-#### final int NEXOTI\_BSAC = 0x00000016 [static]
+#### final int NEXOTI\_BSAC = 0x00000016
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_DRA = 0x000000E0 [static]
+#### final int NEXOTI\_DRA = 0x000000E0
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_DTS = 0x40000003 [static]
+#### final int NEXOTI\_DTS = 0x40000003
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_EC3 = 0x00002001 [static]
+#### final int NEXOTI\_EC3 = 0x00002001
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_EVRC = 0x000000D1 [static]
-
-Possible speech codec value for mAudioCodec.
-
-This is not supported in the current version; do not use it.
-
-Deprecated Not supported in the current version; do not use.
-
-#### final int NEXOTI\_G711 = 0x000000DF [static]
-
-Possible speech codec value for mAudioCodec.
-
-This is not supported in the current version; do not use it.
-
-> Deprecated Not supported in the current version; do not use.
-
-#### final int NEXOTI\_G723 = 0x000000DE [static]
-
-Possible speech codec value for mAudioCodec.
-
-This is not supported in the current version; do not use it.
-
-> Deprecated Not supported in the current version; do not use.
-
-#### final int NEXOTI\_H263 = 0x000000C0 [static]
+#### final int NEXOTI\_H263 = 0x000000C0
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_H264 = 0x000000C1 [static]
+#### final int NEXOTI\_H264 = 0x000000C1
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_HEVC = 0x10010400 [static]
+#### final int NEXOTI\_HEVC = 0x10010400
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_MP2 = 0x00000021 [static]
+#### final int NEXOTI\_MP2 = 0x00000021
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_MP3 = 0x0000016B [static]
+#### final int NEXOTI\_MP3 = 0x0000016B
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_MP3inMP4 = 0x0000006B [static]
+#### final int NEXOTI\_MP3inMP4 = 0x0000006B
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_MP43 = 0x3334####d [static]
+#### final int NEXOTI\_MP43 = 0x3334####d
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_MPEG1 = 0x000000F2 [static]
+#### final int NEXOTI\_MPEG1 = 0x000000F2
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_MPEG2 = 0x000000F3 [static]
+#### final int NEXOTI\_MPEG2 = 0x000000F3
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_MPEG2AAC = 0x00000067 [static]
+#### final int NEXOTI\_MPEG2AAC = 0x00000067
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_MPEG4Sv1 = 0x00000001 [static]
+#### final int NEXOTI\_MPEG4Sv1 = 0x00000001
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_MPEG4Sv2 = 0x00000002 [static]
+#### final int NEXOTI\_MPEG4Sv2 = 0x00000002
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_MPEG4V = 0x00000020 [static]
+#### final int NEXOTI\_MPEG4V = 0x00000020
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_QCELP = 0x000000D2 [static]
-
-Possible speech codec value for mAudioCodec.
-
-This is not supported in the current version; do not use it.
-
-Deprecated Not supported in the current version; do not use.
-
-#### final int NEXOTI\_QCELP\_ALT = 0x000000E1 [static]
-
-Possible speech codec value for mAudioCodec.
-
-This is not supported in the current version; do not use it.
-
-> Deprecated Not supported in the current version; do not use.
-
-#### final int NEXOTI\_RA = 0x000000DA [static]
+#### final int NEXOTI\_RA = 0x000000DA
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_RV = 0x000000DB [static]
+#### final int NEXOTI\_RV = 0x000000DB
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_S263 = 0x000000C2 [static]
+#### final int NEXOTI\_S263 = 0x000000C2
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_SMV = 0x000000D3 [static]
-
-Possible speech codec value for mAudioCodec.
-
-This is not supported in the current version; do not use it.
-
-> Deprecated Not supported in the current version; do not use.
-
-#### final int NEXOTI\_TEXT\_3GPP = 0x000000E0 [static]
-
-Possible text codec for subtitles.
-
-This is not supported in the current version; do not use it.
-
-> Deprecated Not supported in the current version; do not use.
-
-#### final int NEXOTI\_TEXT\_SKT = 0x000000E2 [static]
-
-Possible text codec for subtitles.
-
-This is not supported in the current version; do not use it.
-
-> Deprecated Not supported in the current version; do not use.
-
-#### final int NEXOTI\_WMA = 0x####D41 [static]
+#### final int NEXOTI\_WMA = 0x####D41
 
 Possible audio codec value for mAudioCodec.
 
-#### final int NEXOTI\_WMV = 0x####D56 [static]
+#### final int NEXOTI\_WMV = 0x####D56
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_WMV1 = 0x31####d57 [static]
+#### final int NEXOTI\_WMV1 = 0x31####d57
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_WMV2 = 0x32####d57 [static]
+#### final int NEXOTI\_WMV2 = 0x32####d57
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_WMV3 = 0x33####d57 [static]
+#### final int NEXOTI\_WMV3 = 0x33####d57
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXOTI\_WVC1 = 0x3143#### [static]
+#### final int NEXOTI\_WVC1 = 0x3143####
 
 Possible video codec value for mVideoCodec.
 
-#### final int NEXPLAYER\_SEEKABLE\_IN\_BUFFER = 2 [static]
+#### final int NEXPLAYER\_SEEKABLE\_IN\_BUFFER = 2
 
 One of the possible values for mIsSeekable in NexContentInformation.mIsSeekable.
 
 This indicates that the player can seek within the prefetch buffer of the current content.
 
-#### final int NEXPLAYER\_SEEKABLE\_IN\_CONTENT = 1 [static]
+#### final int NEXPLAYER\_SEEKABLE\_IN\_CONTENT = 1
 
 One of the possible values for mIsSeekable in NexContentInformation.mIsSeekable.
 
 This indicates that the player can seek within the current content.
 
-#### final int NEXPLAYER\_SEEKABLE\_NONE = 0** [static]
+#### final int NEXPLAYER\_SEEKABLE\_NONE = 0**
 
 One of the possible values for mIsSeekable in NexContentInformation.mIsSeekable.
 
 This indicates that seeking is not available in the current content.
 
-#### final int NEXPLAYER\_SEEKABLE\_TO\_ZERO = 4 [static]
+#### final int NEXPLAYER\_SEEKABLE\_TO\_ZERO = 4
 
 One of the possible values for mIsSeekable in NexContentInformation.mIsSeekable.
 
@@ -8299,23 +7184,11 @@ This class provides information about an individual content track, for formats t
 
 This class defines a caption view for rendering and displaying CEA 708 closed captions.
 
-All of the information about how CEA 708 closed captions is contained within a `NexEIA708Struct` object, and the
-caption view defined here provides an example text renderer which can be used to display the captions.
+All of the information about how CEA 708 closed captions is contained within a `NexEIA708Struct` object, and the caption view defined here provides an example text renderer which can be used to display the captions.
 
 Whenever new CEA 708 closed caption data is received, it should be handled by calling the `setEIA708CC` method.
 
 For other subtitle formats, including CEA 608 closed captions, please see the `NexClosedCaption`, `NexCaptionRenderer`, and `NexCaptionRendererForTimedText` classes instead.
-
-**Classes**
-
-- `class ComparatorRect`
-
-
-**See Also**
-
-- `NexEIA708Struct`
-- `NexClosedCaption`
-
 
 #### NexEIA708CaptionView (Context context)
 
@@ -8341,13 +7214,11 @@ This is an alternative constructor for the CEA 708 closed captions caption view.
 | attrs   | The set of attributes associated with the view. |
 
 
-
 #### void changeFontSize (int rate)
 
 This method changes the font size of CEA 708 closed captions.
 
-To double the size of the font, the parameter *rate* should be set to 200. In contrast, to have the size of the font,
-rate should be set to 50 (in other words, 50%).
+To double the size of the font, the parameter *rate* should be set to 200. In contrast, to have the size of the font, rate should be set to 50 (in other words, 50%).
 
 **Parameters**
 
@@ -8355,17 +7226,6 @@ rate should be set to 50 (in other words, 50%).
 |------|------------------|
 | rate | The change in size of the caption font, as a percentage. |
 
-#### void changeOrientation (Boolean isChange)
-
-This method indicates when the orientation of a device has changed; deprecated in the current API version.
-
-**Deprecated** Not supported in current API version; do not use.
-
-**Parameters**
-
-| Name     | Description                                                                                     |
-|----------|-----------------|
-| isChange | 0 when the device orientation remains unchanged or 1 when the device’s orientation has changed. |
 
 #### void clearCaptionString ( )
 
@@ -8373,8 +7233,7 @@ This method clears the current caption string in CEA 708 closed captions.
 
 #### void initCaptionStyle ( )
 
-This method initializes the style attributes of CEA 708 closed captions that may be set by a user, including the colors
-of the text, background, and caption window as well as the edge style and the font size.
+This method initializes the style attributes of CEA 708 closed captions that may be set by a user, including the colors of the text, background, and caption window as well as the edge style and the font size.
 
 This API does not effect the default caption style attributes of specific streaming content.
 
@@ -8404,8 +7263,7 @@ This method sets whether or not CEA 708 closed captions should be displayed in *
 
 Caption data includes attributes such as **bold** anditalics.
 
-Normally, the caption renderer displays each character in normal, **bold** , or italics based on the attributes included
-in the caption data.
+Normally, the caption renderer displays each character in normal, **bold** , or italics based on the attributes included in the caption data.
 
 However in some cases (such as for users with visual impairment) it may be desirable to force the use of bold text.
 
@@ -8460,11 +7318,9 @@ To have depressed closed captions be displayed in a user-defined color, see the 
 
 #### void setDepressedWithColor (boolean isDepressed, CaptionColor depColor, int depOpacity)**
 
-This method indicates wheather or not CEA 708 closed captions should be displayed as if "depressed" (in a set font
-color).
+This method indicates wheather or not CEA 708 closed captions should be displayed as if "depressed" (in a set font color).
 
-If CEA 708 closed captions are "depressed", they should be displayed as if they are pressed into the video display
-slightly, and the color of the depressed part of the caption text can be set by the user.
+If CEA 708 closed captions are "depressed", they should be displayed as if they are pressed into the video display slightly, and the color of the depressed part of the caption text can be set by the user.
 
 **Parameters**
 
@@ -8507,8 +7363,7 @@ view.
 
 #### void setEmbossBlurRadius (float radius)
 
-This method sets the blur radius of the Emboss Mask filter used when a user sets CEA 708 captions to be ’Raised’
-or ’Depressed’ in the UI.
+This method sets the blur radius of the Emboss Mask filter used when a user sets CEA 708 captions to be ’Raised’ or ’Depressed’ in the UI.
 
 **Parameters**
 
@@ -8518,8 +7373,7 @@ or ’Depressed’ in the UI.
 
 #### void setEmbossSpecular (float specular)
 
-This method sets the specular level of the Emboss Mask filter used when a user sets CEA 708 captions to be
-’Raised’ or ’Depressed’ in the UI.
+This method sets the specular level of the Emboss Mask filter used when a user sets CEA 708 captions to be ’Raised’ or ’Depressed’ in the UI.
 
 **Parameters**
 
@@ -8544,11 +7398,9 @@ For a full list of colors, please refer to `NexClosedCaption.CaptionColor`.
 
 This method sets the fonts to be used for CEA 708 closed captions.
 
-Four typefaces may be specified for different combinations of **bold** and italics. The caption renderer will select the
-appropriate typeface from among these based on the CEA 708 captions being displayed.
+Four typefaces may be specified for different combinations of **bold** and italics. The caption renderer will select the appropriate typeface from among these based on the CEA 708 captions being displayed.
 
-For best results, specify all four typefaces. Any typeface can be set to *null*, in which case the system default
-typeface will be used.
+For best results, specify all four typefaces. Any typeface can be set to *null*, in which case the system default typeface will be used.
 
 **Parameters**
 
@@ -8713,9 +7565,7 @@ This method checks if the CEA 708 service number is enabled.
 
 This method sets the source byte stream for CEA 708 closed captions.
 
-Like the different channels in CEA 608 closed captions, each CEA 708 service provides different caption information
-for the same content, for example captions in different languages. The option to change the CEA 708 service may
-be beneficial to offer to application users.
+Like the different channels in CEA 608 closed captions, each CEA 708 service provides different caption information for the same content, for example captions in different languages. The option to change the CEA 708 service may be beneficial to offer to application users.
 
 **Parameters**
 
@@ -8754,7 +7604,7 @@ Messages with equivalent semantics shall have the same value,
 
 - i.e. processing of any one event message box with the same id is sufficient.
 
-#### byte [ ] mMessageData
+#### byte[] mMessageData
 
 The `mMessageData` is body of the message, which fills the remainder of the message box.
 
@@ -8765,8 +7615,7 @@ the owner of the scheme identified in the `mSchemeIdUri` field.
 
 ThemPresentationTime.
 
-- If `mVersion` is 0, provides the Media Presentation time delta of the media presentation time of the event and
-    the earliest presentation time in this segment. The timescale is provided in the `mTimescale` field.
+- If `mVersion` is 0, provides the Media Presentation time delta of the media presentation time of the event and the earliest presentation time in this segment. The timescale is provided in the `mTimescale` field.
 - If `mVersion` is 1, provides the Media Presentation time of the event measured on the Movie timeline, in the timescale provided in the `mTimescale` field.
 
 #### String mSchemeIdUri
@@ -8775,8 +7624,7 @@ The `mSchemeIdUri` used identify the message scheme.
 
 The semantics and syntax of the `mMessageData` are defined by the owner of the scheme identified.
 
-For SCTE-35 event, the `mSchemeIdUri` is equal to "urn:scte:scte35:2013:bin", "urn:scte:scte35:2013:xml" and
-"urn:scte:scte35:2014:xml+bin".
+For SCTE-35 event, the `mSchemeIdUri` is equal to "urn:scte:scte35:2013:bin", "urn:scte:scte35:2013:xml" and "urn:scte:scte35:2014:xml+bin".
 
 #### long mStartTime
 
@@ -8833,15 +7681,13 @@ Errors we can’t control relating to the system (for example, memory allocation
 
 Possible error codes that `NexPlayer` can return.
 
-This is a Java *enum* so each error constant is an object, but you can convert to or from a numerical code using
-instance and class methods.
+This is a Java *enum* so each error constant is an object, but you can convert to or from a numerical code using instance and class methods.
 
 To get the error constant for a given code, call `fromIntegerValue(int)`.
 
 To get the error code given an error constant, call `getIntegerCode()`.
 
-Because this is a Java *enum*, it is very easy to include the name of the error constant in an error message instead
-of just the number. For example, the following code logs the errors that are received from the `NexPlayer` engine:
+Because this is a Java *enum*, it is very easy to include the name of the error constant in an error message instead of just the number. For example, the following code logs the errors that are received from the `NexPlayer` engine:
 
 ```java
 void onError( NexPlayer mp, NexErrorCode errorCode )
@@ -8876,9 +7722,7 @@ The corresponding `NexErrorCode` object or null if an invalid code was passed.
 
 Returns the category of the error.
 
->**CAUTION:** This is experimental and is subject to change. Error categories are an experimental feature. The idea is that the application can provide a friendlier (and possibly
-more useful) message based on the category of the error. For example, if the category is NETWORK, the application
-may suggest that the user check their network connection. This is experimental, so the set of categories may change in future versions of the API, or the feature may be
+>**CAUTION:** This is experimental and is subject to change. Error categories are an experimental feature. The idea is that the application can provide a friendlier (and possibly more useful) message based on the category of the error. For example, if the category is NETWORK, the application may suggest that the user check their network connection. This is experimental, so the set of categories may change in future versions of the API, or the feature may be
 removed entirely. Use it with caution.
 
 **Returns**
@@ -8890,8 +7734,7 @@ The category to which the error belongs.
 
 Gets a description of the error suitable for display in an error pop-up.
 
->**CAUTION:** This is experimental and is subject to change. The strings returned by this method may change in future
-versions, may not cover all possible errors, and are not currently localized.
+>**CAUTION:** This is experimental and is subject to change. The strings returned by this method may change in future versions, may not cover all possible errors, and are not currently localized.
 
 **Returns**
 
@@ -8917,7 +7760,7 @@ Gets the integer sub error code when unknown error occurs.
 
 An integer sub error code of UNKNOWN as provided by the `NexPlayer` engine.
 
-#### static int getUnknownSubCode ( ) *[static]*
+#### static int getUnknownSubCode ()
 
 Gets the integer sub error code when unknown error occurs.
 
@@ -9053,8 +7896,7 @@ E.g. The device has a resolution limit of 1080P but the content is 4K.
 
 #### SOURCE_OPEN_TIMEOUT = ( 0x00000023,NexErrorCategory.GENERAL, "The media source open timed out")
 
-There is no response from the server within the set time of SOURCE_OPEN_TIMEOUT property while calling
-`open()`.
+There is no response from the server within the set time of SOURCE_OPEN_TIMEOUT property while calling `open()`.
 
 The default value of the SOURCE_OPEN_TIMEOUT property is 300 seconds.
 
@@ -9062,9 +7904,7 @@ The default value of the SOURCE_OPEN_TIMEOUT property is 300 seconds.
 
 Unknown error.
 
-This error is a kind of internal error such as "system failure". E.g. `NexPlayer` returns this when memory allocation is
-failed for unknown reasons. It’s mostly an error that the user can not handle. Please contact a `NexPlayer` developer
-for more details.
+This error is a kind of internal error such as "system failure". E.g. `NexPlayer` returns this when memory allocation is failed for unknown reasons. It’s mostly an error that the user can not handle. Please contact a `NexPlayer` developer for more details.
 
 #### UNSUPPORTED_SDK_FEATURE = (0x70000001, NexErrorCategory.API, " JNI - SDK called unsupported feature" )
 
@@ -9077,10 +7917,6 @@ recording or timeshift) or called a specific feature(i.e. call video capture in 
 This class implements all `NexPlayer` interfaces.
 
 An instance of *NexEventReceiver* can be used for parameter of NexPlayer.addEventRecevier, `NexPlayer.removeEventReceiver`
-
-**Static Protected Attributes**
-
-- `static Integer HAS_NO_EFFECT = 0xF000F000`
 
 
 #### void onAsyncCmdComplete (NexPlayer mp,int command,int result,int param1,int param2)**
@@ -9123,155 +7959,155 @@ When an asynchronous method of `NexPlayer` has completed successfully or failed,
 
 Below are the possible error codes for async_command_value.
 
-- NEXPLAYER_ASYNC_CMD_OPEN_LOCAL
+- NEXPLAYER\_ASYNC\_CMD\_OPEN\_LOCAL
 
-	- INVALID_STATE
-	- INVALID_PARAMETER
-	- SOURCE_OPEN_TIMEOUT
-	- NOT_SUPPORT_AUDIO_CODEC
-	- NOT_SUPPORT_VIDEO_CODEC
-	- NOT_SUPPORT_MEDIA
-	- FILE_INVALID_SYNTAX
+	- INVALID\_STATE
+	- INVALID\_PARAMETER
+	- SOURCE\_OPEN\_TIMEOUT
+	- NOT_SUPPORT\_AUDIO\_CODEC
+	- NOT_SUPPORT\_VIDEO\_CODEC
+	- NOT_SUPPORT\_MEDIA
+	- FILE_INVALID\_SYNTAX
 	- UNKNOWN
 
 
-- NEXPLAYER_ASYNC_CMD_OPEN_STREAMING
+- NEXPLAYER\_ASYNC\_CMD_OPEN\_STREAMING
 
-	- INVALID_STATE
-	- INVALID_PARAMETER
-	- SOURCE_OPEN_TIMEOUT
-	- NOT_SUPPORT_AUDIO_CODEC
-	- NOT_SUPPORT_VIDEO_CODEC
-	- NOT_SUPPORT_MEDIA
-	- FILE_INVALID_SYNTAX
-	- ERROR_NETWORK_PROTOCOL
+	- INVALID\_STATE
+	- INVALID\_PARAMETER
+	- SOURCE\_OPEN\_TIMEOUT
+	- NOT\_SUPPORT\_AUDIO_CODEC
+	- NOT\_SUPPORT\_VIDEO_CODEC
+	- NOT\_SUPPORT\_MEDIA
+	- FILE\_INVALID\_SYNTAX
+	- ERROR\_NETWORK\_PROTOCOL
 	- UNKNOWN
 
 
-- NEXPLAYER_ASYNC_CMD_START_LOCAL
+- NEXPLAYER\_ASYNC\_CMD\_START\_LOCAL
 
-	- INVALID_STATE
-	- INVALID_PARAMETER
-	- DATA_INACTIVITY_TIMEOUT
-	- NOT_SUPPORT_AUDIO_CODEC
-	- NOT_SUPPORT_VIDEO_CODEC
-	- NOT_SUPPORT_MEDIA
-	- FILE_INVALID_SYNTAX
-	- ERROR_NETWORK_PROTOCOL
-	- CODEC_DECODING_ERROR
-	- NOT_SUPPORT_VIDEO_RESOLUTION
+	- INVALID\_STATE
+	- INVALID\_PARAMETER
+	- DATA\_INACTIVITY\_TIMEOUT
+	- NOT\_SUPPORT\_AUDIO_CODEC
+	- NOT\_SUPPORT\_VIDEO_CODEC
+	- NOT\_SUPPORT\_MEDIA
+	- FILE\_INVALID\_SYNTAX
+	- ERROR\_NETWORK\_PROTOCOL
+	- CODEC\_DECODING\_ERROR
+	- NOT\_SUPPORT\_VIDEO\_RESOLUTION
 	- UNKNOWN
 
 
-- NEXPLAYER_ASYNC_CMD_START_STREAMING
+- NEXPLAYER\_ASYNC\_CMD\_START\_STREAMING
 
-	- INVALID_STATE
-	- INVALID_PARAMETER
-	- DATA_INACTIVITY_TIMEOUT
-	- NOT_SUPPORT_AUDIO_CODEC
-	- NOT_SUPPORT_VIDEO_CODEC
-	- NOT_SUPPORT_MEDIA
-	- FILE_INVALID_SYNTAX
-	- ERROR_NETWORK_PROTOCOL
-	- CODEC_DECODING_ERROR
-	- NOT_SUPPORT_VIDEO_RESOLUTION
+	- INVALID\_STATE
+	- INVALID\_PARAMETER
+	- DATA\_INACTIVITY\_TIMEOUT
+	- NOT\_SUPPORT\_AUDIO\_CODEC
+	- NOT\_SUPPORT\_VIDEO\_CODEC
+	- NOT\_SUPPORT\_MEDIA
+	- FILE_INVALID\_SYNTAX
+	- ERROR\_NETWORK\_PROTOCOL
+	- CODEC\_DECODING\_ERROR
+	- NOT\_SUPPORT\_VIDEO\_RESOLUTION
 	- UNKNOWN
 
 
-- NEXPLAYER_ASYNC_CMD_STOP
+- NEXPLAYER\_ASYNC\_CMD\_STOP
 
-	- NOT_SUPPORT_MEDIA
-	- ERROR_NETWORK_PROTOCOL
+	- NOT\_SUPPORT\_MEDIA
+	- ERROR_NETWORK\_PROTOCOL
 	- UNKNOWN
 
 
-- NEXPLAYER_ASYNC_CMD_PAUSE
+- NEXPLAYER\_ASYNC\_CMD\_PAUSE
 
-	- INVALID_STATE
-	- INVALID_PARAMETER
-	- ERROR_NETWORK_PROTOCOL
+	- INVALID\_STATE
+	- INVALID\_PARAMETER
+	- ERROR\_NETWORK\_PROTOCOL
 	- UNKNOWN
 
 
 - NEXPLAYER_ASYNC_CMD_RESUME
 
-	- INVALID_STATE
-	- INVALID_PARAMETER
-	- NOT_SUPPORT_AUDIO_CODEC
-	- NOT_SUPPORT_VIDEO_CODEC
-	- NOT_SUPPORT_MEDIA
-	- FILE_INVALID_SYNTAX
-	- ERROR_NETWORK_PROTOCOL
+	- INVALID\_STATE
+	- INVALID\_PARAMETER
+	- NOT\_SUPPORT\_AUDIO\_CODEC
+	- NOT\_SUPPORT\_VIDEO\_CODEC
+	- NOT\_SUPPORT\_MEDIA
+	- FILE\_INVALID\_SYNTAX
+	- ERROR\_NETWORK\_PROTOCOL
 	- UNKNOWN
 
 - NEXPLAYER_ASYNC_CMD_SEEK
 
-	- INVALID_STATE
-	- NOT_SUPPORT_TO_SEEK
-	- DATA_INACTIVITY_TIMEOUT
-	- NOT_SUPPORT_VIDEO_CODEC
-	- CODEC_DECODING_ERROR
+	- INVALID\_STATE
+	- NOT\_SUPPORT\_TO\_SEEK
+	- DATA\_INACTIVITY\_TIMEOUT
+	- NOT\_SUPPORT\_VIDEO\_CODEC
+	- CODEC\_DECODING_ERROR
 	- UNKNOWN
 
 
-- NEXPLAYER_ASYNC_CMD_SETEXTSUBTITLE
+- NEXPLAYER\_ASYNC\_CMD\_SETEXTSUBTITLE
 
-	- INVALID_STATE
-	- INVALID_PARAMETER
+	- INVALID\_STATE
+	- INVALID\_PARAMETER
 	- UNKNOWN
 
 
-- NEXPLAYER_ASYNC_CMD_REINITVIDEO
+- NEXPLAYER\_ASYNC\_CMD\_REINITVIDEO
 
 	- INVALID_STATE
-	- NOT_SUPPORT_VIDEO_CODEC
-	- FILE_INVALID_SYNTAX
-	- ERROR_NETWORK_PROTOCOL
-	- CODEC_DECODING_ERROR
-	- NOT_SUPPORT_TO_SEEK
-	- DATA_INACTIVITY_TIMEOUT
+	- NOT\_SUPPORT\_VIDEO\_CODEC
+	- FILE\_INVALID\_SYNTAX
+	- ERROR\_NETWORK\_PROTOCOL
+	- CODEC\_DECODING\_ERROR
+	- NOT\_SUPPORT\_TO\_SEEK
+	- DATA\_INACTIVITY\_TIMEOUT
 	- UNKNOWN
 
-- NEXPLAYER_ASYNC_CMD_FASTPLAY_START
+- NEXPLAYER\_ASYNC\_CMD\_FASTPLAY\_START
 
-	- INVALID_STATE
+	- INVALID\_STATE
 	- UNKNOWN
 
 
-- NEXPLAYER_ASYNC_CMD_FASTPLAY_STOP
+- NEXPLAYER\_ASYNC\_CMD\_FASTPLAY\_STOP
 
-	- NOT_SUPPORT_AUDIO_CODEC
-	- CODEC_DECODING_ERROR
+	- NOT\_SUPPORT\_AUDIO\_CODEC
+	- CODEC\_DECODING\_ERROR
 
 
 - NEXPLAYER_ASYNC_CMD_SET_MEDIA_STREAM
 
-	- INVALID_STATE
-	- INVALID_PARAMETER
+	- INVALID\_STATE
+	- INVALID\_PARAMETER
 	- UNKNOWN
 
 
-- NEXPLAYER_ASYNC_CMD_OPEN_STORE_STREAM
+- NEXPLAYER_ASYNC\_CMD\_OPEN\_STORE\_STREAM
 
-	- INVALID_PARAMETER
-	- SOURCE_OPEN_TIMEOUT
-	- NOT_SUPPORT_AUDIO_CODEC
-	- NOT_SUPPORT_VIDEO_CODEC
-	- ERROR_NETWORK_PROTOCOL
-	- NOT_SUPPORT_MEDIA
-	- FILE_INVALID_SYNTAX
+	- INVALID\_PARAMETER
+	- SOURCE\_OPEN\_TIMEOUT
+	- NOT\_SUPPORT\_AUDIO\_CODEC
+	- NOT\_SUPPORT\_VIDEO\_CODEC
+	- ERROR\_NETWORK\_PROTOCOL
+	- NOT\_SUPPORT\_MEDIA
+	- FILE\_INVALID\_SYNTAX
 	- UNKNOWN
 
 
-- NEXPLAYER_ASYNC_CMD_START_STORE_STREAM
+- NEXPLAYER\_ASYNC\_CMD\_START\_STORE\_STREAM
 
-	- INVALID_STATE
-	- INVALID_PARAMETER
-	- NOT_SUPPORT_AUDIO_CODEC
-	- NOT_SUPPORT_VIDEO_CODEC
-	- NOT_SUPPORT_MEDIA
-	- ERROR_NETWORK_PROTOCOL
-	- FILE_INVALID_SYNTAX
+	- INVALID\_STATE
+	- INVALID\_PARAMETER
+	- NOT\_SUPPORT\_AUDIO\_CODEC
+	- NOT\_SUPPORT\_VIDEO\_CODEC
+	- NOT\_SUPPORT\_MEDIA
+	- ERROR\_NETWORK\_PROTOCOL
+	- FILE\_INVALID\_SYNTAX
 	- UNKNOWN
 
 **Parameters**
@@ -9297,10 +8133,6 @@ Implements `NexPlayer.IListener`.
 
 Notification that the audio rendering thread has been created.
 
-Under previous versions of the SDK, it was necessary to create and manage the audio renderer. However, under
-the current version this is done automatically, and the *onAudioRenderCreate* method should be empty or
-contain only diagnostic code.
-
 **Parameters**
 
 | Name         | Description                                               |
@@ -9314,10 +8146,6 @@ Implements `NexPlayer.IListener`.
 #### void onAudioRenderDelete (NexPlayer mp)
 
 Notification that the audio rendering thread has been destroyed.
-
-Under previous versions of the SDK, it was necessary to destroy the audio renderer. However, under the current
-version this is done automatically, and the *onAudioRenderDelete* method should be empty or contain only
-diagnostic code.
 
 
 **Parameters**
@@ -9558,8 +8386,7 @@ Implements `NexPlayer.IDynamicThumbnailListener`.
 
 This method indicates when playback has completed successfully up to the end of the content.
 
-This event occurs when the player reaches the end of the file or stream. In most cases, applications should respond
-to this by calling `NexPlayer.stop` and then updating the user interface.
+This event occurs when the player reaches the end of the file or stream. In most cases, applications should respond to this by calling `NexPlayer.stop` and then updating the user interface.
 
 
 **Parameters**
@@ -9608,8 +8435,7 @@ Implements `NexPlayer.IHTTPABRTrackChangeListener`.
 
 This method allows `NexPlayer` to pass HTTP request messages to an application.
 
-While `NexPlayer` normally handles HTTP requests and responses internally, in cases where additional information
-is required from the server (for example user cookies), this method can be used in conjunction with *onHTTPResponse* to allow an application to handle that information directly.
+While `NexPlayer` normally handles HTTP requests and responses internally, in cases where additional information is required from the server (for example user cookies), this method can be used in conjunction with *onHTTPResponse* to allow an application to handle that information directly.
 
 >**Note** This should be called before a request is sent to an HTTP server. To modify an HTTP request, see *onModifyHttpRequest*. To handle the response received, call *onHTTPResponse*.
 
@@ -9631,11 +8457,9 @@ Implements `NexPlayer.IListener`.
 
 This method allows responses from an HTTP server to be received and handled in a more customized way.
 
-While `NexPlayer` normally handles HTTP requests and responses internally, in cases where additional information
-is required from the server (for example user cookies), this method can be used in conjunction with *onHTTPRequest* to handle that information directly.
+While `NexPlayer` normally handles HTTP requests and responses internally, in cases where additional information is required from the server (for example user cookies), this method can be used in conjunction with *onHTTPRequest* to handle that information directly.
 
->**Note** This should be called after a response has been received from the server. To change the requests being
-made,on *ModifyHttpRequest* should be called.
+>**Note** This should be called after a response has been received from the server. To change the requests being made,on *ModifyHttpRequest* should be called.
 
 
 **Parameters**
@@ -9696,7 +8520,7 @@ the key ID of media drm stored with onOfflineKeyStoreListener.
 
 Implements `NexPlayer.IOfflineKeyListener`.
 
-#### byte [ ] onOfflineKeyRetrieveListener (NexPlayer mp)
+#### byte[] onOfflineKeyRetrieveListener (NexPlayer mp)
 
 This method will be called by the NexPlayer engine when the keyId of media DRM should be retrieved.
 
@@ -9724,10 +8548,6 @@ This method will be called by the `NexPlayer` engine when the keyId of media DRM
 |-------|---------------------------|
 | mp    | The `NexPlayer` object generating the event. |
 | keyId | The Key ID of Media drm for offline playback. |
-
-**Returns**
-
-void.
 
 
 Implements `NexPlayer.IOfflineKeyListener`.
@@ -9782,60 +8602,6 @@ The values from *strTag* and *offset* parameters can be added to determine the c
 | strTag | The most recent #EXT-X-PROGRAM-DATE-TIME tag in the HLS content, as a *String*.                                                       |
 | offset | The time offset of the currently decoding frame’s timestamp with respect to the #EXT-X-PR- OGRAM-DATE-TIME tag time, in milliseconds. |
 
-**See Also**
-
-
-- `getProgramTime`
-
-Implements `NexPlayer.IListener`.
-
-#### void onRecording (NexPlayer mp, int recDuration, int recSize)
-
-This reports `NexPlayer`’s recording status.
-
-
-**Parameters**
-
-| Name        | Description                                                 |
-|-------------|---------------------|
-| mp          | The `NexPlayer` object generating the event.               |
-| recDuration | An integer indicating the duration of the recording so far. |
-| recSize     | An integer indicating the size of the recording so far.     |
-
-**Deprecated** Not available in current version; do not use.
-
-Implements `NexPlayer.IListener`.
-
-#### void onRecordingEnd (NexPlayer mp, int success)
-
-This indicates when `NexPlayer` recording has ended.
-
-**Parameters**
-
-| Name    | Description                                   |
-|---------|---------------------------|
-| mp      | The `NexPlayer` object generating the event. |
-| success |                                               |
-
-**Deprecated** Not available in current version; do not use.
-
-Implements `NexPlayer.IListener`.
-
-#### void onRecordingErr (NexPlayer mp,int err)
-
-This indicates when there has been a `NexPlayer` recording error.
-
-**Parameters**
-
-
-| Name | Description                                   |
-|------|---------------------------|
-| mp   | The `NexPlayer` object generating the event. |
-| err  | An error while recording.                     |
-
-**Deprecated** Not available in current version; do not use.
-
-Implements `NexPlayer.IListener`.
 
 #### void onRTSPCommandTimeOut (NexPlayer mp)
 
@@ -9873,38 +8639,6 @@ Implements `NexPlayer.IListener`.
 | mp   | The `NexPlayer` object to which this event applies. |
 | pre  | The previous signal status.                          |
 | now  | The current signal status.                           |
-
-Implements `NexPlayer.IListener`.
-
-#### void onStartAudioTask (NexPlayer mp)
-
-The `NexPlayer` audio task has started.
-
-**Deprecated** This method is only included for compatibility with older code and should not be used.
-
-This is provided for compatibility with older code, and new applications may safely ignore this event.
-
-**Parameters**
-
-| Name | Description                                  |
-|------|--------------------------|
-| mp   | The `NexPlayer` object generating the event |
-
-Implements `NexPlayer.IListener`.
-
-#### void onStartVideoTask (NexPlayer mp)
-
-The `NexPlayer` video task has started.
-
-**Deprecated** This method is only included for compatibility with older code and should not be used.
-
-This is provided for compatibility with older code, and new applications may safely ignore this event.
-
-**Parameters**
-
-| Name | Description                                  |
-|------|--------------------------|
-| mp   | The `NexPlayer` object generating the event |
 
 Implements `NexPlayer.IListener`.
 
@@ -10022,14 +8756,9 @@ Implements `NexPlayer.IListener`.
 
 This function is called when new subtitle data is ready for display.
 
-This is called whenever playback reaches a point in time where subtitles on any track need to be displayed or
-cleared.
+This is called whenever playback reaches a point in time where subtitles on any track need to be displayed or cleared.
 
-The text to display is provided in a *NexClosedCaption* object as a byte array; it is the responsibility of the
-application to convert this to text with the appropriate encoding. Where possible, the encoding information will
-be provided in the NexClosedCaption.mEncodingType, but many subtitle file formats do not explicitly specify an
-encoding, so it may be necessary for the application to guess the encoding or allow the user to select it.
-
+The text to display is provided in a *NexClosedCaption* object as a byte array; it is the responsibility of the application to convert this to text with the appropriate encoding. Where possible, the encoding information will be provided in the NexC osedCaption.mEncodingType, but many subtitle file formats do not explicitly specify an encoding, so it may be necessary for the application to guess the encoding or allow the user to select it.
 
 **Parameters**
 
@@ -10065,9 +8794,7 @@ Implements `NexPlayer.IListener`.
 
 This method is called when new timed metadata is ready for display in HLS.
 
-Timed metadata includes additional information about the playing content that may be displayed to the user and this
-information may change at different times throughout the content. Each time new metadata is available for display,
-this method is called.
+Timed metadata includes additional information about the playing content that may be displayed to the user and this information may change at different times throughout the content. Each time new metadata is available for display, this method is called.
 
 **See Also**
 
@@ -10081,182 +8808,6 @@ this method is called.
 |-----------|--------|
 | mp        | The `NexPlayer` object to which this event applies.                                                           |
 | TimedMeta | An `NexID3TagInformation` object that contains the timed metadata associated with the content to be displayed. |
-
-Implements `NexPlayer.IListener`.
-
-#### void onTimeshift (NexPlayer mp, int currTime, int TotalTime)
-
-This is a deprecated method that formerly reported `NexPlayer`’s Time shift status.
-
-**Parameters**
-
-| Name      | Description                                   |
-|-----------|---------------------------|
-| mp        | The `NexPlayer` object generating the event. |
-| currTime  | The current time.                             |
-| TotalTime | The total time.                               |
-
-**Deprecated** Not available in current version; do not use.
-
-Implements `NexPlayer.IListener`.
-
-#### void onTimeshiftErr (NexPlayer mp, int err)
-
-This is a deprecated method that formerly reported any `NexPlayer` Time shift error.
-
-**Deprecated** Not available in current version; do not use.
-
-Implements `NexPlayer.IListener`.
-
-#### void onVideoRenderCapture (NexPlayer mp, int width, int height, int pixelbyte, Object bitmap)
-
-Called when a frame of video has been captured.
-
-**Deprecated** Not available in current version; use IVideoRendererListener instead.
-
-After calling `captureVideo` to set up video capture, this function will be called whenever a frame is captured, and can
-process the captured frame as necessary.
-
-	Bitmap bitmap = Bitmap.createBitmap(width, height, pixelbyte==2?Config.RGB_565:Config.ARGB_8888 );
-	ByteBuffer RGBBuffer = (ByteBuffer)rgbBuffer;
-	RGBBuffer.asIntBuffer();
-	bitmap.copyPixelsFromBuffer(RGBBuffer);
-
-**Parameters**
-
-| Name      | Description                                               |
-|-----------|-------------------|
-| mp        | The `NexPlayer` object to which this event applies.      |
-| width     | The width of the captured frame.                          |
-| height    | The height of the captured frame.                         |
-| pixelbyte | The number of bytes per pixel (2 for RGB565; 4 for RGBA). |
-| bitmap    | The object where the captured video frame data is stored. |
-
-Implements `NexPlayer.IListener`.
-
-#### void onVideoRenderCreate (NexPlayer mp, int width, int height, Object rgbBuffer)**
-
-This method is called when `NexPlayer` needs the application to create a surface on which to render the video.
-
-**Deprecated** Not available in current version; use IVideoRendererListener instead.
-
-The application must respond to this by calling `setDisplay`.
-
-Generally speaking, the application will actually create the surface earlier, during GUI layout, and will simply use
-the existing handle in response to this call. There are, however, some threading considerations. See `setDisplay` for
-details.
-
-**Parameters**
-
-| Name      | Description                                                                                       |
-|-----------|-------------------|
-| mp        | The `NexPlayer` object to which this event applies.                                              |
-| width     | The width of the source video.                                                                    |
-| height    | The height of the source video.                                                                   |
-| rgbBuffer | Direct RGB Buffer(RGB565 format). This RGB buffer is shared with `NexPlayer` Engine native code. |
-
-Implements `NexPlayer.IListener`.
-
-#### void onVideoRenderDelete (NexPlayer mp)
-
-This method is called when `NexPlayer` no longer needs the render surface.
-
-**Deprecated** Not available in current version; use IVideoRendererListener instead.
-
-If a surface was created in *onVideoRenderCreate*, this is the place to destroy it. However, if (as in most cases)
-an existing surface was used, then this function need not take any special action, other than updating whatever state
-the application needs to track.
-
-**Parameters**
-
-| Name | Description                                          |
-|------|--------------|
-| mp   | The `NexPlayer` object to which this event applies. |
-
-Implements `NexPlayer.IListener`.
-
-#### void onVideoRenderPrepared (NexPlayer mp)
-
-This method is called when `NexPlayer` recognizes which video render type will be used.
-
-> **Deprecated** Not available in current version; use IVideoRendererListener instead.
-
-At first, `NexPlayer` does not know which renderer will be used. When this method is called, the application can determine the video renderer mode by calling `GetRenderMode` and prepare for the specified video renderer, as in the following example code:
-
-```java
-
-	public void onVideoRenderPrepared(NexPlayer mp) {
-if(mNexPlayer.GetRenderMode() == NexPlayer.NEX_USE_RENDER_OPENGL) {
-	UseOpenGL = true;
-	mHandler.post(new Runnable() {
-		public void run() {
-			mVideoSurfaceView.setVisibility(View.INVISIBLE);
-			int colorDepth = 4;
-			if(glRenderer == null)
-			{
-				glRenderer = new GLRenderer(mContext, mNexPlayer, this, colorDepth);
-				FrameLayout view = (FrameLayout)findViewById(R.id.gl_container);
-				view.addView(glRenderer);
-			}
-			else if(mInitGLRenderer == true)
-			{
-				glRenderer.mReInitRenderer = true;
-				glRenderer.requestRender();
-			}
-			else
-			{
-				glRenderer.setVisibility(View.VISIBLE );
-			}
-		}
-	});
-}
-else
-{
-	UseOpenGL = false;
-	mHandler.post(new Runnable() {
-
-
-		public void run() {
-			if(mNexPlayer.GetRenderMode() == NexPlayer.NEX_USE_RENDER_AND
-)
-			{
-				mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_NORMAL);//For Gingerbread Android Renderer
-			}
-			else
-			{
-				mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);/ For HW Renderer
-			}
-			if(glRenderer != null)
-			{
-				glRenderer.setVisibility(View.INVISIBLE );
-				glRenderer = null;
-			}
-			mVideoSurfaceView.setVisibility(View.VISIBLE); // This invokes nexPlayer.setDisplay(mSurfaceHolderForSW, 0);
-		}
-	});
-}
-}
-```
-
-**Parameters**
-
-| Name | Description                                          |
-|------|--------------|
-| mp   | The `NexPlayer` object to which this event applies. |
-
-Implements `NexPlayer.IListener`.
-
-#### void onVideoRenderRender (NexPlayer mp)
-
-This requests to display Video frame data at JAVA application.
-
-> **Deprecated** Not available in current version; use IVideoRendererListener instead.
-
-**Parameters**
-
-| Name | Description                                          |
-|------|--------------|
-| mp   | The `NexPlayer` object to which this event applies. |
 
 Implements `NexPlayer.IListener`.
 
@@ -10338,8 +8889,7 @@ When timed metadata is used with HLS content, the `NexID3TagInformation` object 
 
 This method gets a list of customized ID3 tags and the extra data they contain included in content timed metadata.
 
-For the list of customized ID3 tags to be recognized and handled by `NexPlayer`, they should be set using the
-NexProperty *TIMED_ID3_META_KEY* after `NexPlayer` is initialized but before *NexPlayer.open* is called.
+For the list of customized ID3 tags to be recognized and handled by `NexPlayer`, they should be set using the NexProperty *TIMED_ID3_META_KEY* after `NexPlayer` is initialized but before *NexPlayer.open* is called.
 
 **Returns**
 
@@ -10463,7 +9013,7 @@ This class allows `NexPlayer` to handle picture information included in timed me
 `NexPlayer` passes an instance of this class whenever new picture information for the current content is received from its ID3 tags, and is included in an updated `NexID3TagInformation` object.
 
 
-#### byte [ ] getPictureData ( )
+#### byte[] getPictureData ( )
 
 This method gets the picture data associated with current content from the content’s timed metadata ID3 tags.
 
@@ -10502,7 +9052,7 @@ This method gets the encoding type of text included in content ID3 tags.
 
 The encoding type of the text.
 
-#### byte [ ] getExtraDataID ( )
+#### byte[] getExtraDataID ( )
 
 This method gets the customized ID3 tags of the extra data added to content timed metadata so they can be passed to the app.
 
@@ -10517,7 +9067,7 @@ The customized ID3 tags as a byte array, or *null* if *TIMED_ID3_META_KEY* has n
 
 - `TIMED_ID3_META_KEY`
 
-#### byte [ ] getTextData ( )
+#### byte[] getTextData ( )
 
 This method gets the text data included in content ID3 tags.
 
@@ -10525,47 +9075,47 @@ This method gets the text data included in content ID3 tags.
 
 The text data as an array.
 
-#### final int ENCODING_TYPE_ASCII = 0x20000000 *[static]*
+#### final int ENCODING_TYPE_ASCII = 0x20000000
 
 A possible return value for `NexID3TagText.getEncodingType`.
 
-#### final int ENCODING_TYPE_ISO_8859 = 0x30000000 *[static]*
+#### final int ENCODING_TYPE_ISO_8859 = 0x30000000 
 
 A possible return value for `NexID3TagText.getEncodingType`.
 
-#### final int ENCODING_TYPE_ISO_8859_1 = 0x30000010 *[static]*
+#### final int ENCODING_TYPE_ISO_8859_1 = 0x30000010
 
 A possible return value for `NexID3TagText.getEncodingType`.
 
-#### final int ENCODING_TYPE_UNICODE = 0x10000000 *[static]*
+#### final int ENCODING_TYPE_UNICODE = 0x10000000 
 
 A possible return value for `NexID3TagText.getEncodingType`.
 
-#### final int ENCODING_TYPE_UNKNOWN = 0x00000000 *[static]*
+#### final int ENCODING_TYPE_UNKNOWN = 0x00000000
 
 A possible return value for `NexID3TagText.getEncodingType`.
 
-#### final int ENCODING_TYPE_UTF16 = 0x10000020 *[static]*
+#### final int ENCODING_TYPE_UTF16 = 0x10000020 
 
 A possible return value for `NexID3TagText.getEncodingType`.
 
-#### final int ENCODING_TYPE_UTF16_BE = 0x10000030 *[static]*
+#### final int ENCODING_TYPE_UTF16_BE = 0x10000030 
 
 A possible return value for `NexID3TagText.getEncodingType`.
 
-#### final int ENCODING_TYPE_UTF32 = 0x10000040 *[static]*
+#### final int ENCODING_TYPE_UTF32 = 0x10000040 
 
 A possible return value for `NexID3TagText.getEncodingType`.
 
-#### final int ENCODING_TYPE_UTF32_BE = 0x10000050 *[static]*
+#### final int ENCODING_TYPE_UTF32_BE = 0x10000050 
 
 A possible return value for `NexID3TagText.getEncodingType`.
 
-#### final int ENCODING_TYPE_UTF8 = 0x10000010 *[static]*
+#### final int ENCODING_TYPE_UTF8 = 0x10000010 
 
 A possible return value for `NexID3TagText.getEncodingType`.
 
-#### static void d (String tag, String msg) *[static]*
+#### static void d (String tag, String msg)
 
 This method sends a DEBUG log message.
 
@@ -10626,82 +9176,6 @@ Whether or not a log message should be sent to log output.
 
 If this value is *TRUE*, the log message will be sent to log output.
 
-### NexLogsToFile Class Reference
-
-Runnable
- 
-**Classes**
-
-- class Builder
-- enum NexFileLogPreset
-
-**Public Member Functions**
-
-- void **run** ()
-- void **clean** ()
-- void **kill** ()
-
-**Protected Member Functions**
-
-- void **finalize** () throws Throwable
-
-#### int GetHeight ()
-
-This method gets the height of CEA 708 closed captions.
- 
-#### int GetWidth ()
-
-This method gets the width of CEA 708 closed captions.
-
-#### void PushChar (int nChar)
-
-This method pushes a character in the display of CEA 708 closed captions.
-
-#### void Reset ()
-
-This method resets CEA 708 closed captions.
- 
-#### void SetAttr (byte ww, byte j, byte sd, byte pd)
-
-This method sets the attributes of CEA 708 closed captions.
- 
-#### void SetLocation (int row, int col)
-
-This method sets the position of CEA 708 closed captions.
- 
-#### void SetSize (int rc, int cc, int rl, int cl, int maxcol)
-
-This method sets the size of CEA 708 closed captions.
- 
-### NexMediaDrmSession Class Reference
-
-**Classes**
-
-- `interface ProvisioningManager`
-
-**Public Member Functions**
-
-- `boolean release()`
-- `final int getState()`
-- `void updateDRMKey()`
-
-### NexMediaDrmSessionManager Class Reference
-
-**Classes**
-
-- `interface EventListener`
-
-**Public Member Functions**
-
-- `void provisionRequired(NexMediaDrmSession session)`
-- `void onProvisionError(Exception error)`
-- `void onProvisionCompleted()`
-- `void updateDRMKey()`
-
-**Protected Member Functions**
-
-- `void releaseMediaDrm()`
-
 ### NexNetAddrTable Class Reference
 
 This class allows an application to retrieve host information by using the hostname and its corresponding custom IP address registered by the developer.
@@ -10734,7 +9208,7 @@ A maximum of 5 entries can be assigned to a table.
 
 1 if successful, otherwise 0.
  
-#### final int NETADDR\_TABLE\_FALLBACK = 1 [static]
+#### final int NETADDR\_TABLE\_FALLBACK = 1
 
 This is a possible table type for the method setNetAddrTable.
 
@@ -10742,7 +9216,7 @@ When the parameter `nNetAddrTableType` in `NexPlayer.setNetAddrTable` is set to 
 
 In other words, this means that the table of net addresses can be used as a fallback option when the needed host information cannot be retrieved.
  
-#### final int NETADDR\_TABLE\_OVERRIDE = 0 [static]
+#### final int NETADDR\_TABLE\_OVERRIDE = 0
 
 This is a possible table type for the methodsetNetAddrTable.
 
@@ -10788,7 +9262,7 @@ To use the storing feature of new offline playback, the user must create an inst
 | context | The current context; from `Activity` subclasses, you can just passthis.| 
 
 
-#### static int deleteOfflineCache (File storedInfoFile) [static]
+#### static int deleteOfflineCache (File storedInfoFile)
 
 This method deletes the cache directory files and then the stored info files.
 
@@ -10802,7 +9276,7 @@ This method deletes the cache directory files and then the stored info files.
  
 Zero for success, or a non-zero NexPlayer error code in the event of a failure.
  
-#### static int deleteOfflineCache (String storedInfoFilePath) [static]
+#### static int deleteOfflineCache (String storedInfoFilePath)
 
 This method deletes the cache directory files and then the stored info files.
 
@@ -11056,27 +9530,25 @@ The parameters needed for the offline storing are defined as follows.
 
 #### INTEGER\_AUDIO\_STREAM\_ID
 
-Possible key value for key parameter of `setOfflineStoreSetting( NexOfflineStoreSetting , int)`. This stores the audio stream that matches the set stream ID. If there is none, it stores the default stream. If you want to store all audio streams, set the value to STREAM\_ID\_ALL.
+This stores the audio stream that matches the set stream ID. If there is none, it stores the default stream. If you want to store all audio streams, set the value to STREAM\_ID\_ALL.
 
 **Default value** : NexPlayer.MEDIA\_STREAM\_DEFAULT\_ID
  
 #### INTEGER\_BANDWIDTH
 
-Possible key value forkeyparameter of setOfflineStoreSetting( NexOfflineStoreSetting , int). This stores the nearest track to the set bandwidth. 
+This stores the nearest track to the set bandwidth. 
 
-**Unit** : bps,  **Default value** : 3000000
+**Unit** : bps,  
+
+**Default value** : 3000000
 
 #### INTEGER\_CUSTOM\_ATTRIBUTE\_ID
-
-Possible key value forkeyparameter of setOfflineStoreSetting( NexOfflineStoreSetting , int).
 
 This stores the custom attribute stream that matches the set stream ID. If there is none, it stores the default stream.
 
 **Default value** : NexPlayer.MEDIA\_STREAM\_DEFAULT\_ID
  
 #### INTEGER\_DRM\_TYPE
-
-Possible key value forkeyparameter of setOfflineStoreSetting( NexOfflineStoreSetting , int).
 
 This sets the DRM type whitch using MediaDrm interface or SW WideVine DRM module. Possible Values: 0 : No
 DRM 1 : Usng Android MediaDrm interface 2 : Using SW WideVine CDM 3 : Using Automatic selection of SW/HW
@@ -11086,8 +9558,6 @@ WideVine Drm
 
 #### INTEGER\_TEXT\_STREAM\_ID
 
-Possible key value forkeyparameter of setOfflineStoreSetting( NexOfflineStoreSetting , int).
-
 This stores the text stream that matches the set stream ID. If there is none, it stores the default stream.
 
 If you want to store all text streams, set the value to STREAM\_ID\_ALL.
@@ -11096,17 +9566,13 @@ If you want to store all text streams, set the value to STREAM\_ID\_ALL.
  
 #### INTEGER\_VIDEO\_STREAM\_ID
 
-Possible key value forkeyparameter of setOfflineStoreSetting( NexOfflineStoreSetting , int).
-
 This stores the video stream that matches the set stream ID. If there is none, it stores the default stream.
 
 If you want to store all video streams, set the value to STREAM\_ID\_ALL.
 
 **Default value** : NexPlayer.MEDIA\_STREAM\_DEFAULT\_ID
  
-#### static final int STREAM\_ID\_ALL = -3 [static]
-
-Possible value forvalueparameter of setOfflineStoreSetting( NexOfflineStoreSetting , int).
+#### static final int STREAM\_ID\_ALL = -3
 
 If you want to store all streams of specific type, set the value to STREAM\_ID\_ALL.
 
@@ -11119,15 +9585,11 @@ setOfflineStoreSetting( INTEGER_AUDIO_STREAM_ID , STREAM_ID_ALL )
 
 #### STRING\_MEDIA\_DRM\_KEY\_SERVER\_URL
 
-Possible key value forkeyparameter of setOfflineStoreSetting( NexOfflineStoreSetting , String).
-
 The URL of the Key Server. The user must adjust the settings to store media DRM content.
 
 **Default value** : NULL
  
 #### STRING\_OFFLINE\_KEY\_ID
-
-Possible key value forkeyparameter of setOfflineStoreSetting( NexOfflineStoreSetting , String).
 
 For offline playback in the future, the user must pass the keyID created with onOfflineKeyStoreListener to NexPlayer.
 
@@ -11139,23 +9601,17 @@ How to Store Media DRM Content in the document.
  
 #### STRING\_PREFER\_LANGUAGE\_AUDIO
 
-Possible key value forkeyparameter of setOfflineStoreSetting( NexOfflineStoreSetting , String).
-
 This sets the audio language to store. If INTEGER\_AUDIO\_STREAM\_ID has a set value, this value will be ignored.
 
 **Default value** :NULL
  
 #### STRING\_PREFER\_LANGUAGE\_TEXT
 
-Possible key value forkeyparameter of setOfflineStoreSetting( NexOfflineStoreSetting , String).
-
 This sets the text language to store. INTEGER\_TEXT\_STREAM\_ID has a set value, this value will be ignored.
  
 **Default value** :NULL
  
 #### STRING\_STORE\_PATH
-
-Possible key value forkeyparameter of setOfflineStoreSetting( NexOfflineStoreSetting , String).
 
 This sets the directory to save the cache file.
 
@@ -12275,8 +10731,7 @@ NexABRController::changeMaxBandWidth()
 
 This method sets the maximum bandwidth for streaming playback dynamically during playback.
 
-> **Warning** It is recommended that the method `NexABRController::changeMaxBandWidth()` be used to set
-maximum bandwidth allowed instead of using this method.
+> **Warning** It is recommended that the method `NexABRController::changeMaxBandWidth()` be used to set maximum bandwidth allowed instead of using this method.
  
 > **Note** To dynamically change the maximum bandwidth in the middle of playback, please use this method. To take effect, this method should be called after calling NexPlayer.open. Note that the maximum bandwith can also be set before play begins by setting the `NexProperty,MAX_BW`, with `NexPlayer.setProperty(MAX_BW)`.
  
@@ -12454,8 +10909,7 @@ Access should be provided by AssetFileDescriptor. Length and Offset will be calc
  
 **Returns**
 
-The status of the operation: this is zero in the case of success, or a non-zero NexPlayer error code in the
-case of failure.
+The status of the operation: this is zero in the case of success, or a non-zero NexPlayer error code in the case of failure.
  
 > **Warning** When building the APK, most of resources will be compressed. This makes it difficult to extract FileDescriptor. To avoid compressing, you MUST change your file’s extension. These extensions are allowed: ".jpg", ".jpeg", ".png", ".gif", ".wav", ".mp2", ".mp3", ".ogg", ".aac", ".mpg", ".mpeg", ".mid", ".midi", ".smf", ".jet", ".rtttl", ".imy", ".xmf", ".mp4", ".m4a", ".m4v", ".3gp", ".3gpp", ".3g2", ".3gpp2", ".amr", ".awb", ".wma", ".wmv"
  
@@ -12723,8 +11177,6 @@ Zero for success, or a non-zero NexPlayer error code in the event of a failure.
 #### native int getAudioSessionId()
 
 This method gets an audio session ID in order to use Android’s audio effects with NexPlayer.
-
-> **Warning** This API is only supported on devices running Android OS version 2.3 (Gingerbread) and above.
  
 This API allows NexPlayer to support use of the Android audio effects like the Android Audio Equalizer. This method should be called before using any audio effect.
 
@@ -12771,15 +11223,6 @@ Note that CTS stands for "Current Time Stamp".
  
 The integer value of the requested buffer information item.
   
-#### native int getBufferStatus()
-
-This method determines the amount of currently buffered data. It returns the amount of data that has been buffered ahead of the current playing position. This is useful to know in cases when it is possible to seek in (for example) a progressive download without needing to buffer.
-
-**Returns**
- 
-The number of milliseconds (1/1000 sec) of media that has been buffered ahead.
- 
-> **Deprecated** This method is deprecated from version 6.0.5, and using it is not recommended. Please use getBufferInfo instead.
 
 #### int getClientStatus ( int id)
 
@@ -13179,28 +11622,6 @@ nexPlayer.getVersion(3);
 
 Requested version information (seemodeabove).
  
-#### native int GLDraw (int mode)
-
-Draws in the current OpenGL context.
-
-> **Deprecated** This method supports legacy code but should not be called by new code. Instead use the GLRenderer class.
-
-This remains public to support legacy code that implemented aGLSurfaceViewsubclass directly. However, new
-code should not call this method. Instead, simply use the GLRenderer class provided with the NexPlayer SDK.
-That class automatically calls GLDraw when needed.
-
-> **Warning** This must be called from the OpenGL renderer thread (the thread where GLSurfaceView.Renderer.onDrawFrameis called). Calling this from anywhere else will result in undefined behavior and possibly cause the application to crash.
- 
-**Parameters**
-
-| Name | Description | 
-|---|---|
-|mode| The type of drawing operation to perform.<br> - **0:** Draw the most recent video frame.<br>- **1:** Erase the surface to black.|
-
-**Returns**
- 
-Always zero, but may change in future versions. The return value should be ignored.
-
 #### native int GLInit ( int width,int height)
 
 Informs NexPlayer of the current size of the GLSurfaceView subclass instance.
@@ -13392,10 +11813,6 @@ case of failure.
  
 > **Note** This only indicates the success or failure ofstartingthe operation. Even if this reports success, the operation may still fail later, asynchronously, in which case the application is notified in onAsyncCmdComplete.
  
-#### int open (String path, String smiPath, String externalPDPath,int type, int transportType, int bufferingTime)
-
-> **Deprecated** This API is deprecated. Please use NexPlayer.open(String, String, String, int, int) instead. Use `INITIAL_BUFFERING_DURATION` and `RE_BUFFERING_DURATION` of NexProperty instead
-of the parameter `bufferingTime`.
 
 #### int openFD (AssetFileDescriptor afd)
 
@@ -13479,29 +11896,6 @@ It allows NexPlayer to reconnect to a media server when network conditions may h
 
 Zero if successful or a non-zero error code.
  
-#### native int recPause()
-
-Recording interface; not available in current version. Do not use.
-
-> **Deprecated** Not available in current version; do not use.
-
-#### native int recResume()
-
-Recording interface; not available in current version. Do not use.
-
-> **Deprecated** Not available in current version; do not use.
-
-#### native int recStart (String path,int maxsize)
-
-Recording interface; not available in current version. Do not use.
-
-> **Deprecated** Not available in current version; do not use.
-
-#### native int recStop()
-
-Recording interface; not available in current version. Do not use.
-
-> **Deprecated** Not available in current version; do not use.
 
 #### void release()
 
@@ -13759,25 +12153,6 @@ Zero if successful, or an error code in the event of failure.
 
 gotoCurrentLivePosition
  
-#### native int SetConfigFilePath(String strConfPath)
-
-Specifies the path to the renderer configuration file.
-
-The renderer configuration file defines which combinations of codec and device should make use of which available renderer. The configuration file is provided with the SDK, but it is the responsibility of the app developer to include the file with the application, and specify the path using this method.
-
-The path must be specified before opening any content, otherwise the renderer configuration file will not be used, and the player will choose the renderer based on the version of Android OS alone without regard to the device model.
-
-**Parameters**
-
-| Name | Description | 
-|---|---|
-|strConfPath| The path to the configuration file.|
- 
-**Returns**
- 
-Always zero, but may change in future versions. The return value should be ignored.
- 
-> **Deprecated** Do not use.
 
 #### native int SetContrastBrightness (int Contrast, int Brightness)
 
@@ -14325,20 +12700,6 @@ NexProperty for details.
  
 Zero if the property was succesfully set; non-zero if there was an error.
  
-#### void setProxyInfo(String proxyAddress,int proxyPort)
-
-This method sets the proxy setting for the requests, **only if the actual network configuration of the device has it.**
-
-**Parameters**
-
-| Name | Description | 
-|---|---|  
-|proxyAddress| The proxy server address to use.|
-|proxyPort| The proxy server port number to use.|
- 
-The default value of proxyAddress is null. The default value of proxyPort is -1.
-
-> **Deprecated** This API will be deprecated. Instead of this API, please use setProperties with NexProperty.PROXY\_ADDRESS and NexProperty.PROXY\_PORT values.
  
 #### native int setRenderOption(int iFlag)
 
@@ -14516,7 +12877,7 @@ Starts playing media from the specified timestamp.
 The media must have already been successfully opened with open. This only works for media that is in the stopped state; to change the play position of media that is currently playing or paused, call seek instead.
 
 When this operation completes, onAsyncCmdComplete is called with one of the following command constants
-(depending on thetypespecified in theopencall):
+(depending on the types pecified in theopencall):
 
 - NEXPLAYER\_ASYNC\_CMD\_START\_LOCAL
 - NEXPLAYER\_ASYNC\_CMD\_START\_STREAMING
@@ -14549,42 +12910,6 @@ This function stops the current playback.
 
 Zero for success, or a non-zero NexPlayer error code in the event of a failure.
 
-#### native int timeBackward(int skiptime)
-
-Timeshift interface; not available in current version.
-
-> **Deprecated** Not available in current version; do not use.
-
-#### native int timeForward(int skiptime)
-
-Timeshift interface; not available in current version.
-
-> **Deprecated** Not available in current version; do not use.
-
-#### native int timePause()
-
-Timeshift interface; not available in current version.
-
-> **Deprecated** Not available in current version; do not use.
-
-#### native int timeResume()
-
-Timeshift interface; not available in current version.
-
-> **Deprecated** Not available in current version; do not use.
-
-5.91.3.129 native int timeStart(String AudioFile,String VideoFile,int maxtime,int maxfilesize)
-
-Timeshift interface; not available in current version.
-
-> **Deprecated** Not available in current version; do not use.
-
-#### native int timeStop()
-
-Timeshift interface; not available in current version.
-
-> **Deprecated** Not available in current version; do not use.
-
 #### void videoOnOff(boolean bOn)
 
 This method turns video rendering on or off.
@@ -14598,14 +12923,6 @@ If video rendering is turned off, any existing frame will remain on the display.
 | Name | Description | 
 |---|---| 
 |bOn| TRUE to render video, FALSE to turn off video rendering.|
- 
-#### native int videoOnOff(int bOn,int bErase)
-
-This method turns video rendering on or off.
-
-> **Warning** This method is deprecated. Use of videoOnOff(boolean) is recommended over of this function.
- 
-> **Deprecated** Use `videoOnOff(boolean)` instead of this method.
 
 **Parameters**
 
@@ -14620,446 +12937,362 @@ should not be used.|
 Always zero, but may change in future versions; the return value should be ignored.
  
 
-#### final int AVAILBITRATES\_HIGH = 0x00000003 [static]
+#### final int AVAILBITRATES\_HIGH = 0x00000003
 
 This is a possible value for the option parameter in `setVideoBitrates(int [] bitrates, int option)`.
  
-#### final int AVAILBITRATES\_INSIDERANGE = 0x00000005 [static]
+#### final int AVAILBITRATES\_INSIDERANGE = 0x00000005
 
 This is a possible value for the option parameter in `setVideoBitrates(int [] bitrates, int option)`.
 
-#### final int AVAILBITRATES\_LOW = 0x00000004 [static]
-
-This is a possible value for the option parameter in `setVideoBitrates(int [] bitrates, int option)`.
- 
-#### final int AVAILBITRATES\_MATCH = 0x00000001 [static]
+#### final int AVAILBITRATES\_LOW = 0x00000004
 
 This is a possible value for the option parameter in `setVideoBitrates(int [] bitrates, int option)`.
  
-#### final int AVAILBITRATES\_NEAREST = 0x00000002 [static]
+#### final int AVAILBITRATES\_MATCH = 0x00000001
 
 This is a possible value for the option parameter in `setVideoBitrates(int [] bitrates, int option)`.
  
-#### final int AVAILBITRATES\_NONE = 0x00000000 [static]
+#### final int AVAILBITRATES\_NEAREST = 0x00000002
 
 This is a possible value for the option parameter in `setVideoBitrates(int [] bitrates, int option)`.
  
-#### final int MEDIA\_STREAM\_DEFAULT\_ID = 0xFFFFFFFF [static]
+#### final int AVAILBITRATES\_NONE = 0x00000000
+
+This is a possible value for the option parameter in `setVideoBitrates(int [] bitrates, int option)`.
+ 
+#### final int MEDIA\_STREAM\_DEFAULT\_ID = 0xFFFFFFFF
 
 Possible value for arguments to NexPlayer.setMediaStream().
 
-#### final int MEDIA\_STREAM\_DISABLE\_ID = 0xFFFFFFFE [static]
+#### final int MEDIA\_STREAM\_DISABLE\_ID = 0xFFFFFFFE
 
 Possible value for arguments to NexPlayer.setMediaStream().
 
-#### final int MEDIA\_STREAM\_TYPE\_AUDIO = 0x00 [static]
+#### final int MEDIA\_STREAM\_TYPE\_AUDIO = 0x00
 
 Possible value for NexStreamInformation.mType; see there for details.
 
-#### final int MEDIA\_STREAM\_TYPE\_TEXT = 0x02 [static]
+#### final int MEDIA\_STREAM\_TYPE\_TEXT = 0x02
 
 Possible value for NexStreamInformation.mType; see there for details.
 
-#### final int MEDIA\_STREAM\_TYPE\_VIDEO = 0x01 [static]
+#### final int MEDIA\_STREAM\_TYPE\_VIDEO = 0x01
 
 Possible value for NexStreamInformation.mType; see there for details.
 
-#### final int MEDIA\_TRACK\_DEFAULT\_ID = 0xFFFFFFFF [static]
+#### final int MEDIA\_TRACK\_DEFAULT\_ID = 0xFFFFFFFF
 
 Possible value for arguments to NexPlayer.setMediaTrack().
 
-#### final int MEDIA\_TRACK\_DISABLE\_ID = 0xFFFFFFFE [static]
+#### final int MEDIA\_TRACK\_DISABLE\_ID = 0xFFFFFFFE
 
 Possible value for arguments to NexPlayer.setMediaTrack().
 
-#### final int MEDIA\_TRACK\_TYPE\_AUDIO = 0x10 [static]
+#### final int MEDIA\_TRACK\_TYPE\_AUDIO = 0x10
 
 Possible value for NexStreamInformation.mType; see there for details.
 
-#### final int NEX\_AS\_CINEMA\_SOUND = 0x00000006 [static]
+#### final int NEX\_AS\_CINEMA\_SOUND = 0x00000006
 
 One of the NexSound audio modes to be set by the uiAudioMode parameter in audioSetParam().
 
-#### final int NEX\_AS\_EARCOMFORT = 0x00000001 [static]
+#### final int NEX\_AS\_EARCOMFORT = 0x00000001
 
 One of the NexSound audio modes to be set by the uiAudioMode parameter in audioSetParam().
 
-#### final int NEX\_AS\_MUSIC\_ENHANCER = 0x00000004 [static]
+#### final int NEX\_AS\_MUSIC\_ENHANCER = 0x00000004
 
 One of the NexSound audio modes to be set by the uiAudioMode parameter in audioSetParam().
 
-#### final int NEX\_AS\_REVERB = 0x00000002 [static]
+#### final int NEX\_AS\_REVERB = 0x00000002
 
 One of the NexSound audio modes to be set by the uiAudioMode parameter in audioSetParam().
 
-#### final int NEX\_AS\_STEREO\_CHORUS = 0x00000003 [static]
+#### final int NEX\_AS\_STEREO\_CHORUS = 0x00000003
 
 One of the NexSound audio modes to be set by the uiAudioMode parameter in audioSetParam().
 
-#### final String NEX\_DEVICE\_USE\_ANDROID\_3D = "Android 3D" [static]
+#### final String NEX\_DEVICE\_USE\_ANDROID\_3D = "Android 3D"
 
 A possible value for the strRenderMode parameter of NexALFactory.init.
 
 See that method description for details.
 
-#### final String NEX\_DEVICE\_USE\_AUTO = "Auto" [static]
+#### final String NEX\_DEVICE\_USE\_AUTO = "Auto"
 
 A possible value for the strRenderMode parameter of NexALFactory.init.
 
 See that method description for details.
  
-#### final String NEX\_DEVICE\_USE\_JAVA = "JAVA" [static]
+#### final String NEX\_DEVICE\_USE\_JAVA = "JAVA"
 
 A possible value for the strRenderMode parameter of NexALFactory.init.
 
 See that method description for details.
 
-#### final String NEX\_DEVICE\_USE\_ONLY\_ANDROID = "Android" [static]
+#### final String NEX\_DEVICE\_USE\_ONLY\_ANDROID = "Android"
 
 A possible value for the strRenderMode parameter of NexALFactory.init.
 
 See that method description for details.
 
-#### final String NEX\_DEVICE\_USE\_OPENGL = "OPENGL" [static]
+#### final String NEX\_DEVICE\_USE\_OPENGL = "OPENGL"
 
 A possible value for the strRenderMode parameter of NexALFactory.init.
 
 See that method description for details.
 
-#### final int NEXDOWNLOADER\_ASYNC\_CMD\_CLOSE = 0x00200002 [static]
+#### final int NEXDOWNLOADER\_ASYNC\_CMD\_CLOSE = 0x00200002
 
 Possible value for msg parameter of onDownloaderAsyncCmdComplete.
 
-#### final int NEXDOWNLOADER\_ASYNC\_CMD\_OPEN = 0x00200001 [static]
+#### final int NEXDOWNLOADER\_ASYNC\_CMD\_OPEN = 0x00200001
 
 Possible value for msg parameter of onDownloaderAsyncCmdComplete.
 
-#### final int NEXDOWNLOADER\_ASYNC\_CMD\_START = 0x00200003 [static]
+#### final int NEXDOWNLOADER\_ASYNC\_CMD\_START = 0x00200003
 
 Possible value for msg parameter of onDownloaderAsyncCmdComplete.
 
-#### final int NEXDOWNLOADER\_ASYNC\_CMD\_STOP = 0x00200004 [static]
+#### final int NEXDOWNLOADER\_ASYNC\_CMD\_STOP = 0x00200004
 
 Possible value for msg parameter of onDownloaderAsyncCmdComplete.
 
-#### final int NEXDOWNLOADER\_OPEN\_TYPE\_APPEND = 1 [static]
+#### final int NEXDOWNLOADER\_OPEN\_TYPE\_APPEND = 1
 
 This is a possible value for the parameter eType in the method DownloaderOpen().
 
-#### final int NEXDOWNLOADER\_OPEN\_TYPE\_CREATE = 0 [static]
+#### final int NEXDOWNLOADER\_OPEN\_TYPE\_CREATE = 0
 
 This is a possible value for the parameter eType in the method DownloaderOpen().
 
-#### final int NEXDOWNLOADER\_STATE\_CLOSED = 2 [static]
+#### final int NEXDOWNLOADER\_STATE\_CLOSED = 2
 
 This is a possible value for the parameter param2 of onDownloaderEventState.
 
-#### final int NEXDOWNLOADER\_STATE\_DOWNLOAD = 4 [static]
+#### final int NEXDOWNLOADER\_STATE\_DOWNLOAD = 4
 
 This is a possible value for the parameter param2 of onDownloaderEventState.
 
-#### final int NEXDOWNLOADER\_STATE\_NONE = 0 [static]
+#### final int NEXDOWNLOADER\_STATE\_NONE = 0
 
 This is a possible value for the parameter param2 of onDownloaderEventState.
 
-#### final int NEXDOWNLOADER\_STATE\_STOP = 3 [static]
+#### final int NEXDOWNLOADER\_STATE\_STOP = 3
 
 This is a possible value for the parameter param2 of onDownloaderEventState.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_FASTPLAY\_START = 0x00000027 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_FASTPLAY\_START = 0x00000027
 
 Possible value for command parameter of onAsyncCmdComplete.
  
-#### final int NEXPLAYER\_ASYNC\_CMD\_FASTPLAY\_STOP = 0x00000028 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_FASTPLAY\_STOP = 0x00000028
 
 Possible value for command parameter of onAsyncCmdComplete.
  
-#### final int NEXPLAYER\_ASYNC\_CMD\_NONE = 0x00000000 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_NONE = 0x00000000
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_OPEN\_LOCAL = 0x00000001 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_OPEN\_LOCAL = 0x00000001
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_OPEN\_STORE\_STREAM = 0x00000101 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_OPEN\_STORE\_STREAM = 0x00000101
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_OPEN\_STREAMING = 0x00000002 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_OPEN\_STREAMING = 0x00000002
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_OPEN\_TV = 0x00000003 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_PAUSE = 0x00000009
 
 Possible value for command parameter of onAsyncCmdComplete.
-
-> **Deprecated** Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_PAUSE = 0x00000009 [static]
-
-Possible value for command parameter of onAsyncCmdComplete.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_RECORD\_PAUSE = 0x0000001C [static]
-
-Possible value for command parameter of onAsyncCmdComplete.
-
-> **Deprecated** Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_RECORD\_RESUME = 0x0000001D [static]
-
-Possible value for command parameter of onAsyncCmdComplete.
-
-> **Deprecated** Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_RECORD\_START = 0x0000001A [static]
-
-Possible value for command parameter of onAsyncCmdComplete.
-
-> **Deprecated** Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_RECORD\_STOP = 0x0000001B [static]
-
-Possible value forcommandparameter of onAsyncCmdComplete.
-
-> **Deprecated** Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_REINITVIDEO = 0x00000013 [static]
-
-Possible value for command parameter of onAsyncCmdComplete.
-
-> **Deprecated** Ignore if the application receives this event.
  
-#### final int NEXPLAYER\_ASYNC\_CMD\_RESUME = 0x0000000A [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_RESUME = 0x0000000A
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_SEEK = 0x0000000B [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_SEEK = 0x0000000B
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_SET\_MEDIA\_STREAM = 0x00000031 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_SET\_MEDIA\_STREAM = 0x00000031
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_SET\_MEDIA\_STREAM\_TRACK = 0x00000033 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_SET\_MEDIA\_STREAM\_TRACK = 0x00000033
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_SET\_MEDIA\_TRACK = 0x00000032 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_SET\_MEDIA\_TRACK = 0x00000032
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_START\_LOCAL = 0x00000005 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_START\_LOCAL = 0x00000005
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_START\_STORE\_STREAM = 0x00000102 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_START\_STORE\_STREAM = 0x00000102
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_START\_STREAMING = 0x00000006 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_START\_STREAMING = 0x00000006
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-#### final int NEXPLAYER\_ASYNC\_CMD\_START\_TV = 0x00000007 [static]
+#### final int NEXPLAYER\_ASYNC\_CMD\_STOP = 0x00000008
 
 Possible value for command parameter of onAsyncCmdComplete.
 
-Deprecated Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_STEP\_SEEK = 0x0000000C [static]
-
-Possible value for command parameter of onAsyncCmdComplete.
-
-Deprecated Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_STOP = 0x00000008 [static]
-
-Possible value for command parameter of onAsyncCmdComplete.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_TIMESHIFT\_BACKWARD = 0x00000026 [static]
-
-Possible value for command parameter of onAsyncCmdComplete.
-
-> **Deprecated** Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_TIMESHIFT\_CREATE = 0x00000021 [static]
-
-Possible value for command parameter of onAsyncCmdComplete.
-
-> **Deprecated** Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_TIMESHIFT\_DESTROY = 0x00000022 [static]
-
-Possible value for command parameter of onAsyncCmdComplete.
-
-> **Deprecated** Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_TIMESHIFT\_FORWARD = 0x00000025 [static]
-
-Possible value forcommandparameter of `onAsyncCmdComplete`.
-
-> **Deprecated** Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_TIMESHIFT\_PAUSE = 0x00000023 [static]
-
-Possible value for command parameter of `onAsyncCmdComplete`.
-
-> **Deprecated** Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_ASYNC\_CMD\_TIMESHIFT\_RESUME = 0x00000024 [static]
-
-Possible value for command parameter of `onAsyncCmdComplete`.
-
-> **Deprecated** Experimental; may or may not be present in future versions.
-
-#### final int NEXPLAYER\_SIGNAL\_STATUS\_NORMAL = 0 [static]
+#### final int NEXPLAYER\_SIGNAL\_STATUS\_NORMAL = 0
 
 Normal signal status; see `onSignalStatusChanged` for details.
 
-#### final int NEXPLAYER\_SIGNAL\_STATUS\_OUT = 2 [static]
+#### final int NEXPLAYER\_SIGNAL\_STATUS\_OUT = 2
 
 No signal (out of service area); see `onSignalStatusChanged` for details.
 
-#### final int NEXPLAYER\_SIGNAL\_STATUS\_WEAK = 1 [static]
+#### final int NEXPLAYER\_SIGNAL\_STATUS\_WEAK = 1
 
 Weak signal status; see `onSignalStatusChanged` for details.
 
-#### final int NEXPLAYER\_SOURCE\_TYPE\_LOCAL\_NORMAL = 0 [static]
+#### final int NEXPLAYER\_SOURCE\_TYPE\_LOCAL\_NORMAL = 0
 
 Treats path as a local media file; a possible value for the type parameter of NexPlayer.open.
 
-#### final int NEXPLAYER\_SOURCE\_TYPE\_STORE\_STREAM = 2 [static]
+#### final int NEXPLAYER\_SOURCE\_TYPE\_STORE\_STREAM = 2
 
 Treats path as a URL to a streaming media source to be stored for offline playback; a possible value for the type parameter of NexPlayer.open.
 
-#### final int NEXPLAYER\_SOURCE\_TYPE\_STREAMING = 1 [static]
+#### final int NEXPLAYER\_SOURCE\_TYPE\_STREAMING = 1
 
 Treats path as a URL to a streaming media source; a possible value for the type parameter of NexPlayer.open.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_AUDIO\_GET\_CODEC\_FAILED = 0x1 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_AUDIO\_GET\_CODEC\_FAILED = 0x1
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_AUDIO\_INIT\_FAILED = 0x3 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_AUDIO\_INIT\_FAILED = 0x3
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_AVMODE\_CHANGED = 0xa [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_AVMODE\_CHANGED = 0xa
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_CONTENT\_INFO\_UPDATED = 0x9 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_CONTENT\_INFO\_UPDATED = 0x9
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_DISCONTINUITY\_EXIST = 0x12 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_DISCONTINUITY\_EXIST = 0x12
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_DOWNLOAD\_PROGRESS = 0x80 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_DOWNLOAD\_PROGRESS = 0x80
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_DSI\_CHANGED = 0x7 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_DSI\_CHANGED = 0x7
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_EXTERNAL\_DOWNLOAD\_CANCELED = 0x20 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_EXTERNAL\_DOWNLOAD\_CANCELED = 0x20
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_HTTP\_INVALID\_RESPONSE = 0xb [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_HTTP\_INVALID\_RESPONSE = 0xb
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_MAX = 0xFFFFFFFF [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_MAX = 0xFFFFFFFF
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_MINMAX\_BANDWIDTH\_CHANGED = 0x21 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_MINMAX\_BANDWIDTH\_CHANGED = 0x21
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_NONE = 0x0 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_NONE = 0x0
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_OBJECT\_CHANGED = 0x8 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_OBJECT\_CHANGED = 0x8
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_STREAM\_CHANGED = 0x6 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_STREAM\_CHANGED = 0x6
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_STREAM\_RECV\_PAUSE = 0x60 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_STREAM\_RECV\_PAUSE = 0x60
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_STREAM\_RECV\_RESUME = 0x61 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_STREAM\_RECV\_RESUME = 0x61
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_TARGET\_BANDWIDTH\_CHANGED = 0x22 [static] , [protected]
+#### final int NEXPLAYER\_STATUS\_REPORT\_TARGET\_BANDWIDTH\_CHANGED = 0x22 , [protected]
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_TRACK\_CHANGED = 0x5 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_TRACK\_CHANGED = 0x5
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_VIDEO\_GET\_CODEC\_FAILED = 0x2 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_VIDEO\_GET\_CODEC\_FAILED = 0x2
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_STATUS\_REPORT\_VIDEO\_INIT\_FAILED = 0x4 [static]
+#### final int NEXPLAYER\_STATUS\_REPORT\_VIDEO\_INIT\_FAILED = 0x4
 
 Possible value for msg parameter of onStatusReport.
 
-#### final int NEXPLAYER\_TRACK\_ENABLE\_OPTION\_DISABLED\_TEMPORARY = 1 [static]
+#### final int NEXPLAYER\_TRACK\_ENABLE\_OPTION\_DISABLED\_TEMPORARY = 1
 
 possible value for the NexPlayer.enableTrack method
 
 Enable the track which is disabled by temporary content issues; possible value for the NexPlayer.enableTrack
 method
 
-#### final int OPTION\_DYNAMIC\_THUMBNAIL\_INTERVAL = 1 [static]
+#### final int OPTION\_DYNAMIC\_THUMBNAIL\_INTERVAL = 1
 
 This is one possible option property for the Dynamic Thumbnail feature in Smooth Streaming content and a possible value of the option parameter of `setOptionDynamicThumbnail`.
  
-#### final int RENDER\_MODE\_VIDEO\_ALLFLAG = 0xFFFFFFFF [static]
+#### final int RENDER\_MODE\_VIDEO\_ALLFLAG = 0xFFFFFFFF
 
 This is a possible value for the iFlag parameter of setRenderOption.
 
 See that method for details.
 
-#### final int RENDER\_MODE\_VIDEO\_ANTIALIAS = 0x00000004 [static]
+#### final int RENDER\_MODE\_VIDEO\_ANTIALIAS = 0x00000004
 
 This is a possible value for the iFlag parameter of setRenderOption.
 
 See that method for details.
 
-#### final int RENDER\_MODE\_VIDEO\_DITHERING = 0x00000002 [static]
+#### final int RENDER\_MODE\_VIDEO\_DITHERING = 0x00000002
 
 This is a possible value for the iFlag parameter of setRenderOption.
 
 See that method for details.
 
-#### final int RENDER\_MODE\_VIDEO\_FILTERBITMAP = 0x00000001 [static]
+#### final int RENDER\_MODE\_VIDEO\_FILTERBITMAP = 0x00000001
 
 This is a possible value for the iFlag parameter of setRenderOption.
 
 See that method for details.
 
-#### final int RENDER\_MODE\_VIDEO\_NONE = 0x00000000 [static]
+#### final int RENDER\_MODE\_VIDEO\_NONE = 0x00000000
 
 This is a possible value for the iFlag parameter of setRenderOption.
 
 See that method for details.
 
-#### int RTSP\_METHOD\_ALL [static]
+#### int RTSP\_METHOD\_ALL
 
 Initial value:
 
@@ -15077,43 +13310,43 @@ This is a possible value for the methods parameter of addRTSPHeaderFields.
 
 See that method for details.
 
-#### int RTSP\_METHOD\_DESCRIBE = 0x00000001 [static]
+#### int RTSP\_METHOD\_DESCRIBE = 0x00000001
 
 This is a possible value for themethodsparameter of addRTSPHeaderFields.
 
 See that method for details.
 
-#### int RTSP\_METHOD\_GETPARAMETER = 0x00000020 [static]
+#### int RTSP\_METHOD\_GETPARAMETER = 0x00000020
 
 This is a possible value for methods parameter of addRTSPHeaderFields.
 
 See that method for details.
 
-#### int RTSP\_METHOD\_OPTIONS = 0x00000004 [static]
+#### int RTSP\_METHOD\_OPTIONS = 0x00000004
 
 This is a possible value for methods parameter of addRTSPHeaderFields.
 
 See that method for details.
 
-#### int RTSP\_METHOD\_PAUSE = 0x00000010 [static]
+#### int RTSP\_METHOD\_PAUSE = 0x00000010
 
 This is a possible value for methods parameter of addRTSPHeaderFields.
 
 See that method for details.
 
-#### int RTSP\_METHOD\_PLAY = 0x00000008 [static]
+#### int RTSP\_METHOD\_PLAY = 0x00000008
 
 This is a possible value for methods parameter of addRTSPHeaderFields.
 
 See that method for details.
 
-#### int RTSP\_METHOD\_SETUP = 0x00000002 [static]
+#### int RTSP\_METHOD\_SETUP = 0x00000002
 
 This is a possible value for methods parameter of addRTSPHeaderFields.
 
 See that method for details.
 
-#### int RTSP\_METHOD\_TEARDOWN = 0x00000040 [static]
+#### int RTSP\_METHOD\_TEARDOWN = 0x00000040
 
 This is a possible value for methods parameter of addRTSPHeaderFields.
 
@@ -15128,14 +13361,6 @@ It is identified by a string, DATA-ID.
 If LANGUAGE is specified, this attribute must be included in a human-readable form in the specified language.
 
 ### NexSoundEffect Class Reference
-
-**Static Public Attributes**
-
-- `static final int **SOUND\_EFFECT\_NONE** = 0x00`
-- `static final int **SOUND\_EFFECT\_NEXSOUND** = 0x01`
-- `static final int **SOUND\_EFFECT\_HEADPHONE\_X** = 0x02`
-- `static final int **SOUND\_EFFECT\_HEAD\_TRACKING** = 0x04`
-- `static final int **SOUND\_EFFECT\_3DAUDIO\_SOLUTION01** = 0x08`
 
 #### int InstallSoundEffectLicenseFile ( String licenseFilePath )
 
@@ -15639,22 +13864,22 @@ begins.
  
 - setDuration(int statisticsType, double seconds)
  
-#### final int STATISTICS\_GENERAL = 0 [static]
+#### final int STATISTICS\_GENERAL = 0
 
 A possible argument value for the parameterstatisticsTypein the onUpdated() and setDuration()
  methods for the type of statistics being requested and received, for general playback statistics.
 
-#### final int STATISTICS\_HTTP = 2 [static]
+#### final int STATISTICS\_HTTP = 2
 
 A possible argument value for the parameter statisticsType in the onUpdated() method for the type of
 statistics being requested and received, for HTTP statistics.
 
-#### final int STATISTICS\_INITIAL = 1 [static]
+#### final int STATISTICS\_INITIAL = 1
 
 A possible argument value for the parameter statisticsType in the onUpdated() method for the type of
 statistics being requested and received, for initial statistics (statistics about when playback is initialized).
 
-#### final int STATISTICS\_SYSTEM = 3 [static]
+#### final int STATISTICS\_SYSTEM = 3
 
 A possible argument value for the parameter statisticsType in the onUpdated() and setDuration()
  methods for the type of statistics being requested and received, for system statistics.
@@ -15704,15 +13929,8 @@ A possible argument value for the parameter statisticsType in the onUpdated() an
     The key ID issued from NexPlayer.IOfflineKeyListener.onOfflineKeyStoreListener as a string.
 - `static final String STORED_INFO_KEY_DRM_TYPE` = "DRM\_Type"
 
-**Static Protected Member Functions**
 
-- `static int makeStoredInfoFile (NexSettingDataForStoring settings)`
-- `static int updateStoredInfoFile (FileDescriptor fd, NexSettingDataForStoring settings)`
-- `static int deleteOfflineCache (File storedInfoFile)`
-
-
-
-#### static JSONObject parseJSONObject ( FileDescriptor storedInfoFD ) [static]
+#### static JSONObject parseJSONObject ( FileDescriptor storedInfoFD )
 
 This method parses the store info file as JSONObject.
 
@@ -15726,7 +13944,7 @@ This method parses the store info file as JSONObject.
  
 Zero for success, or a non-zero NexPlayer error code in the event of a failure.
  
-#### static JSONObject parseJSONObject ( File storedInfoFile ) [static]
+#### static JSONObject parseJSONObject ( File storedInfoFile )
 
 This method parses the store info file as JSONObject.
 
@@ -15857,73 +14075,7 @@ This is one of:
 
 This class provides NexPlayer with information about the system and device.
 
-**Static Public Attributes**
-
-- `static final int NEX_SUPPORT_PLATFORM_NOTHING` = 0x0
-
-    Return value of getPlatformInfo() for checking Android Version, for a not supported platform.
-- `static final int NEX_SUPPORT_PLATFORM_CUPCAKE` = 0x15
-
-    Return value of getPlatformInfo() for checking Android Version, for Cupcake.
-- `static final int NEX_SUPPORT_PLATFORM_DONUT` = 0x16
-
-    Return value of getPlatformInfo() for checking Android Version, for Donut.
-- `static final int NEX_SUPPORT_PLATFORM_ECLAIR` = 0x21
-
-    Return value of getPlatformInfo() for checking Android Version, for Eclair.
-- `static final int NEX_SUPPORT_PLATFORM_FROYO` = 0x22
-
-    Return value of getPlatformInfo() for checking Android Version, for Froyo.
-- `static final int NEX_SUPPORT_PLATFORM_GINGERBREAD` = 0x30
-
-    Return value of getPlatformInfo() for checking Android Version, for Gingerbread.
-- `static final int NEX_SUPPORT_PLATFORM_HONEYCOMB` = 0x31
-
-    Return value of getPlatformInfo() for checking Android Version, for Honeycomb.
-- `static final int NEX_SUPPORT_PLATFORM_ICECREAM_SANDWICH` = 0x40
-
-    Return value of getPlatformInfo() for checking Android Version, for Ice Cream Sandwich.
-- `static final int NEX_SUPPORT_PLATFORM_JELLYBEAN` = 0x41
-
-    Return value of getPlatformInfo() for checking Android Version, for Jelly Bean.
-- `static final int NEX_SUPPORT_PLATFORM_JELLYBEAN3` = 0x43
-
-    Return value of getPlatformInfo() for checking Android Version, for Jelly Bean.
-- `static final int NEX_SUPPORT_PLATFORM_KITKAT` = 0x44
-
-    Return value of getPlatformInfo() for checking Android Version, for KitKat.
-- `static final int NEX_SUPPORT_PLATFORM_LOLLIPOP` = 0x50
-
-	Return value of getPlatformInfo() for checking Android Version, for Lollipop.
-- `static final int NEX_SUPPORT_PLATFORM_MARSHMALLOW` = 0x60
-
-    Return value of getPlatformInfo() for checking Android Version, for Marshmallow.
-- `static final int NEX_SUPPORT_PLATFORM_NOUGAT` = 0x70
-
-    Return value of getPlatformInfo() for checking Android Version, for Nougat.
-- `static final int NEX_SUPPORT_PLATFORM_OREO` = 0x80
-
-    Return value of getPlatformInfo() for checking Android Version, for OREO.
-- `static final int NEX_SUPPORT_CPU_ARM64_V8A` = 0x8
-
-    Return value of getCPUInfo() for ARMV8.
-- `static final int NEX_SUPPORT_CPU_ARMV7` = 0x7
-    Return value of getCPUInfo() for ARMV7.
-- `static final int NEX_SUPPORT_CPU_ARMV6` = 0x6
-
-    Return value of getCPUInfo() for ARMV6.
-- `static final int NEX_SUPPORT_CPU_ARMV5` = 0x5
-
-    Return value of getCPUInfo() for ARMV5.
-- `static final int NEX_SUPPORT_CPU_X86` = 0x86
-
-    Return value of getCPUInfo() for Intel x86 chipsets.
-- `static final int NEX_SUPPORT_CPU_X86_64` = 0x64
-- `static boolean x86Disabled` = false
-
-    Allows the CPU architecture (whether it should be viewed as x86 or ARM) to be set externally.
-
-#### static int getCPUInfo ( ) [static]
+#### static int getCPUInfo ( )
 
 This method returns the CPU architecture information.
 
@@ -15938,32 +14090,16 @@ CPU architecture information; one of:
 - `NEX_SUPPORT_CPU_X86`
 - `NEX_SUPPORT_CPU_X86_64`
 
-#### static int getPlatformInfo ( ) [static]
+#### static int getPlatformInfo ( )
 
 This method returns the Android Version of the device platform.
 
-**Returns**
 
-Android Version; one of:
- 
-- `NEX_SUPPORT_PLATFORM_CUPCAKE`
-- `NEX_SUPPORT_PLATFORM_DONUT`
-- `NEX_SUPPORT_PLATFORM_ECLAIR`
-- `NEX_SUPPORT_PLATFORM_FROYO`
-- `NEX_SUPPORT_PLATFORM_GINGERBREAD`
-- `NEX_SUPPORT_PLATFORM_HONEYCOMB`
-- `NEX_SUPPORT_PLATFORM_ICECREAM_SANDWICH`
-- `NEX_SUPPORT_PLATFORM_JELLYBEAN`
-- `NEX_SUPPORT_PLATFORM_MARSHMALLOW`
-- `NEX_SUPPORT_PLATFORM_NOUGAT`
-- `NEX_SUPPORT_PLATFORM_OREO`
-- `NEX_SUPPORT_PLATFORM_NOTHING`
-
-#### final int NEX\_SUPPORT\_CPU\_X86 = 0x86 [static]
+#### final int NEX\_SUPPORT\_CPU\_X86 = 0x86
 
 Return value of getCPUInfo() for Intel x86 chipsets.
  
-#### boolean x86Disabled = false [static]
+#### boolean x86Disabled = false
 
 Allows the CPU architecture (whether it should be viewed as x86 or ARM) to be set externally.
 
@@ -15972,27 +14108,6 @@ the internal setting is set to ARM or x86.
  
 ### NexTextureView Class Reference
  
-**Classes**
-
-- `class EGLManager`
-- `class Renderer`
-
-**Protected Attributes**
-
-- `final String LOG_TAG = "NexTextureView"`
-- `final String GLT_LOG_TAG = "NexGLThread"`
-
-**Static Protected Attributes**
-
-- `static final boolean LOG_ATTACH_DETACH` = true
-- `static final boolean LOG_THREADS` = true
-- `static final boolean LOG_PAUSE_RESUME` = true
-- `static final boolean LOG_SURFACE` = false
-- `static final boolean LOG_RENDERER` = true
-- `static final boolean LOG_RENDERER_DRAW_FRAME` = false
-- `static final boolean LOG_EGL` = true
-
-
 
 #### void clearCanvas ( )
 
@@ -16131,19 +14246,6 @@ Setting this listener is absolutely optional and intended for the experts who wa
 |-----------------|------|
 | preNexPlayerVideoRendererListener | An instance of the NexPlayer.IVideoRendererListener that requests the callbacks from NexPlayer to handle them after NexVideoRenderer has started performing its operations. |
  
-#### void setScreenPixelFormat ( int screenPixelFormatToSet )
-
-This method sets the current screen pixel format.
-
-If the model is "Milestone", the screen pixel format will be forced to RGB\_565.
-
-**Parameters**
-
-| Name            | Description              |
-|-----------------|------|
-| screenPixelFormatToSet | One of the constants specified in android.graphics.PixelFormat. |
- 
-> **Deprecated** This is no longer supported;
  
 #### void setSurfaceSecure ( Boolean usesecure )
 
@@ -16251,21 +14353,6 @@ Thumbnail timestamp value
 Stores and provides information about an individual content track, for formats that use multiple tracks (such as HLS).
 
 See NexContentInformation for details.
-
-**Static Public Attributes**
-
-- `static final int REASON_TRACK_NOT_SUPPORT_VIDEO_CODEC` = 0x0000001
-
-    Possible value for NexTrackInformation.mReason.
-- `static final int REASON_TRACK_NOT_SUPPORT_AUDIO_CODEC` = 0x0000002
-
-    Possible value for NexTrackInformation.mReason.
-- `static final int REASON_TRACK_NOT_SUPPORT_VIDEO_RESOLUTION` = 0x0000003
-
-    Possible value for NexTrackInformation.mReason.
-- `static final int REASON_TRACK_NOT_SUPPORT_VIDEO_RENDER` = 0x0000004
-
-    Possible value for NexTrackInformation.mReason.
  
 #### int mCodecType
 
@@ -16454,10 +14541,6 @@ This method gets the current screen pixel format.
  
 One of the constants specified in android.graphics.PixelFormat.
  
-**Since**
-
- 
-version 6.1
  
 #### void getVideoSize ( Point outSize )
 
@@ -16541,11 +14624,6 @@ This method releases resources that are used by the instance of NexVideoRenderer
 
 This should be called before the NexPlayer.release method is called when the instance is no longer needed.
  
-#### void requestClear ( )
-
-This method requests that the canvas be cleared.
-
-> **Deprecated** This is no longer supported; use clearCanvas instead.
 
 #### void resetSurface ( )
 
@@ -16701,9 +14779,8 @@ This method sets whether or not the bitmap should be filtered when the Java rend
 
 This method prevents the user from recording the screen on devices running the Android KitKat (4.4) OS and above.
 
-Call this API right afterinitif screen recording should be prevented.
+Call this API right after init if screen recording should be prevented.
 
-**Parameters**
 
 **Parameters**
 
@@ -16809,11 +14886,6 @@ classes so that the developer can play the media content by only using a NexVide
     This class manages the setting values needed for initializing Video Renderer, Caption Renderer and NexPlayer
     internally.
     
-**Static Public Attributes**
-
-- `static final int STREAM_TYPE_VIDEO` = 2
-- `static final int STREAM_TYPE_AUDIO` = 1
-- `static final int STREAM_TYPE_TEXT` = 0
  
 #### NexVideoView( Context context )
 
@@ -16978,7 +15050,7 @@ stands for "Current Time Stamp".
 The percentage of buffered data.
 
  
-#### NexCaptionPaintergetCaptionPainter ( )
+#### NexCaptionPainter getCaptionPainter ( )
 
 This method gets an object of the  NexCaptionPainter.
 
@@ -16989,21 +15061,6 @@ To use any specific feature provided by the NexCaptionPainter, use this method t
 A NexCaptionPainter object.
 
  
-#### NexCaptionRenderViewgetCaptionRenderView ( )
-
-This method gets an object of the NexCaptionRenderView.
-
-To use any specific feature provided by the NexCaptionRenderView, use this method to call desired API to the NexCaptionRenderView object.
-
-**Returns**
-
- 
-A NexCaptionRenderView object.
- 
-This method is deprecated and not supported in the current API version. Do not use it.
-
-> **Deprecated** Not supported in current API version; do use getCaptionPainter instead of this method for captions.
-
 #### int getCaptionType ( )
 
 This method gets the type of the current caption in use.
@@ -17505,11 +15562,6 @@ This method operates asynchronously, and when stop has successfully completed, a
 
 This class allows NexPlayer to handle and descramble WideVine HLS content.
 
-**Classes**
-
-- `class _CdmRequestMsg`
-- `interface IWVDRMSessionListener`
-
 #### void setOptionalHeaderFields ( HashMap<String, String> optionalHeaderFields )
 
 This method sets optional Parameters when sending requests to the Key Server of NexWVDRM.
@@ -17520,15 +15572,6 @@ This method sets optional Parameters when sending requests to the Key Server of 
 |--------|---------------|
 | optionalHeaderFields   | HashMap is included in the key request message to allow a client application to provide additional message parameters to the server.                                                                                                                                                            |
  
-### NexPlayer.OfflineMode Enum Reference
-
-**Public Attributes**
-
-- `NONE = (0)`
-- `STORE = (1)`
-- `RETRIEVE = (2)`
-- `RETRIEVE_STORE = (3)`
-- `KEYEXPIRE_RETRIEVE_STORE = (4)`
 
 ### NexVideoView.OnBufferingUpdateListener Interface Reference
 
@@ -17767,8 +15810,6 @@ View.
 
 > **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from within IListener callbacks. The safest way to update the UI is to use android.os.Handler to post an event back to the main application thread.
  
- 
-#
 
 #### void onResumeComplete (NexPlayermp)
 
@@ -17864,7 +15905,7 @@ This method is called when new timed metadata is ready for display in HLS.
 
 - `void onTime (NexPlayer mp, int currTime)`
 
-#### static native int initDRMManager ( String strEngineLibName) [static]
+#### static native int initDRMManager ( String strEngineLibName)
 
 Initializes and registers the PiffPlayReadyDRMManager.
 
@@ -17906,22 +15947,6 @@ This method sets the time offset from the most recent #EXT-X-PROGRAM-DATE-TIME t
 
 This method sets the #EXT-X-PROGRAM-DATE-TIME tag for the current HLS content.
 
-### NexMediaDrmSession.ProvisioningManager Interface Reference
-
-**Public Member Functions**
-
-- `void provisionRequired` (NexMediaDrmSession session)
-- `void onProvisionError` (Exception error)
-- `void onProvisionCompleted ()`
-
-### NexTextureView.Renderer Class Reference
-
-**Public Member Functions**
-
-- `void onDrawFrame (GL10 gl)`
-- `void onSurfaceChanged (GL10 gl, int width, int height)`
-- `void onSurfaceCreated (GL10 gl, EGLConfig config)`
-- `void onSurfaceDestroyed (GL10 gl)`
 
 ### NexCaptionRenderView.RenderingArea Class Reference
 
@@ -17960,11 +15985,6 @@ These segment options can be used to set the parameter *segOption* when calling 
 - `LATEMIX` : NexPlayer will preserve and play the content segments already buffered and will download a
     new track.
 
-
-**Public Member Functions**
-
-- `SegmentOption (int code)`
-
 **Public Attributes**
 
 - `DEFAULT = (0x00000000)`
@@ -17988,35 +16008,6 @@ These segment options can be used to set the parameter *segOption* when calling 
 This class manages the setting values needed for initializing Video Renderer, Caption Renderer and `NexPlayer` internally.
 
 To initialize successfully,*setSettings* must be called before *setVideoPath* or *setVideoURI* is called, after changing the setting value by using *setValue*. Note that *setSettings* is not guaranteed to work properly when called at any other time.
-
-**Classes**
-
-- `enum CEARenderMode`
-    
-    This enumeration defines the possible modes for CEA rendering.
-
-**Static Public Attributes**
-
-- `static final int INT_LOG_LEVEL = 0`
-    
-    Possible key value for *key* parameter of `setValue`.
-- `static final int CEA_RENDER_MODE = 1`
-    
-    Possible key value for *key* parameter of `setValue`.
-- `static final int PIXELFORMAT_FORMAT = 2`
-    
-    Possible key value for *key* parameter of `setValue`.
-- `static final int BOOL_USE_UDP = 3`
-    
-    Possible key value for *key* parameter of `setValue`.
-
-**Protected Attributes**
-
-- `int mLogLevel = 0`
-- `int mPixelFormat = PixelFormat.RGBA_8888`
-- `CEARenderMode mCEARenderMode = CEARenderMode.CEA_608`
-- `boolean mCEA608Standard = true`
-- `boolean mUseUDP = false`
 
 #### Object getValue (int key)
 
@@ -18104,7 +16095,7 @@ This will be one of the following values :
 - `PixelFormat.RGBA_8888`
 - `PixelFormat.RGB_565`
 
-#### static native int initDRMManager (String strEngineLibName) [static]
+#### static native int initDRMManager (String strEngineLibName)
 
 Initializes and registers the `SmoothStreamFragmentDRMManager`.
 
@@ -18574,14 +16565,6 @@ This enumeration determines the font style of CFF timed text (TTML) in content.
 
 It corresponds to the *tts:fontStyle* attribute, and indicates how timed text font should be displayed.
 
-**Public Member Functions**
-
-- `int getValue ()`
-
-**Static Public Member Functions**
-
-- `static TTML_Fontstyle fromValue (int value)`
-
 #### Default = (0)
 
 The timed text (TTML) font should be displayed as default.
@@ -18603,14 +16586,6 @@ The timed text (TTML) font should be displayed with a shear transformation at an
 This enumeration specifies which type of length is being used in the style properties of a content’s timed text (TTML).
 
 It corresponds to the units in the<length>expression for timed text TTML style property values.
-
-**Public Member Functions**
-
-- `int getValue ()`
-
-**Static Public Member Functions**
-
-- `static TTML_LengthType fromValue (int value)`
  
 #### c = (4)
 
@@ -18639,29 +16614,11 @@ This class describes the length of every timed text (TTML) attribute.
 
 This will be determined based on the units of the "type" of length, as specified by `TTML_LengthType`.
 
-**Public Member Functions**
-
-- `int getLength ()`
-- `TTML_LengthType getType ()`
-
-**Public Attributes**
-
-- `float length`
-- `TTML_LengthType lengthType`
-
 ### NexClosedCaption.TTML_TextAlign Enum Reference
 
 This enumeration determines the horizontal alignment of timed text (TTML) in content.
 
 It corresponds to the *tts:textAlign* attribute, and indicates how timed text should be aligned horizontally in display blocks of the subtitles.
-
-**Public Member Functions**
-
-- `int getValue ()`
-
-**Static Public Member Functions**
-
-- `static TTML_TextAlign fromValue (int value)`
 
 
 #### Center = (3)
@@ -18743,13 +16700,7 @@ The timed text (TTML) should be displayed as normal.
 This enumeration specifies the mode in which timed text (TTML) in content will be displayed.
 
 This corresponds to the *tts:writingMode*, where the modes indicate how timed text and timed text blocks will be arranged when displayed. This allows different language text to be displayed for example vertically, or from right-to-left when required.
-**Public Member Functions**
 
-- `int getValue ()`
-
-**Static Public Member Functions**
-
-- `static TTML_WritingMode fromValue (int value)`
 
 
 #### Default = (0)
@@ -18795,13 +16746,6 @@ This enumeration defines the text track cue span tags for how WebVTT text tracks
 
 Additional details about WebVTT cue spans can be found in the WebVTT specifications at *http://dev.w3.org/html5/webvtt/*.
 
-**Public Member Functions**
-
-- `int getValue ()`
-
-**Static Public Member Functions**
-
-- `static WebVTT_CueSpanTag fromValue (int value)`
 
 #### BOLD = (3)
 
@@ -18889,25 +16833,3 @@ WebVTT cue captions are aligned at the start of the text track region.
 This enumeration specifies how WebVTT captions in content will be displayed.
 
 This allows different language text to be displayed for example vertically, or from right-to-left when required.
-
-**Public Member Functions**
-
-- `int getValue ()`
-
-**Static Public Member Functions**
-
-- `static WebVTT_WritingDirection fromValue (int value)`
-
-**Public Attributes**
-
-- `Default = (0)`
-- `Horizontal = (1)`
-- `Vertical_Growing_Left = (2)`
-- `Vertical_Growing_Right = (3)`
-
-
-### NexClosedCaption.WebVTTRenderingData Class Reference
-
-**Classes**
-
-- `class WebVTTNodeData`
