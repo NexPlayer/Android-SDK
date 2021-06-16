@@ -1812,7 +1812,7 @@ The application must implement this interface in order to receive events from `N
  
 `NexVideoRenderer` will call the methods provided in this interface automatically during playback to notify the application when various events have occurred.
 
-In most cases, the handling of these events is optional; `NexPlayer` will continue playback normally without the application doing anything special. For best results, handling all events is recommended.
+In most cases, the handling of these events is optional; NexPlayer will continue playback normally without the application doing anything special. For best results, handling all events is recommended.
 
 See each individual *IListener* method for a recommendation on how to handle the event in the application.
  
@@ -1828,7 +1828,7 @@ This would be a good time for the application to handle any related layout chang
 
 #### void onFirstVideoRenderCreate ( )
 
-This callback indicates that the `NexPlayer` instance has performed its first of possibly many `onVideoRenderCreate` callbacks.
+This callback indicates that the NexPlayer instance has performed its first of possibly many `onVideoRenderCreate` callbacks.
 
 This event occurs when `NexVideoRenderer` first receives the `onVideoRenderCreate` callback from the associated NexPlayer instance.
 
@@ -1854,7 +1854,7 @@ desired resolution and aspect ratio.
  
 ### INexDRMLicenseListener Interface Reference
 
-The application must implement this interface in order to receive events from `NexPlayer`.
+The application must implement this interface in order to receive events from NexPlayer.
 
 #### byte[] onLicenseRequest ( byte[ ]requestData)**
 
@@ -1873,7 +1873,7 @@ A *Object* with license response data. DRM Client will use this *string* without
  
 ### NexStatisticsMonitor.InitialStatisticsMetric Enum Reference
 
-This is an enumeration of the possible initial statistics that can be requested when initializing playback of HLS, DASH or SS content in `NexPlayer`.
+This is an enumeration of the possible initial statistics that can be requested when initializing playback of HLS, DASH or SS content in NexPlayer.
 
 Since this statistics metric is only for monitoring the statistics related to the initialization of content, for more general playback statistics, monitor *GeneralStatisticsMetric* instead.
 
@@ -1965,7 +1965,7 @@ the key ID of media drm stored with onOfflineKeyStoreListener.
 
 #### byte[] onOfflineKeyRetrieveListener (NexPlayer mp)
 
-This method will be called by the `NexPlayer` engine when the keyId of media DRM should be retrieved.
+This method will be called by the NexPlayer engine when the keyId of media DRM should be retrieved.
 
 **Parameters**
 
@@ -1982,14 +1982,14 @@ The key ID of media drm stored with onOfflineKeyStoreListener.
 
 #### void onOfflineKeyStoreListener (NexPlayer mp, byte[ ]keyId)
 
-This method will be called by the `NexPlayer` engine when the keyId of media DRM should be stored.
+This method will be called by the NexPlayer engine when the keyId of media DRM should be stored.
 
 **Parameters**
 
  
 | Name  | Description                                     |
 |-------|---------|
-| mp    | The `NexPlayer` object generating the event. |
+| mp    | The NexPlayer object generating the event. |
 | keyId | The Key ID of Media drm for offline playback.   |
 
  
@@ -2075,7 +2075,7 @@ Once an instance of *NexStatisticsMonitor* is created, a statistics listener imp
 
 #### void onUpdated (int statisticsType, HashMap < IStatistics, Object > map)
 
-This method is called whenever statistics are updated and sent by `NexPlayer`.
+This method is called whenever statistics are updated and sent by NexPlayer.
 
 The time interval at which general and system statistics are updated in *NexStatisticsMonitor* can be
 changed by calling the *setDuration()* method.
@@ -2104,12 +2104,12 @@ changed by calling the *setDuration()* method.
 The application must implement this interface in order to receive video renderer-specific events from NexPlayer.
 
 > **Warning** These callbacks may occur in any thread, not necessarily the main application thread. In some cases, it may not be safe to call UI-related functions from within *IListener* callbacks. The safest way to update the UI is to use *android.os.Handler* to post an event back to the main application thread.
+ NexPlayer
+> **Note** This interface replaces the deprecated methods in `IListener` that received video renderer-specific events from NexPlayer. Note that in existing older applications, the video renderer related methods of `IListener` (now deprecated) can be reused.
  
-> **Note** This interface replaces the deprecated methods in `IListener` that received video renderer-specific events from `NexPlayer`. Note that in existing older applications, the video renderer related methods of `IListener` (now deprecated) can be reused.
- 
-`NexPlayer` will call the methods provided in this interface automatically during playback to notify the application when various video renderer-specific events have occurred.
+NexPlayer will call the methods provided in this interface automatically during playback to notify the application when various video renderer-specific events have occurred.
 
-In most cases, the handling of these events is optional; `NexPlayer` will continue playback normally without the application doing anything special. There are a few exceptions to this which are listed below.
+In most cases, the handling of these events is optional; NexPlayer will continue playback normally without the application doing anything special. There are a few exceptions to this which are listed below.
 
 See each individual *IVideoRendererListenermethod* for a recommendation on how to implement that
 method in your application.
@@ -2137,7 +2137,7 @@ After calling `captureVideo` to set up video capture, this function will be call
 
 | Name      | Description                                               |
 |-----------|-------------------|
-| mp        | The `NexPlayer` object to which this event applies.    |
+| mp        | The NexPlayer object to which this event applies.    |
 | widht     | The width of the captured frame.                          |
 | height    | The height of the captured frame.                         |
 | pixelbyte | The number of bytes per pixel (2 for RGB565; 4 for RGBA). |
@@ -2147,7 +2147,7 @@ Implemented in `NexEventReceiver`.
 
 #### void onVideoRenderCreate (NexPlayer mp,int width,int height,Object rgbBuffer)
 
-This method is called when `NexPlayer` needs the application to create a surface on which to render the video.
+This method is called when NexPlayer needs the application to create a surface on which to render the video.
 
 The application must respond to this by calling `setDisplay`.
 
@@ -2158,15 +2158,15 @@ Generally speaking, the application will actually create the surface earlier, du
  
 | Name      | Description                                                                                         |
 |-----------|---------------------|
-| mp        | The `NexPlayer` object to which this event applies.                                              |
+| mp        | The NexPlayer object to which this event applies.                                              |
 | widht     | The width of the source video.                                                                      |
 | height    | The height of the source video.                                                                     |
-| pixelbyte | Direct RGB Buffer(RGB565 format). This RGB buffer is shared with `NexPlayer` Engine native code. | 
+| pixelbyte | Direct RGB Buffer(RGB565 format). This RGB buffer is shared with NexPlayer Engine native code. | 
 Implemented in `NexEventReceiver`.
 
 #### void onVideoRenderDelete (NexPlayer mp)
 
-This method is called when `NexPlayer` no longer needs the render surface.
+This method is called when NexPlayer no longer needs the render surface.
 
 If a surface was created in *onVideoRenderCreate*, this is the place to destroy it. However, if (as in most cases) an existing surface was used, then this function need not take any special action, other than updating whatever state the application needs to track.
 
@@ -2176,14 +2176,14 @@ If a surface was created in *onVideoRenderCreate*, this is the place to destroy 
  
 | Name | Description                                            |
 |------|----------------|
-| mp   | The `NexPlayer` object to which this event applies. | 
+| mp   | The NexPlayer object to which this event applies. | 
 Implemented in `NexEventReceiver`.
 
 #### void onVideoRenderPrepared (NexPlayer mp)
 
-This method is called when `NexPlayer` recognizes which type of video renderer will be used.
+This method is called when NexPlayer recognizes which type of video renderer will be used.
 
-At first, `NexPlayer` does not know which renderer will be used. When this method is called, the application can determine the video renderer mode by calling `GetRenderMode` and prepare for the specified video renderer, as in the following example code:
+At first, NexPlayer does not know which renderer will be used. When this method is called, the application can determine the video renderer mode by calling `GetRenderMode` and prepare for the specified video renderer, as in the following example code:
 
 ```java
 	public void onVideoRenderPrepared(NexPlayer mp) {
@@ -2240,7 +2240,7 @@ At first, `NexPlayer` does not know which renderer will be used. When this metho
  
 | Name | Description                                            |
 |------|----------------|
-| mp   | The `NexPlayer` object to which this event applies. |
+| mp   | The NexPlayer object to which this event applies. |
  
 Implemented in `NexEventReceiver`.
 
@@ -2252,14 +2252,14 @@ This requests to display Video frame data at JAVA application.
  
 | Name | Description                                            |
 |------|----------------|
-| mp   | The `NexPlayer` object to which this event applies. |
+| mp   | The NexPlayer object to which this event applies. |
  
 Implemented in `NexEventReceiver`.
 
 
 ### NexStatisticsMonitor.MediaType Enum Reference
 
-An enumeration defining the possible types of HLS, DASH or SS media can be played by `NexPlayer`.
+An enumeration defining the possible types of HLS, DASH or SS media can be played by NexPlayer.
 
 These media types include:
 
@@ -2320,7 +2320,7 @@ This class defines the information possible for an entry made with the method *8
  
 ### Nex3DAudioSolution01 Class Reference
 
-This class allows `NexPlayer` to handle audio and convert to 3D audio.
+This class allows NexPlayer to handle audio and convert to 3D audio.
 
 #### int setEuler ( float pitch,float yaw,float roll)
 
@@ -2362,16 +2362,16 @@ This method sets the quaternion value.
 
 ### NexABRController Class Reference
 
-This class allows applications to control and use ABR-related methods within the `NexPlayer` SDK.
+This class allows applications to control and use ABR-related methods within the NexPlayer SDK.
 
-An instance of *NexABRController* can be called once `NexPlayer` has been created and initialized.
+An instance of *NexABRController* can be called once NexPlayer has been created and initialized.
 
 **Classes**
 
 - `interface IABREventListener`    
     This interface must be implemented in order for the application to receiveABRControlevents from *NexABRController*.
 - `enum SegmentOption`    
-    This enum defines the options possible for how `NexPlayer` should handle existing buffered content as a track
+    This enum defines the options possible for how NexPlayer should handle existing buffered content as a track
     changes (due to a set target bandwidth).
 - `enum TargetOption`    
     This enumeration defines the possible options for how an application should use a target bandwidth set.
@@ -2437,9 +2437,9 @@ NexErrorCode
 
 This method sets whether ABR methods should be used or not.
 
-In general, `NexPlayer` plays streaming content, including content with multiple tracks at different bandwidths such as HLS, by choosing the optimal track according to network conditions and device performance. This is the default behavior of `NexPlayer` and this occurs when ABR is enabled (or calling *setABREnabled* with the parameter enabledset to *TRUE*).
+In general, NexPlayer plays streaming content, including content with multiple tracks at different bandwidths such as HLS, by choosing the optimal track according to network conditions and device performance. This is the default behavior of NexPlayer and this occurs when ABR is enabled (or calling *setABREnabled* with the parameter enabledset to *TRUE*).
 
-However, there may be instances when an application may want to set limits on which tracks should be selected and played by `NexPlayer` in order to provide a specific user experience, and to force `NexPlayer`to stay on a particular bandwidth track, regardless of network conditions. In cases like this, in order to keep playing a track at a target bandwidth (set with *setTargetBandWidth*) this method must be called to disable `NexPlayer`’s ABR behavior (with the parameter *enabled* set to *FALSE*).
+However, there may be instances when an application may want to set limits on which tracks should be selected and played by NexPlayer in order to provide a specific user experience, and to force NexPlayerto stay on a particular bandwidth track, regardless of network conditions. In cases like this, in order to keep playing a track at a target bandwidth (set with *setTargetBandWidth*) this method must be called to disable NexPlayer’s ABR behavior (with the parameter *enabled* set to *FALSE*).
 
 > **Warning** This method must be called with *enabled* set to *FALSE* `before` calling *setTargetBandWidth* if the application should continue playing the target bandwidth regardless of network conditions.
  
@@ -2447,7 +2447,7 @@ However, there may be instances when an application may want to set limits on wh
 
 | Name    | Description                                                                                                                                                                                                      |
 |---------|--------------------------|
-| enabled | - `TRUE` : ABR enabled. `NexPlayer` will handle track changes automatically. - `FALSE` : ABR disabled. `NexPlayer` will continue playing the target bandwidth track     set, regardless of network conditions. |
+| enabled | - `TRUE` : ABR enabled. NexPlayer will handle track changes automatically. - `FALSE` : ABR disabled. NexPlayer will continue playing the target bandwidth track     set, regardless of network conditions. |
 
 **Returns**
  
@@ -2455,7 +2455,7 @@ NexErrorCode
   
 #### void setIABREventListener(IABREventListener listener)
 
-This method sets and registers an *IABREventListener* listener for the application playing content with `NexPlayer`.
+This method sets and registers an *IABREventListener* listener for the application playing content with NexPlayer.
 
 **Parameters**
 
@@ -2494,11 +2494,11 @@ NexErrorCode
 
 The primary interface to the `NexALFactory`.
 
-`NexALFactory` handles codecs and renderer selection for the `NexPlayer` SDK. To use the `NexPlayer` SDK, the application must create an instance of the `NexALFactory` class (supplied as part of the `NexPlayer` SDK).
+`NexALFactory` handles codecs and renderer selection for the NexPlayer SDK. To use the NexPlayer SDK, the application must create an instance of the `NexALFactory` class (supplied as part of the NexPlayer SDK).
 
 In addition, an application must also do the following:
 
-1. Create an instance of `NexPlayer`  and an instance of `NexALFactory` and set the codec usage policy.
+1. Create an instance of NexPlayer  and an instance of `NexALFactory` and set the codec usage policy.
 
  	```java
 		mNexPlayer = new NexPlayer();
@@ -2513,7 +2513,7 @@ In addition, an application must also do the following:
 		mNexPlayer.init(this, 1);
 	```
  
-3. After playback by `NexPlayer`, `NexALFactory.release` should be called when instances of `NexPlayer` and
+3. After playback by NexPlayer, `NexALFactory.release` should be called when instances of NexPlayer and
     `NexALFactory` are no longer needed.
 
  	```java
@@ -2526,7 +2526,7 @@ In addition, an application must also do the following:
 - `interface ICodecDownListener`
 - `enum NexALFactoryErrorCode`
    
-    Possible error codes that can be returned by `NexPlayer`’s *NexALFactory*.
+    Possible error codes that can be returned by NexPlayer’s *NexALFactory*.
 
 **Protected Member Functions**
 
@@ -2586,7 +2586,7 @@ This method downloads a codec.
 > **Warning** This must be called after `NexALFactory.getDownloadableCodecs` has been called.
  
 After a codec is downloaded by calling this method, the application should also call *`NexALFactory.rescanCodecs` to
-inform `NexPlayer` of the newly available codecs.
+inform NexPlayer of the newly available codecs.
 
 **Parameters**
  
@@ -2637,15 +2637,15 @@ An array of the codecs available to be downloaded from the server.
 
 Returns the NexALFactoryContext.
 
-This method is called by the `NexPlayer` Engine. This is just for native methods. Don’t use this method for other purposes.
+This method is called by the NexPlayer Engine. This is just for native methods. Don’t use this method for other purposes.
 
 #### boolean init (Context context, String strModel, String strRenderMode, int logLevel, int colorDepth)
 
 Initializes `NexALFactory`.
 
-`NexPlayer` automatically detects the devices where HW codecs and H.264 Main/High profiles can be supported so there is no need to indicate any specific device model to the player.
+NexPlayer automatically detects the devices where HW codecs and H.264 Main/High profiles can be supported so there is no need to indicate any specific device model to the player.
 
-> **Warning** Although it is possible to change the device model parameter, *strModel*, it is not recommended because changing the model name may result in the H/W decoder not working properly. Please do NOT change the device model name in the sample code. Similarly, although it is possible to change the render mode parameter, *strRenderMode*, `NexPlayer` is only guaranteed to work properly with *strRenderMode* set to *NEX\_DEVICE\_USE\_AUTO*. Please do NOT change the render mode in the sample code.
+> **Warning** Although it is possible to change the device model parameter, *strModel*, it is not recommended because changing the model name may result in the H/W decoder not working properly. Please do NOT change the device model name in the sample code. Similarly, although it is possible to change the render mode parameter, *strRenderMode*, NexPlayer is only guaranteed to work properly with *strRenderMode* set to *NEX\_DEVICE\_USE\_AUTO*. Please do NOT change the render mode in the sample code.
 
 **Parameters**
 
@@ -2653,7 +2653,7 @@ Initializes `NexALFactory`.
 | Name          | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 |---------------|------------------------|
 | context       | The current context; from *Activity* subclasses, you can just pass *this*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| srtModel      | Device model name. `NexPlayer` includes multiple renderer modules, and past versions of the player selected the module most suitable to the device based on this value. The renderer is now set by the parameter *strRenderMode*. Under normal use, you should pass the MODEL as available via the Android API in *android.os.Build.MODEL*. For example:  	*nexALFactory.init(this, android.os.Build.MODEL, 	NEX\_DEVICE\_USE\_AUTO, 0, 1);*     `NexPlayer` uses this to select the most appropriate renderer if no renderer is selected (*NULL* is passed) with the parameter *strRenderMode* below. For OS versions up to Gingerbread, this is always the Android Renderer (although from Froyo, other renderers are supported as well) if the SW codec is in use. For Honeycomb and Ice Cream Sandwich (ICS), this is always the OpenGL renderer when the SW codec is in use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| srtModel      | Device model name. NexPlayer includes multiple renderer modules, and past versions of the player selected the module most suitable to the device based on this value. The renderer is now set by the parameter *strRenderMode*. Under normal use, you should pass the MODEL as available via the Android API in *android.os.Build.MODEL*. For example:  	*nexALFactory.init(this, android.os.Build.MODEL, 	NEX\_DEVICE\_USE\_AUTO, 0, 1);*     NexPlayer uses this to select the most appropriate renderer if no renderer is selected (*NULL* is passed) with the parameter *strRenderMode* below. For OS versions up to Gingerbread, this is always the Android Renderer (although from Froyo, other renderers are supported as well) if the SW codec is in use. For Honeycomb and Ice Cream Sandwich (ICS), this is always the OpenGL renderer when the SW codec is in use.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | srtRenderMode | The Renderer to use, as a string. The recommended render mode to use is *NEX\_DEVICE\_USE\_AUTO*, which will choose the most appropriate render mode automatically. |
 | logLevel      | NexPlayer SDK logging level. This affects the messages that the SDK writes to the Android log.   - **-1** : Do not output any log messages. - **0** : Output basic log messages only (recommended). - **1** ∼ **4** : Output detailed log messages; higher numbers result in more verbose log entries, but may cause performance issues in some cases and are not recommended for general release code.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | colorDepth    | colorDepth Video output image color depth.   - **1** : RGBA\_8888 - **4** : RGB\_565                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
@@ -2677,12 +2677,12 @@ be used.
 
 #### native int rescanCodecs ( )
 
-This method rescans the codec files in the application files directory(*/data/data/<package\_name>/files*) to update the codecs available in `NexPlayer`.
+This method rescans the codec files in the application files directory(*/data/data/<package\_name>/files*) to update the codecs available in NexPlayer.
 
 > **Warning** This must be called after `NexALFactory.init` has been called.
  
 Any time an application downloads an additional codec by calling `NexALFactory.downloadCodec`, this method
-should be called to inform `NexPlayer` of the newly available codecs.
+should be called to inform NexPlayer of the newly available codecs.
 
 **Returns**
 
@@ -2709,7 +2709,7 @@ Zero if successful, or a non-zero error code.
  
 ### NexALFactory.NexALFactoryErrorCode Enum Reference
 
-Possible error codes that can be returned by `NexPlayer`’s *NexALFactory*.
+Possible error codes that can be returned by NexPlayer’s *NexALFactory*.
 
 This is a Java *enum* so each error constant is an object, but it can be converted to or from a numerical code using
 the instance and class methods.
@@ -2831,7 +2831,7 @@ This method sets the value of an individual *NexCaptionAttribute* attribute.
 **Returns**
 
  
-Zero for success, or a non-zero `NexPlayer` error code in the event of a failure.
+Zero for success, or a non-zero NexPlayer error code in the event of a failure.
  
  
 #### boolean setValue (int attr,EdgeStyle value)
@@ -2849,7 +2849,7 @@ This method sets the value of an individual *NexCaptionAttribute* attribute.
 **Returns**
 
  
-Zero for success, or a non-zero `NexPlayer` error code in the event of a failure.
+Zero for success, or a non-zero NexPlayer error code in the event of a failure.
   
 #### boolean setValue (int attr,int value)
 
@@ -2866,7 +2866,7 @@ This method sets the value of an individual *NexCaptionAttribute* attribute.
 **Returns**
 
  
-Zero for success, or a non-zero `NexPlayer` error code in the event of a failure.
+Zero for success, or a non-zero NexPlayer error code in the event of a failure.
   
 #### boolean setValue (int attr,float value)
 
@@ -2882,7 +2882,7 @@ This method sets the value of an individual *NexCaptionAttribute* attribute.
 **Returns**
 
  
-Zero for success, or a non-zero `NexPlayer` error code in the event of a failure.
+Zero for success, or a non-zero NexPlayer error code in the event of a failure.
  
 #### final int COLOR\_BACKGROUND = 0x00000102 *[static]*
 
@@ -3857,7 +3857,7 @@ It can be used to allow users to select the color they want to use for shadows a
  
 #### void setTextScaleFactor (float scale, float textSize)
 
-This method lets users control the CEA 608 closed caption font size in `NexPlayer` from the application UI.
+This method lets users control the CEA 608 closed caption font size in NexPlayer from the application UI.
 
 >**Warning** This method should only be used when a *customFont* has been set by calling the method `NexCaptionRenderer.setFonts` AND the captions exceed the size of the caption character cell.
  
@@ -3904,7 +3904,7 @@ For a full list of colors , please refer to `NexClosedCaption.CaptionColor`.
 
 This class defines the renderer view for CFF and 3GPP timed text subtitles in content and displays them.
 
-In order for `NexPlayer` to display CFF or 3GPP timed text, a separate Caption Renderer view must be created with the `NexCaptionRendererForTimedText` class.
+In order for NexPlayer to display CFF or 3GPP timed text, a separate Caption Renderer view must be created with the `NexCaptionRendererForTimedText` class.
 
 In particular, in order to use `NexCaptionRendererForTimedText`, care must be taken to do the following:
 
@@ -4311,7 +4311,7 @@ This method sets a margin around caption text to the edge of the caption window,
 
 This class defines the renderer view for Web Video Text Tracks (WebVTT) text tracks in HLS content and displays them.
 
-In order for `NexPlayer` to display WebVTT, a separate Caption Renderer view must be created with the `NexCaptionRendererForWebVTT` class.
+In order for NexPlayer to display WebVTT, a separate Caption Renderer view must be created with the `NexCaptionRendererForWebVTT` class.
 
 In particular, in order to use `NexCaptionRendererForWebVTT`, care must be taken to do the following:
 
@@ -7679,7 +7679,7 @@ Errors we can’t control relating to the system (for example, memory allocation
 
 ### NexPlayer.NexErrorCode Enum Reference
 
-Possible error codes that `NexPlayer` can return.
+Possible error codes that NexPlayer can return.
 
 This is a Java *enum* so each error constant is an object, but you can convert to or from a numerical code using instance and class methods.
 
@@ -7687,7 +7687,7 @@ To get the error constant for a given code, call `fromIntegerValue(int)`.
 
 To get the error code given an error constant, call `getIntegerCode()`.
 
-Because this is a Java *enum*, it is very easy to include the name of the error constant in an error message instead of just the number. For example, the following code logs the errors that are received from the `NexPlayer` engine:
+Because this is a Java *enum*, it is very easy to include the name of the error constant in an error message instead of just the number. For example, the following code logs the errors that are received from the NexPlayer engine:
 
 ```java
 void onError( NexPlayer mp, NexErrorCode errorCode )
@@ -7748,7 +7748,7 @@ Gets the integer code associated with a given error.
 **Returns**
 
 
-An integer error code as provided by the `NexPlayer` engine.
+An integer error code as provided by the NexPlayer engine.
 
 
 #### String getSubDesc ( )
@@ -7758,7 +7758,7 @@ Gets the integer sub error code when unknown error occurs.
 **Returns**
 
 
-An integer sub error code of UNKNOWN as provided by the `NexPlayer` engine.
+An integer sub error code of UNKNOWN as provided by the NexPlayer engine.
 
 #### static int getUnknownSubCode ()
 
@@ -7766,13 +7766,13 @@ Gets the integer sub error code when unknown error occurs.
 
 **Returns**
 
-An integer sub error code of UNKNOWN as provided by the `NexPlayer` engine.
+An integer sub error code of UNKNOWN as provided by the NexPlayer engine.
 
 #### CODEC_DECODING_ERROR = (0x0000000E,NexErrorCategory.GENERAL, "The codec reported an error")
 
 Audio or video decoding error.
 
-E.g. `NexPlayer` get a failure during parsing the content for playback or during decoding the audio or video bitstreams..
+E.g. NexPlayer get a failure during parsing the content for playback or during decoding the audio or video bitstreams..
 
 #### DATA_INACTIVITY_TIMEOUT = ( 0x00000026,NexErrorCategory.GENERAL, "The response timed out")
 
@@ -7856,9 +7856,9 @@ E.g. `pause()` is called when the current state is NEXPLAYER_STATE_STOP.
 
 #### NOT_SUPPORT_AUDIO_CODEC = ( 0x00000009,NexErrorCategory.NOT_SUPPORT, "The audio codec is not supported")
 
-`NexPlayer` does not support the audio codec of the content.
+NexPlayer does not support the audio codec of the content.
 
-E.g. The content is not yet supported by NexPlayer or a customer could not include codecs of `NexPlayer` SDK due
+E.g. The content is not yet supported by NexPlayer or a customer could not include codecs of NexPlayer SDK due
 to licensing issues.
 
 #### NOT_SUPPORT_MEDIA = ( 0x0000000C,NexErrorCategory.NOT_SUPPORT, "The content format is not supported or is not playable A/V track")
@@ -7883,9 +7883,9 @@ content with an wide interval between each Iframe cannot be seeked.
 
 #### NOT_SUPPORT_VIDEO_CODEC = ( 0x0000000A,NexErrorCategory.NOT_SUPPORT, "The video codec is not supported")
 
-`NexPlayer` does not support the video codec of the content.
+NexPlayer does not support the video codec of the content.
 
-E.g. The content is not yet supported by `NexPlayer` or the customer did not include codecs of `NexPlayer` SDK due
+E.g. The content is not yet supported by NexPlayer or the customer did not include codecs of NexPlayer SDK due
 to licensing issues.
 
 #### NOT_SUPPORT_VIDEO_RESOLUTION = ( 0x0000000B,NexErrorCategory.NOT_SUPPORT, "The video resolution is not supported")
@@ -7904,24 +7904,24 @@ The default value of the SOURCE_OPEN_TIMEOUT property is 300 seconds.
 
 Unknown error.
 
-This error is a kind of internal error such as "system failure". E.g. `NexPlayer` returns this when memory allocation is failed for unknown reasons. It’s mostly an error that the user can not handle. Please contact a `NexPlayer` developer for more details.
+This error is a kind of internal error such as "system failure". E.g. NexPlayer returns this when memory allocation is failed for unknown reasons. It’s mostly an error that the user can not handle. Please contact a NexPlayer developer for more details.
 
 #### UNSUPPORTED_SDK_FEATURE = (0x70000001, NexErrorCategory.API, " JNI - SDK called unsupported feature" )
 
-`NexPlayer` detected an unsupported feature(i.e.
+NexPlayer detected an unsupported feature(i.e.
 
 recording or timeshift) or called a specific feature(i.e. call video capture in H/W mode).
 
 ### NexEventReceiver Class Reference
 
-This class implements all `NexPlayer` interfaces.
+This class implements all NexPlayer interfaces.
 
 An instance of *NexEventReceiver* can be used for parameter of NexPlayer.addEventRecevier, `NexPlayer.removeEventReceiver`
 
 
 #### void onAsyncCmdComplete (NexPlayer mp,int command,int result,int param1,int param2)**
 
-When an asynchronous method of `NexPlayer` has completed successfully or failed, this event occurs.
+When an asynchronous method of NexPlayer has completed successfully or failed, this event occurs.
 
 **Parameters**
 
@@ -8137,7 +8137,7 @@ Notification that the audio rendering thread has been created.
 
 | Name         | Description                                               |
 |--------------|-------------------|
-| mp           | The `NexPlayer` object to which this event applies.      |
+| mp           | The NexPlayer object to which this event applies.      |
 | samplingRate | The sample rate (in Hz) of the content to be played back. |
 | channelNum   | The number of channels in the content (1=mono, 2=stereo). |
 
@@ -8152,21 +8152,21 @@ Notification that the audio rendering thread has been destroyed.
 
 | Name | Description                                          |
 |------|--------------|
-| mp   | The `NexPlayer` object to which this event applies. |
+| mp   | The NexPlayer object to which this event applies. |
 
 Implements `NexPlayer.IListener`.
 
 #### void onAudioRenderPrepared (NexPlayer mp)
 
-This method is called when `NexPlayer` recognizes which audio render will be used.
+This method is called when NexPlayer recognizes which audio render will be used.
 
-Because `NexPlayer` supports only a SW audio render, this method will not be used.
+Because NexPlayer supports only a SW audio render, this method will not be used.
 
 **Parameters**
 
 | Name | Description                                          |
 |------|--------------|
-| mp   | The `NexPlayer` object to which this event applies. |
+| mp   | The NexPlayer object to which this event applies. |
 
 Implements `NexPlayer.IListener`.
 
@@ -8178,7 +8178,7 @@ This reports the current buffering status.
 
 | Name                | Description                                          |
 |---------------------|--------------|
-| mp                  | The `NexPlayer` object to which this event applies. |
+| mp                  | The NexPlayer object to which this event applies. |
 | progress_in_percent | The current buffering percentage.                    |
 
 Implements `NexPlayer.IListener`.
@@ -8200,7 +8200,7 @@ This reports the end of buffering.
 
 | Name | Description                                          |
 |------|--------------|
-| mp   | The `NexPlayer` object to which this event applies. |
+| mp   | The NexPlayer object to which this event applies. |
 
 Implements `NexPlayer.IListener`.
 
@@ -8212,7 +8212,7 @@ Reports Data Inactivity Timeout.
 
 | Name | Description                                          |
 |------|--------------|
-| mp   | The `NexPlayer` object to which this event applies. |
+| mp   | The NexPlayer object to which this event applies. |
 
 Implements `NexPlayer.IListener`.
 
@@ -8224,7 +8224,7 @@ This method reports the dataRange value that is contained in the EXT-X-DATERANGE
 
 | Name | Description                                                                                                  |
 |------|------|
-| mp   | The `NexPlayer` object to which this event applies.                                                         |
+| mp   | The NexPlayer object to which this event applies.                                                         |
 | data | The array of `NexDateRangeData` object that includes dataRange and datacontained in the EXT-X-DATERANGE tag. |
 
 Implements NexPlayer.IListener.
@@ -8270,7 +8270,7 @@ This function is called when an error is generated by the Downloader module.
 
 | Name   | Description                                                                               |
 |--------|-------------------------------|
-| mp     | The `NexPlayer` object to which this event applies.                                      |
+| mp     | The NexPlayer object to which this event applies.                                      |
 | msg    | An integer indicating the error generated by the Downloader module.                       |
 | param1 | This parameter is currently undefined but reserved for future use and should not be used. |
 
@@ -8284,7 +8284,7 @@ This method reports when a Downloader event has started.
 
 | Name   | Description                                                                           |
 |--------|---------------------------|
-| mp     | The `NexPlayer` object to which this event applies.                                  |
+| mp     | The NexPlayer object to which this event applies.                                  |
 | param1 | This parameter is currently undefined and is not used but is reserved for future use. |
 | param2 | The total size of the content file to be downloaded.                                  |
 
@@ -8298,7 +8298,7 @@ This function is called when a Downloader event has completed.
 
 | Name   | Description                                                                           |
 |--------|---------------------------|
-| mp     | The `NexPlayer` object to which this event applies.                                  |
+| mp     | The NexPlayer object to which this event applies.                                  |
 | param1 | This parameter is currently undefined and is not used but is reserved for future use. |
 
 Implements `NexPlayer.IListener`.
@@ -8311,7 +8311,7 @@ This function is called to pass the downloading progress of a Downloader event.
 
 | Name   | Description                                                                                  |
 |--------|----------------------------------|
-| mp     | The `NexPlayer` object to which this event applies.                                         |
+| mp     | The NexPlayer object to which this event applies.                                         |
 | param1 | This parameter is currently undefined and is not used but is reserved for future use.        |
 | param2 | The time remaining until the downloading file has saved completely, in *msec*(milliseconds). |
 | param3 | The size of the portion of the downloading file already received. in bytes (B).              |
@@ -8352,7 +8352,7 @@ Implements `NexPlayer.IListener`.
 
 #### void onDynamicThumbnailData (NexPlayer mp, int width, int height, int cts, Object bitmap)**
 
-This method will be called by the `NexPlayer` engine when thumbnail data is created.
+This method will be called by the NexPlayer engine when thumbnail data is created.
 
 If the *enableDynamicThumbnail()* method is called before Smooth Streaming content is in the *open* state,
 then this method will be called and gets the thumbnail information associated with the content.
@@ -8362,7 +8362,7 @@ then this method will be called and gets the thumbnail information associated wi
 
 | Name   | Description                                        |
 |--------|------------|
-| mp     | The `NexPlayer` object generating the event.      |
+| mp     | The NexPlayer object generating the event.      |
 | width  | The width of the thumbnail image.                  |
 | height | The height of the thumbnail image.                 |
 | cts    | The current timestamp of the thumbnail image.      |
@@ -8378,7 +8378,7 @@ This callback method informs the Dynamic Thumbnail listener when the end of thum
 
 | Name   | Description                                        |
 |--------|------------|
-| mp     | The `NexPlayer` object generating the event.      |
+| mp     | The NexPlayer object generating the event.      |
 
 Implements `NexPlayer.IDynamicThumbnailListener`.
 
@@ -8393,7 +8393,7 @@ This event occurs when the player reaches the end of the file or stream. In most
 
 | Name   | Description                                        |
 |--------|------------|
-| mp     | The `NexPlayer` object generating the event.      |
+| mp     | The NexPlayer object generating the event.      |
 
 Implements `NexPlayer.IListener`.
 
@@ -8405,20 +8405,20 @@ An error has occurred during playback.
 
 | Name      | Description                                   |
 |-----------|---------------------------|
-| mp        | The `NexPlayer` object generating the event. |
+| mp        | The NexPlayer object generating the event. |
 | errorcode | The error code for the generated error.       |
 
 Implements `NexPlayer.IListener`.
 
 #### int onHTTPABRTrackChange (NexPlayer mp, int param1, int param2, int param3)
 
-This method will be called by the `NexPlayer` engine when the ABR track is switched.
+This method will be called by the NexPlayer engine when the ABR track is switched.
 
 **Parameters**
 
 | Name   | Description                                   |
 |--------|---------------------------|
-| mp     | The `NexPlayer` object generating the event. |
+| mp     | The NexPlayer object generating the event. |
 | param1 | The current network bandwidth.                |
 | param2 | The current track bandwidth.                  |
 | param3 | The target track bandwidth.                   |
@@ -8433,9 +8433,9 @@ Implements `NexPlayer.IHTTPABRTrackChangeListener`.
 
 #### void onHTTPRequest (NexPlayer mp, String strRequest)
 
-This method allows `NexPlayer` to pass HTTP request messages to an application.
+This method allows NexPlayer to pass HTTP request messages to an application.
 
-While `NexPlayer` normally handles HTTP requests and responses internally, in cases where additional information is required from the server (for example user cookies), this method can be used in conjunction with *onHTTPResponse* to allow an application to handle that information directly.
+While NexPlayer normally handles HTTP requests and responses internally, in cases where additional information is required from the server (for example user cookies), this method can be used in conjunction with *onHTTPResponse* to allow an application to handle that information directly.
 
 >**Note** This should be called before a request is sent to an HTTP server. To modify an HTTP request, see *onModifyHttpRequest*. To handle the response received, call *onHTTPResponse*.
 
@@ -8443,7 +8443,7 @@ While `NexPlayer` normally handles HTTP requests and responses internally, in ca
 
 | Name       | Description                                               |
 |------------|-------------------|
-| mp         | The `NexPlayer` object to which this event applies.      |
+| mp         | The NexPlayer object to which this event applies.      |
 | strRequest | The HTTP request to be sent to the server, as a *String*. |
 
 **See Also**
@@ -8457,7 +8457,7 @@ Implements `NexPlayer.IListener`.
 
 This method allows responses from an HTTP server to be received and handled in a more customized way.
 
-While `NexPlayer` normally handles HTTP requests and responses internally, in cases where additional information is required from the server (for example user cookies), this method can be used in conjunction with *onHTTPRequest* to handle that information directly.
+While NexPlayer normally handles HTTP requests and responses internally, in cases where additional information is required from the server (for example user cookies), this method can be used in conjunction with *onHTTPRequest* to handle that information directly.
 
 >**Note** This should be called after a response has been received from the server. To change the requests being made,on *ModifyHttpRequest* should be called.
 
@@ -8466,7 +8466,7 @@ While `NexPlayer` normally handles HTTP requests and responses internally, in ca
 
 | Name        | Description                                          |
 |-------------|--------------|
-| mp          | The `NexPlayer` object to which this event applies. |
+| mp          | The NexPlayer object to which this event applies. |
 | strResponse | The response from the HTTP server, as a *String*.    |
 
 **See Also**
@@ -8479,13 +8479,13 @@ Implements `NexPlayer.IListener`.
 
 #### String onModifyHttpRequest (NexPlayer mp, int param1, Object input_obj)
 
-This method provides the HTTP Request that will be used by `NexPlayer` when an HTTP request is modified.
+This method provides the HTTP Request that will be used by NexPlayer when an HTTP request is modified.
 
 **Parameters**
 
 | Name      | Description                                          |
 |-----------|--------------|
-| mp        | The `NexPlayer` object to which this event applies. |
+| mp        | The NexPlayer object to which this event applies. |
 | param1    | The length of the current HTTP Request data.         |
 | input_obj | The modified HTTP Request data.                      |
 
@@ -8504,14 +8504,14 @@ Implements `NexPlayer.IListener`.
 
 #### void onOfflineKeyExpiredListener (NexPlayer mp)
 
-This method will be called by the `NexPlayer` engine when the keyId of media DRM should be expired.
+This method will be called by the NexPlayer engine when the keyId of media DRM should be expired.
 
 
 **Parameters**
 
 | Name | Description                                   |
 |------|---------------------------|
-| mp   | The `NexPlayer` object generating the event. |
+| mp   | The NexPlayer object generating the event. |
 
 **Returns**
 
@@ -8528,7 +8528,7 @@ This method will be called by the NexPlayer engine when the keyId of media DRM s
 
 | Name | Description                                   |
 |------|---------------------------|
-| mp   | The `NexPlayer` object generating the event. |
+| mp   | The NexPlayer object generating the event. |
 
 **Returns**
 
@@ -8539,14 +8539,14 @@ Implements `NexPlayer.IOfflineKeyListener`.
 
 #### void onOfflineKeyStoreListener (NexPlayer mp,byte[ ]keyId)
 
-This method will be called by the `NexPlayer` engine when the keyId of media DRM should be stored.
+This method will be called by the NexPlayer engine when the keyId of media DRM should be stored.
 
 **Parameters**
 
 
 | Name  | Description                                   |
 |-------|---------------------------|
-| mp    | The `NexPlayer` object generating the event. |
+| mp    | The NexPlayer object generating the event. |
 | keyId | The Key ID of Media drm for offline playback. |
 
 
@@ -8560,7 +8560,7 @@ Reports Pause Supervision Timeout.
 
 | Name | Description                                   |
 |------|---------------------------|
-| mp   | The `NexPlayer` object generating the event. |
+| mp   | The NexPlayer object generating the event. |
 
 Implements `NexPlayer.IListener`.
 
@@ -8571,7 +8571,7 @@ This method provides SEI picture timing information about video frames of H.264 
 This method is called when *ENABLE_H264_SEI* is enabled and the H.264 content contains supplemental enhancement information (SEI). While SEI may include a variety of attributes, this method specifically receives SEI
 picture timing information when available.
 
-`NexPlayer` delivers the timing information through this method by passing an instance of `NexPictureTimingInfo`
+NexPlayer delivers the timing information through this method by passing an instance of `NexPictureTimingInfo`
 whenever SEI picture timing information is received.
 
 **Parameters**
@@ -8579,7 +8579,7 @@ whenever SEI picture timing information is received.
 
 | Name                 | Description                                                                                         |
 |----------------------|---------------------|
-| mp                   | The `NexPlayer` object to which this event applies.                                                |
+| mp                   | The NexPlayer object to which this event applies.                                                |
 | arrPictureTimingInfo | The `NexPictureTimingInfo` object that includes the SEI picture timing information for the content. |
 
 Implements `NexPlayer.IListener`.
@@ -8598,7 +8598,7 @@ The values from *strTag* and *offset* parameters can be added to determine the c
 
 | Name   | Description                                                                                                                           |
 |--------|-----------|
-| mp     | The `NexPlayer` object generating the event.                                                                                         |
+| mp     | The NexPlayer object generating the event.                                                                                         |
 | strTag | The most recent #EXT-X-PROGRAM-DATE-TIME tag in the HLS content, as a *String*.                                                       |
 | offset | The time offset of the currently decoding frame’s timestamp with respect to the #EXT-X-PR- OGRAM-DATE-TIME tag time, in milliseconds. |
 
@@ -8611,7 +8611,7 @@ Reports RTSP command Timeout.
 
 | Name | Description                                   |
 |------|---------------------------|
-| mp   | The `NexPlayer` object to which this event applies. |
+| mp   | The NexPlayer object to which this event applies. |
 
 Implements `NexPlayer.IListener`.
 
@@ -8623,20 +8623,20 @@ This method reports the arbitrary session data of the HLS master playlist.
 
 | Name | Description                                                                                               |
 |------|---------------------------|
-| mp   | The `NexPlayer` object to which this event applies.                                                      |
+| mp   | The NexPlayer object to which this event applies.                                                      |
 | data | The array of `NexSessionData` object that includes the arbitrary session data of the HLS master playlist. |
 
 Implements `NexPlayer.IListener`.
 
 #### void onSignalStatusChanged (NexPlayer mp, int pre, int now)
 
-`NexPlayer`’s signal status has been changed.
+NexPlayer’s signal status has been changed.
 
 **Parameters**
 
 | Name | Description                                          |
 |------|--------------|
-| mp   | The `NexPlayer` object to which this event applies. |
+| mp   | The NexPlayer object to which this event applies. |
 | pre  | The previous signal status.                          |
 | now  | The current signal status.                           |
 
@@ -8644,9 +8644,9 @@ Implements `NexPlayer.IListener`.
 
 #### void onStateChanged (NexPlayer mp, int pre, int now)
 
-`NexPlayer`’s state has been changed.
+NexPlayer’s state has been changed.
 
-This method is called when `NexPlayer`’s state has been changed but it does not mean that the changing operation
+This method is called when NexPlayer’s state has been changed but it does not mean that the changing operation
 has completed. Therefore, the next operation can be carried out only after the event *onAsyncCmdComplete* is
 received, not when this event,*onStateChanged*, is called.
 
@@ -8654,7 +8654,7 @@ received, not when this event,*onStateChanged*, is called.
 
 | Name | Description                                  |
 |------|--------------------------|
-| mp   | The `NexPlayer` object generating the event |
+| mp   | The NexPlayer object generating the event |
 | pre  | The previous play status.                    |
 | now  | The current play status.                     |
 
@@ -8696,7 +8696,7 @@ To determine the new content information when this event occurs, call `getConten
 	
   <tr><td><b>NEXPLAYER_STATUS_REPORT_VIDEO_INIT_FAILED (0x00000004)</b>: The video codec failed to initialize. This can happen for several reasons. The container may     indicate the wrong video codec, or the video stream may be incorrect or corrupted, or the video stream may use a codec version or features that NexPlayer doesn’t support.</td></tr>
 	
-<tr><td><b>NEXPLAYER_STATUS_REPORT_TRACK_CHANGED (0x00000005)</b>: The track has changed. This happens for protocols such as HLS that provide the content in multiple formats or at multiple resolutions or bitrates. The ID of the new track can be found in mCurrTrackID, and also inparam1. When this event occurs, `NexPlayer` also enerates a eNEXPLAYER_CONTENT_INFO_UPDATED event.</td></tr>
+<tr><td><b>NEXPLAYER_STATUS_REPORT_TRACK_CHANGED (0x00000005)</b>: The track has changed. This happens for protocols such as HLS that provide the content in multiple formats or at multiple resolutions or bitrates. The ID of the new track can be found in mCurrTrackID, and also inparam1. When this event occurs, NexPlayer also enerates a eNEXPLAYER_CONTENT_INFO_UPDATED event.</td></tr>
 	
   <tr><td><b>NEXPLAYER_STATUS_REPORT_STREAM_CHANGED (0x00000006)</b>: The stream being played back has changed (between the states Audio-Only, Video-Only and     Audio+Video). The new stream type is in mMediaType, and also in param1.</td></tr>
 	
@@ -8747,7 +8747,7 @@ Called when initially beginning playback of media content with associated subtit
 
 | Name      | Description                                                                                                                                           |
 |-----------|---------------------------|
-| mp        | The `NexPlayer` object to which this event applies.                                                                                                  |
+| mp        | The NexPlayer object to which this event applies.                                                                                                  |
 | numTracks | The number of subtitle tracks available for this media. Note that this may be 0 if there are no subtitles, or this function may not be called at all. |
 
 Implements `NexPlayer.IListener`.
@@ -8765,7 +8765,7 @@ The text to display is provided in a *NexClosedCaption* object as a byte array; 
 
 | Name       | Description                                                          |
 |------------|------------------------------|
-| mp         | The `NexPlayer` object to which this event applies.                 |
+| mp         | The NexPlayer object to which this event applies.                 |
 | trackIndex | This is always zero and should always be ignored.                    |
 | textInfo   | The text to be displayed (cast this to a *NexClosedCaption* object). |
 
@@ -8785,7 +8785,7 @@ ignore this event and create their own timer, in which case they can use the cur
 
 | Name     | Description                                  |
 |----------|--------------------------|
-| mp       | The `NexPlayer` object generating the event |
+| mp       | The NexPlayer object generating the event |
 | millisec | Current play position in milliseconds.       |
 
 Implements `NexPlayer.IListener`.
@@ -8806,7 +8806,7 @@ Timed metadata includes additional information about the playing content that ma
 
 | Name      | Description                                                                                                    |
 |-----------|--------|
-| mp        | The `NexPlayer` object to which this event applies.                                                           |
+| mp        | The NexPlayer object to which this event applies.                                                           |
 | TimedMeta | An `NexID3TagInformation` object that contains the timed metadata associated with the content to be displayed. |
 
 Implements `NexPlayer.IListener`.
@@ -8889,7 +8889,7 @@ When timed metadata is used with HLS content, the `NexID3TagInformation` object 
 
 This method gets a list of customized ID3 tags and the extra data they contain included in content timed metadata.
 
-For the list of customized ID3 tags to be recognized and handled by `NexPlayer`, they should be set using the NexProperty *TIMED_ID3_META_KEY* after `NexPlayer` is initialized but before *NexPlayer.open* is called.
+For the list of customized ID3 tags to be recognized and handled by NexPlayer, they should be set using the NexProperty *TIMED_ID3_META_KEY* after NexPlayer is initialized but before *NexPlayer.open* is called.
 
 **Returns**
 
@@ -8926,7 +8926,7 @@ included in the other ID3 tag frames, and are tagged:
 Where the ’Owner identifier’ string includes contact information for the organization which is responsible for the
 frame and its provided binary data.
 
-`NexPlayer` merely passes the private frame information to the client application where it can be handled as desired.
+NexPlayer merely passes the private frame information to the client application where it can be handled as desired.
 
 #### NexID3TagText getText ( )
 
@@ -8950,8 +8950,8 @@ The timestamp of timed metadata in millisecond unit.
 
 This method sets the list of customized ID3 tags and the extra data they contain included in content timed metadata.
 
-For the list of customized ID3 tags to be recognized and handled by `NexPlayer`, they should be set using the
-NexProperty *TIMED_ID3_META_KEY* after `NexPlayer` is initialized but before *NexPlayer.open* is called.
+For the list of customized ID3 tags to be recognized and handled by NexPlayer, they should be set using the
+NexProperty *TIMED_ID3_META_KEY* after NexPlayer is initialized but before *NexPlayer.open* is called.
 
 **Parameters**
 
@@ -9008,9 +9008,9 @@ This method sets the text frame data in this class.
 
 ### NexID3TagPicture Class Reference
 
-This class allows `NexPlayer` to handle picture information included in timed metadata ID3 tags.
+This class allows NexPlayer to handle picture information included in timed metadata ID3 tags.
 
-`NexPlayer` passes an instance of this class whenever new picture information for the current content is received from its ID3 tags, and is included in an updated `NexID3TagInformation` object.
+NexPlayer passes an instance of this class whenever new picture information for the current content is received from its ID3 tags, and is included in an updated `NexID3TagInformation` object.
 
 
 #### byte[] getPictureData ( )
@@ -15972,13 +15972,13 @@ This enumeration defines the possible scaling mode for output video and captions
 
 ### NexABRController.SegmentOption Enum Reference
 
-This enum defines the options possible for how `NexPlayer` should handle existing buffered content as a track changes (due to a set target bandwidth).
+This enum defines the options possible for how NexPlayer should handle existing buffered content as a track changes (due to a set target bandwidth).
 
-While `NexPlayer` will by default change to a new target bandwidth as optimally as possible, there may be instances when it is preferable either for an application to preferentially change to the target bandwidth track more quickly (regardless of buffered content segments) or to first play buffered segments before changing tracks.
+While NexPlayer will by default change to a new target bandwidth as optimally as possible, there may be instances when it is preferable either for an application to preferentially change to the target bandwidth track more quickly (regardless of buffered content segments) or to first play buffered segments before changing tracks.
 
 These segment options can be used to set the parameter *segOption* when calling *setTargetBandwidth* to one of the following:
 
-- `DEFAULT` : Default (`NexPlayer` will decide between *QUICKMIX* (changing tracks quickly) and *LATEMIX*
+- `DEFAULT` : Default (NexPlayer will decide between *QUICKMIX* (changing tracks quickly) and *LATEMIX*
     (playing buffered content and changing tracks more slowly)).
 - `QUICKMIX` : NexPlayer will clear the buffer as much as possible and will start to download new track so
     user can see a new track faster.
@@ -15989,13 +15989,13 @@ These segment options can be used to set the parameter *segOption* when calling 
 
 - `DEFAULT = (0x00000000)`
     
-    Default. `NexPlayer` will decide betweenQUICKMIXandLATEMIXoptions automatically.
+    Default. NexPlayer will decide betweenQUICKMIXandLATEMIXoptions automatically.
 - `QUICKMIX = (0x00000001)`
     
-    `NexPlayer` will clear the buffer quickly and will start downloading new track segments more quickly.
+    NexPlayer will clear the buffer quickly and will start downloading new track segments more quickly.
 - `LATEMIX = (0x00000002)`
     
-    `NexPlayer` will preserve buffered segments and will download new track.
+    NexPlayer will preserve buffered segments and will download new track.
 - `int mCode`
 
 **See Also**
@@ -16005,7 +16005,7 @@ These segment options can be used to set the parameter *segOption* when calling 
 
 ### NexVideoView.Settings Class Reference
 
-This class manages the setting values needed for initializing Video Renderer, Caption Renderer and `NexPlayer` internally.
+This class manages the setting values needed for initializing Video Renderer, Caption Renderer and NexPlayer internally.
 
 To initialize successfully,*setSettings* must be called before *setVideoPath* or *setVideoURI* is called, after changing the setting value by using *setValue*. Note that *setSettings* is not guaranteed to work properly when called at any other time.
 
@@ -16025,7 +16025,7 @@ The value correspondent to the key.
 
 #### boolean setValue (int key,int value)
 
-This method sets the setting values for the properties of `NexPlayer`.
+This method sets the setting values for the properties of NexPlayer.
 
 **Parameters**
 
@@ -16039,7 +16039,7 @@ The value of the property.
 
 #### boolean setValue (int key,boolean value)
 
-This method sets the setting values for the properties of `NexPlayer`.
+This method sets the setting values for the properties of NexPlayer.
 
 **Parameters**
 
@@ -16055,7 +16055,7 @@ The value of the property.
 
 #### boolean setValue (int key, CEARenderMode value)
 
-This method sets the setting values for the properties of `NexPlayer`.
+This method sets the setting values for the properties of NexPlayer.
 
 
 **Parameters**
@@ -16154,7 +16154,7 @@ These are available caption string styles :
 
 ### NexStatisticsMonitor.SystemStatisticsMetric Enum Reference
 
-This is an enumeration of the possible system statistics that can be requested during playback of HLS, DASH or SS content in `NexPlayer`.
+This is an enumeration of the possible system statistics that can be requested during playback of HLS, DASH or SS content in NexPlayer.
 
 These statistics are only related to the system performance during playback. For other statistics specifically about the HLS, DASH or SS content playback or HTTP statistics, monitor *GeneralStatisticsMetric* or *HttpStatisticsMetricinstead*.
 
@@ -16192,7 +16192,7 @@ This enumeration defines the possible options for how an application should use 
 
 The options defined by this enumeration are possible values used to set the *targetOption* parameter when calling *setTargetBandwidth* to set a new target bandwidth for streaming content with multiple tracks at different bandwidths such as HLS.
 
-By default, when a target bandwidth is set, `NexPlayer` will choose the closest track available at a bandwidth below the target. For example, if there is content with five tracks at bandwidths of 500k, 900k, 1200k, 1500k, and 2000k, and the target bandwidth is chosen as 1200k with the option set to *DEFAULT* or *BELOW*, the targe t bandwidth will be set to 900k. If instead the target option is set to *ABOVE* in the same example, `NexPlayer` will set the target bandwidth to 1500k.
+By default, when a target bandwidth is set, NexPlayer will choose the closest track available at a bandwidth below the target. For example, if there is content with five tracks at bandwidths of 500k, 900k, 1200k, 1500k, and 2000k, and the target bandwidth is chosen as 1200k with the option set to *DEFAULT* or *BELOW*, the targe t bandwidth will be set to 900k. If instead the target option is set to *ABOVE* in the same example, NexPlayer will set the target bandwidth to 1500k.
 
 If a target bandwidth is to be set exactly, using the target option *MATCH*, then the target value will ONLY be changed if exactly a track with a bandwidth exactly the same as the value set is available.
 
