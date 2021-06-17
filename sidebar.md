@@ -9,11 +9,6 @@
     - [Synchronization Feature](/Synchronization-Feature-android.md)
     - [API Documentation](/advanced.md)
 - 3rd Party Integrations
-    - [VAST](/vast.md) 
-    - [Agama](/Agama.md) 
-    - [Agora](/agora.md)
-    - [Conviva](/Conviva.md)     
-    - [Freewheel](/freewheel.md)
-    - [AWS-NexPlayer](/AWSMediaServices-NexPlayer.md)
+   - [AWS Integration](https://nexplayer.github.io/NexPlayer_AWS/)
 - [Releases](/releases.md) 
 - [Request Demo](https://nexplayersdk.com/ios-player-sdk/) 
