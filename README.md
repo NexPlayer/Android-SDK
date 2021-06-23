@@ -16,6 +16,10 @@ Feel free to contact us to request a demo
 
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.846 (23/06/2021)
+- [Fix] Fixed an issue with SET_PRESENTATION_DELAY property
+- [Update] Updated settings organization from the sample application
+
 ### version 6.72.0.844 (28/05/2021)
 - [Add] EMSG events for HLS/fMP4
 
