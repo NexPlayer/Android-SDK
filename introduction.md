@@ -10,11 +10,16 @@
 
 - Android 4.4 and above
 
+#### Basic Functionalities
+- Start (from beginning or anywhere) Pause/Resume
+- Seek
+- Select Media Stream (Multi-Audio/Video/Subtitle) Turn on/off Media Stream
+- Generate playback statistics information 
+
 #### Functionalities
 
 - Basic video controls: start, seek, stop
 - H.264 aspect-ratio
-- H.264 Picture Timing SEI Parsing
 - Eye-pleaser (seamless frame skipping method) 
 - ID3 Tags (including Private Frame Data)
 - EMSG Events
@@ -23,40 +28,12 @@
 - Set subtitle display property
 - Generate playback statistics information 
 - Multiple Instance
-- Chromecast Pre-integrated
 - Android TV Input
-- Calculate Average Audio Roundnes
 - Select Media Stream (Multi-Audio/Video/Subtitle) Turn on/off Media Stream
 
 #### Streaming Protocols
 
 - HTTP Live Streaming
-    - Supported Playlist Tags
-    	- Basic Tags
-    		- EXTM3U
-    		- EXT-X-VERSION
-		- Media Segment Tags
-			- EXTINF
-			- EXT-X-BYTERANGE
-			- EXT-X-MAP
-			- EXT-X-PROGRAM-DATE-TIME
-			- EXT-X-DATERANGE
-		- Media Playlist Tags
-			- EXT-X-TARGETDURATION
-			- EXT-X-MEDIA-SEQUENCE
-			- EXT-X-DISCONTINUITY-SEQUENCE
-			- EXT-X-ENDLIST
-			- EXT-X-PLAYLIST-TYPE
-			- EXT-X-I-FRAMES-ONLY
-		- Master Playlist Tags
-			- EXT-X-MEDIA
-			- EXT-X-STREAM-INF
-			- EXT-X-I-FRAME-STREAM-INF
-			- EXT-X-SESSION-DATA
-			- EXT-X-SESSION-KEY
-		- Media or Master Playlist Tags
-			- EXT-X-INDEPENDENT-SEGMENTS
-			- EXT-X-START	
 - MPEG-DASH
 - HLSv06
 - VoD
