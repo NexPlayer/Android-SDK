@@ -7,6 +7,7 @@
     - [Logging To File](/log2File.md) 
     - [Loggging Callback](/logging_callback.md) 
     - [Synchronization Feature](/Synchronization-Feature-android.md)
+    - [Error Codes](/error-codes.md)
     - [API Documentation](/advanced.md)
 - 3rd Party Integrations
    - [AWS Integration](https://nexplayer.github.io/NexPlayer_AWS/)
