@@ -1,6 +1,6 @@
 # Enabling Video Synchronization Feature
 
-## What is Nexplayer's synchronization feature?
+## What is NexPlayer's synchronization feature?
 
 NexPlayer synchronization feature technology allows you to sync the video arrival and stream video synchronously across different devices using the DASH SPD value. This is also possible for HLS streams by controlling the SPD value from the client-side.
 
