@@ -35,7 +35,6 @@ section.
 
 Streaming → GO TO URL (at the bottom) → put the URL in the “Stream URL
 
-Synchronization feature is highly dependent on the internet speed and the configuration of the manifest.
 
 ### Limitations
 
