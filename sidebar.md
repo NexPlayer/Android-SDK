@@ -5,8 +5,9 @@
     - [Media DRM](/MediaDRM.md) 
     - [SW DRM](/SW_WV.md) 
     - [Logging To File](/log2File.md) 
-    - [Loggging Callback](/logging_callback.md) 
     - [Synchronization Feature](/Synchronization-Feature-android.md)
+    - [Loggging Callback](/logging_callback.md) 
+    - [Crash Reports](/crash-reports.md)     
     - [Error Codes](/error-codes.md)
     - [API Documentation](/advanced.md)
 - 3rd Party Integrations
