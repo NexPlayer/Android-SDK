@@ -716,7 +716,7 @@ Live HLS playback option.
 
 This must be one of the following values:
 
-- **LIVE_VIEW\_RECENT (0x00000000)** Start playback from the most recently received media segment (.ts) files of the HLS live playlist. For example, if 5.ts is the latest media segment (.ts), playback will begin at the beginning of that segment.
+- **LIVE_VIEW\_RECENT (0x00000000)** Starts playback from the 3rd segment from the last. For example, if manifest have 1.ts, 2.ts, 3.ts, 4.ts, 5.ts then playback will start from the beginning of 3.ts. 
 
 - **LIVE_VIEW\_RECENT\_BYTARGETDUR (0x00000001)** Start playback from the most recently received media segement (.ts) files, based on the value set for the `EXT-X-TARGETDURATION` tag in the HLS live playlist. (The player will begin playback at the media segment that immediately precedes the media segment that is three times (x3) the target duration before the latest media segment file loaded). As a concrete example, if the target duration is set to 12 seconds and the total duration of currently loaded media segments is 48 seconds, playback will begin at the media file that immediately precedes the media segment with the timestamp at 12 (48-36) seconds. If this example HLS playlist includes media segment files 1.ts (duration of 10 seconds), 2.ts (9 sec), 3.ts (11 sec), 4.ts (10 sec), and 5.ts (8 sec), then playback will begin at the first media segment, 1.ts, because it immediate precedes the 2.ts segment (where the timestamp at 12 seconds occurs).
 
@@ -724,25 +724,12 @@ This must be one of the following values:
 
 - **LIVE_VIEW\_LOW\_LATENCY (0x00000003)** Playback starts from a position close to real-time and frame skipping may occur during playback to maintain low latency.
 
+> Note: When `EXT-X-PROGRAM-DATE-TIME` exists, playback will start from the first segment that is matching with the current time. 
+
 **Type:** unsigned integer
 
 **Default:** LIVE\_VIEW\_RECENT
 
-#### LIVE\_VIEW\_RECENT 0x00000000 
-
-This is a possible setting for the `LIVE_VIEW_OPTION` property; see that property for details.
-
-#### LIVE\_VIEW\_RECENT\_BYTARGETDUR 0x00000001 
-
-This is a possible setting for the `LIVE_VIEW_OPTION` property; see that property for details.
-
-#### LIVE_VIEW\_FIRST 0x00000002 
-
-This is a possible setting for the `LIVE_VIEW_OPTION` property; see that property for details.
-
-#### LIVE_VIEW\_LOW\_LATENCY 0x00000003 
-
-This is a possible setting for the `LIVE_VIEW_OPTION` property; see that property for details.
 
 ### LOCK\_END\_DATE (0x000A0002)
 
