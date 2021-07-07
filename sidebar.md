@@ -4,6 +4,7 @@
 - Advanced Usage
     - [Media DRM](/MediaDRM.md) 
     - [SW DRM](/SW_WV.md) 
+    - [Low Latency](/low-latency.md) 
     - [Logging To File](/log2File.md) 
     - [Synchronization Feature](/Synchronization-Feature-android.md)
     - [Logging Callback](/logging_callback.md) 
