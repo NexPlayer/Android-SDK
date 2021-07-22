@@ -1,5 +1,10 @@
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.848 (22/07/2021)
+- [Update] Improvements for NexRecovery with SWDRM fallback
+- [Add] Expose license server response to application layer when there is a DRM error
+- [Add] Deliver EMSG events with TimedMetadata callback
+
 ### version 6.72.0.846 (23/06/2021)
 - [Fix] Fixed an issue with SET_PRESENTATION_DELAY property
 - [Update] Updated settings organization from the sample application
