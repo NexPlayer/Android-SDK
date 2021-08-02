@@ -8,7 +8,7 @@
 
 #### Operating Systems
 
-- Android 4.4 and above
+- Android 4.1 and above
 
 #### Basic Functionalities
 - Start (from beginning or anywhere) Pause/Resume
