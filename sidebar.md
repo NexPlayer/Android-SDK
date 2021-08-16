@@ -31,5 +31,5 @@
 - [Releases](/releases.md) 
 **Links**
 - [<img src="https://nexplayer.github.io/Android-SDK/assets/help.svg">Request Demo](https://nexplayersdk.com/android-player-sdk/)
-- [<img src="https://nexplayer.github.io/Android-SDK/assets/linkedin.svg">LinkedIn](https://www.linkedin.com/company/nexstreaming/mycompany/)
-- [<img src="https://nexplayer.github.io/Android-SDK/assets/code.svg">Other Platforms](https://www.linkedin.com/company/nexstreaming/)
+- [<img src="https://nexplayer.github.io/Android-SDK/assets/linkedin.svg">LinkedIn](https://www.linkedin.com/company/nexstreaming/)
+- [<img src="https://nexplayer.github.io/Android-SDK/assets/code.svg">Other Platforms](https://nexplayer.github.io/)
