@@ -1,5 +1,8 @@
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.849 (12/08/2021)
+- [Fix] Fixed video stuttering problem for certain devices
+
 ### version 6.72.0.848 (22/07/2021)
 - [Update] Improvements for NexRecovery with SWDRM fallback
 - [Add] Expose license server response to application layer when there is a DRM error
