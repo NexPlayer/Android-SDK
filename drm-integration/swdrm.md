@@ -26,7 +26,7 @@ NexPlayer provides the integration for SW Widevine through a dynamic library cal
 
 Besides the library above, NexPlayer also provides NexWVDRM.java and NexWVDRMSession.java which will perform accordingly to the protected data and receiving/sending events from/to the libnexwvdrm.so.
 
-In order to initialize the NexPlayer-SW Widevine module, the following steps needs to be made:
+In order to initialize the NexPlayer-SW Widevine module, the following steps need to be made:
 
 - Create a NexWVDRM object that will be used later:
 
@@ -108,7 +108,7 @@ In order to initialize the NexPlayer-SW Widevine module, the following steps nee
     ```
    This API should be used before the NexWVDRM.initDRMManager function call.
    
--  NexWVDRM allows modifying they key when needed. If multiple keys are gotten from the license server, this call will be needed.
+-  NexWVDRM allows modifying the key when needed. If multiple keys are gotten from the license server, this call will be needed.
   
     ```java
     NexWVDRM.IWVDrmListener mWidevineDRMListener = mNexWVDRM.createWVDRMListener();

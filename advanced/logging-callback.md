@@ -1,6 +1,8 @@
 # NexPlayer Logging Callback
 
-### Enabling the feature
+With this feature, you can receive the NexPlayer logs from the application side to collect them directly from the users or for any kind of debug purposes.
+
+## Enabling the feature
 
 NexPlayer logs can be received to application side by enabling the following property:
 
@@ -11,7 +13,7 @@ mNexPlayer.setProperty(NexProperty.SET_UDS_NAME_FOR_LOGGING, socket);
 mNexPlayer.setProperty(NexProperty.ENABLE_LOGGING_TO_APP_SIDE,1);
 ```
 
-### Receiving the logs
+## Receiving the logs
 
 `NexLogd.java` is a simple example about how to receive a log message. You can find this class and usage inside the sample application for your reference.
 
@@ -52,4 +54,25 @@ public void run() {
 }
 ```
 
+## Properties
 
+### ENABLE_LOGGING_TO_APP_SIDE (902)
+
+Enables to deliver all logging messages of a native framework to app side instead of using adb system.
+
+- **Type:** int
+
+- **Default:** 0
+
+- **Values:**
+
+- **0:** Disabled to deliver a log to app side.
+- **1:** Enabled to deliver a log to app side.
+
+### SET_UDS_NAME_FOR_LOGGING (903)
+
+Sets a name of unix domain socket.
+
+- **Type:** String
+
+- **Default:** null

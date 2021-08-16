@@ -20,7 +20,7 @@ Here we have several fields that, depending on our needs, we will have to config
 
 **SPD Delay Time:** Value between 500.0 ms and 20,000.0ms (default 2000.0ms).
 
-**SPD Sync Range:** Value between 100.0 ms and 2000.0ms (default 300.0ms).
+**SPD Sync **Range:** Value between 100.0 ms and 2000.0ms (default 300.0ms).
 
 **SPD Too Much Difference Time:** Value between 2000.0and 10,000.0 ms (default
 5000.0ms).
@@ -28,7 +28,7 @@ Here we have several fields that, depending on our needs, we will have to config
 **Sync to Device UTC:** Enable or disable. This field takes as reference the UTC time
 (disabled by default).
 
-  <img width="20%" height="40%" text-align="center" src="./assets/1.jpg" alt="1" >
+![](../assets/1.jpg)
 
 Once we have configured what we need, we will play the content with SPD in the
 section.
@@ -74,9 +74,9 @@ Enables synchronization to device UTC for more accurate behaviour.
 mNexPlayer.setProperty(NexPlayer.NexProperty.ENABLE_SPD_SYNC_TO_DEVICE_TIME, 1);
 ```
 
-Default: 0
+- **Default:** 0
 
-Values:
+- **Values:**
 
 - 0: Disabled device UTC
 - 1: Enabled device UTC
@@ -89,9 +89,9 @@ If the current playback desynchronizes from the value, the player will slow down
 mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_SYNC_DIFF_TIME, 100);
 ```
 
-Unit: msec (1/1000 sec)
+- **Unit:** msec (1/1000 sec)
 
-Default: 300 (300 msec)
+- **Default:** 300 (300 msec)
 
 #### SET_SPD_TOO_MUCH_DIFF_TIME
 
@@ -102,6 +102,6 @@ video rather than make it by speeding.
 mNexPlayer.setProperty(NexPlayer.NexProperty.SET_SPD_TOO_MUCH_DIFF_TIME,5000);
 ```
 
-Unit: msec (1/1000 sec)
+- **Unit:** msec (1/1000 sec)
 
-Default: 5000 (5 seconds)
+- **Default:** 5000 (5 seconds)

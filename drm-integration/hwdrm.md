@@ -1,12 +1,12 @@
 # MediaDRM NexPlayerSDK for Android
 
-![](assets/mediadrm_overview.png)
+![](../assets/mediadrm_overview.png)
 
 Encrypted content is prepared using an encryption server and stored in a content library. The encrypted content is streamed or downloaded from the content library to client devices via content servers. Licenses to view the content are obtained from the License Server.
 
 NexPlayer provides some wrapping classes to the users for more convenience using Media DRM and Media Crypto classes. Find more information about MediaDrm on the [Android development website](https://developer.android.com/reference/android/media/MediaDrm.html).
 
-![](assets/MediaDrm_with_NexPlayer_Sequence.png)
+![](../assets/MediaDrm_with_NexPlayer_Sequence.png)
 
 In the beginning, the app calls open() of NexPlayer with a url encrypted content. NexPlayer invokes openSession() and adds keys provided by the key server. Then, the content is decrypted.
 

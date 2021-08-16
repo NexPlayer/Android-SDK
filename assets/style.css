@@ -120,6 +120,11 @@ img {
     margin: 10px;
 }
 
+img.icon {
+    width:12px;
+    height:auto;
+}
+
 svg:not(:root) {
     overflow: hidden
 }
