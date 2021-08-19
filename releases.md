@@ -19,9 +19,6 @@
 - [Update] ViewRight WebClient updated to version 4.3.8.0
 - [Improve] Improvements with Dolby passthrough
 
-### version 6.72.0.842 (22/04/2021)
-- [Fix] Search the nearest segment when seeking in hls protocol
-
 ### version 6.72.0.841 (16/04/2021)
 - [Add] New API to enable SW DRM recovery
 - [Add] Implemented new property to disable video vendor codec
