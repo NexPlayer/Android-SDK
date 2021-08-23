@@ -246,11 +246,11 @@ NexPlayer initialization failed by the invalid SDK. Error while creating or init
 
 Error while creating or initializing NexPlayer.
 
-#### `PLAYER_ERROR_NOT_ACTIVATED_APP_ID`  `0x80000011`
+#### `PLAYER_ERROR_NOT_ACTIVATED_APP_ID`  `0x80000012`
 
 Error while creating or initializing NexPlayer. The current app id is not activated
 
-#### `PLAYER_ERROR_TIME_LOCKED`  `0x80000012`
+#### `PLAYER_ERROR_TIME_LOCKED`  `0x800000A0`
 
 SDK has expired
 
