@@ -16,6 +16,12 @@ Feel free to contact us to request a demo
 
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.850 (26/08/2021)
+- [Add] New listener for trackdown property, when a track down happens
+- [Add] AV1 Codec Support
+- [Improve] Offline Playback improvements for FAT32 formatted SD Cards
+- [Improve] Improve setTargetBandwidth API with QUICK_MIX option for faster track changes
+
 ### version 6.72.0.849 (12/08/2021)
 - [Fix] Fixed video stuttering problem for certain devices
 
