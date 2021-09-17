@@ -1,5 +1,11 @@
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.852 (10/09/2021)
+- [Fix] Fix AV Sync issue after resuming on AC3 for specific devices
+
+### version 6.72.0.851 (07/09/2021)
+- [Improve] Improve HLS/fMP4 implementation to support encryption scheme changes
+
 ### version 6.72.0.850 (26/08/2021)
 - [Add] New listener for trackdown property, when a track down happens
 - [Add] AV1 Codec Support
