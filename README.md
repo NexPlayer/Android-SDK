@@ -16,6 +16,12 @@ Feel free to contact us to request a demo
 
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.853
+- [Improve] Align library names across different architectures
+- [Improve] Fix Android Studio warnings and comments
+- [Improve] Update sample project structure
+- [Improve] Reduced package size
+
 ### version 6.72.0.852 (10/09/2021)
 - [Fix] Fix AV Sync issue after resuming on AC3 for specific devices
 
