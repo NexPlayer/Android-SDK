@@ -7,6 +7,7 @@
 	- [Timed Metadata](/timed-metadata.md)
 	- [Low Latency](/low-latency.md) 
 	- [Error Codes](/error-codes.md)
+    - [NexPlayer Logs](/nexplayer-logs.md)
 - [DRM Integration](/drm-integration.md) 
 	- [Media DRM](/drm-integration/hwdrm.md) 
 	- [SW DRM](/drm-integration/swdrm.md) 
