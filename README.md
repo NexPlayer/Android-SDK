@@ -16,6 +16,11 @@ Feel free to contact us to request a demo
 
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.854 (17/11/2021)
+- [Add] New API to support parsing of license server URL from DASH manifest
+- [Add] New API to seek frame-by-frame for local playback
+- [Update] ViewRight WebClient updated to version 4.3.8.3
+
 ### version 6.72.0.853 (07/10/2021)
 - [Improve] Align library names across different architectures
 - [Improve] Fix Android Studio warnings and comments
