@@ -99,7 +99,7 @@ _Subject to additional and/or 3rd party licenses_
 	- Yospace 
 	- Freewheel 
 	- VAST
-	- VPAID
+	- VMAP
 
 ## Legal Notices
 
