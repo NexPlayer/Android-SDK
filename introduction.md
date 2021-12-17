@@ -50,6 +50,7 @@ NexPlayer is the market leader player SDK for premium video apps. NexPlayer ensu
 - Image based closed caption at TTML 
 - External subtitles (smi, srt, sub, dfxp) 
 - 3gpp Timed Text (3GPP file format)
+- EBU Timed text (EBU-TT)
 
 #### Content Protection
 
