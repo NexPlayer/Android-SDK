@@ -4,7 +4,7 @@ The NexPlayer supports a variety of subtitle formats including:
 
 1. Local subtitle files (.srt/.smi/.sub)
 2. 3GPP and CFF (TTML) timed text
-	2.1.  EBU Timed Text (EBU-TT)
+- EBU Timed Text (EBU-TT)
 3. CEA 608 closed captions
 4. CEA 708 closed captions
 5. Web Video Text Tracks (WebVTT)
