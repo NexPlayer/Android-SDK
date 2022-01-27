@@ -14,7 +14,7 @@ Feel free to contact us to request a demo
 
 * support@nexplayer.com
 
-## NexPlayer SDK for Android Release Notes
+## NexPlayer SDK for Android Release Notes 
 
 ### version 6.72.0.856 (27/01/2022)
 - [Add] New property to improve video synchronization among multiple instances
