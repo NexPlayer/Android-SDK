@@ -16,6 +16,13 @@ Feel free to contact us to request a demo
 
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.856 (27/01/2022)
+- [Add] New property to improve video synchronization among multiple instances
+- [Add] Disable subtitle files to be downloaded
+- [Update] Support different offset values for different tracks in HLS
+- [Update] Vast module update
+- [Fix] Fix to handle the #EXT-X-PROGRAM-DATE-TIME value correctly when is incomplete
+
 ### version 6.72.0.854 (17/11/2021)
 - [Add] New API to support parsing of license server URL from DASH manifest
 - [Add] New API to seek frame-by-frame for local playback
