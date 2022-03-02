@@ -1,5 +1,12 @@
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.857 (02/03/2022)
+- [Add] New property for SSL certificate verification
+- [Update] Change the way SW DRM recovery is registered 
+- [Add] Include a new option for NexRecovery to provide a backup URL
+- [Add] New property to get PCM data from audio renderer
+- [Add] New property to improve video synchronization among multiple instances
+- 
 ### version 6.72.0.856 (27/01/2022)
 - [Add] New property to improve video synchronization among multiple instances
 - [Add] Disable subtitle files to be downloaded

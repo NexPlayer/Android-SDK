@@ -571,3 +571,32 @@ RTSP/HTTP User Agent value.
 
 - **Default:** "User-Agent: Mozilla/5.0 (iPhone; U; CPU iPhone OS 3\_1\_2 like Mac OS X; ko-kr) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7D11 Safari/528.16"
 
+### SET_SSL\_CERTIFICATE\_VERIFICATION (908)
+
+NexPlayer ignores any SSL error by default and keeps playing the content. By enabling this property, NexPlayer will throw an error when there is an error during the SSL handshake.
+
+- **Type:** integer
+
+- **Default:** 0
+
+> Since version 6.72.0.857
+
+### SUPPORT_EXTERNAL\_PCM
+
+NexPlayer is able to expose audio PCM data to application side for any post audio processing. You can process the audio data on the application side and return back to the NexPlayer SDK to apply any audio modification you would like to introduce. When this property is enabled following event will be generated in `NexEventReceiver`:
+
+```java
+@Override
+public byte[] onHandlingExternalPCM(NexPlayer mp, int ts, Object ob) {
+   byte[] pkt = (byte[]) ob;
+   int timestamp = ts;
+	//Process the audio data here
+   return pkt;
+}
+```
+
+- **Type:** integer
+
+- **Default:** 0
+
+> Since version 6.72.0.857
