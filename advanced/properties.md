@@ -581,6 +581,16 @@ NexPlayer ignores any SSL error by default and keeps playing the content. By ena
 
 > Since version 6.72.0.857
 
+### SET_FALLBACK\_URL (909)
+
+Sets a fallback url for DASH contents and switches to this given backup URL seamlessly when there is a network error.
+
+- **Type:** String
+
+- **Default:** null
+
+> Since version 6.72.0.858
+
 ### SUPPORT_EXTERNAL\_PCM
 
 NexPlayer is able to expose audio PCM data to application side for any post audio processing. You can process the audio data on the application side and return back to the NexPlayer SDK to apply any audio modification you would like to introduce. When this property is enabled following event will be generated in `NexEventReceiver`:
