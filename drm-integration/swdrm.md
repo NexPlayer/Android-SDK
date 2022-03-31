@@ -116,6 +116,27 @@ In order to initialize the NexPlayer-SW Widevine module, the following steps nee
     ```
    This API should be used only if the initDRMManager function call has been successful.
    
+## How to enable DRM Recovery
+
+NexPlayer provides an easy way to handle MediaDRM errors and fallback to SW Widevine automatically. you can enable this option with the following code snippet:
+
+```java
+mNexPlayer.getNexRecovery().register(
+	NexRecovery.RecoveryAction.DRM_INIT_FAILED,
+	new NexRecoveryDRMFail(this, 
+		mCurrentPath, 
+		sourceType, 
+		keyServer, 
+		mLicenseRequestListener, 
+		WVDRMOptionalHeaders, 
+		NexPlayer.NEXPLAYER_TRANSPORT_TYPE_TCP
+	)
+);
+
+```   
+Sample integration can be found in our sample app (`NexPlayerSample.java`).
+
+> Since version 6.72.0.858
 
 ## Things to consider
 
