@@ -16,6 +16,24 @@ Feel free to contact us to request a demo
 
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.860
+- [Improve] Improve handling of multiple DRM sessions
+- [Fix] Fix a crash on some Huawei devices for Atmos contents
+
+### version 6.72.0.859
+- [Update] Automatically disable dynamic thumbnails for unsupported contents
+
+### version 6.72.0.858
+- [Fix] Fix to follow HTTP redirection for video initialization segments
+- [Add] New property SET_FALLBACK_URL to provide a backup URL for DASH contents
+
+### version 6.72.0.857
+- [Add] New property for SSL certificate verification
+- [Update] Change the way SW DRM recovery is registered
+- [Add] Include a new option for NexRecovery to provide a backup URL
+- [Add] New property to get PCM data from audio renderer
+- [Add] New property to improve video synchronization among multiple instances
+
 ### version 6.72.0.856 (27/01/2022)
 - [Add] New property to improve video synchronization among multiple instances
 - [Add] Disable subtitle files to be downloaded
