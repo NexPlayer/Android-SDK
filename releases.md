@@ -1,5 +1,9 @@
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.860
+- [Improve] Improve handling of multiple DRM sessions
+- [Fix] Fix a crash on some Huawei devices for Atmos contents
+
 ### version 6.72.0.859
 - [Update] Automatically disable dynamic thumbnails for unsupported contents
 
