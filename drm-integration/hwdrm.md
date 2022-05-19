@@ -43,7 +43,7 @@ optionalHeaderFields)
 
 This API is used for setting optionalParameters when sending requests to the Key Server.
 
-### How to play MediaDrm content
+### How to Play MediaDrm content
 
 1. Initialize NexPlayer and NexALFactory.
 2. Set Key server’s URL using `setNexMediaDrmKeyServerUri` API.

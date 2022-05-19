@@ -172,6 +172,18 @@ This property should be called after init but before calling open.
 
 - **Default:** 8192
 
+### SET_STOP\_TEXT\_DOWNLOAD (910)
+
+If set to 1, when setting the text media stream (`setMediaStream` API) with `MEDIA_STREAM_DISABLE_ID`, the subtitles won't be downloaded. To show the subtitles without any delay, you should restart the playback without this property. 
+
+If set to 0, the subtitles won't be shown when using `MEDIA_STREAM_DISABLE_ID` but they will be downloaded in the background.
+
+- **Type:** int
+
+- **Default:** 0
+
+> Since version 6.72.0.862
+
 ## API Reference
 
 ### NexPlayer.changeSubtitleFD

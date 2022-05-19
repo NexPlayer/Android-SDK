@@ -144,6 +144,47 @@ This property should be set before the Downloader module is opened.
 
 - **Type:** String
 
+### NUMBER_OF\_SEGMENTS\_TO\_DOWNLOAD (595)
+
+Set number of segments to download in parallel
+
+- **Type:** Int
+- **Default:** 1
+
+### DOWNLOAD_AUDIO\_STREAM\_ID (611)
+
+Set the streamID to download for offline playback. When downloading dash contents in parallel download mode (`NUMBER_OF_SEGMENTS_TO_DOWNLOAD > 1`), you should set the audio stream ID to be downloaded.
+
+- **Type:** Int
+
+> Since version 6.72.0.862
+
+
+### DOWNLOAD_AUDIO\_TRACK\_ID (612)
+
+Set the trackID to download for offline playback. When downloading dash contents in parallel download mode (`NUMBER_OF_SEGMENTS_TO_DOWNLOAD > 1`), you should set the audio track ID to be downloaded.
+
+- **Type:** Int
+
+> Since version 6.72.0.862
+
+### OFFLINE_PLAYBACK\_AUDIO\_STREAM\_ID (613)
+
+Set the streamID for Dash offline playback. If the content has been downloaded in parallel download mode (`NUMBER_OF_SEGMENTS_TO_DOWNLOAD > 1`), you should set the audio stream ID to be played.
+
+- **Type:** Int
+
+> Since version 6.72.0.862
+
+### OFFLINE_PLAYBACK\_AUDIO\_TRACK\_ID (614)
+
+Set the trackID for Dash offline playback. If the content has been downloaded in parallel download mode (`NUMBER_OF_SEGMENTS_TO_DOWNLOAD > 1`), you should set the audio track ID to be played.
+
+- **Type:** Int
+
+> Since version 6.72.0.862
+
+
 ## Classes
 
 ### IOfflineStoreListener Interface
@@ -152,7 +193,6 @@ This interface allows the application to get events about the Offline Store from
 
 When storing data to `NexOfflineStoreController`, the user must call `setListener(IOfflineStoreListener i)` to get events before startOfflineStore. When the user wants to call an API that edits UI-related APIs or the state of OfflineStore such as `stopOfflineStore()` from `IOfflineStoreListener` callback, they must use a Handler in order for the API to be
 able to run on the main application thread.
-
 #### void onDownloadEnd (boolean completed)
 
 This event is called when the download is complete.
