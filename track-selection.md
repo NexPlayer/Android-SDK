@@ -35,11 +35,26 @@ The different params you can use in method *mABRController.setTargetBandWidth(ta
 	* **QUICKMIX**: NexPlayer will clear the buffer as much as possible and will start to download new track so the user can see a new track faster.
 	* **LATEMIX**: NexPlayer will preserve and play the content segments already buffered and will download a new track.
 * NexABRController.TargetOption:
-	* - **Default**: Default target option (BELOW).
+	* **Default**: Default target option (BELOW).
 	* **BELOW**: Select a track with a bandwidth below the target bandwidth.
 	* **ABOVE**: Select a track with a bandwidth above the target bandwidth.
 	* **MATCH**: Select the track that has a bandwidth that matches the target set; otherwise send an error and no new target bandwidth is selected.
 
+## Properties
+
+### SET_IGNORE\_PERIOD\_ID\_IN\_STREAMID (1001)
+
+If set to 1, NexPlayer SDK will ignore the period id in the stream id for DASH.
+
+StreamID consists of period id and adaptation id for DASH. When this property is enabled, NexPlayer SDK will ignore the given period id and keep the current playing one when changing the track. 
+
+This property helps to resolve race conditions for certain multi-period DASH streams if there are frequent track changes or seek operations.
+
+- **Type:** int
+
+- **Default:** 0
+
+> Since version 6.72.0.864
 
 ## API Reference
 

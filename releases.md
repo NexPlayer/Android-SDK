@@ -1,5 +1,25 @@
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.864
+- [Fix] Fix an issue for FireTV Stick Lite (AFTSS)
+- [Add] New property added to ignore DASH period id when calling setMediaStream API
+
+### version 6.72.0.863
+- [Fix] Fix senc atom parsing for certain contents
+- [Improve] Improve event streams for DASH live playback
+- [Update] Updated settings organization in the sample project 
+- [Add] Added new property to receive all SCTE35 events
+
+### version 6.72.0.862
+- [Add] Added new field to offline store data to get the DRM license expiration date
+- [Improve] Improve setVolume API to be called during the initialization
+- [Fix] Fix offline playback when parallel segment download is enabled
+
+### version 6.72.0.861
+- [Improve] Remove printStackTrace calls
+- [Add] Program Time for DASH based on the supplemental property urn:scte:dash:utc-time
+- [Fix] Closed caption sometimes fail to be set to on
+
 ### version 6.72.0.860
 - [Improve] Improve handling of multiple DRM sessions
 - [Fix] Fix a crash on some Huawei devices for Atmos contents
