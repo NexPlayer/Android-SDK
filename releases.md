@@ -1,5 +1,10 @@
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.865
+- [Fix] Keep playing the same track after period changes for certain DASH streams
+- [Fix] Prevent sample app to crash after a DRM error
+- [Add] Include information for the start stream event if there was a codec failure
+
 ### version 6.72.0.864
 - [Fix] Fix an issue for FireTV Stick Lite (AFTSS)
 - [Add] New property added to ignore DASH period id when calling setMediaStream API
