@@ -1,7 +1,9 @@
 ## NexPlayer SDK for Android Release Notes
 
-### version 6.72.0.865
+### version 6.72.0.866
 - [Fix] Keep playing the same track after period changes for certain DASH streams
+
+### version 6.72.0.865
 - [Fix] Prevent sample app to crash after a DRM error
 - [Add] Include information for the start stream event if there was a codec failure
 
