@@ -1,5 +1,10 @@
 ## NexPlayer SDK for Android Release Notes
 
+### version 6.72.0.867
+- [Fix] Fixed seek issue when there was a loading operation active
+- [Fix] Fixed memory leak with long playbacks
+- [Add] Added support for multiple NexPlayer download instances 
+
 ### version 6.72.0.866
 - [Fix] Keep playing the same track after period changes for certain DASH streams
 
